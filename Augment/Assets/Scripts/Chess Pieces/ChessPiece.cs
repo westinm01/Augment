@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class ChessPiece : MonoBehaviour
 {
-    public (int, int) coord;
-    public List<(int, int)> possibleSpaces = new List<(int, int)>(); //calculated at the start of your turn.
+    public Vector2Int coord;
+    public List<Vector2Int> possibleSpaces = new List<Vector2Int>(); //calculated at the start of your turn.
     public bool team = true; //true if white, false if black. True by default.
     public bool canJump = false; //setToTrue for Knight.
     public int statusTimer; //number of turns the current status lasts.
