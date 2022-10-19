@@ -23,6 +23,7 @@ public class ChessPiece : MonoBehaviour
 
         GameManager.Instance.board.AddPiece(this, coord.y, coord.x);
         GameManager.Instance.board.PrintBoard();    // for testing
+        GetPossibleSpaces();
     }
 
     // Update is called once per frame
