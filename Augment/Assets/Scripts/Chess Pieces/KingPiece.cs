@@ -5,12 +5,6 @@ using UnityEngine;
 public class KingPiece : ChessPiece
 {
     public int direction = 1; 
-    // Start is called before the first frame update
-    void Start()
-    {
-        GameManager.Instance.board.AddPiece(this, coord.y, coord.x);
-        GameManager.Instance.board.PrintBoard();
-    }
 
     // Update is called once per frame
     void Update()

@@ -15,9 +15,14 @@ public class ChessPiece : MonoBehaviour
     
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        
+        // automatically finds coord on board using gameObject position
+        coord.x = (int)gameObject.transform.position.x;
+        coord.y = -(int)gameObject.transform.position.y;
+
+        GameManager.Instance.board.AddPiece(this, coord.y, coord.x);
+        GameManager.Instance.board.PrintBoard();    // for testing
     }
 
     // Update is called once per frame

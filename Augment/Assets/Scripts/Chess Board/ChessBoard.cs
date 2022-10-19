@@ -78,9 +78,4 @@ public class ChessBoard : MonoBehaviour
             Debug.Log("Added piece " + piece + " out of bounds at (" + row + ", " + col + ")");
         }
     }
-
-    void Start()
-    {
-
-    }
 }

@@ -22,6 +22,20 @@ public class BoardManager : MonoBehaviour
         return board.getHeight();
     }
 
+    public bool InBounds(int row, int col){
+        if (row >= board.getHeight() || row < 0){
+            Debug.Log("Row " + row + " out of bounds");
+            return false;
+        }
+        else if (col >= board.getWidth() || col < 0){
+            Debug.Log("Col " + col + " out of bounds");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
     public void AddPiece(ChessPiece piece, int row, int col)
     {
         board.AddPiece(piece, row, col);

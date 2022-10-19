@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7200692150030271499}
   - component: {fileID: 7200692150030271498}
+  - component: {fileID: 3333120927014364357}
   m_Layer: 0
   m_Name: pawn
   m_TagString: Untagged
@@ -84,3 +85,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3333120927014364357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7200692150030271501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade48d216eba0b04c80ca0c09471a2db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coord: {x: 0, y: 0}
+  possibleSpaces: []
+  team: 1
+  canJump: 0
+  statusTimer: 0
+  status: 0
+  direction: 1

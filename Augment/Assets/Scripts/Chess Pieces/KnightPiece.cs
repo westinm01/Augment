@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class KnightPiece : ChessPiece
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void GetPossibleSpaces()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        possibleSpaces.Clear();
         
     }
 }
