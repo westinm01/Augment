@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class KingPiece : ChessPiece
 {
-    public int direction = 1; 
+    private List<Vector2Int> allPossibleSpaces = new List<Vector2Int> { new Vector2Int(-1, 1), 
+                                                                        new Vector2Int(-1, -1), 
+                                                                        new Vector2Int(-1, 0),
+                                                                        new Vector2Int(0, 1), 
+                                                                        new Vector2Int(0, -1), 
+                                                                        new Vector2Int(1, 1), 
+                                                                        new Vector2Int(1, -1),
+                                                                        new Vector2Int(1, 0) };
+    private float direction = 1; 
 
     // Update is called once per frame
     void Update()
     {
-        possibleSpaces.Clear(); 
-        int nextY = coord.y + direction;
-        int nextX = coord.x + direction; 
-
-        if (nextY < GameManager.Instance.board.getHeight() && nextY >= 0)
+        possibleSpaces.Clear();
+        foreach (Vector2Int vec in allPossibleSpaces)
         {
-            possibleSpaces.Add(new Vector2Int(nextX, nextY));
-            possibleSpaces.Add(new Vector2Int(coord.x, nextY));
-            possibleSpaces.Add(new Vector2Int(nextX, coord.y));
-            possibleSpaces.Add(new Vector2Int(coord.x, -coord.y));
+            int newX = coord.x + vec.x;
+            int newY = coord.y + vec.y;
+            if (GameManager.Instance.board.InBounds(newX, newY))
+            {
+                possibleSpaces.Add(new Vector2Int(newX, newY));
+            }
         }
     }
 }
