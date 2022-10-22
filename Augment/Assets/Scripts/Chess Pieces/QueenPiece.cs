@@ -16,32 +16,6 @@ public class QueenPiece : ChessPiece
     }
     public override void GetPossibleSpaces()
     {
-        int right = 1;
-        int left = -1;
-        int up = 1;
-        int down = -1;
-
-        // Get all spaces to top right
-        for (int i = 1; i <= (GameManager.Instance.board.getWidth() - coord.x); i++)
-        {
-            MoveAndCheckPos(i, right, up);
-        }
-        // Get all spaces to top left
-        for (int i = 1; i <= coord.x; i++)
-        {
-            MoveAndCheckPos(i, left, up);
-        }
-        // Get all spaces bottom right
-        for (int i = 1; i <= (GameManager.Instance.board.getHeight() - coord.y); i++)
-        {
-            MoveAndCheckPos(i, right, down);
-        }
-        // Get all spaces bottom left
-        for (int i = 1; i <= coord.y; i++)
-        {
-            MoveAndCheckPos(i, left, down);
-        }
-
         // Get all spaces to right
         for (int i = coord.x + 1; i < GameManager.Instance.board.getWidth(); i++)
         {
@@ -62,9 +36,47 @@ public class QueenPiece : ChessPiece
         {
             possibleSpaces.Add(new Vector2Int(coord.x, i));
         }
+
+        int right = 1;
+        int left = -1;
+        int up = 1;
+        int down = -1;
+
+        // Get all spaces to top right
+        for (int i = 1; i <= (GameManager.Instance.board.getWidth() - coord.x); i++)
+        {
+            if (!CheckAndMovePos(i, right, up))
+            {
+                break;
+            }
+        }
+        // Get all spaces to top left
+        for (int i = 1; i <= coord.x; i++)
+        {
+            if (!CheckAndMovePos(i, left, up))
+            {
+                break;
+            }
+        }
+        // Get all spaces bottom right
+        for (int i = 1; i <= (GameManager.Instance.board.getHeight() - coord.y); i++)
+        {
+            if (!CheckAndMovePos(i, right, down))
+            {
+                break;
+            }
+        }
+        // Get all spaces bottom left
+        for (int i = 1; i <= coord.y; i++)
+        {
+            if (!CheckAndMovePos(i, left, down))
+            {
+                break;
+            }
+        }
     }
 
-    private void MoveAndCheckPos(int distance, int xDir, int yDir)
+    private bool CheckAndMovePos(int distance, int xDir, int yDir)
     {
         int xCheck = xDir * coord.x + distance;
         int yCheck = yDir * coord.y + distance;
@@ -76,6 +88,11 @@ public class QueenPiece : ChessPiece
         {
             // Spot is open, add it to possible spaces
             possibleSpaces.Add(new Vector2Int(xCheck, yCheck));
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
