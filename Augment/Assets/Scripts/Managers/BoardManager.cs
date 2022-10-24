@@ -24,11 +24,11 @@ public class BoardManager : MonoBehaviour
 
     public bool InBounds(int row, int col){
         if (row >= board.getHeight() || row < 0){
-            Debug.Log("Row " + row + " out of bounds");
+            //Debug.Log("Row " + row + " out of bounds");
             return false;
         }
         else if (col >= board.getWidth() || col < 0){
-            Debug.Log("Col " + col + " out of bounds");
+            //Debug.Log("Col " + col + " out of bounds");
             return false;
         }
         else{
