@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BoardManager : MonoBehaviour
 {
+    public GameObject selectedPieceHighlighter;
+
     private ChessBoard board;
 
     private void Awake()
@@ -43,5 +45,21 @@ public class BoardManager : MonoBehaviour
 
     public void PrintBoard(){
         board.PrintBoard();
+    }
+
+    public void HighlightPossibleMoves(ChessPiece piece)
+    {
+
+    }
+
+    public void HighlightPiece(GameObject piece)
+    {
+        selectedPieceHighlighter.SetActive(true);
+        selectedPieceHighlighter.transform.position = piece.transform.position;
+    }
+
+    public void UnHighlightPiece()
+    {
+        selectedPieceHighlighter.SetActive(false);
     }
 }
