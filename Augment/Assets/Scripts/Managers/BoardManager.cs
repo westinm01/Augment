@@ -5,13 +5,16 @@ using UnityEngine;
 public class BoardManager : MonoBehaviour
 {
     public GameObject selectedPieceHighlighter;
+    public GameObject possibleSpaceHighlighter;
 
     private ChessBoard board;
+    private List<GameObject> possibleSpaceHighlights;
 
     private void Awake()
     {
         // Create new chess board with 8 rows and 8 cols
         board = new ChessBoard(8, 8);
+        possibleSpaceHighlights = new List<GameObject>();
     }
 
     public int getWidth()
@@ -22,6 +25,10 @@ public class BoardManager : MonoBehaviour
     public int getHeight()
     {
         return board.getHeight();
+    }
+
+    public void PrintBoard(){
+        board.PrintBoard();
     }
 
     public bool InBounds(int row, int col){
@@ -43,13 +50,20 @@ public class BoardManager : MonoBehaviour
         board.AddPiece(piece, row, col);
     }
 
-    public void PrintBoard(){
-        board.PrintBoard();
+    public void MovePiece(ChessPiece piece, int newRow, int newCol)
+    {
+        
     }
 
     public void HighlightPossibleMoves(ChessPiece piece)
     {
-
+        piece.GetPossibleSpaces();
+        foreach (Vector2Int space in piece.possibleSpaces)
+        {
+            Vector3 pos = new Vector3(space.x, -space.y, 0);
+            GameObject newHighlight = Instantiate(possibleSpaceHighlighter, pos, Quaternion.Euler(0, 0, 0));
+            possibleSpaceHighlights.Add(newHighlight);
+        }
     }
 
     public void HighlightPiece(GameObject piece)
@@ -61,5 +75,10 @@ public class BoardManager : MonoBehaviour
     public void UnHighlightPiece()
     {
         selectedPieceHighlighter.SetActive(false);
+        foreach (GameObject highlight in possibleSpaceHighlights)
+        {
+            Destroy(highlight);
+        }
+        possibleSpaceHighlights.Clear();
     }
 }
