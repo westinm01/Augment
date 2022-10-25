@@ -26,6 +26,7 @@ public class InputManager : MonoBehaviour
                         if (currSelected != null && currSelected.tag == "ChessPiece")
                         {
                             GameManager.Instance.board.HighlightPiece(currSelected);
+                            GameManager.Instance.board.HighlightPossibleMoves(currSelected.GetComponent<ChessPiece>());
                             state = InputState.TouchHold;
                         }
                     }
@@ -50,17 +51,25 @@ public class InputManager : MonoBehaviour
                     if (t.phase == TouchPhase.Ended)    // Check if first touch is end of touch
                     {
                         GameObject tempSelected = GetTouchedPiece(t.position);      // Check if touch was on a piece
+                        GameManager.Instance.board.UnHighlightPiece();
                         if (tempSelected != null)
                         {
                             if (tempSelected.tag == "ChessPiece")
                             {
                                 currSelected = tempSelected;
                                 GameManager.Instance.board.HighlightPiece(currSelected);
+                                GameManager.Instance.board.HighlightPossibleMoves(currSelected.GetComponent<ChessPiece>());
+                            }
+                            else if (tempSelected.tag == "PossibleSpace")
+                            {
+                                int newX = (int) tempSelected.transform.position.x;
+                                int newY = -(int) tempSelected.transform.position.x;
+                                GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newY, newX);
+                                state = InputState.Wait;
                             }
                         }
                         else
                         {
-                            GameManager.Instance.board.UnHighlightPiece();
                             state = InputState.Wait;
                         }
                     }
