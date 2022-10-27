@@ -39,7 +39,7 @@ public class ChessPiece : MonoBehaviour
 
     virtual public void GetPossibleSpaces()
     {
-
+        possibleSpaces.Clear();
     }
 
     //Eating & CheckMate will be done by a game manager

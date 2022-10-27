@@ -15,9 +15,9 @@ public class KingPiece : ChessPiece
     private float direction = 1; 
 
     // Update is called once per frame
-    void Update()
+    public override void GetPossibleSpaces()
     {
-        possibleSpaces.Clear();
+        base.GetPossibleSpaces();
         foreach (Vector2Int vec in allPossibleSpaces)
         {
             int newX = coord.x + vec.x;

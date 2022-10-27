@@ -8,7 +8,7 @@ public class PawnPiece : ChessPiece
 
     public override void GetPossibleSpaces()
     {
-        possibleSpaces.Clear();
+        base.GetPossibleSpaces();
         int nextY = coord.y + direction;
 
         // If the pawn is in the last square, can't move further

@@ -6,11 +6,6 @@ using UnityEngine;
 
 public class BishopPiece : ChessPiece
 {
-    void Start()
-    {
-        GameManager.Instance.board.AddPiece(this, coord.y, coord.x);
-        GameManager.Instance.board.PrintBoard();
-    }
 
     void Update()
     {
@@ -18,6 +13,7 @@ public class BishopPiece : ChessPiece
     }
     public override void GetPossibleSpaces()
     {
+        base.GetPossibleSpaces();
         int right = 1;
         int left = -1;
         int up = 1;

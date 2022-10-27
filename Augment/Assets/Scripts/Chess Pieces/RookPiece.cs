@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class RookPiece : ChessPiece
 {
-    void Start()
-    {
-        GameManager.Instance.board.AddPiece(this, coord.y, coord.x);
-        GameManager.Instance.board.PrintBoard();
-    }
 
     void Update()
     {
@@ -17,6 +12,7 @@ public class RookPiece : ChessPiece
 
     public override void GetPossibleSpaces()
     {
+        base.GetPossibleSpaces();
         /* TO DO:
          * restrict movement if piece blocking (cant tp behind piece)
          * implement a break statement if a piece is blocking to 

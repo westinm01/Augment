@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class QueenPiece : ChessPiece
 {
-    void Start()
-    {
-        GameManager.Instance.board.AddPiece(this, coord.y, coord.x);
-        GameManager.Instance.board.PrintBoard();
-    }
 
     void Update()
     {
@@ -16,6 +11,7 @@ public class QueenPiece : ChessPiece
     }
     public override void GetPossibleSpaces()
     {
+        base.GetPossibleSpaces();
         // Get all spaces to right
         for (int i = coord.x + 1; i < GameManager.Instance.board.getWidth(); i++)
         {

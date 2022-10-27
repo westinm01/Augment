@@ -63,10 +63,11 @@ public class InputManager : MonoBehaviour
                             else if (tempSelected.tag == "PossibleSpace")
                             {
                                 //Debug.Log("possible space");
-                                //int newX = (int)tempSelected.transform.position.x;
-                                //int newY = (int)tempSelected.transform.position.y;
-                                Vector3 pos = new Vector3(tempSelected.transform.position.x, -tempSelected.transform.position.y, 0);
-                                GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), pos);
+                                int newX = (int)tempSelected.transform.position.x;
+                                int newY = (int)tempSelected.transform.position.y;
+                                //Vector3 pos = new Vector3(tempSelected.transform.position.x, -tempSelected.transform.position.y, 0);
+                                //GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), pos);
+                                GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
                                 state = InputState.Wait;
                             }
                         }
