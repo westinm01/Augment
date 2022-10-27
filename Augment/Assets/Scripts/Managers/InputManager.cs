@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum InputState{
-    Wait, TouchHold, TouchRelease
+    Wait, TouchHold, TouchRelease, Move
 }
 
 public class InputManager : MonoBehaviour
@@ -62,9 +62,11 @@ public class InputManager : MonoBehaviour
                             }
                             else if (tempSelected.tag == "PossibleSpace")
                             {
-                                int newX = (int) tempSelected.transform.position.x;
-                                int newY = -(int) tempSelected.transform.position.x;
-                                GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newY, newX);
+                                //Debug.Log("possible space");
+                                //int newX = (int)tempSelected.transform.position.x;
+                                //int newY = (int)tempSelected.transform.position.y;
+                                Vector3 pos = new Vector3(tempSelected.transform.position.x, -tempSelected.transform.position.y, 0);
+                                GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), pos);
                                 state = InputState.Wait;
                             }
                         }

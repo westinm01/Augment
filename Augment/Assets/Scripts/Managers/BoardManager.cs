@@ -50,9 +50,11 @@ public class BoardManager : MonoBehaviour
         board.AddPiece(piece, row, col);
     }
 
-    public void MovePiece(ChessPiece piece, int newRow, int newCol)
+    public void MovePiece(ChessPiece piece, Vector3 vec)
     {
-        
+        piece.transform.position = vec;
+        Debug.Log(vec);
+        //Debug.Log("function call");
     }
 
     public void HighlightPossibleMoves(ChessPiece piece)
