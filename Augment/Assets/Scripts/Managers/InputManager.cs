@@ -12,6 +12,7 @@ public class InputManager : MonoBehaviour
 
     [SerializeField]
     private InputState state = InputState.Wait;
+    private Vector3 initialPos;
     void Update()
     {
         switch (state)
@@ -28,6 +29,7 @@ public class InputManager : MonoBehaviour
                             GameManager.Instance.board.HighlightPiece(currSelected);
                             GameManager.Instance.board.HighlightPossibleMoves(currSelected.GetComponent<ChessPiece>());
                             state = InputState.TouchHold;
+                            initialPos = currSelected.transform.position;
                         }
                     }
                 }
@@ -36,10 +38,28 @@ public class InputManager : MonoBehaviour
                 if (Input.touchCount > 0)
                 {
                     Touch t = Input.GetTouch(0);
+                    currSelected.transform.position = Camera.main.ScreenToWorldPoint(t.position) + new Vector3(0, 0, 10);   // piece follows users finger while holding, add 10 to z to match other pieces
+                    
+                    // If the player let go
                     if (t.phase == TouchPhase.Ended)
                     {
                         Debug.Log("Released");
-                        state = InputState.TouchRelease;
+                        GameObject tempSelected = GetTouchedPiece(t.position);      // Check if touch was on a piece
+                        currSelected.transform.position = initialPos;
+                        
+                        // if the player let go on top of a possible space
+                        if (tempSelected != null && tempSelected.tag == "PossibleSpace")
+                        {
+                            // Move the piece to the empty space
+                            GameManager.Instance.board.UnHighlightPieces();
+                            int newX = (int)tempSelected.transform.position.x;
+                            int newY = (int)tempSelected.transform.position.y;
+                            GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
+                            state = InputState.Wait;
+                        }
+                        else {
+                            state = InputState.TouchRelease;
+                        }
                     }
                 }
                 break;
@@ -48,28 +68,29 @@ public class InputManager : MonoBehaviour
                 if (Input.touchCount > 0)               // If touched screen
                 {
                     Touch t = Input.GetTouch(0);        // Get first touch
-                    if (t.phase == TouchPhase.Ended)    // Check if first touch is end of touch
+                    GameObject tempSelected = GetTouchedPiece(t.position);
+
+                    if (tempSelected != null && tempSelected.tag == "ChessPiece")
                     {
-                        GameObject tempSelected = GetTouchedPiece(t.position);      // Check if touch was on a piece
-                        GameManager.Instance.board.UnHighlightPiece();
-                        if (tempSelected != null)
+                        GameManager.Instance.board.UnHighlightPieces();
+                        currSelected = tempSelected;
+                        GameManager.Instance.board.HighlightPiece(currSelected);
+                        GameManager.Instance.board.HighlightPossibleMoves(currSelected.GetComponent<ChessPiece>());
+                        state = InputState.TouchHold;
+                        initialPos = currSelected.transform.position;          
+                    }
+                    else if (t.phase == TouchPhase.Ended)    // Check if first touch is end of touch
+                    {
+                        GameManager.Instance.board.UnHighlightPieces();
+                        if (tempSelected != null && tempSelected.tag == "PossibleSpace")
                         {
-                            if (tempSelected.tag == "ChessPiece")
-                            {
-                                currSelected = tempSelected;
-                                GameManager.Instance.board.HighlightPiece(currSelected);
-                                GameManager.Instance.board.HighlightPossibleMoves(currSelected.GetComponent<ChessPiece>());
-                            }
-                            else if (tempSelected.tag == "PossibleSpace")
-                            {
-                                //Debug.Log("possible space");
-                                int newX = (int)tempSelected.transform.position.x;
-                                int newY = (int)tempSelected.transform.position.y;
-                                //Vector3 pos = new Vector3(tempSelected.transform.position.x, -tempSelected.transform.position.y, 0);
-                                //GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), pos);
-                                GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
-                                state = InputState.Wait;
-                            }
+                            //Debug.Log("possible space");
+                            int newX = (int)tempSelected.transform.position.x;
+                            int newY = (int)tempSelected.transform.position.y;
+                            //Vector3 pos = new Vector3(tempSelected.transform.position.x, -tempSelected.transform.position.y, 0);
+                            //GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), pos);
+                            GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
+                            state = InputState.Wait;
                         }
                         else
                         {

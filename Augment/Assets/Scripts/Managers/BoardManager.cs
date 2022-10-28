@@ -62,7 +62,7 @@ public class BoardManager : MonoBehaviour
         piece.GetPossibleSpaces();
         foreach (Vector2Int space in piece.possibleSpaces)
         {
-            Vector3 pos = new Vector3(space.x, -space.y, 0);
+            Vector3 pos = new Vector3(space.x, -space.y, -5);   // Set z to -5 to prioritize raycast to hit highlighter rather than chess piece
             GameObject newHighlight = Instantiate(possibleSpaceHighlighter, pos, Quaternion.Euler(0, 0, 0));
             possibleSpaceHighlights.Add(newHighlight);
         }
@@ -74,7 +74,7 @@ public class BoardManager : MonoBehaviour
         selectedPieceHighlighter.transform.position = piece.transform.position;
     }
 
-    public void UnHighlightPiece()
+    public void UnHighlightPieces()
     {
         selectedPieceHighlighter.SetActive(false);
         foreach (GameObject highlight in possibleSpaceHighlights)
