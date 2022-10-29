@@ -48,6 +48,10 @@ public class ChessBoard : MonoBehaviour
         return height;
     }
 
+    public ChessPiece GetPiece(int row, int col){
+        return grid[col, row];
+    }
+
     public void PrintBoard(){
         //Backend Stringbuilder to show chessboard in console 
         StringBuilder sb = new StringBuilder();  
@@ -77,5 +81,11 @@ public class ChessBoard : MonoBehaviour
         else{
             Debug.Log("Added piece " + piece + " out of bounds at (" + row + ", " + col + ")");
         }
+    }
+
+    public void SwapPieces(int x1, int y1, int x2, int y2) {
+        ChessPiece temp = grid[y1, x1];
+        grid[y1, x1] = grid[y2, x2];
+        grid[y2, x2] = temp;
     }
 }

@@ -31,13 +31,24 @@ public class BoardManager : MonoBehaviour
         board.PrintBoard();
     }
 
+    // Checks to see if a space is within bounds and not occupied
+    public bool isValidMoveSpace(int row, int col)
+    {
+        return InBounds(row, col) && !isSpaceOccupied(row, col);
+    }
+
+    public bool isSpaceOccupied(int row, int col)
+    {
+        return board.GetPiece(row, col) != null;
+    }
+
     public bool InBounds(int row, int col){
         if (row >= board.getHeight() || row < 0){
-            //Debug.Log("Row " + row + " out of bounds");
+            Debug.Log("Row " + row + " out of bounds");
             return false;
         }
         else if (col >= board.getWidth() || col < 0){
-            //Debug.Log("Col " + col + " out of bounds");
+            Debug.Log("Col " + col + " out of bounds");
             return false;
         }
         else{
@@ -53,8 +64,10 @@ public class BoardManager : MonoBehaviour
     public void MovePiece(ChessPiece piece, int newX, int newY)
     {
         piece.transform.position = new Vector3(newX, newY, 0);
+        board.SwapPieces(piece.coord.x, piece.coord.y, newX, -newY);
         piece.coord.x = newX;
         piece.coord.y = -newY;
+        board.PrintBoard();
     }
 
     public void HighlightPossibleMoves(ChessPiece piece)
