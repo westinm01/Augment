@@ -19,8 +19,8 @@ public class BishopPiece : ChessPiece
         int up = 1;
         int down = -1;
 
-        // Get all spaces to top right
-        for (int i = 1; i <= (GameManager.Instance.board.getWidth() - coord.x); i++)
+        // Get all spaces to bottom right
+        for (int i = 1; i <= (GameManager.Instance.board.getWidth() - coord.y); i++)
         {
             if(!CheckAndMovePos(i, right, up))
             {
@@ -35,8 +35,8 @@ public class BishopPiece : ChessPiece
                 break;
             }
         }
-        // Get all spaces bottom right
-        for (int i = 1; i <= (GameManager.Instance.board.getHeight() - coord.y); i++)
+        // Get all spaces top right
+        for (int i = 1; i <= (GameManager.Instance.board.getHeight() - coord.x); i++)
         {
             if(!CheckAndMovePos(i, right, down))
             {
@@ -55,13 +55,14 @@ public class BishopPiece : ChessPiece
 
     private bool CheckAndMovePos(int distance, int xDir, int yDir)
     {
-        int xCheck = xDir * coord.x + distance;
-        int yCheck = yDir * coord.y + distance;
+        int xCheck = coord.x + xDir * distance;
+        int yCheck = coord.y + yDir * distance;
 
-        bool validX = (xCheck >= 0) && (xCheck < GameManager.Instance.board.getWidth());
-        bool validY = (yCheck >= 0) && (yCheck < GameManager.Instance.board.getHeight());
+        //bool validX = (xCheck >= 0) && (xCheck < GameManager.Instance.board.getWidth());
+        //bool validY = (yCheck >= 0) && (yCheck < GameManager.Instance.board.getHeight());
 
-        if (validX && validY)
+        //if (validX && validY)
+        if (GameManager.Instance.board.isValidMoveSpace(xCheck, yCheck))
         {
             // Spot is open, add it to possible spaces
             possibleSpaces.Add(new Vector2Int(xCheck, yCheck));

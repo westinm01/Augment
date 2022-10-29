@@ -22,22 +22,42 @@ public class RookPiece : ChessPiece
         // Get all spaces to right
         for (int i = coord.x + 1; i < GameManager.Instance.board.getWidth(); i++)
         {
-            possibleSpaces.Add(new Vector2Int(i, coord.y));
+            if (GameManager.Instance.board.isValidMoveSpace(i, coord.y)) {
+                possibleSpaces.Add(new Vector2Int(i, coord.y));
+            }
+            else {
+                break;
+            }
         }
         // Get all spaces to left
         for (int i = coord.x - 1; i >= 0; i--)
         {
-            possibleSpaces.Add(new Vector2Int(i, coord.y));
+            if (GameManager.Instance.board.isValidMoveSpace(i, coord.y)) {
+                possibleSpaces.Add(new Vector2Int(i, coord.y));
+            }
+            else {
+                break;
+            }
         }
         // Get all spaces up
         for (int i = coord.y + 1; i < GameManager.Instance.board.getHeight(); i++)
         {
-            possibleSpaces.Add(new Vector2Int(coord.x, i));
+            if (GameManager.Instance.board.isValidMoveSpace(coord.x, i)) {
+                possibleSpaces.Add(new Vector2Int(coord.x, i));
+            }
+            else {
+                break;
+            }
         }
         // Get all spaces down
         for (int i = coord.y - 1; i >= 0; i--)
         {
-            possibleSpaces.Add(new Vector2Int(coord.x, i));
+            if (GameManager.Instance.board.isValidMoveSpace(coord.x, i)) {
+                possibleSpaces.Add(new Vector2Int(coord.x, i));
+            }
+            else {
+                break;
+            }
         }
     }
 }
