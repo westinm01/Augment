@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PawnPiece : ChessPiece
 {
-    public int direction = 1;   // 1 for moving up, -1 for moving down
+    public int direction = 1;   // 1 for moving down, -1 for moving up
 
     public override void GetPossibleSpaces()
     {
-        possibleSpaces.Clear();
+        base.GetPossibleSpaces();
         int nextY = coord.y + direction;
 
         // If the pawn is in the last square, can't move further
