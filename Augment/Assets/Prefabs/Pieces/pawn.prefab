@@ -126,7 +126,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coord: {x: 0, y: 0}
   possibleSpaces: []
+  possibleEats: []
   team: 1
+  blackSprite: {fileID: 21300000, guid: e93912b8448aca1468900f32ff58ece6, type: 3}
+  whiteSprite: {fileID: 21300000, guid: 5687cfc73bfd2984880266a7c7e1c4dc, type: 3}
   canJump: 0
   statusTimer: 0
   status: 0
