@@ -26,6 +26,10 @@ public class KingPiece : ChessPiece
             {
                 possibleSpaces.Add(new Vector2Int(newX, newY));
             }
+            else if (CheckIfCanEat(newX, newY))
+            {
+                possibleEats.Add(new Vector2Int(newX, newY));
+            }
         }
     }
 }

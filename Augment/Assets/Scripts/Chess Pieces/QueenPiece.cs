@@ -18,6 +18,10 @@ public class QueenPiece : ChessPiece
             if (GameManager.Instance.board.isValidMoveSpace(i, coord.y)) {
                 possibleSpaces.Add(new Vector2Int(i, coord.y));
             }
+            else if (CheckIfCanEat(i, coord.y)) {
+                possibleEats.Add(new Vector2Int(i, coord.y));
+                break;
+            }
             else {
                 break;
             }
@@ -27,6 +31,10 @@ public class QueenPiece : ChessPiece
         {
             if (GameManager.Instance.board.isValidMoveSpace(i, coord.y)) {
                 possibleSpaces.Add(new Vector2Int(i, coord.y));
+            }
+            else if (CheckIfCanEat(i, coord.y)) {
+                possibleEats.Add(new Vector2Int(i, coord.y));
+                break;
             }
             else {
                 break;
@@ -38,6 +46,10 @@ public class QueenPiece : ChessPiece
             if (GameManager.Instance.board.isValidMoveSpace(coord.x, i)) {
                 possibleSpaces.Add(new Vector2Int(coord.x, i));
             }
+            else if (CheckIfCanEat(coord.x, i)) {
+                possibleEats.Add(new Vector2Int(coord.x, i));
+                break;
+            }
             else {
                 break;
             }
@@ -47,6 +59,10 @@ public class QueenPiece : ChessPiece
         {
             if (GameManager.Instance.board.isValidMoveSpace(coord.x, i)) {
                 possibleSpaces.Add(new Vector2Int(coord.x, i));
+            }
+            else if (CheckIfCanEat(coord.x, i)) {
+                possibleEats.Add(new Vector2Int(coord.x, i));
+                break;
             }
             else {
                 break;
@@ -107,6 +123,11 @@ public class QueenPiece : ChessPiece
             // Spot is open, add it to possible spaces
             possibleSpaces.Add(new Vector2Int(xCheck, yCheck));
             return true;
+        }
+        else if (CheckIfCanEat(xCheck, yCheck))
+        {
+            possibleEats.Add(new Vector2Int(xCheck, yCheck));
+            return false;
         }
         else
         {

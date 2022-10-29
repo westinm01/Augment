@@ -83,6 +83,11 @@ public class ChessBoard : MonoBehaviour
         }
     }
 
+    public void MovePiece(int x1, int y1, int x2, int y2) {
+        grid[y2, x2] = grid[y1, x1];
+        grid[y1, x1] = null;
+    }
+
     public void SwapPieces(int x1, int y1, int x2, int y2) {
         ChessPiece temp = grid[y1, x1];
         grid[y1, x1] = grid[y2, x2];

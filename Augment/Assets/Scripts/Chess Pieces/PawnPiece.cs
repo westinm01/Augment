@@ -11,6 +11,7 @@ public class PawnPiece : ChessPiece
         base.GetPossibleSpaces();
         int nextY = coord.y - direction;
 
+        // Check move up/down
         if (GameManager.Instance.board.isValidMoveSpace(coord.x, nextY))
         {
             possibleSpaces.Add(new Vector2Int(coord.x, nextY));
@@ -21,6 +22,16 @@ public class PawnPiece : ChessPiece
                     possibleSpaces.Add(new Vector2Int(coord.x, nextY - direction));
                 }
             }
+        }
+        
+        // Check diagonal eats
+        ChessPiece leftDiagonal = GameManager.Instance.board.GetChessPiece(coord.x - 1, nextY);
+        ChessPiece rightDiagonal = GameManager.Instance.board.GetChessPiece(coord.x + 1, nextY);
+        if (leftDiagonal != null && leftDiagonal.team != this.team) {
+            possibleEats.Add(leftDiagonal.coord);
+        }
+        if (rightDiagonal != null && rightDiagonal.team != this.team) {
+            possibleEats.Add(rightDiagonal.coord);
         }
     }
 }

@@ -68,6 +68,11 @@ public class BishopPiece : ChessPiece
             possibleSpaces.Add(new Vector2Int(xCheck, yCheck));
             return true;
         }
+        else if (CheckIfCanEat(xCheck, yCheck))
+        {
+            possibleEats.Add(new Vector2Int(xCheck, yCheck));
+            return false;
+        }
         else
         {
             return false;
