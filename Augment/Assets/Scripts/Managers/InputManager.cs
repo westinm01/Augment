@@ -9,10 +9,18 @@ public enum InputState{
 public class InputManager : MonoBehaviour
 {
     public GameObject currSelected;
+    private bool blackTurn;
 
     [SerializeField]
     private InputState state = InputState.Wait;
     private Vector3 initialPos;
+
+    void Awake()
+    {   
+        //set boolean variable to true if it is black's turn
+        blackTurn = true;
+    }
+
     void Update()
     {
         switch (state)
@@ -24,7 +32,16 @@ public class InputManager : MonoBehaviour
                     if (t.phase == TouchPhase.Began)    // Check if first touch is start of touch
                     {
                         currSelected = GetTouchedPiece(t.position);      // Check if touch was on a piece
-                        if (currSelected != null && currSelected.tag == "ChessPiece")
+                        //Check if the selected piece is a chess piece and gets the piece's ChessPiece component to check which team and if it is black's turn
+                        if (currSelected != null && currSelected.tag == "ChessPiece" && currSelected.GetComponent<ChessPiece>().team == false && blackTurn)
+                        {
+                            GameManager.Instance.board.HighlightPiece(currSelected);
+                            GameManager.Instance.board.HighlightPossibleMoves(currSelected.GetComponent<ChessPiece>());
+                            state = InputState.TouchHold;
+                            initialPos = currSelected.transform.position;
+                        }
+                        //white turn's check
+                        else if ( currSelected != null && currSelected.tag == "ChessPiece" && currSelected.GetComponent<ChessPiece>().team == true && !blackTurn)
                         {
                             GameManager.Instance.board.HighlightPiece(currSelected);
                             GameManager.Instance.board.HighlightPossibleMoves(currSelected.GetComponent<ChessPiece>());
@@ -91,6 +108,15 @@ public class InputManager : MonoBehaviour
                             //GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), pos);
                             GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
                             state = InputState.Wait;
+                            //changes blackTurn boolean to change the players
+                            if ( blackTurn )
+                            {
+                                blackTurn = false;
+                            }
+                            else
+                            {
+                                blackTurn = true;
+                            }
                         }
                         else
                         {
