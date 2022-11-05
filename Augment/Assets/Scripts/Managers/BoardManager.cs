@@ -7,6 +7,8 @@ public class BoardManager : MonoBehaviour
     public GameObject selectedPieceHighlighter;
     public GameObject possibleSpaceHighlighter;
     public GameObject possibleEatHighlighter;
+    public GameObject player1;
+    public GameObject player2; 
 
     private ChessBoard board;
     private List<GameObject> possibleSpaceHighlights;
@@ -129,5 +131,10 @@ public class BoardManager : MonoBehaviour
         }
         possibleSpaceHighlights.Clear();
         possibleEatHighlights.Clear();
+    }
+
+    public void isCheckmate()
+    {
+        
     }
 }
