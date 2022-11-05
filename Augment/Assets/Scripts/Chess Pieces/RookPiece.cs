@@ -22,22 +22,58 @@ public class RookPiece : ChessPiece
         // Get all spaces to right
         for (int i = coord.x + 1; i < GameManager.Instance.board.getWidth(); i++)
         {
-            possibleSpaces.Add(new Vector2Int(i, coord.y));
+            if (GameManager.Instance.board.isValidMoveSpace(i, coord.y)) {
+                possibleSpaces.Add(new Vector2Int(i, coord.y));
+            }
+            else if (CheckIfCanEat(i, coord.y)) {
+                possibleEats.Add(new Vector2Int(i, coord.y));
+                break;
+            }
+            else {
+                break;
+            }
         }
         // Get all spaces to left
         for (int i = coord.x - 1; i >= 0; i--)
         {
-            possibleSpaces.Add(new Vector2Int(i, coord.y));
+            if (GameManager.Instance.board.isValidMoveSpace(i, coord.y)) {
+                possibleSpaces.Add(new Vector2Int(i, coord.y));
+            }
+            else if (CheckIfCanEat(i, coord.y)) {
+                possibleEats.Add(new Vector2Int(i, coord.y));
+                break;
+            }
+            else {
+                break;
+            }
         }
         // Get all spaces up
         for (int i = coord.y + 1; i < GameManager.Instance.board.getHeight(); i++)
         {
-            possibleSpaces.Add(new Vector2Int(coord.x, i));
+            if (GameManager.Instance.board.isValidMoveSpace(coord.x, i)) {
+                possibleSpaces.Add(new Vector2Int(coord.x, i));
+            }
+            else if (CheckIfCanEat(coord.x, i)) {
+                possibleEats.Add(new Vector2Int(coord.x, i));
+                break;
+            }
+            else {
+                break;
+            }
         }
         // Get all spaces down
         for (int i = coord.y - 1; i >= 0; i--)
         {
-            possibleSpaces.Add(new Vector2Int(coord.x, i));
+            if (GameManager.Instance.board.isValidMoveSpace(coord.x, i)) {
+                possibleSpaces.Add(new Vector2Int(coord.x, i));
+            }
+            else if (CheckIfCanEat(coord.x, i)) {
+                possibleEats.Add(new Vector2Int(coord.x, i));
+                break;
+            }
+            else {
+                break;
+            }
         }
     }
 }
