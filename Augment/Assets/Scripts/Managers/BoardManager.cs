@@ -7,8 +7,8 @@ public class BoardManager : MonoBehaviour
     public GameObject selectedPieceHighlighter;
     public GameObject possibleSpaceHighlighter;
     public GameObject possibleEatHighlighter;
-    public GameObject player1;
-    public GameObject player2; 
+    public Player player1;
+    public Player player2; 
 
     private ChessBoard board;
     private List<GameObject> possibleSpaceHighlights;
@@ -133,8 +133,19 @@ public class BoardManager : MonoBehaviour
         possibleEatHighlights.Clear();
     }
 
-    public void isCheckmate()
+    public void isCheckThreatened(Vector2Int vec, Player player)
     {
-        
+        Debug.Log(vec);
+        foreach (ChessPiece piece in player.player)
+        {
+            piece.GetPossibleSpaces();
+            foreach(Vector2Int matt in piece.possibleEats)
+            {
+                if ( vec == matt )
+                {
+                    Debug.Log("matt is checked");
+                }
+            }
+        }
     }
 }

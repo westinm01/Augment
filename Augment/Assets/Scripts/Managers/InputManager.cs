@@ -9,6 +9,8 @@ public enum InputState{
 public class InputManager : MonoBehaviour
 {
     public GameObject currSelected;
+    public Player player1;
+    public Player player2;
     private bool blackTurn;
 
     [SerializeField]
@@ -107,6 +109,12 @@ public class InputManager : MonoBehaviour
                             //Vector3 pos = new Vector3(tempSelected.transform.position.x, -tempSelected.transform.position.y, 0);
                             //GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), pos);
                             GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
+                            if (blackTurn) {
+                                player1.mattIsSuperCheckedSuperDuperMattFunction();
+                            }
+                            else {
+                                player2.mattIsSuperCheckedSuperDuperMattFunction();
+                            }
                             state = InputState.Wait;
                             //changes blackTurn boolean to change the players
                             if ( blackTurn )
