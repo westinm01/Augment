@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedPieceHighlighter: {fileID: 1016504711646125471}
+  possibleSpaceHighlighter: {fileID: 2652722786965267460, guid: f4030155c57063c419f8b2744473828c, type: 3}
 --- !u!114 &1016504711927523080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,3 +159,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currSelected: {fileID: 0}
+  state: 0
