@@ -207,7 +207,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1431893139}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.36569217
+  m_Size: 0.479592
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1857,6 +1857,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1917622946795163638, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622946795163638, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622946795163641, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7569eb8c3439aa34db440042a881c4b4, type: 3}
     - target: {fileID: 2068229041836727091, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_text
       value: 1000
