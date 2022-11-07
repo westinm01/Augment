@@ -668,6 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c977182cc37984a8e91920af3a0506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTeam: 0
   player:
   - {fileID: 835949296}
   - {fileID: 149739460}
@@ -1056,11 +1057,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8257740226168760996, guid: 53b7397e73d5754428b922d3db80beaf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.0705338
+      value: 3.05
       objectReference: {fileID: 0}
     - target: {fileID: 8257740226168760996, guid: 53b7397e73d5754428b922d3db80beaf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.779308
+      value: -0.81
       objectReference: {fileID: 0}
     - target: {fileID: 8257740226168760996, guid: 53b7397e73d5754428b922d3db80beaf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1695,11 +1696,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7200692150030271499, guid: fa07661cc1978f94d8e30a2127548a32, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.0705338
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 7200692150030271499, guid: fa07661cc1978f94d8e30a2127548a32, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2206922
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7200692150030271499, guid: fa07661cc1978f94d8e30a2127548a32, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1769,11 +1770,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3110446998470711208, guid: 0e005e2a03dc63c45b3542c28fb65554, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0705336
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: 3110446998470711208, guid: 0e005e2a03dc63c45b3542c28fb65554, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2206922
+      value: 2.22
       objectReference: {fileID: 0}
     - target: {fileID: 3110446998470711208, guid: 0e005e2a03dc63c45b3542c28fb65554, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1934,6 +1935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c977182cc37984a8e91920af3a0506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTeam: 0
   player:
   - {fileID: 1039569588}
   - {fileID: 2144649564}
@@ -2066,6 +2068,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1016504711927523080, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: player1
+      value: 
+      objectReference: {fileID: 1515583773}
+    - target: {fileID: 1016504711927523080, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: player2
+      value: 
+      objectReference: {fileID: 769687991}
     - target: {fileID: 1016504711927523081, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2113,11 +2123,11 @@ PrefabInstance:
     - target: {fileID: 1016504711927523083, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
       propertyPath: player1
       value: 
-      objectReference: {fileID: 1515583772}
+      objectReference: {fileID: 1515583773}
     - target: {fileID: 1016504711927523083, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
       propertyPath: player2
       value: 
-      objectReference: {fileID: 769687990}
+      objectReference: {fileID: 769687991}
     - target: {fileID: 1016504711927523083, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
       propertyPath: possibleEatHighlighter
       value: 

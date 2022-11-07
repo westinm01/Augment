@@ -111,9 +111,11 @@ public class InputManager : MonoBehaviour
                             GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
                             if (blackTurn) {
                                 player1.mattIsSuperCheckedSuperDuperMattFunction();
+                                player1.mattWinsTheGame();
                             }
                             else {
                                 player2.mattIsSuperCheckedSuperDuperMattFunction();
+                                player2.mattWinsTheGame();
                             }
                             state = InputState.Wait;
                             //changes blackTurn boolean to change the players
