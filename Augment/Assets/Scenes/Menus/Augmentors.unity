@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1484645945}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.09740916
+  m_Size: 0.09740917
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1910,7 +1910,7 @@ PrefabInstance:
     - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7569eb8c3439aa34db440042a881c4b4, type: 3}
+      objectReference: {fileID: 21300000, guid: 7f39266c81484df42a9ce4e3ab07d9a6, type: 3}
     - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -10
@@ -2344,7 +2344,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 220706532}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.42871666
+  m_Size: 0.44538453
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
