@@ -9,19 +9,10 @@ public enum InputState{
 public class InputManager : MonoBehaviour
 {
     public GameObject currSelected;
-    public Player player1;
-    public Player player2;
-    private bool blackTurn;
 
     [SerializeField]
     private InputState state = InputState.Wait;
     private Vector3 initialPos;
-
-    void Awake()
-    {   
-        //set boolean variable to true if it is black's turn
-        blackTurn = true;
-    }
 
     void Update()
     {
@@ -33,22 +24,17 @@ public class InputManager : MonoBehaviour
                     Touch t = Input.GetTouch(0);        // Get first touch
                     if (t.phase == TouchPhase.Began)    // Check if first touch is start of touch
                     {
-                        currSelected = GetTouchedPiece(t.position);      // Check if touch was on a piece
+                        GameObject tempSelected = GetTouchedPiece(t.position);      // Check if touch was on a piece
+                        
                         //Check if the selected piece is a chess piece and gets the piece's ChessPiece component to check which team and if it is black's turn
-                        if (currSelected != null && currSelected.tag == "ChessPiece" && currSelected.GetComponent<ChessPiece>().team == false && blackTurn)
+                        if (tempSelected != null && tempSelected.tag == "ChessPiece")
                         {
-                            GameManager.Instance.board.HighlightPiece(currSelected);
-                            GameManager.Instance.board.HighlightPossibleMoves(currSelected.GetComponent<ChessPiece>());
-                            state = InputState.TouchHold;
-                            initialPos = currSelected.transform.position;
-                        }
-                        //white turn's check
-                        else if ( currSelected != null && currSelected.tag == "ChessPiece" && currSelected.GetComponent<ChessPiece>().team == true && !blackTurn)
-                        {
-                            GameManager.Instance.board.HighlightPiece(currSelected);
-                            GameManager.Instance.board.HighlightPossibleMoves(currSelected.GetComponent<ChessPiece>());
-                            state = InputState.TouchHold;
-                            initialPos = currSelected.transform.position;
+                            // If selected piece matches current player's turn
+                            // if team == false, then black turn, (false != true) = true
+                            // if team == true, then white turn, (true != false) = true
+                            if (tempSelected.GetComponent<ChessPiece>().team == GameManager.Instance.GetCurrentPlayer().playerTeam) {
+                                SelectPiece(tempSelected);
+                            }
                         }
                     }
                 }
@@ -64,19 +50,16 @@ public class InputManager : MonoBehaviour
                     {
                         Debug.Log("Released");
                         GameObject tempSelected = GetTouchedPiece(t.position);      // Check if touch was on a piece
-                        currSelected.transform.position = initialPos;
                         
                         // if the player let go on top of a possible space
                         if (tempSelected != null && tempSelected.tag == "PossibleSpace")
                         {
                             // Move the piece to the empty space
-                            GameManager.Instance.board.UnHighlightPieces();
-                            int newX = (int)tempSelected.transform.position.x;
-                            int newY = (int)tempSelected.transform.position.y;
-                            GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
-                            state = InputState.Wait;
+                            MovePiece(tempSelected.transform.position);
                         }
                         else {
+                            // Released over empty space, keep highlight
+                            currSelected.transform.position = initialPos;
                             state = InputState.TouchRelease;
                         }
                     }
@@ -91,45 +74,18 @@ public class InputManager : MonoBehaviour
 
                     if (tempSelected != null && tempSelected.tag == "ChessPiece")
                     {
-                        GameManager.Instance.board.UnHighlightPieces();
-                        currSelected = tempSelected;
-                        GameManager.Instance.board.HighlightPiece(currSelected);
-                        GameManager.Instance.board.HighlightPossibleMoves(currSelected.GetComponent<ChessPiece>());
-                        state = InputState.TouchHold;
-                        initialPos = currSelected.transform.position;          
+                        SelectPiece(tempSelected);
                     }
                     else if (t.phase == TouchPhase.Ended)    // Check if first touch is end of touch
                     {
-                        GameManager.Instance.board.UnHighlightPieces();
                         if (tempSelected != null && tempSelected.tag == "PossibleSpace")
                         {
-                            //Debug.Log("possible space");
-                            int newX = (int)tempSelected.transform.position.x;
-                            int newY = (int)tempSelected.transform.position.y;
-                            //Vector3 pos = new Vector3(tempSelected.transform.position.x, -tempSelected.transform.position.y, 0);
-                            //GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), pos);
-                            GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
-                            if (blackTurn) {
-                                player1.mattIsSuperCheckedSuperDuperMattFunction();
-                                player1.mattWinsTheGame();
-                            }
-                            else {
-                                player2.mattIsSuperCheckedSuperDuperMattFunction();
-                                player2.mattWinsTheGame();
-                            }
-                            state = InputState.Wait;
-                            //changes blackTurn boolean to change the players
-                            if ( blackTurn )
-                            {
-                                blackTurn = false;
-                            }
-                            else
-                            {
-                                blackTurn = true;
-                            }
+                            MovePiece(tempSelected.transform.position);
                         }
                         else
                         {
+                            // Touched an empty space, go back to wait state and unhighlight
+                            GameManager.Instance.board.UnHighlightPieces();
                             state = InputState.Wait;
                         }
                     }
@@ -138,6 +94,10 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Returns a piece if a player touched one
+    /// Returns null if player touched empty space/non piece
+    /// </summary>
     private GameObject GetTouchedPiece(Vector3 touchPos)
     {
         Vector3 tPos = Camera.main.ScreenToWorldPoint(touchPos);
@@ -148,5 +108,40 @@ public class InputManager : MonoBehaviour
             return raycast.transform.gameObject;                // Set currSelected to touched piece
         }
         return null;
+    }
+
+    /// <summary>
+    /// Highlights a piece and moves to touchHold state
+    /// </summary>
+    private void SelectPiece(GameObject tempSelected) {
+        currSelected = tempSelected;
+        initialPos = currSelected.transform.position;      
+
+        GameManager.Instance.board.UnHighlightPieces();
+        GameManager.Instance.board.HighlightPiece(currSelected);
+        GameManager.Instance.board.HighlightPossibleMoves(currSelected.GetComponent<ChessPiece>());
+
+        state = InputState.TouchHold;
+    }
+
+    /// <summary>
+    /// Calls boardManager.movePiece and switch player turns
+    /// </summmary>
+    private void MovePiece(Vector3 newPos) {
+        int newX = (int) newPos.x;
+        int newY = (int) newPos.y;
+
+        GameManager.Instance.board.UnHighlightPieces();
+        GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
+        
+        // Check if opposing player is now in check
+        Player enemyPlayer = GameManager.Instance.GetEnemyPlayer(GameManager.Instance.GetCurrentPlayer());
+        enemyPlayer.mattIsSuperCheckedSuperDuperMattFunction();
+        enemyPlayer.mattWinsTheGame();
+
+        currSelected = null;
+        GameManager.Instance.SwitchTeams();
+        
+        state = InputState.Wait;
     }
 }

@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTeam: 0
-  player: []
+  playerPieces: []
 --- !u!4 &1179473133
 Transform:
   m_ObjectHideFlags: 0
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTeam: 1
-  player: []
+  playerPieces: []
 --- !u!4 &1468011884
 Transform:
   m_ObjectHideFlags: 0
@@ -275,6 +275,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: blackPlayer
+      value: 
+      objectReference: {fileID: 1179473132}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: whitePlayer
+      value: 
+      objectReference: {fileID: 1468011883}
     - target: {fileID: 1016504711927523083, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
       propertyPath: player1
       value: 

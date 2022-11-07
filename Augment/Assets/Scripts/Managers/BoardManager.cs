@@ -7,8 +7,6 @@ public class BoardManager : MonoBehaviour
     public GameObject selectedPieceHighlighter;
     public GameObject possibleSpaceHighlighter;
     public GameObject possibleEatHighlighter;
-    public Player player1;
-    public Player player2; 
 
     private ChessBoard board;
     private List<GameObject> possibleSpaceHighlights;
@@ -81,7 +79,6 @@ public class BoardManager : MonoBehaviour
         piece.transform.position = new Vector3(newX, newY, 0);
 
         ChessPiece tempPiece = GetChessPiece(newX, -newY);
-        Debug.Log(tempPiece);
         if (tempPiece != null && tempPiece.team != piece.team) {
             // Eat piece
             Debug.Log("Eating piece " + tempPiece);
@@ -133,19 +130,30 @@ public class BoardManager : MonoBehaviour
         possibleEatHighlights.Clear();
     }
 
-    public void isCheckThreatened(Vector2Int vec, Player player)
+    public ChessPiece isCheckThreatened(Vector2Int vec, Player enemyPlayer)
     {
-        Debug.Log(vec);
-        foreach (ChessPiece piece in player.player)
+        Debug.Log("Checking if tile " + vec + " is threatened");
+        Debug.Log(enemyPlayer);
+        foreach (ChessPiece piece in enemyPlayer.playerPieces)
         {
             piece.GetPossibleSpaces();
-            foreach(Vector2Int matt in piece.possibleEats)
+            foreach (Vector2Int matt in piece.possibleEats)
             {
                 if ( vec == matt )
                 {
                     Debug.Log("matt is checked");
+                    return piece;
+                }
+            }
+
+            foreach (Vector2 garrick in piece.possibleSpaces) {
+                if (vec == garrick) {
+                    Debug.Log("garrick is checked");
+                    return piece;
                 }
             }
         }
+        
+        return null;
     }
 }
