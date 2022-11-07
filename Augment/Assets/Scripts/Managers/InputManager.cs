@@ -16,6 +16,12 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
+        AIPlayer currAI;
+        if (GameManager.Instance.GetCurrentPlayer().TryGetComponent<AIPlayer>(out currAI)) {
+            currAI.MakeMove();
+        }
+
+
         switch (state)
         {
             case InputState.Wait:
