@@ -18,39 +18,47 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void mattIsSuperCheckedSuperDuperMattFunction()
-    {
-        // Find the king piece
-        foreach (ChessPiece piece in playerPieces)
-        {
-            KingPiece king;
-            if ( piece.TryGetComponent<KingPiece>(out king) )
-            {
-                //Debug.Log("Garrick is cool");
-                piece.GetPossibleSpaces();
-                // King piece found, check if its threatened
-                GameManager.Instance.board.isCheckThreatened(piece.coord, GameManager.Instance.GetEnemyPlayer(this));
-                return;
-            }
+    public void UpdatePossibleMoves() {
+        foreach (ChessPiece piece in playerPieces) {
+            piece.GetPossibleSpaces();
         }
     }
 
-    public void mattWinsTheGame()
+    public void mattIsSuperCheckedSuperDuperMattFunction()
     {
-        foreach (ChessPiece piece in playerPieces)
+        // Find the king piece
+        KingPiece king = GetKingPiece();
+        //Debug.Log("Garrick is cool");
+
+        // King piece found, check if its threatened
+        GameManager.Instance.board.isCheckThreatened(king.coord, GameManager.Instance.GetEnemyPlayer(this));
+        return;
+    }
+
+    public bool mattWinsTheGame()
+    {
+        KingPiece king = GetKingPiece();
+        //Debug.Log("Matt wins the Game");
+        foreach(Vector2Int vec in king.possibleSpaces)
         {
-            KingPiece king;
-            if ( piece.TryGetComponent<KingPiece>(out king) )
-            {
-                //Debug.Log("Matt wins the Game");
-                piece.GetPossibleSpaces();
-                foreach(Vector2Int vec in piece.possibleSpaces)
-                {
-                    GameManager.Instance.board.isCheckThreatened(vec, GameManager.Instance.GetEnemyPlayer(this));
-                    return;
-                }
+            if (GameManager.Instance.board.isCheckThreatened(vec, GameManager.Instance.GetEnemyPlayer(this)) == null){
+                return false;
             }
         }
+
+        Debug.Log("CHECKMATE");
+        return true;
+    }
+
+    private KingPiece GetKingPiece() {
+        foreach (ChessPiece piece in playerPieces) {
+            KingPiece king;
+            if ( piece.TryGetComponent<KingPiece>(out king) ) {
+                return king;
+            }
+        }
+        
+        return null;
     }
 
 }

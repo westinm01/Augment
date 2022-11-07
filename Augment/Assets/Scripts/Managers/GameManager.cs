@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         currPlayer = whitePlayer;
+        whitePlayer.UpdatePossibleMoves();
+        blackPlayer.UpdatePossibleMoves();
     }
 
     // Update is called once per frame
@@ -54,5 +56,8 @@ public class GameManager : MonoBehaviour
         else {
             currPlayer = whitePlayer;
         }
+
+        whitePlayer.UpdatePossibleMoves();
+        blackPlayer.UpdatePossibleMoves();
     }
 }
