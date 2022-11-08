@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1484645945}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.09740917
+  m_Size: 0.09740916
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2344,7 +2344,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 220706532}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.44538453
+  m_Size: 0.44538447
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2678,16 +2678,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.24056602
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.910154
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Color.r
-      value: 0.88925934
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a516dcbcaf65aa8418f5ab217d13b87d, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
