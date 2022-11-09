@@ -22,13 +22,18 @@ public class KingPiece : ChessPiece
         {
             int newX = coord.x + vec.x;
             int newY = coord.y + vec.y;
-            if (GameManager.Instance.board.isValidMoveSpace(newX, newY))
-            {
-                possibleSpaces.Add(new Vector2Int(newX, newY));
-            }
-            else if (CheckIfCanEat(newX, newY))
-            {
-                possibleEats.Add(new Vector2Int(newX, newY));
+            Vector2Int nextMove = new Vector2Int(newX, newY);
+            Player enemyPlayer = GameManager.Instance.GetPlayer(!this.team);
+
+            if (!GameManager.Instance.board.isCheckThreatened(nextMove, enemyPlayer)) {
+                if (GameManager.Instance.board.isValidMoveSpace(newX, newY))
+                {
+                    possibleSpaces.Add(nextMove);
+                }
+                else if (CheckIfCanEat(newX, newY))
+                {
+                    possibleEats.Add(nextMove);
+                }
             }
         }
     }

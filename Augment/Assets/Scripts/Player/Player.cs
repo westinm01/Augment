@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public bool playerTeam;
+    public bool inCheck;
     public List<ChessPiece> playerPieces;
 
     void Start() {
@@ -33,7 +34,9 @@ public class Player : MonoBehaviour
         //Debug.Log("Garrick is cool");
 
         // King piece found, check if its threatened
-        return GameManager.Instance.board.isCheckThreatened(king.coord, enemyPlayer);
+        ChessPiece threateningPiece = GameManager.Instance.board.isCheckThreatened(king.coord, enemyPlayer);
+        inCheck = threateningPiece != null;
+        return threateningPiece;
     }
 
     public bool mattWinsTheGame()

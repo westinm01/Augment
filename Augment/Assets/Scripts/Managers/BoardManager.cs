@@ -156,7 +156,6 @@ public class BoardManager : MonoBehaviour
         // Debug.Log("Checking if tile " + vec + " is threatened");
         foreach (ChessPiece piece in enemyPlayer.playerPieces)
         {
-            piece.GetPossibleSpaces();
             foreach (Vector2Int matt in piece.possibleEats)
             {
                 if ( vec == matt )
