@@ -24,24 +24,26 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void mattIsSuperCheckedSuperDuperMattFunction()
+    public ChessPiece mattIsSuperCheckedSuperDuperMattFunction()
     {
         // Find the king piece
         KingPiece king = GetKingPiece();
+        Player enemyPlayer = GameManager.Instance.GetPlayer(!this.playerTeam);
+
         //Debug.Log("Garrick is cool");
 
         // King piece found, check if its threatened
-        GameManager.Instance.board.isCheckThreatened(king.coord, GameManager.Instance.GetEnemyPlayer(this));
-        return;
+        return GameManager.Instance.board.isCheckThreatened(king.coord, enemyPlayer);
     }
 
     public bool mattWinsTheGame()
     {
         KingPiece king = GetKingPiece();
+        Player enemyPlayer = GameManager.Instance.GetPlayer(!this.playerTeam);
         //Debug.Log("Matt wins the Game");
         foreach(Vector2Int vec in king.possibleSpaces)
         {
-            if (GameManager.Instance.board.isCheckThreatened(vec, GameManager.Instance.GetEnemyPlayer(this)) == null){
+            if (GameManager.Instance.board.isCheckThreatened(vec, enemyPlayer) == null){
                 return false;
             }
         }

@@ -74,6 +74,10 @@ public class BoardManager : MonoBehaviour
         board.AddPiece(piece, row, col);
     }
 
+    /// <summary>
+    /// Moves piece to global coordinates newX and newY
+    /// NOTE: newY is negative, function converts it to positive
+    /// </summary>
     public void MovePiece(ChessPiece piece, int newX, int newY)
     {
         piece.transform.position = new Vector3(newX, newY, 0);
@@ -82,12 +86,29 @@ public class BoardManager : MonoBehaviour
         if (tempPiece != null && tempPiece.team != piece.team) {
             // Eat piece
             Debug.Log("Eating piece " + tempPiece);
-            Destroy(tempPiece.gameObject);
+            EatPiece(tempPiece);
         }
         board.MovePiece(piece.coord.x, piece.coord.y, newX, -newY);
         piece.coord.x = newX;
         piece.coord.y = -newY;
-        board.PrintBoard();
+        // board.PrintBoard();
+
+        // Check if opposing player is now in check
+        Player enemyPlayer = GameManager.Instance.GetPlayer(!GameManager.Instance.GetCurrentPlayer().playerTeam);
+        if (enemyPlayer.mattIsSuperCheckedSuperDuperMattFunction()) {
+            if (enemyPlayer.mattWinsTheGame()) {
+                GameManager.Instance.EndGame();
+            }
+        }
+    }
+
+    /// <summary>
+    /// Eats piece in parameter
+    /// </summary>
+    public void EatPiece(ChessPiece piece) {
+        Player piecePlayer = GameManager.Instance.GetPlayer(piece.team);
+        piecePlayer.playerPieces.Remove(piece);
+        Destroy(piece.gameObject);
     }
 
     public void HighlightPossibleMoves(ChessPiece piece)
@@ -132,8 +153,7 @@ public class BoardManager : MonoBehaviour
 
     public ChessPiece isCheckThreatened(Vector2Int vec, Player enemyPlayer)
     {
-        Debug.Log("Checking if tile " + vec + " is threatened");
-        Debug.Log(enemyPlayer);
+        // Debug.Log("Checking if tile " + vec + " is threatened");
         foreach (ChessPiece piece in enemyPlayer.playerPieces)
         {
             piece.GetPossibleSpaces();

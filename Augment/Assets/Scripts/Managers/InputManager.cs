@@ -18,7 +18,10 @@ public class InputManager : MonoBehaviour
     {
         AIPlayer currAI;
         if (GameManager.Instance.GetCurrentPlayer().TryGetComponent<AIPlayer>(out currAI)) {
-            currAI.MakeMove();
+            if (!currAI.isMakingMove) {
+                currAI.StartMove();
+            }
+            return;
         }
 
 
@@ -139,11 +142,6 @@ public class InputManager : MonoBehaviour
 
         GameManager.Instance.board.UnHighlightPieces();
         GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
-        
-        // Check if opposing player is now in check
-        Player enemyPlayer = GameManager.Instance.GetEnemyPlayer(GameManager.Instance.GetCurrentPlayer());
-        enemyPlayer.mattIsSuperCheckedSuperDuperMattFunction();
-        enemyPlayer.mattWinsTheGame();
 
         currSelected = null;
         GameManager.Instance.SwitchTeams();

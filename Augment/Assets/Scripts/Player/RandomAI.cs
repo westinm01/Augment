@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class RandomAI : AIPlayer
 {
-    public override void MakeMove() {
+    public override IEnumerator MakeMove() {
+        yield return new WaitForSeconds(moveDelay);
+
         ChessPiece randPiece = null;
         int randIndex;
 
@@ -31,7 +33,10 @@ public class RandomAI : AIPlayer
             move = possibleMoves[Random.Range(0, possibleMoves.Count)];
         }
 
-        GameManager.Instance.board.MovePiece(randPiece, move.x, move.y);
+        Debug.Log("Moving piece " + randPiece + " to " + move);
+        GameManager.Instance.board.MovePiece(randPiece, move.x, -move.y);
         GameManager.Instance.SwitchTeams();
+
+        isMakingMove = false;
     }
 }

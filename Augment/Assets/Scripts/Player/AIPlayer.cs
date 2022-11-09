@@ -4,5 +4,12 @@ using UnityEngine;
 
 public abstract class AIPlayer : Player
 {
-    public abstract void MakeMove();
+    public float moveDelay;
+    public bool isMakingMove;
+    public abstract IEnumerator MakeMove();
+
+    public void StartMove() {
+        isMakingMove = true;
+        StartCoroutine(MakeMove());
+    }
 }

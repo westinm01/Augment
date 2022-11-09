@@ -40,12 +40,12 @@ public class GameManager : MonoBehaviour
         return currPlayer;
     }
 
-    public Player GetEnemyPlayer(Player friendlyPlayer) {
-        if (whitePlayer == friendlyPlayer) {
-            return blackPlayer;
+    public Player GetPlayer(bool team) {
+        if (team) {
+            return whitePlayer;
         }
         else {
-            return whitePlayer;
+            return blackPlayer;
         }
     }
 
@@ -59,5 +59,8 @@ public class GameManager : MonoBehaviour
 
         whitePlayer.UpdatePossibleMoves();
         blackPlayer.UpdatePossibleMoves();
+    }
+
+    public void EndGame() {
     }
 }
