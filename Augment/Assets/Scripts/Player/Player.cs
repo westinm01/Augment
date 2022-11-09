@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public ChessPiece mattIsSuperCheckedSuperDuperMattFunction()
+    public ChessPiece isInCheck()
     {
         // Find the king piece
         KingPiece king = GetKingPiece();
@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
         return threateningPiece;
     }
 
-    public bool mattWinsTheGame()
+    public bool isInCheckmate()
     {
         KingPiece king = GetKingPiece();
         Player enemyPlayer = GameManager.Instance.GetPlayer(!this.playerTeam);

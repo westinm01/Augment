@@ -95,8 +95,8 @@ public class BoardManager : MonoBehaviour
 
         // Check if opposing player is now in check
         Player enemyPlayer = GameManager.Instance.GetPlayer(!GameManager.Instance.GetCurrentPlayer().playerTeam);
-        if (enemyPlayer.mattIsSuperCheckedSuperDuperMattFunction()) {
-            if (enemyPlayer.mattWinsTheGame()) {
+        if (enemyPlayer.isInCheck()) {
+            if (enemyPlayer.isInCheckmate()) {
                 GameManager.Instance.EndGame();
             }
         }
@@ -156,19 +156,19 @@ public class BoardManager : MonoBehaviour
         // Debug.Log("Checking if tile " + vec + " is threatened");
         foreach (ChessPiece piece in enemyPlayer.playerPieces)
         {
-            foreach (Vector2Int matt in piece.possibleEats)
+            foreach (Vector2Int coord in piece.possibleEats)
             {
-                if ( vec == matt )
+                if ( vec == coord )
                 {
-                    Debug.Log("matt is checked");
                     return piece;
                 }
             }
 
-            foreach (Vector2 garrick in piece.possibleSpaces) {
-                if (vec == garrick) {
-                    Debug.Log("garrick is checked");
-                    return piece;
+            if (piece.GetComponent<PawnPiece>() == null) {
+                foreach (Vector2 coord in piece.possibleSpaces) {
+                    if (vec == coord) {
+                        return piece;
+                    }
                 }
             }
         }

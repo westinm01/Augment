@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTeam: 0
+  inCheck: 0
   playerPieces: []
 --- !u!4 &1179473133
 Transform:
@@ -199,7 +200,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTeam: 0
+  inCheck: 0
   playerPieces: []
+  moveDelay: 1
+  isMakingMove: 0
 --- !u!4 &1193725145
 Transform:
   m_ObjectHideFlags: 0
@@ -245,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTeam: 1
+  inCheck: 0
   playerPieces: []
 --- !u!4 &1468011884
 Transform:
