@@ -7,10 +7,13 @@ public class Player : MonoBehaviour
     public bool playerTeam;
     public bool inCheck;
     public List<ChessPiece> playerPieces;
+    public List<ChessPiece> threateningPieces;
+    public List<Vector2Int> checkPath;
 
     void Start() {
-        GameObject[] pieces = GameObject.FindGameObjectsWithTag("ChessPiece");
+        checkPath = new List<Vector2Int>();
 
+        GameObject[] pieces = GameObject.FindGameObjectsWithTag("ChessPiece");
         foreach (GameObject piece in pieces) {
             ChessPiece cPiece = piece.GetComponent<ChessPiece>();
             if (cPiece.team == playerTeam) {
@@ -25,28 +28,46 @@ public class Player : MonoBehaviour
         }
     }
 
-    public ChessPiece isInCheck()
+    public bool isInCheck()
     {
         // Find the king piece
         KingPiece king = GetKingPiece();
         Player enemyPlayer = GameManager.Instance.GetPlayer(!this.playerTeam);
 
-        //Debug.Log("Garrick is cool");
-
         // King piece found, check if its threatened
-        ChessPiece threateningPiece = GameManager.Instance.board.isCheckThreatened(king.coord, enemyPlayer);
-        inCheck = threateningPiece != null;
-        return threateningPiece;
+        threateningPieces = GameManager.Instance.board.GetThreateningPieces(king.coord, enemyPlayer);
+
+        // Add path from threatening pieces to king to checkPath
+        // Needs to add a path for each threatening piece
+        checkPath.Clear();
+        foreach (ChessPiece piece in threateningPieces) {
+            List<Vector2Int> spacesInbetween = GameManager.Instance.board.GetSpacesInbetween(king.coord, piece.coord);
+            foreach (Vector2Int space in spacesInbetween) {
+                checkPath.Add(space);
+            }
+        }
+
+        inCheck = threateningPieces.Count != 0;
+        return inCheck;
     }
 
     public bool isInCheckmate()
     {
+        // Find the king piece
         KingPiece king = GetKingPiece();
         Player enemyPlayer = GameManager.Instance.GetPlayer(!this.playerTeam);
-        //Debug.Log("Matt wins the Game");
-        foreach(Vector2Int vec in king.possibleSpaces)
-        {
-            if (GameManager.Instance.board.isCheckThreatened(vec, enemyPlayer) == null){
+
+        // Check if all spaces the king can move to are threatened
+        // foreach(Vector2Int vec in king.possibleSpaces)
+        // {
+        //     if (GameManager.Instance.board.GetThreateningPieces(vec, enemyPlayer).Count == 0){
+        //         return false;
+        //     }
+        // }
+
+        // Check if any pieces can move
+        foreach (ChessPiece piece in playerPieces) {
+            if (piece.possibleEats.Count != 0 || piece.possibleSpaces.Count != 0) {
                 return false;
             }
         }

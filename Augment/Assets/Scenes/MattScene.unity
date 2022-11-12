@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1179473132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +155,8 @@ MonoBehaviour:
   playerTeam: 0
   inCheck: 0
   playerPieces: []
+  threateningPieces: []
+  checkPath: []
 --- !u!4 &1179473133
 Transform:
   m_ObjectHideFlags: 0
@@ -186,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1193725144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +204,8 @@ MonoBehaviour:
   playerTeam: 0
   inCheck: 0
   playerPieces: []
+  threateningPieces: []
+  checkPath: []
   moveDelay: 1
   isMakingMove: 0
 --- !u!4 &1193725145
@@ -251,6 +255,8 @@ MonoBehaviour:
   playerTeam: 1
   inCheck: 0
   playerPieces: []
+  threateningPieces: []
+  checkPath: []
 --- !u!4 &1468011884
 Transform:
   m_ObjectHideFlags: 0
@@ -329,7 +335,7 @@ PrefabInstance:
     - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
       propertyPath: blackPlayer
       value: 
-      objectReference: {fileID: 1193725144}
+      objectReference: {fileID: 1179473132}
     - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
       propertyPath: whitePlayer
       value: 

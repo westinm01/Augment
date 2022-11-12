@@ -16,11 +16,14 @@ public class ChessPiece : MonoBehaviour
     public int statusTimer; //number of turns the current status lasts.
     Augmentation pieceAugmentation;
     public int status = 0; //to determine what status it has.
+
+    protected Player thisPlayer;
     
 
     // Start is called before the first frame update
     public void Start()
     {
+        thisPlayer = GameManager.Instance.GetPlayer(team);
         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
         if (team) {     // piece is white team
             sr.sprite = whiteSprite;
@@ -63,7 +66,25 @@ public class ChessPiece : MonoBehaviour
         else {
             return false;
         }
-        
+    }
+
+    protected bool CanBlock(Vector2Int possibleMove, List<Vector2Int> vector2Ints) {
+        foreach (Vector2Int v in vector2Ints) {
+            if (possibleMove == v) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    ///  If player is in check, piece should only be able to move in a space that blocks the check
+    /// </summary>
+    /// <param name="possibleMove"> Coordinate to move to</param>
+    /// <returns></returns>
+    protected bool ValidMoveInCheck(Vector2Int possibleMove) {
+        return !thisPlayer.inCheck || CanBlock(possibleMove, thisPlayer.checkPath);
     }
 
     //Eating & CheckMate will be done by a game manager

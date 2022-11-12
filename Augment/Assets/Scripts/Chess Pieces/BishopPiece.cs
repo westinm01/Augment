@@ -57,6 +57,7 @@ public class BishopPiece : ChessPiece
     {
         int xCheck = coord.x + xDir * distance;
         int yCheck = coord.y + yDir * distance;
+        Vector2Int nextMove = new Vector2Int(xCheck, yCheck);
 
         //bool validX = (xCheck >= 0) && (xCheck < GameManager.Instance.board.getWidth());
         //bool validY = (yCheck >= 0) && (yCheck < GameManager.Instance.board.getHeight());
@@ -65,12 +66,14 @@ public class BishopPiece : ChessPiece
         if (GameManager.Instance.board.isValidMoveSpace(xCheck, yCheck))
         {
             // Spot is open, add it to possible spaces
-            possibleSpaces.Add(new Vector2Int(xCheck, yCheck));
+            if (ValidMoveInCheck(nextMove)) {
+                possibleSpaces.Add(nextMove);
+            }
             return true;
         }
-        else if (CheckIfCanEat(xCheck, yCheck))
+        else if (CheckIfCanEat(xCheck, yCheck) && ValidMoveInCheck(nextMove))
         {
-            possibleEats.Add(new Vector2Int(xCheck, yCheck));
+            possibleEats.Add(nextMove);
             return false;
         }
         else

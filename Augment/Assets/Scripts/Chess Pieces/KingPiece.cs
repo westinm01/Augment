@@ -12,7 +12,6 @@ public class KingPiece : ChessPiece
                                                                         new Vector2Int(1, 1), 
                                                                         new Vector2Int(1, -1),
                                                                         new Vector2Int(1, 0) };
-    private float direction = 1; 
 
     // Update is called once per frame
     public override void GetPossibleSpaces()
@@ -25,7 +24,8 @@ public class KingPiece : ChessPiece
             Vector2Int nextMove = new Vector2Int(newX, newY);
             Player enemyPlayer = GameManager.Instance.GetPlayer(!this.team);
 
-            if (!GameManager.Instance.board.isCheckThreatened(nextMove, enemyPlayer)) {
+            // Prevents king from moving to threatened tile
+            if (GameManager.Instance.board.GetThreateningPieces(nextMove, enemyPlayer).Count < 0) {
                 if (GameManager.Instance.board.isValidMoveSpace(newX, newY))
                 {
                     possibleSpaces.Add(nextMove);

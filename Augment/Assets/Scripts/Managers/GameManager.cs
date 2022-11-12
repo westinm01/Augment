@@ -49,6 +49,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void UpdateAllPossibleMoves() {
+        whitePlayer.UpdatePossibleMoves();
+        blackPlayer.UpdatePossibleMoves();
+    }
+
     public void SwitchTeams() {
         if (whitePlayer == currPlayer) {
             currPlayer = blackPlayer;
@@ -56,9 +61,6 @@ public class GameManager : MonoBehaviour
         else {
             currPlayer = whitePlayer;
         }
-
-        whitePlayer.UpdatePossibleMoves();
-        blackPlayer.UpdatePossibleMoves();
     }
 
     public void EndGame() {

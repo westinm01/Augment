@@ -68,7 +68,7 @@ public class BoardManager : MonoBehaviour
             return true;
         }
     }
-
+    
     public void AddPiece(ChessPiece piece, int row, int col)
     {
         board.AddPiece(piece, row, col);
@@ -80,22 +80,32 @@ public class BoardManager : MonoBehaviour
     /// </summary>
     public void MovePiece(ChessPiece piece, int newX, int newY)
     {
-        piece.transform.position = new Vector3(newX, newY, 0);
-
+        // Check if moving piece eats another piece
         ChessPiece tempPiece = GetChessPiece(newX, -newY);
         if (tempPiece != null && tempPiece.team != piece.team) {
-            // Eat piece
             Debug.Log("Eating piece " + tempPiece);
             EatPiece(tempPiece);
         }
+
+        // Move the backend values in the board array
         board.MovePiece(piece.coord.x, piece.coord.y, newX, -newY);
+
+        // Update new coordinates
         piece.coord.x = newX;
         piece.coord.y = -newY;
-        // board.PrintBoard();
+
+        // Update physical location in scene
+        piece.transform.position = new Vector3(newX, newY, 0);
+
+        // Update moves for all pieces
+        GameManager.Instance.UpdateAllPossibleMoves();
 
         // Check if opposing player is now in check
         Player enemyPlayer = GameManager.Instance.GetPlayer(!GameManager.Instance.GetCurrentPlayer().playerTeam);
         if (enemyPlayer.isInCheck()) {
+            
+            // Update the player moves again to only allow moves that escape check
+            enemyPlayer.UpdatePossibleMoves();
             if (enemyPlayer.isInCheckmate()) {
                 GameManager.Instance.EndGame();
             }
@@ -151,8 +161,16 @@ public class BoardManager : MonoBehaviour
         possibleEatHighlights.Clear();
     }
 
-    public ChessPiece isCheckThreatened(Vector2Int vec, Player enemyPlayer)
+    /// <summary>
+    /// Gets a list of all pieces on the enemy team that can attack a square
+    /// </summary>
+    /// <param name="vec"> Square to be checked </param>
+    /// <param name="enemyPlayer"> Team of the enemy pieces that can attack </param>
+    /// <returns> List of pieces that are able to attack the square </returns>
+    public List<ChessPiece> GetThreateningPieces(Vector2Int vec, Player enemyPlayer)
     {
+        List<ChessPiece> attackingPieces = new List<ChessPiece>();
+
         // Debug.Log("Checking if tile " + vec + " is threatened");
         foreach (ChessPiece piece in enemyPlayer.playerPieces)
         {
@@ -160,19 +178,56 @@ public class BoardManager : MonoBehaviour
             {
                 if ( vec == coord )
                 {
-                    return piece;
+                    attackingPieces.Add(piece);
                 }
             }
 
+            // Pawns are the only pieces that can't eat where they move
             if (piece.GetComponent<PawnPiece>() == null) {
                 foreach (Vector2 coord in piece.possibleSpaces) {
                     if (vec == coord) {
-                        return piece;
+                        attackingPieces.Add(piece);
                     }
                 }
             }
         }
         
-        return null;
+        return attackingPieces;
+    }
+
+    public List<Vector2Int> GetSpacesInbetween(Vector2Int pos1, Vector2Int pos2) {
+        List<Vector2Int> spaces = new List<Vector2Int>();
+
+        int xPos = pos1.x;
+        int yPos = pos1.y;
+        int xDir = 0;
+        int yDir = 0;
+
+        // Moving from pos1 to pos2
+        if (pos2.x > xPos) {
+            xDir = 1;
+        }
+        else if (pos2.x < xPos) {
+            xDir = -1;
+        }
+
+        if (pos2.y > yPos) {
+            yDir = 1;
+        }
+        else if (pos2.y < yPos) {
+            yDir = -1;
+        }
+
+        xPos += xDir;
+        yPos += yDir;
+        while (xPos != pos2.x && yPos != pos2.y && InBounds(yPos, xPos)) {
+            Vector2Int newSpace = new Vector2Int(xPos, yPos);
+            spaces.Add(newSpace);
+
+            xPos += xDir;
+            yPos += yDir;
+        }
+
+        return spaces;
     }
 }

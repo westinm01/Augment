@@ -22,13 +22,14 @@ public class KnightPiece : ChessPiece
         {
             int newX = coord.x + vec.x;
             int newY = coord.y + vec.y;
-            if (GameManager.Instance.board.isValidMoveSpace(newX, newY))
+            Vector2Int nextMove = new Vector2Int(newX, newY);
+            if (GameManager.Instance.board.isValidMoveSpace(newX, newY) && ValidMoveInCheck(nextMove))
             {
-                possibleSpaces.Add(new Vector2Int(newX, newY));
+                possibleSpaces.Add(nextMove);
             }
-            else if (CheckIfCanEat(newX, newY))
+            else if (CheckIfCanEat(newX, newY) && ValidMoveInCheck(nextMove))
             {
-                possibleEats.Add(new Vector2Int(newX, newY));
+                possibleEats.Add(nextMove);
             }
         }
         // int x, y;
