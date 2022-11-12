@@ -171,7 +171,7 @@ public class BoardManager : MonoBehaviour
     {
         List<ChessPiece> attackingPieces = new List<ChessPiece>();
 
-        // Debug.Log("Checking if tile " + vec + " is threatened");
+        Debug.Log("Checking if tile " + vec + " is threatened");
         foreach (ChessPiece piece in enemyPlayer.playerPieces)
         {
             foreach (Vector2Int coord in piece.possibleEats)

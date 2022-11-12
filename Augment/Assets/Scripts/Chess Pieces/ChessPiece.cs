@@ -84,7 +84,14 @@ public class ChessPiece : MonoBehaviour
     /// <param name="possibleMove"> Coordinate to move to</param>
     /// <returns></returns>
     protected bool ValidMoveInCheck(Vector2Int possibleMove) {
-        return !thisPlayer.inCheck || CanBlock(possibleMove, thisPlayer.checkPath);
+        bool canEat = false;
+        foreach (ChessPiece threateningPiece in thisPlayer.threateningPieces) {
+            if (possibleMove == threateningPiece.coord) {
+                canEat = true;
+                break;
+            }
+        }
+        return !thisPlayer.inCheck || CanBlock(possibleMove, thisPlayer.checkPath) || canEat;
     }
 
     //Eating & CheckMate will be done by a game manager
