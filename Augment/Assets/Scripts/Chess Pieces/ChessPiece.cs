@@ -58,6 +58,37 @@ public class ChessPiece : MonoBehaviour
         possibleEats.Clear();
     }
 
+    /// <summary>
+    /// Calculates if a piece can attack a square or not
+    /// </summary>
+    /// <param name="space"> square to check </param>
+    /// <returns></returns>
+    public virtual bool CanAttack(Vector2Int space) {
+        foreach (Vector2Int possibleMove in possibleSpaces) {
+            if (space == possibleMove) {
+                return true;
+            }
+        }
+
+        foreach (Vector2Int possibleEat in possibleEats) {
+            if (space == possibleEat) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public virtual bool IsProtected() {
+        foreach (ChessPiece piece in thisPlayer.playerPieces) {
+            if (piece.CanAttack(this.coord)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     // Used by king piece to prevent from moving in check
     public virtual bool InPath(Vector2Int possibleMove) {
         return false;

@@ -37,4 +37,13 @@ public class PawnPiece : ChessPiece
             possibleEats.Add(rightDiagonal.coord);
         }
     }
+
+    public override bool CanAttack(Vector2Int space) {
+        int nextY = coord.y - direction;
+
+        Vector2Int leftDiagonal = new Vector2Int(coord.x - 1, nextY);
+        Vector2Int rightDiagonal = new Vector2Int(coord.x + 1, nextY);
+
+        return (space == leftDiagonal || space == rightDiagonal);
+    }
 }

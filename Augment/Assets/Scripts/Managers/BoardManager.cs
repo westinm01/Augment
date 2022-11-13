@@ -171,24 +171,11 @@ public class BoardManager : MonoBehaviour
     {
         List<ChessPiece> attackingPieces = new List<ChessPiece>();
 
-        Debug.Log("Checking if tile " + vec + " is threatened");
+        // Debug.Log("Checking if tile " + vec + " is threatened");
         foreach (ChessPiece piece in enemyPlayer.playerPieces)
         {
-            foreach (Vector2Int coord in piece.possibleEats)
-            {
-                if ( vec == coord )
-                {
-                    attackingPieces.Add(piece);
-                }
-            }
-
-            // Pawns are the only pieces that can't eat where they move
-            if (piece.GetComponent<PawnPiece>() == null) {
-                foreach (Vector2 coord in piece.possibleSpaces) {
-                    if (vec == coord) {
-                        attackingPieces.Add(piece);
-                    }
-                }
+            if (piece.CanAttack(vec)) {
+                attackingPieces.Add(piece);
             }
         }
         

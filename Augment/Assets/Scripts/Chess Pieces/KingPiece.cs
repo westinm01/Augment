@@ -47,6 +47,7 @@ public class KingPiece : ChessPiece
                     }
                     else if (CheckIfCanEat(newX, newY))
                     {
+                        // If the player is in check, prevent the king from moving along the path of the threatening piece
                         bool canMoveBackwardsInCheck = true;
                         if (thisPlayer.inCheck) {
                             foreach (ChessPiece piece in thisPlayer.threateningPieces) {
