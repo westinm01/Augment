@@ -53,6 +53,35 @@ public class BishopPiece : ChessPiece
         }
     }
 
+    public override bool InPath(Vector2Int possibleMove) {
+        int currX = this.coord.x;
+        int currY = this.coord.y;
+
+        Vector2Int topLeft = new Vector2Int(-1, 1);
+        Vector2Int topRight = new Vector2Int(1, 1);
+        Vector2Int botLeft = new Vector2Int(-1, -1);
+        Vector2Int botRight = new Vector2Int(1, -1);
+
+        Vector2Int[] directions = {topLeft, topRight, botLeft, botRight};
+        foreach (Vector2Int direction in directions) {
+            int dist = 1;
+            int nextX = currX + direction.x * dist;
+            int nextY = currY + direction.y * dist;
+
+            while (GameManager.Instance.board.InBounds(nextY, nextX)) {
+                if (possibleMove.x == nextX && possibleMove.y == nextY) {
+                    return true;
+                }
+
+                dist++;
+                nextX = currX + direction.x * dist;
+                nextY = currY + direction.y * dist;
+            }
+        }
+
+        return false;
+    }
+
     private bool CheckAndMovePos(int distance, int xDir, int yDir)
     {
         int xCheck = coord.x + xDir * distance;

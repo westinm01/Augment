@@ -30,11 +30,36 @@ public class KingPiece : ChessPiece
                 if (threatening.Count == 0) {
                     if (GameManager.Instance.board.isValidMoveSpace(newX, newY))
                     {
-                        possibleSpaces.Add(nextMove);
+                        // If the player is in check, prevent the king from moving along the path of the threatening piece
+                        bool canMoveBackwardsInCheck = true;
+                        if (thisPlayer.inCheck) {
+                            foreach (ChessPiece piece in thisPlayer.threateningPieces) {
+                                if (piece.InPath(nextMove)) {
+                                    // Debug.Log("Preventing king from moving to " + nextMove);
+                                    canMoveBackwardsInCheck = false;
+                                }
+                            }
+                        }
+
+                        if (canMoveBackwardsInCheck) {
+                            possibleSpaces.Add(nextMove);
+                        }
                     }
                     else if (CheckIfCanEat(newX, newY))
                     {
-                        possibleEats.Add(nextMove);
+                        bool canMoveBackwardsInCheck = true;
+                        if (thisPlayer.inCheck) {
+                            foreach (ChessPiece piece in thisPlayer.threateningPieces) {
+                                if (piece.InPath(nextMove)) {
+                                    // Debug.Log("Preventing king from moving to " + nextMove);
+                                    canMoveBackwardsInCheck = false;
+                                }
+                            }
+                        }
+
+                        if (canMoveBackwardsInCheck) {
+                            possibleEats.Add(nextMove);
+                        }
                     }
                 }
             }

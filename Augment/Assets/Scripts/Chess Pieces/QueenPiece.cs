@@ -15,16 +15,6 @@ public class QueenPiece : ChessPiece
         // Get all spaces to the right
         for (int i = coord.x + 1; i < GameManager.Instance.board.getWidth(); i++)
         {
-            // if (GameManager.Instance.board.isValidMoveSpace(i, coord.y)) {
-            //     possibleSpaces.Add(new Vector2Int(i, coord.y));
-            // }
-            // else if (CheckIfCanEat(i, coord.y)) {
-            //     possibleEats.Add(new Vector2Int(i, coord.y));
-            //     break;
-            // }
-            // else {
-            //     break;
-            // }
             if (!CheckHorizontalAndVertical(i, coord.y)) {
                 break;
             }
@@ -32,16 +22,6 @@ public class QueenPiece : ChessPiece
         // Get all spaces to left
         for (int i = coord.x - 1; i >= 0; i--)
         {
-            // if (GameManager.Instance.board.isValidMoveSpace(i, coord.y)) {
-            //     possibleSpaces.Add(new Vector2Int(i, coord.y));
-            // }
-            // else if (CheckIfCanEat(i, coord.y)) {
-            //     possibleEats.Add(new Vector2Int(i, coord.y));
-            //     break;
-            // }
-            // else {
-            //     break;
-            // }
             if (!CheckHorizontalAndVertical(i, coord.y)) {
                 break;
             }
@@ -49,16 +29,6 @@ public class QueenPiece : ChessPiece
         // Get all spaces up
         for (int i = coord.y + 1; i < GameManager.Instance.board.getHeight(); i++)
         {
-            // if (GameManager.Instance.board.isValidMoveSpace(coord.x, i)) {
-            //     possibleSpaces.Add(new Vector2Int(coord.x, i));
-            // }
-            // else if (CheckIfCanEat(coord.x, i)) {
-            //     possibleEats.Add(new Vector2Int(coord.x, i));
-            //     break;
-            // }
-            // else {
-            //     break;
-            // }
             if (!CheckHorizontalAndVertical(coord.x, i)) {
                 break;
             }
@@ -66,16 +36,6 @@ public class QueenPiece : ChessPiece
         // Get all spaces down
         for (int i = coord.y - 1; i >= 0; i--)
         {
-            // if (GameManager.Instance.board.isValidMoveSpace(coord.x, i)) {
-            //     possibleSpaces.Add(new Vector2Int(coord.x, i));
-            // }
-            // else if (CheckIfCanEat(coord.x, i)) {
-            //     possibleEats.Add(new Vector2Int(coord.x, i));
-            //     break;
-            // }
-            // else {
-            //     break;
-            // }
             if (!CheckHorizontalAndVertical(coord.x, i)) {
                 break;
             }
@@ -119,6 +79,39 @@ public class QueenPiece : ChessPiece
                 break;
             }
         }
+    }
+
+    public override bool InPath(Vector2Int possibleMove) {
+        int currX = this.coord.x;
+        int currY = this.coord.y;
+
+        if (possibleMove.x == currX || possibleMove.y == currY) {
+            return true;
+        }
+
+        Vector2Int topLeft = new Vector2Int(-1, 1);
+        Vector2Int topRight = new Vector2Int(1, 1);
+        Vector2Int botLeft = new Vector2Int(-1, -1);
+        Vector2Int botRight = new Vector2Int(1, -1);
+
+        Vector2Int[] directions = {topLeft, topRight, botLeft, botRight};
+        foreach (Vector2Int direction in directions) {
+            int dist = 1;
+            int nextX = currX + direction.x * dist;
+            int nextY = currY + direction.y * dist;
+
+            while (GameManager.Instance.board.InBounds(nextY, nextX)) {
+                if (possibleMove.x == nextX && possibleMove.y == nextY) {
+                    return true;
+                }
+
+                dist++;
+                nextX = currX + direction.x * dist;
+                nextY = currY + direction.y * dist;
+            }
+        }
+
+        return false;
     }
 
     private bool CheckAndMovePos(int distance, int xDir, int yDir)

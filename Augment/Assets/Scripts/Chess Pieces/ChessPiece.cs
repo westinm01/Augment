@@ -58,6 +58,11 @@ public class ChessPiece : MonoBehaviour
         possibleEats.Clear();
     }
 
+    // Used by king piece to prevent from moving in check
+    public virtual bool InPath(Vector2Int possibleMove) {
+        return false;
+    }
+
     protected bool CheckIfCanEat(int x, int y) {
         ChessPiece temp = GameManager.Instance.board.GetChessPiece(x, y);
         if (temp != null && temp.team != this.team) {
