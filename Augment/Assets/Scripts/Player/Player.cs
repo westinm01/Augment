@@ -25,8 +25,24 @@ public class Player : MonoBehaviour
             KingPiece king;
             if ( piece.TryGetComponent<KingPiece>(out king) )
             {
-                Debug.Log("Garrick is cool");
+                //Debug.Log("Garrick is cool");
                 GameManager.Instance.board.isCheckThreatened(piece.coord, this.gameObject.GetComponent<Player>());
+            }
+        }
+    }
+
+    public void mattWinsTheGame()
+    {
+        foreach (ChessPiece piece in player)
+        {
+            KingPiece king;
+            if ( piece.TryGetComponent<KingPiece>(out king) )
+            {
+                //Debug.Log("Matt wins the Game");
+                foreach(Vector2Int vec in piece.possibleSpaces)
+                {
+                    GameManager.Instance.board.isCheckThreatened(vec, this.gameObject.GetComponent<Player>());
+                }
             }
         }
     }
