@@ -14,7 +14,7 @@ public class ChessPiece : MonoBehaviour
     public Sprite whiteSprite;
     public bool canJump = false; //setToTrue for Knight.
     public int statusTimer; //number of turns the current status lasts.
-    Augmentor pieceAugmentor;
+    public Augmentor pieceAugmentor;
     public int status = 0; //to determine what status it has.
 
     protected Player thisPlayer;
