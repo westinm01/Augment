@@ -83,7 +83,9 @@ public class InputManager : MonoBehaviour
 
                     if (tempSelected != null && tempSelected.tag == "ChessPiece")
                     {
-                        SelectPiece(tempSelected);
+                        if (tempSelected.GetComponent<ChessPiece>().team == GameManager.Instance.GetCurrentPlayer().playerTeam) {
+                            SelectPiece(tempSelected);
+                        }
                     }
                     else if (t.phase == TouchPhase.Ended)    // Check if first touch is end of touch
                     {
