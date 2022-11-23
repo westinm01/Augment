@@ -32,8 +32,9 @@ public class StatusManager : MonoBehaviour
     {
         for (int i = 0; i < bins.Length; i++)
         {
-            foreach (ChessPiece cp in bins[i])
+            for (int j = 0; j < bins[i].Count; j++)
             {
+                ChessPiece cp = bins[i][j];
                 cp.statusTimer--;
                 if(cp.statusTimer <= 0)
                 {
@@ -43,6 +44,17 @@ public class StatusManager : MonoBehaviour
                     bins[i].Remove(cp);
                 }
             }
+            /*foreach (ChessPiece cp in bins[i])
+            {
+                cp.statusTimer--;
+                if(cp.statusTimer <= 0)
+                {
+                    cp.statusTimer = 0;
+                    cp.status = 0;
+                    ReverseStatus(cp, i);
+                    bins[i].Remove(cp);
+                }
+            }*/
         }
     }
 
