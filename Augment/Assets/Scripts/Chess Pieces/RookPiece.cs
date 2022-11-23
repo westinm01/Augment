@@ -66,6 +66,14 @@ public class RookPiece : ChessPiece
             possibleEats.Add(nextMove);
             return false;
         }
+        else if (CheckIfCanProtect(x, y))
+        {
+            // Spot is on an enemy piece, return false to prevent from moving further
+            if (ValidMoveInCheck(nextMove)) {
+                possibleProtects.Add(new Vector2Int(x, y));
+            }
+            return false;
+        }
         else {
             return false;
         }

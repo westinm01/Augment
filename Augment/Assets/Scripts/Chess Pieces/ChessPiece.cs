@@ -8,6 +8,7 @@ public class ChessPiece : MonoBehaviour
     public Vector2Int coord;
     public List<Vector2Int> possibleSpaces = new List<Vector2Int>(); //calculated at the start of your turn.
     public List<Vector2Int> possibleEats = new List<Vector2Int>(); //calculated at the start of your turn.
+    public List<Vector2Int> possibleProtects = new List<Vector2Int>();
 
     public bool team = true; //true if white, false if black. True by default.
     public Sprite blackSprite;
@@ -56,6 +57,7 @@ public class ChessPiece : MonoBehaviour
     {
         possibleSpaces.Clear();
         possibleEats.Clear();
+        possibleProtects.Clear();
     }
 
     /// <summary>
@@ -81,8 +83,10 @@ public class ChessPiece : MonoBehaviour
 
     public virtual bool IsProtected() {
         foreach (ChessPiece piece in thisPlayer.playerPieces) {
-            if (piece.CanAttack(this.coord)) {
-                return true;
+            foreach (Vector2Int possibleProtect in piece.possibleProtects) {
+                if (possibleProtect == this.coord) {
+                    return true;
+                }
             }
         }
 
@@ -97,6 +101,16 @@ public class ChessPiece : MonoBehaviour
     protected bool CheckIfCanEat(int x, int y) {
         ChessPiece temp = GameManager.Instance.board.GetChessPiece(x, y);
         if (temp != null && temp.team != this.team) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    protected bool CheckIfCanProtect(int x, int y) {
+        ChessPiece temp = GameManager.Instance.board.GetChessPiece(x, y);
+        if (temp != null && temp.team == this.team) {
             return true;
         }
         else {

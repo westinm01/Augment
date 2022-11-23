@@ -30,11 +30,21 @@ public class PawnPiece : ChessPiece
         // Check diagonal eats
         ChessPiece leftDiagonal = GameManager.Instance.board.GetChessPiece(coord.x - 1, nextY);
         ChessPiece rightDiagonal = GameManager.Instance.board.GetChessPiece(coord.x + 1, nextY);
-        if (leftDiagonal != null && leftDiagonal.team != this.team && ValidMoveInCheck(leftDiagonal.coord)) {
-            possibleEats.Add(leftDiagonal.coord);
+        if (leftDiagonal != null && ValidMoveInCheck(leftDiagonal.coord)) {
+            if (leftDiagonal.team != this.team) {
+                possibleEats.Add(leftDiagonal.coord);
+            }
+            else {
+                possibleProtects.Add(leftDiagonal.coord);
+            }
         }
-        if (rightDiagonal != null && rightDiagonal.team != this.team && ValidMoveInCheck(rightDiagonal.coord)) {
-            possibleEats.Add(rightDiagonal.coord);
+        if (rightDiagonal != null && ValidMoveInCheck(rightDiagonal.coord)) {
+            if (rightDiagonal.team != this.team) {
+                possibleEats.Add(rightDiagonal.coord);
+            }
+            else {
+                possibleProtects.Add(rightDiagonal.coord);
+            }
         }
     }
 

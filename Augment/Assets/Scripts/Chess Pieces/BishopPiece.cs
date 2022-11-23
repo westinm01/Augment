@@ -105,6 +105,14 @@ public class BishopPiece : ChessPiece
             possibleEats.Add(nextMove);
             return false;
         }
+        else if (CheckIfCanProtect(xCheck, yCheck))
+        {
+            // Spot is on an enemy piece, return false to prevent from moving further
+            if (ValidMoveInCheck(nextMove)) {
+                possibleProtects.Add(new Vector2Int(xCheck, yCheck));
+            }
+            return false;
+        }
         else
         {
             return false;

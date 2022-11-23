@@ -27,43 +27,34 @@ public class KingPiece : ChessPiece
                 List<ChessPiece> threatening = GameManager.Instance.board.GetThreateningPieces(nextMove, enemyPlayer);
 
                 // Prevents king from moving to threatened tile
-                if (threatening.Count == 0) {
+                // If the player is in check, prevent the king from moving along the path of the threatening piece
+                if (threatening.Count == 0 && CanMoveBackwardsInCheck(nextMove)) {
                     if (GameManager.Instance.board.isValidMoveSpace(newX, newY))
                     {
-                        // If the player is in check, prevent the king from moving along the path of the threatening piece
-                        bool canMoveBackwardsInCheck = true;
-                        if (thisPlayer.inCheck) {
-                            foreach (ChessPiece piece in thisPlayer.threateningPieces) {
-                                if (piece.InPath(nextMove)) {
-                                    // Debug.Log("Preventing king from moving to " + nextMove);
-                                    canMoveBackwardsInCheck = false;
-                                }
-                            }
-                        }
-
-                        if (canMoveBackwardsInCheck) {
-                            possibleSpaces.Add(nextMove);
-                        }
+                        possibleSpaces.Add(nextMove);
                     }
                     else if (CheckIfCanEat(newX, newY))
                     {
-                        // If the player is in check, prevent the king from moving along the path of the threatening piece
-                        bool canMoveBackwardsInCheck = true;
-                        if (thisPlayer.inCheck) {
-                            foreach (ChessPiece piece in thisPlayer.threateningPieces) {
-                                if (piece.InPath(nextMove)) {
-                                    // Debug.Log("Preventing king from moving to " + nextMove);
-                                    canMoveBackwardsInCheck = false;
-                                }
-                            }
-                        }
-
-                        if (canMoveBackwardsInCheck) {
+                        ChessPiece eatPiece = GameManager.Instance.board.GetChessPiece(newX, newY);
+                        if (!eatPiece.IsProtected()) {
                             possibleEats.Add(nextMove);
                         }
                     }
                 }
             }
         }
+    }
+
+    private bool CanMoveBackwardsInCheck(Vector2Int nextMove) {
+        if (thisPlayer.inCheck) {
+            foreach (ChessPiece piece in thisPlayer.threateningPieces) {
+                if (piece.InPath(nextMove)) {
+                    // Debug.Log("Preventing king from moving to " + nextMove);
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 }
