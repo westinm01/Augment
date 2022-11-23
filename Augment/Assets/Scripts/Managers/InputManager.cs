@@ -68,7 +68,7 @@ public class InputManager : MonoBehaviour
                         GameObject tempSelected = GetTouchedPiece(t.position);      // Check if touch was on a piece
                         
                         // if the player let go on top of a possible space
-                        if (tempSelected != null && tempSelected.tag == "PossibleSpace")
+                        if (tempSelected != null && tempSelected.tag == "PossibleSpace" && currSelected.GetComponent<ChessPiece>().canMove)
                         {
                             // Move the piece to the empty space
                             MovePiece(tempSelected.transform.position);
