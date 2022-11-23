@@ -123,6 +123,32 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &371990746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5299686063756461596, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+  m_PrefabInstance: {fileID: 3053927876371101412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &371990751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371990746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ab20559fe305cd47a06dffcbeaa28b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  sprite: {fileID: 0}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+  augmentPiece: {fileID: 0}
+  canActivate: 0
+  augmentName: 
+  augmentDesc: 
+  triggerVal: 0
+  barks: []
 --- !u!1 &1179473131
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +428,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22bff3ddee7f2e4da54e9abb7673a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1016504711906601582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016504711906601576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ffe0ce53f00d540afe017f653877cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3053927876371101412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -410,6 +448,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 297278170232121044, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+      propertyPath: pieceAugmentor
+      value: 
+      objectReference: {fileID: 371990751}
     - target: {fileID: 3053927876258891749, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -420,6 +462,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3053927877880718894, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
       propertyPath: m_Name
+      value: Field
+      objectReference: {fileID: 0}
+    - target: {fileID: 3053927877880718894, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+      propertyPath: m_TagString
       value: Field
       objectReference: {fileID: 0}
     - target: {fileID: 3053927877880718895, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
