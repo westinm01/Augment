@@ -84,7 +84,9 @@ public class BoardManager : MonoBehaviour
         ChessPiece tempPiece = GetChessPiece(newX, -newY);
         if (tempPiece != null && tempPiece.team != piece.team) {
             Debug.Log("Eating piece " + tempPiece);
+            //!!!!!!!!CHECK TRIGGERS: 4!!!!!!!!!!!!!!!!!!!!!!!!
             EatPiece(tempPiece);
+            //!!!!!!!!CHECK TRIGGERS: 3!!!!!!!!!!!!!!!!!!!!!!!
         }
 
         // Move the backend values in the board array
@@ -110,6 +112,7 @@ public class BoardManager : MonoBehaviour
                 GameManager.Instance.EndGame();
             }
         }
+         //!!!!!!!!CHECK TRIGGERS: 1!!!!!!!!!!!!!!!!!!!!!!!!
     }
 
     /// <summary>

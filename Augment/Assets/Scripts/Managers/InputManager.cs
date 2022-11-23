@@ -133,6 +133,7 @@ public class InputManager : MonoBehaviour
         GameManager.Instance.board.HighlightPossibleMoves(currSelected.GetComponent<ChessPiece>());
 
         state = InputState.TouchHold;
+         //!!!!!!!!CHECK TRIGGERS: 2!!!!!!!!!!!!!!!!!!!!!!!! 
     }
 
     /// <summary>

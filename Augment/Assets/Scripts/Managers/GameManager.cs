@@ -55,12 +55,14 @@ public class GameManager : MonoBehaviour
     }
 
     public void SwitchTeams() {
+         //!!!!!!!!CHECK CURRPLAYER TRIGGERS: 7!!!!!!!!!!!!!!!!!!!!!!!!
         if (whitePlayer == currPlayer) {
             currPlayer = blackPlayer;
         }
         else {
             currPlayer = whitePlayer;
         }
+         //!!!!!!!!CHECK CURRPLAYER TRIGGERS: 0!!!!!!!!!!!!!!!!!!!!!!!!
     }
 
     public void EndGame() {
