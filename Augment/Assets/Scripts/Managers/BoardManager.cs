@@ -87,14 +87,15 @@ public class BoardManager : MonoBehaviour
     public void MovePiece(ChessPiece piece, int newX, int newY)
     {
         // Check if moving piece eats another piece
+        bool pieceEaten = false;
         ChessPiece tempPiece = GetChessPiece(newX, -newY);
         if (tempPiece != null && tempPiece.team != piece.team) {
             Debug.Log("Eating piece " + tempPiece);
             //!!!!!!!!CHECK TRIGGERS: 4!!!!!!!!!!!!!!!!!!!!!!!!
             //tm.CheckTrigger(4, tempPiece);
             EatPiece(tempPiece);
-            //!!!!!!!!CHECK TRIGGERS: 3!!!!!!!!!!!!!!!!!!!!!!!
-            tm.CheckTrigger(3, piece);
+            
+            pieceEaten = true;
         }
 
         // Move the backend values in the board array
@@ -106,6 +107,13 @@ public class BoardManager : MonoBehaviour
 
         // Update physical location in scene
         piece.transform.position = new Vector3(newX, newY, 0);
+
+        //!!!!!!!!CHECK TRIGGERS: 3!!!!!!!!!!!!!!!!!!!!!!!
+        if(pieceEaten)
+        {
+            tm.CheckTrigger(3, piece);
+        }
+        
 
         // Update moves for all pieces
         GameManager.Instance.UpdateAllPossibleMoves();

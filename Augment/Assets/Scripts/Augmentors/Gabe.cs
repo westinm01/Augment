@@ -29,12 +29,14 @@ public class Gabe : Augmentor
             for (int j = -1; j <= 1; j++)
             {
                 
-                if (!(j == 0 && i == 0))
+                if (true)
                 {
-                    Debug.Log("Checking... (" + i + ", " + j + ")");
+                    
                     Vector2Int spaceCheck = new Vector2Int(i,j);
                     spaceCheck += spaceVal;
-                    if (spaceCheck.x > 0 && spaceCheck.x < 8 && spaceCheck.y > 0 && spaceCheck.y < 8)
+                    Debug.Log("At (" + spaceVal.x + ", " + spaceVal.y + ")"); //currently applying augment to adjacent enemies from PREV space.
+                    Debug.Log("Checking... (" + spaceCheck.x + ", " + spaceCheck.y + ")");
+                    if (spaceCheck.x >= 0 && spaceCheck.x < 8 && spaceCheck.y >= 0 && spaceCheck.y < 8)
                     {
                         ChessPiece possibleEnemy = g.GetChessPiece(spaceCheck.x, spaceCheck.y);
                         
