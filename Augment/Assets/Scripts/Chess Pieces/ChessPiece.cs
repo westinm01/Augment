@@ -17,7 +17,7 @@ public class ChessPiece : MonoBehaviour
     public int statusTimer; //number of turns the current status lasts.
     public Augmentor pieceAugmentor;
     public int status = 0; //to determine what status it has.
-
+    public bool canMove = true;
     protected Player thisPlayer;
     
 

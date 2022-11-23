@@ -91,10 +91,10 @@ public class BoardManager : MonoBehaviour
         if (tempPiece != null && tempPiece.team != piece.team) {
             Debug.Log("Eating piece " + tempPiece);
             //!!!!!!!!CHECK TRIGGERS: 4!!!!!!!!!!!!!!!!!!!!!!!!
-            tm.CheckTrigger(4, piece);
+            //tm.CheckTrigger(4, tempPiece);
             EatPiece(tempPiece);
             //!!!!!!!!CHECK TRIGGERS: 3!!!!!!!!!!!!!!!!!!!!!!!
-            tm.CheckTrigger(3, tempPiece);
+            tm.CheckTrigger(3, piece);
         }
 
         // Move the backend values in the board array
@@ -121,7 +121,7 @@ public class BoardManager : MonoBehaviour
             }
         }
          //!!!!!!!!CHECK TRIGGERS: 1!!!!!!!!!!!!!!!!!!!!!!!!
-         tm.CheckTrigger(1, piece);
+         //tm.CheckTrigger(1, piece);
          
     }
 

@@ -20,7 +20,7 @@ public class InputManager : MonoBehaviour
     {
         tm = GetComponent<TriggerManager>();
     }
-    
+
     void Update()
     {
         AIPlayer currAI;
@@ -151,11 +151,13 @@ public class InputManager : MonoBehaviour
         int newY = (int) newPos.y;
 
         GameManager.Instance.board.UnHighlightPieces();
-        GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
+        if (currSelected.GetComponent<ChessPiece>().canMove){
+            GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
 
-        currSelected = null;
-        GameManager.Instance.SwitchTeams();
-        
-        state = InputState.Wait;
+            currSelected = null;
+            GameManager.Instance.SwitchTeams();
+            
+            state = InputState.Wait;
+        }
     }
 }

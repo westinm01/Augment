@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     private TriggerManager tm;
     
-    public List<ChessPiece> statusedPieces = new List<ChessPiece>();
+    public StatusManager statusManager;
 
     private void Awake()
     {
@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         whitePlayer.UpdatePossibleMoves();
         blackPlayer.UpdatePossibleMoves();
         tm = GetComponent<TriggerManager>();
+        statusManager = GetComponent<StatusManager>();
     }
 
     // Update is called once per frame
@@ -61,17 +62,7 @@ public class GameManager : MonoBehaviour
 
     public void SwitchTeams() {
          //!!!!!!!!CHECK CURRPLAYER TRIGGERS: 7!!!!!!!!!!!!!!!!!!!!!!!!
-        tm.CheckTrigger(7, currPlayer.playerTeam);
-
-         //also need to update all statusTurns for chesspieces with statuses.
-        for (int i = 0; i <statusedPieces.Count; i++)
-        {
-            statusedPieces[i].statusTimer--;
-            if(statusedPieces[i].statusTimer == 0)
-            {
-                statusedPieces.RemoveAt(i);
-            }
-        }
+        //tm.CheckTrigger(7, currPlayer.playerTeam);
 
         if (whitePlayer == currPlayer) {
             currPlayer = blackPlayer;
@@ -79,8 +70,10 @@ public class GameManager : MonoBehaviour
         else {
             currPlayer = whitePlayer;
         }
+        statusManager.TurnUpdate();
+
          //!!!!!!!!CHECK CURRPLAYER TRIGGERS: 0!!!!!!!!!!!!!!!!!!!!!!!!
-         tm.CheckTrigger(0, currPlayer.playerTeam);
+         //tm.CheckTrigger(0, currPlayer.playerTeam);
     }
 
     public void EndGame() {
