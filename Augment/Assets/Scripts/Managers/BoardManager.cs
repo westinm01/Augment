@@ -12,6 +12,7 @@ public class BoardManager : MonoBehaviour
     private List<GameObject> possibleSpaceHighlights;
     private List<GameObject> possibleEatHighlights;
 
+    private TriggerManager tm;
 
     private void Awake()
     {
@@ -19,6 +20,11 @@ public class BoardManager : MonoBehaviour
         board = new ChessBoard(8, 8);
         possibleSpaceHighlights = new List<GameObject>();
         possibleEatHighlights = new List<GameObject>();
+    }
+
+    void Start()
+    {
+        tm = GetComponent<TriggerManager>();
     }
 
     public int getWidth()
@@ -85,8 +91,10 @@ public class BoardManager : MonoBehaviour
         if (tempPiece != null && tempPiece.team != piece.team) {
             Debug.Log("Eating piece " + tempPiece);
             //!!!!!!!!CHECK TRIGGERS: 4!!!!!!!!!!!!!!!!!!!!!!!!
+            tm.CheckTrigger(4, piece);
             EatPiece(tempPiece);
             //!!!!!!!!CHECK TRIGGERS: 3!!!!!!!!!!!!!!!!!!!!!!!
+            tm.CheckTrigger(3, tempPiece);
         }
 
         // Move the backend values in the board array
@@ -113,6 +121,8 @@ public class BoardManager : MonoBehaviour
             }
         }
          //!!!!!!!!CHECK TRIGGERS: 1!!!!!!!!!!!!!!!!!!!!!!!!
+         tm.CheckTrigger(1, piece);
+         
     }
 
     /// <summary>

@@ -14,6 +14,13 @@ public class InputManager : MonoBehaviour
     private InputState state = InputState.Wait;
     private Vector3 initialPos;
 
+    private TriggerManager tm;
+
+    void Start()
+    {
+        tm = GetComponent<TriggerManager>();
+    }
+    
     void Update()
     {
         AIPlayer currAI;

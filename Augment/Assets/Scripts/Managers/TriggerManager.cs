@@ -9,7 +9,7 @@ public class TriggerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //need to populate bins.
     }
 
     // Update is called once per frame
@@ -21,16 +21,30 @@ public class TriggerManager : MonoBehaviour
     {
         foreach (ChessPiece cp in bins[triggerVal])
         {
-            cp.pieceAugmentor.UseAugment();//perform augment           
+            if(cp.pieceAugmentor)
+            {
+                cp.pieceAugmentor.UseAugment();//perform augment    
+            }
+                   
         }
     }
     public void CheckTrigger(int triggerVal, bool team)
     {
         foreach (ChessPiece cp in bins[triggerVal])
         {
-            if (cp.team == team)
+            if(cp.pieceAugmentor)
             {
-                cp.pieceAugmentor.UseAugment();//perform augment
+                cp.pieceAugmentor.UseAugment();//perform augment    
+            }
+        }
+    }
+    public void CheckTrigger(int triggerVal, ChessPiece piece)
+    {
+        foreach (ChessPiece cp in bins[triggerVal])
+        {
+            if(cp.pieceAugmentor)
+            {
+                cp.pieceAugmentor.UseAugment();//perform augment    
             }
         }
     }
