@@ -39,25 +39,36 @@ public class TriggerManager : MonoBehaviour
     }
     public void CheckTrigger(int triggerVal)
     {
-        Debug.Log("Triggered");
-        foreach (ChessPiece cp in bins[triggerVal])
+        
+        if(bins[triggerVal] == null)
         {
+            return;
+        }
+         for(int i = 0; i < bins[triggerVal].Count; i++)
+        {
+            ChessPiece cp = bins[triggerVal][i];
             if(cp.pieceAugmentor != null)
             {
-                cp.pieceAugmentor.UseAugment();//perform augment    
+                Debug.Log("Triggered");
+                cp.pieceAugmentor.UseAugment();//perform augment   
             }
-                   
         }
     }
     public void CheckTrigger(int triggerVal, bool team)
     {
-        Debug.Log("Triggered");
-        foreach (ChessPiece cp in bins[triggerVal])
+        
+        if(bins[triggerVal] == null)
         {
+            return;
+        }
+        for(int i = 0; i < bins[triggerVal].Count; i++)
+        {
+            ChessPiece cp = bins[triggerVal][i];
             if(cp.pieceAugmentor != null)
             {
                 if(cp.team == team)
                 {
+                    Debug.Log("Triggered");
                     cp.pieceAugmentor.UseAugment();//perform augment   
                 }
                  
@@ -66,16 +77,22 @@ public class TriggerManager : MonoBehaviour
     }
     public void CheckTrigger(int triggerVal, ChessPiece piece)
     {
-        Debug.Log("Triggered");
-        foreach (ChessPiece cp in bins[triggerVal])
+        
+        if(bins[triggerVal] == null)
         {
+            return;
+        }
+        for(int i = 0; i < bins[triggerVal].Count; i++)
+        {
+            ChessPiece cp = bins[triggerVal][i];
             if(cp.pieceAugmentor != null)
             {
                 if(cp == piece)
                 {
-                    cp.pieceAugmentor.UseAugment();//perform augment    
+                    Debug.Log("Triggered");
+                    cp.pieceAugmentor.UseAugment();//perform augment   
                 }
-                
+                 
             }
         }
     }

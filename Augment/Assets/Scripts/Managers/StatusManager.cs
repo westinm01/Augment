@@ -44,17 +44,6 @@ public class StatusManager : MonoBehaviour
                     bins[i].Remove(cp);
                 }
             }
-            /*foreach (ChessPiece cp in bins[i])
-            {
-                cp.statusTimer--;
-                if(cp.statusTimer <= 0)
-                {
-                    cp.statusTimer = 0;
-                    cp.status = 0;
-                    ReverseStatus(cp, i);
-                    bins[i].Remove(cp);
-                }
-            }*/
         }
     }
 

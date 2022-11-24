@@ -141,6 +141,7 @@ public class InputManager : MonoBehaviour
 
         state = InputState.TouchHold;
          //!!!!!!!!CHECK TRIGGERS: 2!!!!!!!!!!!!!!!!!!!!!!!! 
+          tm.CheckTrigger(2, currSelected);
     }
 
     /// <summary>

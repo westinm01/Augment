@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     public void SwitchTeams() {
          //!!!!!!!!CHECK CURRPLAYER TRIGGERS: 7!!!!!!!!!!!!!!!!!!!!!!!!
-        //tm.CheckTrigger(7, currPlayer.playerTeam);
+        tm.CheckTrigger(7, currPlayer.playerTeam);
 
         if (whitePlayer == currPlayer) {
             currPlayer = blackPlayer;
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
         statusManager.TurnUpdate();
 
          //!!!!!!!!CHECK CURRPLAYER TRIGGERS: 0!!!!!!!!!!!!!!!!!!!!!!!!
-         //tm.CheckTrigger(0, currPlayer.playerTeam);
+         tm.CheckTrigger(0, currPlayer.playerTeam);
     }
 
     public void EndGame() {

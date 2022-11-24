@@ -21,8 +21,9 @@ public class Gabe : Augmentor
         ChessPiece cp = gameObject.GetComponent<ChessPiece>();
         Vector2Int spaceVal = cp.coord;
         
-        BoardManager g = FindObjectOfType<BoardManager>();
         
+        GameObject managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        BoardManager g = managers.GetComponent<BoardManager>();
         for (int i = -1; i <= 1; i++)
         {
             
@@ -34,8 +35,8 @@ public class Gabe : Augmentor
                     
                     Vector2Int spaceCheck = new Vector2Int(i,j);
                     spaceCheck += spaceVal;
-                    Debug.Log("At (" + spaceVal.x + ", " + spaceVal.y + ")"); //currently applying augment to adjacent enemies from PREV space.
-                    Debug.Log("Checking... (" + spaceCheck.x + ", " + spaceCheck.y + ")");
+                    
+                    Debug.Log("Checking... (" + spaceCheck.y + ", " + spaceCheck.x + ")");
                     if (spaceCheck.x >= 0 && spaceCheck.x < 8 && spaceCheck.y >= 0 && spaceCheck.y < 8)
                     {
                         ChessPiece possibleEnemy = g.GetChessPiece(spaceCheck.x, spaceCheck.y);
@@ -47,7 +48,7 @@ public class Gabe : Augmentor
                                 possibleEnemy.status = 2; //this turn and the next.
                                 possibleEnemy.statusTimer = 2; //restored at the second chance the opponent has to move.
                                 Debug.Log("ZAPPETIZER: Stunned enemy at (" + spaceCheck.x + ", " +spaceCheck.y + ")");
-                                StatusManager sm = FindObjectOfType<StatusManager>();
+                                StatusManager sm = managers.GetComponent<StatusManager>();
                                 sm.ApplyStatus(possibleEnemy, 0);
                                 
                             }
