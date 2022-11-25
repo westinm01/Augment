@@ -11,6 +11,7 @@ public class ChessPiece : MonoBehaviour
     public List<Vector2Int> possibleProtects = new List<Vector2Int>();
 
     public bool team = true; //true if white, false if black. True by default.
+    public bool isVisible = true;
     public Sprite blackSprite;
     public Sprite whiteSprite;
     public bool canJump = false; //setToTrue for Knight.

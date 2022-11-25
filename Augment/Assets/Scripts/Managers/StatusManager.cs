@@ -56,7 +56,7 @@ public class StatusManager : MonoBehaviour
                 target.canMove = false;
             break;
             case 1:
-                
+                target.canMove = false;
             break;
             case 2:
 
@@ -68,7 +68,7 @@ public class StatusManager : MonoBehaviour
                 target.canMove = false;
             break;
             case 5:
-
+                target.isVisible = false;
             break;
         }
     }
@@ -81,7 +81,7 @@ public class StatusManager : MonoBehaviour
                 target.canMove = true;
             break;
             case 1:
-            
+                target.canMove = true;
             break;
             case 2:
 
@@ -93,7 +93,7 @@ public class StatusManager : MonoBehaviour
                 target.canMove = true;
             break;
             case 5:
-
+                target.isVisible = true;
             break;
         }
     }
