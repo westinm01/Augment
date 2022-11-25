@@ -13,6 +13,7 @@ public class Augmentor : MonoBehaviour
     public string augmentDesc;
     public int triggerVal;
     public List<AudioClip> barks = new List<AudioClip>();
+    public bool hasPrompt = false;
     public virtual void UseAugment()
     {
         if(canActivate)

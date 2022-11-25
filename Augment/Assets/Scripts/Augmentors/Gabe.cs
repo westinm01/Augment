@@ -15,7 +15,7 @@ public class Gabe : Augmentor
         triggerVal = 3;
     }
 
-    // Update is called once per frame
+    
     public override void UseAugment()
     {
         ChessPiece cp = gameObject.GetComponent<ChessPiece>();
