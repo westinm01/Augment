@@ -71,5 +71,8 @@ public class CanvasManager : MonoBehaviour
     public void ClickUseAugment() {
         currSelected.pieceAugmentor.UseAugment();
         useAugmentButton.GetComponentInChildren<TextMeshProUGUI>().text = "Cancel";
+
+        // Remove this later, call function in InputManager after getting the required input
+        DeactivateAugmentPrompt();
     }
 }
