@@ -34,6 +34,8 @@ public class ChessPiece : MonoBehaviour
             sr.sprite = blackSprite;
         }
 
+        pieceAugmentor = GetComponent<Augmentor>();
+
         // automatically finds coord on board using gameObject position
         coord.x = (int)gameObject.transform.position.x;
         coord.y = -(int)gameObject.transform.position.y;
