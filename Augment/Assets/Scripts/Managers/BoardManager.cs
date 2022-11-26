@@ -80,6 +80,10 @@ public class BoardManager : MonoBehaviour
         board.AddPiece(piece, row, col);
     }
 
+    public void RemovePiece(int row, int col) {
+        board.RemovePiece(row, col);
+    }
+
     /// <summary>
     /// Moves piece to global coordinates newX and newY
     /// NOTE: newY is negative, function converts it to positive

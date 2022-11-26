@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     private Player currPlayer;
 
     private TriggerManager tm;
+    private EventsManager events;
     
     public StatusManager statusManager;
 
@@ -34,6 +36,7 @@ public class GameManager : MonoBehaviour
         blackPlayer.UpdatePossibleMoves();
         tm = GetComponent<TriggerManager>();
         statusManager = GetComponent<StatusManager>();
+        events = GetComponent<EventsManager>();
     }
 
     // Update is called once per frame
@@ -55,6 +58,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public EventsManager GetEventsManager() {
+        return events;
+    }
+
     public void UpdateAllPossibleMoves() {
         whitePlayer.UpdatePossibleMoves();
         blackPlayer.UpdatePossibleMoves();
@@ -74,6 +81,7 @@ public class GameManager : MonoBehaviour
 
          //!!!!!!!!CHECK CURRPLAYER TRIGGERS: 0!!!!!!!!!!!!!!!!!!!!!!!!
          tm.CheckTrigger(0, currPlayer.playerTeam);
+         events.CallOnTurnEnd();
     }
 
     public void EndGame() {

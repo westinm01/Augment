@@ -70,6 +70,6 @@ public class CanvasManager : MonoBehaviour
 
     public void ClickUseAugment() {
         currSelected.pieceAugmentor.UseAugment();
-        useAugmentButton.GetComponentInChildren<TextMeshProUGUI>().text = "Use Augment";
+        useAugmentButton.GetComponentInChildren<TextMeshProUGUI>().text = "Cancel";
     }
 }

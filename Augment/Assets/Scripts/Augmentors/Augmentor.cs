@@ -19,7 +19,7 @@ public class Augmentor : MonoBehaviour
     public bool canActivate = false;
     public List<AudioClip> barks = new List<AudioClip>();
 
-    protected void Start(){
+    protected virtual void Start(){
         UpdateInformation();
     }
 
@@ -31,6 +31,8 @@ public class Augmentor : MonoBehaviour
         this.backgroundColor = augmentor.backgroundColor;
         this.triggerVal = augmentor.triggerVal;
         this.hasPrompt = augmentor.hasPrompt;
+
+        this.augmentPiece = GetComponent<ChessPiece>();
     }
 
     public virtual void UseAugment()

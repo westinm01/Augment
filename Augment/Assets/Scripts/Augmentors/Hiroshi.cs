@@ -15,8 +15,38 @@ public class Hiroshi : Augmentor
     //     triggerVal = 2;
     // }
 
+    private bool isInvis;
+    private int turnsLeft;
+
+    protected override void Start() {
+        base.Start();
+        isInvis = false;
+        turnsLeft = 0;   
+    }
+
+    public void Wait() {
+        if (turnsLeft == 0) {
+            Debug.Log("Finished waiting");
+            UseAugment();
+        }
+        else {
+            turnsLeft--;
+        }
+    }
+
     public override void UseAugment()
     {
-        //
+        if (!isInvis) {
+            Debug.Log("Activating Hiroshi");
+            isInvis = true;
+            turnsLeft = 6;  // 3 player turns invisible
+            canActivate = false;
+
+            GameManager.Instance.GetEventsManager().OnTurnEnd += Wait;
+            augmentPiece.BanishPiece();
+        }
+        else {
+            augmentPiece.UnbanishPiece(true);
+        }
     }
 }

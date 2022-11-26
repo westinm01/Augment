@@ -83,6 +83,10 @@ public class ChessBoard : MonoBehaviour
         }
     }
 
+    public void RemovePiece(int row, int col) {
+        grid[row, col] = null;
+    }
+
     public void MovePiece(int x1, int y1, int x2, int y2) {
         grid[y2, x2] = grid[y1, x1];
         grid[y1, x1] = null;
