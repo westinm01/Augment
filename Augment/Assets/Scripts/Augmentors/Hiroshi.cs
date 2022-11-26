@@ -46,7 +46,10 @@ public class Hiroshi : Augmentor
             augmentPiece.BanishPiece();
         }
         else {
-            augmentPiece.UnbanishPiece(true);
+            augmentPiece.UnbanishPiece();
+            GameManager.Instance.GetEventsManager().OnTurnEnd -= Wait;
+            isInvis = false;
+            canActivate = true;
         }
     }
 }

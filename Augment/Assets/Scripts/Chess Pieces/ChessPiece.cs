@@ -159,21 +159,20 @@ public class ChessPiece : MonoBehaviour
 
     }
 
-    public void UnbanishPiece(bool eatOnReappear) {
+    public void UnbanishPiece() {
         GetPossibleSpaces();
         GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<BoxCollider2D>().enabled = true;
-        ChessPiece existingPiece = GameManager.Instance.board.GetChessPiece(coord.y, coord.x);
+        ChessPiece existingPiece = GameManager.Instance.board.GetChessPiece(coord.x, coord.y);
 
+        Debug.Log(existingPiece);
         if (existingPiece != null) {
-            if (eatOnReappear) {
-                // Eats piece if on opposing team
-                // This piece is removed if the piece is on the same team
-                if (existingPiece.team != this.team) {
-                    GameManager.Instance.board.EatPiece(existingPiece);
-                    GameManager.Instance.board.AddPiece(this, coord.y, coord.x);
-                    return;
-                }
+            // Eats piece if on opposing team
+            // This piece is removed if the piece is on the same team
+            if (existingPiece.team != this.team) {
+                GameManager.Instance.board.EatPiece(existingPiece);
+                GameManager.Instance.board.AddPiece(this, coord.y, coord.x);
+                return;
             }
             else {
                 GameManager.Instance.board.EatPiece(this);
