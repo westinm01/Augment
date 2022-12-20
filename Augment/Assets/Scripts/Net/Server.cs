@@ -25,6 +25,7 @@ public class Server : MonoBehaviour
 
     public void Init(ushort port)
     {
+        Debug.Log("Server Init");
         driver = NetworkDriver.Create();
         NetworkEndPoint endpoint = NetworkEndPoint.AnyIpv4;
         endpoint.Port = port;
@@ -63,7 +64,7 @@ public class Server : MonoBehaviour
         {
             return;
         }
-        //KeepAlive();
+        KeepAlive();
 
         driver.ScheduleUpdate().Complete();
 
@@ -73,8 +74,17 @@ public class Server : MonoBehaviour
 
     }
 
+    private void KeepAlive()
+    {
+        if (Time.time - lastKeepAlive > keepAliveTickRate)
+        {
+            lastKeepAlive = Time.time;
+            Broadcast(new NetKeepAlive());
+        }
+    }
     private void CleanUpConnections()
     {
+        Debug.Log("Server Clean Up Connections");
         for (int i = 0; i < connections.Length; i++)
         {
             if (!connections[i].IsCreated)
@@ -87,6 +97,7 @@ public class Server : MonoBehaviour
 
     private void AcceptNewConnections()
     {
+        Debug.Log("Server Accept New Connections");
         NetworkConnection c;
         while ((c = driver.Accept()) != default(NetworkConnection))
         {
@@ -96,16 +107,18 @@ public class Server : MonoBehaviour
 
     private void UpdateMessagePump()
     {
+        Debug.Log("Server Message Pump");
         DataStreamReader stream;
         for (int i = 0; i < connections.Length; i++)
         {
             NetworkEvent.Type cmd;
             while((cmd = driver.PopEventForConnection(connections[i], out stream)) != NetworkEvent.Type.Empty)
             {
+                Debug.Log("Server Message Received");
                 //if player sends message
                 if (cmd == NetworkEvent.Type.Data)
                 {
-                    //NetUtility.OnData(stream, connections[i], this);
+                    NetUtility.OnData(stream, connections[i], this);
                 }
                 else if (cmd == NetworkEvent.Type.Disconnect)
                 {
@@ -123,7 +136,7 @@ public class Server : MonoBehaviour
     {
         DataStreamWriter writer;
         driver.BeginSend(connection, out writer);
-        //msg.Serialize(ref writer);
+        msg.Serialize(ref writer);
         driver.EndSend(writer);
     }
 
