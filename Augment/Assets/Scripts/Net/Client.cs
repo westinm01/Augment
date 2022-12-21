@@ -78,13 +78,19 @@ public class Client : MonoBehaviour
     {
         
         DataStreamReader stream;
-        NetworkEvent.Type cmd = connection.PopEvent(driver, out stream);
+        NetworkEvent.Type cmd;
         //Debug.Log(cmd);
-        while(cmd != NetworkEvent.Type.Empty) 
+        while((cmd= connection.PopEvent(driver, out stream)) != NetworkEvent.Type.Empty) 
         {
             
            if (cmd == NetworkEvent.Type.Connect)
            {
+            DataStreamWriter writer;
+            uint value = 1;
+            driver.BeginSend(connection, out writer);
+            //msg.Serialize(ref writer);
+            writer.WriteUInt(value);
+            driver.EndSend(writer);
             //SendToServer(new NetWelcome());
             Debug.Log("We're connected!");
            }

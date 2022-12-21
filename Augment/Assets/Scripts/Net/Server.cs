@@ -1,5 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+//using System.Collections;
+//using System.Collections.Generic;
 using Unity.Networking.Transport;
 using UnityEngine;
 using System;
@@ -24,8 +24,8 @@ public class Server : MonoBehaviour
     public Action connectionDropped;
 
     public void Init(ushort port)
-    {
-        Debug.Log("Server Init");
+    {   
+        
         driver = NetworkDriver.Create();
         NetworkEndPoint endpoint = NetworkEndPoint.AnyIpv4;
         endpoint.Port = port;
@@ -36,7 +36,9 @@ public class Server : MonoBehaviour
         }
         else
         {
-            driver.Listen();
+
+            driver.Listen(); //<-- problem is here.
+
             Debug.Log("Currently Listening on port" + endpoint.Port);
         }
         connections = new NativeList<NetworkConnection>(2, Allocator.Persistent);
@@ -84,7 +86,7 @@ public class Server : MonoBehaviour
     }
     private void CleanUpConnections()
     {
-        Debug.Log("Server Clean Up Connections");
+        //Debug.Log("Server Clean Up Connections");
         for (int i = 0; i < connections.Length; i++)
         {
             if (!connections[i].IsCreated)
@@ -97,7 +99,7 @@ public class Server : MonoBehaviour
 
     private void AcceptNewConnections()
     {
-        Debug.Log("Server Accept New Connections");
+       //Debug.Log("Server Accept New Connections");
         NetworkConnection c;
         while ((c = driver.Accept()) != default(NetworkConnection))
         {
@@ -107,7 +109,7 @@ public class Server : MonoBehaviour
 
     private void UpdateMessagePump()
     {
-        Debug.Log("Server Message Pump");
+        //Debug.Log("Server Message Pump");
         DataStreamReader stream;
         for (int i = 0; i < connections.Length; i++)
         {
@@ -147,7 +149,7 @@ public class Server : MonoBehaviour
         {
             if (connections[i].IsCreated)
             {
-                //Debug.Log($"Sending {msg.Code} to : {connections[i].InternalId}");
+                Debug.Log($"Sending {msg.Code} to : {connections[i].InternalId}");
                 SendToClient(connections[i], msg);
             }
         }

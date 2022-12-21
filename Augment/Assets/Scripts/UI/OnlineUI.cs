@@ -11,19 +11,19 @@ public class OnlineUI : MonoBehaviour
     public void OnOnlineHostButton()
     {
         
-        server.Init(8008);
-        client.Init("127.0.0.1", 8008);
+        server.Init(80);
+        client.Init("127.0.0.1", 80);
     }
     public void OnOnlineConnectButton()
     {
         Debug.Log("Client init");
         
-        client.Init(addressInput.text, 8008);
+        client.Init(addressInput.text, 80);
     }
     public void OnLocalGameButton()
     {
-        server.Init(8007);
-        client.Init("127.0.0.1", 8008);
+        server.Init(80);
+        client.Init("127.0.0.1", 80);
     }
     public void OnHostBackButton()
     {
