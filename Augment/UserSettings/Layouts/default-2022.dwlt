@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 109
+  controlID: 107
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -295,8 +295,8 @@ MonoBehaviour:
     y: 0
     width: 441
     height: 939
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -332,24 +332,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 1ac80000
-      m_LastClickedID: 51226
-      m_ExpandedIDs: d20dfbff1a40fcff92deffff1ae1ffffb4e4ffffe8e7ffffd6e9ffff28ecffffbcf1ffff10f4ffff10f5ffff62f7fffffafafffff4ffffff
+      scrollPos: {x: 0, y: 89}
+      m_SelectedIDs: 0c770000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 66f8f4ffaef8f4ff70fdf4ffe8fff4ffa800f5ffda7bfeff64caffff78cbfffffacdffff20cfffffdad1fffffafaffff7ad80000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: knight
+        m_OriginalName: knight
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 56626
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -650,9 +650,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.16890751, y: -1.5231128, z: 365.54663}
+    m_Target: {x: 1.4766821, y: -5.442516, z: 0.0006355834}
     speed: 2
-    m_Value: {x: 0.16890751, y: -1.5231128, z: 365.54663}
+    m_Value: {x: 1.4766821, y: -5.442516, z: 0.0006355834}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -702,9 +702,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.019811
+    m_Target: 2.549158
     speed: 2
-    m_Value: 4.019811
+    m_Value: 2.549158
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -770,22 +770,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/NetCode
+    - Assets/Resources
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/NetCode
+  - Assets/Resources
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\monta\OneDrive\Desktop\GitHub\Augment\Augment
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 35}
-    m_SelectedIDs: 20b50000
-    m_LastClickedID: 46368
-    m_ExpandedIDs: 000000009073000092730000b2730000bc73000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: ec790000
+    m_LastClickedID: 31212
+    m_ExpandedIDs: 000000002279000024790000e8790000f2790000c88b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -813,7 +813,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009073000092730000
+    m_ExpandedIDs: 000000002279000024790000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

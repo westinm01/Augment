@@ -16,7 +16,7 @@ MonoBehaviour:
   augmentName: Vanish
   description: This piece can vanish from the board for 3 turns. After, it eats any
     piece on its space, but if an ally is on its space, this piece is discarded.
-  sprite: {fileID: 21300000, guid: 08e6665b14880b844ba69278d1bd91b9, type: 3}
+  sprite: {fileID: 21300000, guid: 9e444fb8beae88541b86ab709f22a313, type: 3}
   backgroundColor: {r: 0.16470589, g: 0.10980393, b: 0.3019608, a: 1}
   triggerVal: 2
   hasPrompt: 1
