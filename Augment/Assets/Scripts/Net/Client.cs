@@ -86,12 +86,12 @@ public class Client : MonoBehaviour
            if (cmd == NetworkEvent.Type.Connect)
            {
             DataStreamWriter writer;
-            uint value = 1;
-            driver.BeginSend(connection, out writer);
+            //uint value = 1;
+            //driver.BeginSend(connection, out writer);
             //msg.Serialize(ref writer);
-            writer.WriteUInt(value);
-            driver.EndSend(writer);
-            //SendToServer(new NetWelcome());
+            //writer.WriteUInt(value);
+            //driver.EndSend(writer);
+            SendToServer(new NetWelcome());
             Debug.Log("We're connected!");
            }
            else if (cmd == NetworkEvent.Type.Data)
