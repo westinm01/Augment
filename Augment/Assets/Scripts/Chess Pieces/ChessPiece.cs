@@ -35,6 +35,8 @@ public class ChessPiece : MonoBehaviour
             sr.sprite = blackSprite;
         }
 
+        pieceAugmentor = GetComponent<Augmentor>();
+
         // automatically finds coord on board using gameObject position
         coord.x = (int)gameObject.transform.position.x;
         coord.y = -(int)gameObject.transform.position.y;
@@ -55,11 +57,15 @@ public class ChessPiece : MonoBehaviour
 
     }
 
-    virtual public void GetPossibleSpaces()
-    {
+    public void ClearAllSpaces() {
         possibleSpaces.Clear();
         possibleEats.Clear();
         possibleProtects.Clear();
+    }
+
+    virtual public void GetPossibleSpaces()
+    {
+        ClearAllSpaces();
     }
 
     /// <summary>
@@ -144,6 +150,38 @@ public class ChessPiece : MonoBehaviour
             }
         }
         return !thisPlayer.inCheck || CanBlock(possibleMove, thisPlayer.checkPath) || canEat;
+    }
+
+    public void BanishPiece() {
+        ClearAllSpaces();
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
+        GameManager.Instance.board.RemovePiece(this.coord.y, this.coord.x);
+
+    }
+
+    public void UnbanishPiece() {
+        GetPossibleSpaces();
+        GetComponent<SpriteRenderer>().enabled = true;
+        GetComponent<BoxCollider2D>().enabled = true;
+        ChessPiece existingPiece = GameManager.Instance.board.GetChessPiece(coord.x, coord.y);
+
+        Debug.Log(existingPiece);
+        if (existingPiece != null) {
+            // Eats piece if on opposing team
+            // This piece is removed if the piece is on the same team
+            if (existingPiece.team != this.team) {
+                GameManager.Instance.board.EatPiece(existingPiece);
+                GameManager.Instance.board.AddPiece(this, coord.y, coord.x);
+                return;
+            }
+            else {
+                GameManager.Instance.board.EatPiece(this);
+            }
+        }
+        else {
+            GameManager.Instance.board.AddPiece(this, coord.y, coord.x);
+        }
     }
 
     //Eating & CheckMate will be done by a game manager

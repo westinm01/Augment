@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb484efb7e083504bbbc60df1fce67af, type: 3}
+  m_Name: Hiroshi
+  m_EditorClassIdentifier: 
+  characterName: Hiroshi
+  augmentName: Vanish
+  description: This piece can vanish from the board for 3 turns. After, it eats any
+    piece on its space, but if an ally is on its space, this piece is discarded.
+  sprite: {fileID: 21300000, guid: 9e444fb8beae88541b86ab709f22a313, type: 3}
+  backgroundColor: {r: 0.16470589, g: 0.10980393, b: 0.3019608, a: 1}
+  triggerVal: 2
+  hasPrompt: 1

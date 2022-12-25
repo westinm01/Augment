@@ -493,6 +493,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &301640305 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+  m_PrefabInstance: {fileID: 1349692965}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &351151989
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,6 +979,188 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539334501}
   m_CullTransparentMesh: 1
+--- !u!1001 &587781230
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 844452741}
+    m_Modifications:
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: "\tLong ago, a man dressed in a red cloak arrived in a village begging
+        for food. The villagers refused him out of distrust. But, a little girl offered
+        him a fruit. Impressed by the girl\u2019s courage, the man revealed himself
+        to be a spider god. As thanks, he gifted her a cloak of spider silk and bestowed
+        upon her the ability to weave. The cloak would be passed to her descendants,
+        the ones who inherit the title of chief of their tribe.\r\n\tAsabi was given
+        a simple but stuffy life. With his mother passed and father absent, Asabi
+        was raised by his grandfather, the chief of their tribe. His grandfather
+        taught him their people\u2019s traditions to prepare him for chiefdom. Asabi
+        was taught their history, the laws of the land protecting them and of the
+        legend of the spider god and his gift of weaving. Asabi was especially fond
+        of weaving, a common skill among the tribe. They were known for their beautiful
+        and intricate patterns that attracted many to visit their lands. He utilized
+        his skill in many of his pranks, strewing fake webs around the branches of
+        trees to frighten unsuspecting tourists, getting a kick out of hearing them
+        panic and retreat.\r\n\tHe loved the forest, often sneaking away in the dead
+        of night to wander the pristine wilderness. His grandfather had taught him
+        to appreciate the land, its bounty and the many lives that called it home.
+        For every berry eaten, he\u2019d plant a seed. For every fish caught, he\u2019d
+        fertilize the ground with its bones. \r\n\tOn one adventure, Asabi discovered
+        a cave. He ventured in but slipped, tumbling deep into the cavern and injuring
+        his legs. Unable to climb nor see, he waited for help, for his grandfather
+        or the villagers to come rescue him. No one came. While trapped, he thought
+        of home, the villagers and his grandfather to kindle hope. But it was thoughts
+        of the forest that kept him alive, and Asabi refused to let the cavern be
+        his grave. His resolve was short lived, and he soon collapsed.\r\n\tAsabi
+        awoke to find his body had changed. He could see in the dark and spin webs
+        from his arms. With his new abilities, Asabi climbed and soon clambered out
+        of the cave\u2019s mouth. Seeing his reflection in water, Asabi was shocked
+        at what he\u2019d become. He\u2019d grown eight spider legs, each protruding
+        from his back. His grandfather and tribe would think they\u2019d been cursed
+        by the spider god if they saw his transformation. Asabi secluded himself
+        in the forest, learning to further understand his powers. Time alone could
+        get boring, however. Asabi entertained himself with old habits, pranking
+        clueless campers or lost hikers with his usual tricks.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorName
+      value: Asabi
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorTitle
+      value: The Spider Soul
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: infoPanelObject
+      value: 
+      objectReference: {fileID: 842792208}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 'Web Trap: Choose a space to place a web that is hidden to your opponent.
+        If an enemy piece is placed on this space, it is stunned for 2 turns.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Name
+      value: Augmentor3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -725
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5426575
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.49279103
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f2268b0506ede104c8aaa0987319d094, type: 3}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
 --- !u!1 &661912441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,9 +1435,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1039749354}
-  - {fileID: 2026958379}
   - {fileID: 795428533}
+  - {fileID: 2026958379}
   - {fileID: 1315153263}
+  - {fileID: 2065184278}
+  - {fileID: 1206299862}
+  - {fileID: 301640305}
   m_Father: {fileID: 49642372}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1835,6 +2025,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186064237}
   m_CullTransparentMesh: 1
+--- !u!224 &1206299862 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+  m_PrefabInstance: {fileID: 587781230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1226592378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,8 +2065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.1499939, y: -150}
-  m_SizeDelta: {x: -25.09, y: 300}
+  m_AnchoredPosition: {x: -0.20999146, y: -150.25}
+  m_SizeDelta: {x: -22.38, y: 277.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1226592380
 MonoBehaviour:
@@ -1923,8 +2118,8 @@ MonoBehaviour:
   m_fontSize: 50
   m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -1979,8 +2174,64 @@ PrefabInstance:
     m_TransformParent: {fileID: 844452741}
     m_Modifications:
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: "\tTucked away in the snow capped mountains of the Northern ranges laid
+        a small kingdom led by a beloved king and his family. Though the modern world
+        had ultimately abandoned monarchs, the family maintained their position and
+        lived quiet and content lives. However, tragedy struck when the king\u2019s
+        eldest and favorite son was killed in a mysterious accident. The king fell
+        into depression, until a scientist who claimed to have knowledge of cloning
+        appeared before him and offered to create a clone of the prince. The king
+        eagerly took his offer, and had the experiment done in secret in order to
+        protect the legitimacy of the throne. He was especially secretive to his
+        second son, who he viewed as foolhardy and immature.\r\n\tWith a strand of
+        hair, the scientist created a perfect clone of the deceased prince in his
+        youth. However, the king\u2019s second son learned of his father\u2019s plan.
+        Fearing his claim to the throne was challenged, he attempted to sabotage
+        the cloning tube while the scientist was away. Without care, the prince pressed
+        buttons, flicked switches, pulled levers and fled before the scientist returned.
+        However, his tampering led to the growth of another clone, this time a girl.
+        Upon seeing the clones, the king was overcome with joy. Knowing that his
+        life was coming to an end, he resolved to raise them as he did his first
+        son. The king bestowed upon the boy and girl the names Main and Solveig respectively,
+        after the moon and sun, reciting an old poem that said that night and day
+        could not exist without each other.\r\n\tEveryone in the kingdom was led
+        to believe that Main and Solveig were distant relatives who had lost their
+        family. The twins believed the lie as well, unaware of their true origins.
+        As he watched them grow further, the king had noticed similarities between
+        his first son and the twins. Main had inherited the former prince\u2019s
+        curious nature and love for adventure. Solveig in contrast, inherited his
+        bookish and reserverved disposition. \tDuring practice duels, Main was headstrong
+        and initiative taking, often committing to actions without thinking to overwhelm
+        his opponents. Solveig was calculating and strategic in her approach, thinking
+        first before hitting with a precise and effective strike. With how quick
+        the twins learned, the king decided they would be his heirs.\r\n\tHearing
+        that the twins would inherit the throne, the prince\u2019s envy turned to
+        wrath. Armed with weapons, he and his supporters stormed the throne room,
+        where he declared himself king and revealed Main and Solveig\u2019s true
+        origins. He shot the king, prompting the usurpers and loyalists to clash
+        while he engaged the twins in combat. Separately, their swordsmanship was
+        no match against the prince\u2019s. The prince revealed that he murdered
+        his brother and framed it as an accident, vowing to do the same if it brought
+        him the throne. With dying breath, the king told Main and Solveig that he
+        loved them for who they are as individuals, not because of the one they were
+        cloned from. They should not be bound by the expectations of others, but
+        instead live as themselves. He then turned to his son, and admitted his own
+        faults. With brief hesitation, the son silenced the king for good. As if
+        their minds and swords became one, the twins began to fight in tandem. Main
+        always struck first, followed by an attack from Solveig. They worked together
+        to bring the prince to his knees, but the battle would unfortunately be lost
+        as more usurper forces poured in, forcing them to retreat. The prince took
+        the throne, and placed a bounty on them for their capture.\r\n\tWith a large
+        bounty over their heads, the twins fled and journeyed westward searching
+        for a place to hide. In time, they would return to the kingdom to avenge
+        their father and take their rightful place on the throne, together. Although
+        they no longer had a place to call home, they took comfort in knowing they
+        had each other.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorName
-      value: Ni & Chi
+      value: Main & Solveig
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorTitle
@@ -2118,6 +2369,193 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
   m_PrefabInstance: {fileID: 1315153262}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1349692965
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 844452741}
+    m_Modifications:
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: "\tLin never knew how it felt to be loved. She\u2019d never seen her
+        parents, her earliest memory being the ugly face of the orphanage director.
+        She was a cruel taskmaster who sent children to work as soon as they could
+        walk and speak; she was particularly terrible to Lin, whom she states owes
+        the director their life for taking them in. Lin was often beaten or whipped
+        to her feet for failing to finish her chores. To the other children, Lin
+        was the primary verbal punching bag to release their own frustrations, as
+        she was often viewed as the weakest among them.. Lin learned the futility
+        of crying for help, as many of the town\u2019s residents were either bribed
+        or silenced by the director. Whenever officials came to evaluate the orphanage,
+        Lin was locked in her room.\r\n\tLin grew numb to the pain as she aged, but
+        behind the teenager\u2019s stoic face was a burning hatred and desire to
+        rebel against the director. She fled the orphanage in the dead of night,
+        jumping over backyard fences and running across lawns. Unfortunately, a neighbor
+        who\u2019d been under the director\u2019s thumb had caught her, immediately
+        taking Lin back to the orphanage where she received the worst beating of
+        her life. With each strike of the belt, she began to hear the director\u2019s
+        vitriolic thoughts. With each lash, she heard the fearful cries of the other
+        orphans. And with the final blow to the face, the stoic facade shattered,
+        leaving behind a star shaped scar.\r\n\tThe voices never ended. All around
+        her, she could hear everyone\u2019s thoughts. Nothing could silence them.
+        The other kids\u2019 disgust and amusement towards her, the director\u2019s
+        spiteful criticism, and the neighbors\u2019 meaningless pity for Lin and
+        the other orphans, took a toll on her mind and body. Lin found that the constant,
+        involuntary use of her power deteriorated her eyesight and would soon be
+        rendered blind. Every night, she buried herself under her covers and sandwiched
+        her head between the pillows, but nothing could stop the endless flow of
+        thought violating her mind. She was willing to do anything to finally put
+        an end to the voices.\r\n\tIn her insanity, she stole a cleaver from the
+        kitchen, and butchered her own arm. Her pained screams were heard by all,
+        and soon the director, belt in hand, barged into her room. Cleaver in hand,
+        Lin hacked the director to death. With each swing, the director\u2019s cruel
+        thoughts turned into cries for help, yet no one could hear her until she
+        drew her last breath. Lin fled the orphanage that night, and soon the voices
+        ceased, for a time.\r\n\tNow a grown woman, Lin put the past behind her,
+        but still holds onto the memory of each childhood ordeal; her arm, magically
+        healed yet scarred, was a constant reminder. Though her power has rendered
+        her blind, Lin considers it a small price to pay for her new life purpose:
+        Listening close for the faint cries of abuse victims and giving them a chance
+        to live the life she couldn\u2019t.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorName
+      value: Lin
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorTitle
+      value: The Resilient
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: infoPanelObject
+      value: 
+      objectReference: {fileID: 842792208}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 'Reality Warp: Once per game, you can switch the positions of 2 enemy
+        pieces or 2 ally pieces.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Name
+      value: Augmentor3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -575
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3066038
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6568238
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b2c0a345b461ecc429be05f7e9862b23, type: 3}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -26
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
 --- !u!1 &1484645944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2282,7 +2720,7 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2451,6 +2889,187 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520070220}
   m_CullTransparentMesh: 1
+--- !u!1001 &1730673727
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 844452741}
+    m_Modifications:
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: "\tFor centuries, the shinobi, or ninja, worked ever in the dark. While
+        warlords quarreled over gridlocked strategies, and soldiers clashed in stalemate,
+        it were ninja, masters of espionage and assassination, who punched holes
+        into enemy lines that led to victory. Many ninja families existed, but none
+        as infamous as the Hikage, a clan feared for having killed hundreds of warlords
+        in the centuries they were active.\r\n\tDemand for the ninja\u2019s skill
+        set began to wane during the mid-18th century. The world had become \u201Ccivilized.\u201D
+        Warlords traded their swords for suits and parliament chambers became the
+        new battleground. Subterfuge and espionage had evolved. A harsh reality,
+        but one the Hikage clan had foreseen and accepted. They resigned themselves
+        to history, their art to be lost in history\u2019s shadow. \r\n\tA widower
+        and disgraced father, Hiroshi Hikage planned to live the rest of his life
+        secluded in the aged halls of his family dojo. As the last ninja, and the
+        final Hikage in name, he made it his final duty to preserve the grounds,
+        lest he anger the spirits of his forebears. He would die of old age, and
+        join them when the time came. The clan\u2019s notoriety, however, had garnered
+        them many enemies over the centuries, who still held age-old grudges that
+        persisted into the modern day. It would not receive the peaceful end it had
+        wished for.\r\n\tOn the anniversary night of the clan\u2019s founding, a
+        group of unknown assailants breached the dojo\u2019s walls. Armed with both
+        a katana and tanto, Hiroshi engaged each attacker one by one. He managed
+        to mortally wound one, before the others finally forced him to kneel. Intending
+        to decapitate the grizzled ninja, the executioner used a dull blade and missed,
+        striking Hiroshi\u2019s jaw but leaving a deep enough wound to kill him.The
+        attackers fled, but not before lighting the storied dojo ablaze, and leaving
+        Hiroshi\u2019s body to burn.\r\n\tIt would not be the end, however. Like
+        the phoenix of legend, a new man was reborn from the ashes of the dojo. Hiroshi
+        returned, driven not by duty but rather a burning vengeance towards his mysterious
+        attackers. Hikage would be a feared name once more, personified by a fiery
+        eyed man shrouded in a cloud of ash.\r\n\tThe first lead, a pendant taken
+        from the corpse of an attacker, has led him around the world. When he heard
+        rumors of a scientist looking for individuals like Hiroshi to partake in
+        an experiment, he volunteered, wanting to hone and understand his new powers.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorName
+      value: Hiroshi
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorTitle
+      value: The Living Legacy
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: infoPanelObject
+      value: 
+      objectReference: {fileID: 842792208}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 'Vanish: This piece can vanish from the board for 3 turns. Returning
+        to its space will eat any enemy piece on it. If there is an ally piece instead,
+        this piece is discarded.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Name
+      value: Augmentor3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -875
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.60048056
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.65163535
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9e444fb8beae88541b86ab709f22a313, type: 3}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
 --- !u!1 &1762100284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2833,6 +3452,41 @@ PrefabInstance:
     m_TransformParent: {fileID: 844452741}
     m_Modifications:
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: "\tGrowing up in a heavily urban area, Gabe had always been surrounded
+        by technology and progress. It filled him with great curiosity, always eager
+        to witness the next advancement in society, driving him to pursue electronic
+        engineering and computer science to positively contribute to humanity. Gabe
+        began drafting and starting many projects, thinking at least one of them
+        would make a significant breakthrough, though dozens of incomplete prototypes
+        suggest that this endeavor is still a work in progress.\r\n\tIn a city full
+        of people, it was difficult to stand out amongst the crowd. Although his
+        parents did their best to spend time with their son, work often pulled them
+        away. Wanting to garner praise and fame for himself, Gabe pushed himself
+        deeper into his designs, exchanging his social life and health for more time
+        toward his work. Chips, candy, and energy drinks became a staple diet, but
+        he didn\u2019t mind. They required no cooking, and had enough sugar for him
+        to continue working. He would also isolate himself from people, so as to
+        prevent his stream of ideas being interrupted. This lifestyle became a source
+        of pride for him, as he often boasted about how long he could stay awake
+        to plan his next invention.\r\n\tOne day, while Gabe tinkered on his latest
+        prototype in the dead of night, his lack of sleep caught up to him. He accidentally
+        poked his screwdriver into the gargantuan power supply. With little safety
+        measures in place, he suffered a massive shock, and shorted out his neighborhood\u2019s
+        power. He was quickly escorted to a hospital, where he lay in a coma. Strangely,
+        the hospital's machines had difficulty scanning Gabe, as if there was something
+        interfering with them. Special care was provided, without the use of modern
+        technology, and Gabe made a full recovery in a few weeks.\r\n\tAs he awoke,
+        he discovered that he attained electrical powers - an Augment. Electricity
+        flowed through him with ease, turning him into a living transformer. Furthermore,
+        Gabe could generate electricity on his own, the amount and strength dependent
+        on the excess energy from his diet. Immediately wanting to test out his new
+        powers, Gabe caught wind of a chess tournament being held, and decided it
+        optimal to register. It\u2019d also help him get back into socializing, and
+        he could practice pitching his project ideas to others - a most efficient
+        use of his time.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorName
       value: Gabe
       objectReference: {fileID: 0}
@@ -2964,6 +3618,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
   m_PrefabInstance: {fileID: 2026958378}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2065184278 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+  m_PrefabInstance: {fileID: 1730673727}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2068338190
 GameObject:

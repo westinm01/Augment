@@ -5,15 +5,15 @@ using UnityEngine;
 public class Gabe : Augmentor
 {
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        name = "Gabe";
-        backgroundColor = Color.yellow;
-        augmentName = "Zappetizer";
-        augmentDesc = "Upon eating an enemy piece, all adjacent enemy pieces are stunned for 2 turns.";
-        triggerVal = 3;
-    }
+    // // Start is called before the first frame update
+    // void Start()
+    // {
+    //     name = "Gabe";
+    //     backgroundColor = Color.yellow;
+    //     augmentName = "Zappetizer";
+    //     augmentDesc = "Upon eating an enemy piece, all adjacent enemy pieces are stunned for 2 turns.";
+    //     triggerVal = 3;
+    // }
 
     
     public override void UseAugment()
