@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PawnPiece : ChessPiece
 {
+    private void Awake()
+    {
+        SetPieceValue(MiniMaxAI.PAWN_VAL);
+    }
+
     public int direction = 1;   // 1 for moving up, -1 for moving down
 
     public override void GetPossibleSpaces()

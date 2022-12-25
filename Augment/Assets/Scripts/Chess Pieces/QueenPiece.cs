@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class QueenPiece : ChessPiece
 {
+    private void Awake()
+    {
+        SetPieceValue(MiniMaxAI.QUEEN_VAL);
+    }
 
     void Update()
     {

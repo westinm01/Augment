@@ -48,8 +48,18 @@ public class ChessBoard : MonoBehaviour
         return height;
     }
 
+    public ChessPiece[,] GetGrid()
+    {
+        return grid;
+    }
+
     public ChessPiece GetPiece(int row, int col){
         return grid[col, row];
+    }
+
+    public void SetGrid(ChessPiece[,] newGrid)
+    {
+        grid = newGrid;
     }
 
     public void PrintBoard(){

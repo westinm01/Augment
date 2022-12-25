@@ -19,6 +19,7 @@ public class ChessPiece : MonoBehaviour
     public Augmentor pieceAugmentor;
     public int status = 0; //to determine what status it has.
     public bool canMove = true;
+    public int pieceValue = 0;
     protected Player thisPlayer;
     
 
@@ -146,4 +147,8 @@ public class ChessPiece : MonoBehaviour
     }
 
     //Eating & CheckMate will be done by a game manager
+    protected void SetPieceValue(int value)
+    {
+        pieceValue = value;
+    }
 }

@@ -6,7 +6,10 @@ using UnityEngine;
 
 public class BishopPiece : ChessPiece
 {
-
+    private void Awake()
+    {
+        SetPieceValue(MiniMaxAI.BISHOP_VAL);
+    }
     void Update()
     {
         

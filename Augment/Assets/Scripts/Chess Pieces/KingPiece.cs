@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class KingPiece : ChessPiece
 {
+    private void Awake()
+    {
+        SetPieceValue(MiniMaxAI.KING_VAL);
+    }
+
     private List<Vector2Int> allPossibleSpaces = new List<Vector2Int> { new Vector2Int(-1, 1), 
                                                                         new Vector2Int(-1, -1), 
                                                                         new Vector2Int(-1, 0),

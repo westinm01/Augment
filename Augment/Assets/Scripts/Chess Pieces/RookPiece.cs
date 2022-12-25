@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class RookPiece : ChessPiece
 {
+    private void Awake()
+    {
+        SetPieceValue(MiniMaxAI.ROOK_VAL);
+    }
 
     void Update()
     {
