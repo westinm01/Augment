@@ -33,6 +33,10 @@ public class CanvasManager : MonoBehaviour
     [SerializeField]
     private GameObject checkPopupBackground;
     [SerializeField]
+    private GameObject checkmatePopupText;    
+    [SerializeField]
+    private GameObject checkmatePopupBackground;
+    [SerializeField]
     private float checkPopupLingerTime;    // How long the popup slows for
     [SerializeField]
     private float fastPopupMoveSpeed;   // How fast the text/background moves to the middle/away
@@ -93,6 +97,8 @@ public class CanvasManager : MonoBehaviour
 
     public IEnumerator CheckCoroutine() {
         checkPopup.SetActive(true);
+        checkPopupText.SetActive(true);
+        checkPopupBackground.SetActive(true);
         Vector3 textOrigin = checkPopupText.transform.position;
         Vector3 backgroundOrigin = checkPopupBackground.transform.position;
 
@@ -124,6 +130,44 @@ public class CanvasManager : MonoBehaviour
 
         checkPopupText.transform.position = textOrigin;
         checkPopupBackground.transform.position = backgroundOrigin;
+        checkPopup.SetActive(false);
+    }
+
+    public IEnumerator CheckmateCoroutine() {
+        checkPopup.SetActive(true);
+        checkmatePopupText.SetActive(true);
+        checkmatePopupBackground.SetActive(true);
+        Vector3 textOrigin = checkmatePopupText.transform.position;
+        Vector3 backgroundOrigin = checkmatePopupBackground.transform.position;
+
+        // Text flies in from the right, background flies in from the left
+        // Text moving towards middle fast
+        // Add a slight buffer to the mid point to prevent sliding too far
+        while (checkmatePopupText.transform.localPosition.x > 100 && checkmatePopupBackground.transform.localPosition.x < -100) {
+            checkmatePopupText.transform.position -= new Vector3(fastPopupMoveSpeed * Time.deltaTime, 0, 0);
+            checkmatePopupBackground.transform.position += new Vector3(fastPopupMoveSpeed * Time.deltaTime, 0, 0);
+            yield return null;
+        }
+
+        // Text moving in middle slowly
+        float slowTimer = 0;
+        while (slowTimer < checkPopupLingerTime) {
+            checkmatePopupText.transform.position -= new Vector3(slowPopupMoveSpeed * Time.deltaTime, 0, 0);
+            checkmatePopupBackground.transform.position += new Vector3(slowPopupMoveSpeed * Time.deltaTime, 0, 0);
+            slowTimer += Time.deltaTime;
+            yield return null;
+        }
+
+        // Text moving away from middle fast
+        while (checkmatePopupText.transform.position.x > backgroundOrigin.x && checkmatePopupBackground.transform.position.x < textOrigin.x) {
+            checkmatePopupText.transform.position -= new Vector3(fastPopupMoveSpeed * Time.deltaTime, 0, 0);
+            checkmatePopupBackground.transform.position += new Vector3(fastPopupMoveSpeed * Time.deltaTime, 0, 0);
+            yield return null;
+        }
+
+
+        checkmatePopupText.transform.position = textOrigin;
+        checkmatePopupBackground.transform.position = backgroundOrigin;
         checkPopup.SetActive(false);
     }
 }
