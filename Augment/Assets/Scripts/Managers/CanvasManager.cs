@@ -25,6 +25,21 @@ public class CanvasManager : MonoBehaviour
     [SerializeField]
     private SpriteRenderer background;
     
+    [Header("Check Popup")]
+    [SerializeField]
+    private GameObject checkPopup;
+    [SerializeField]
+    private GameObject checkPopupText;    
+    [SerializeField]
+    private GameObject checkPopupBackground;
+    [SerializeField]
+    private float checkPopupLingerTime;    // How long the popup slows for
+    [SerializeField]
+    private float fastPopupMoveSpeed;   // How fast the text/background moves to the middle/away
+    [SerializeField]
+    private float slowPopupMoveSpeed;   // How fast the text/background moves in the middle of the screen
+    
+
 
     private ChessPiece currSelected;
 
@@ -74,5 +89,41 @@ public class CanvasManager : MonoBehaviour
 
         // Remove this later, call function in InputManager after getting the required input
         DeactivateAugmentPrompt();
+    }
+
+    public IEnumerator CheckCoroutine() {
+        checkPopup.SetActive(true);
+        Vector3 textOrigin = checkPopupText.transform.position;
+        Vector3 backgroundOrigin = checkPopupBackground.transform.position;
+
+        // Text flies in from the right, background flies in from the left
+        // Text moving towards middle fast
+        // Add a slight buffer to the mid point to prevent sliding too far
+        while (checkPopupText.transform.localPosition.x > 100 && checkPopupBackground.transform.localPosition.x < -100) {
+            checkPopupText.transform.position -= new Vector3(fastPopupMoveSpeed * Time.deltaTime, 0, 0);
+            checkPopupBackground.transform.position += new Vector3(fastPopupMoveSpeed * Time.deltaTime, 0, 0);
+            yield return null;
+        }
+
+        // Text moving in middle slowly
+        float slowTimer = 0;
+        while (slowTimer < checkPopupLingerTime) {
+            checkPopupText.transform.position -= new Vector3(slowPopupMoveSpeed * Time.deltaTime, 0, 0);
+            checkPopupBackground.transform.position += new Vector3(slowPopupMoveSpeed * Time.deltaTime, 0, 0);
+            slowTimer += Time.deltaTime;
+            yield return null;
+        }
+
+        // Text moving away from middle fast
+        while (checkPopupText.transform.position.x > backgroundOrigin.x && checkPopupBackground.transform.position.x < textOrigin.x) {
+            checkPopupText.transform.position -= new Vector3(fastPopupMoveSpeed * Time.deltaTime, 0, 0);
+            checkPopupBackground.transform.position += new Vector3(fastPopupMoveSpeed * Time.deltaTime, 0, 0);
+            yield return null;
+        }
+
+
+        checkPopupText.transform.position = textOrigin;
+        checkPopupBackground.transform.position = backgroundOrigin;
+        checkPopup.SetActive(false);
     }
 }

@@ -127,6 +127,8 @@ public class BoardManager : MonoBehaviour
         if (enemyPlayer.isInCheck()) {
             Debug.Log("CHECK!");
             //Maybe add visual queues!
+            StartCoroutine(CanvasManager.Instance.CheckCoroutine());
+
             // Update the player moves again to only allow moves that escape check
             enemyPlayer.UpdatePossibleMoves();
             if (enemyPlayer.isInCheckmate()) {
