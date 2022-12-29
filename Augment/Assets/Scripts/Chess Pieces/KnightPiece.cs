@@ -7,6 +7,7 @@ public class KnightPiece : ChessPiece
     private void Awake()
     {
         SetPieceValue(MiniMaxAI.KNIGHT_VAL);
+        SetPieceChar(StockfishAI.KNIGHT_CHAR);
     }
 
     // More efficient to hard code lol

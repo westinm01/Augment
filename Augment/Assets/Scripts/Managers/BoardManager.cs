@@ -41,6 +41,11 @@ public class BoardManager : MonoBehaviour
         board.PrintBoard();
     }
 
+    public ChessBoard GetBoard()
+    {
+        return board;
+    }
+
     public ChessPiece GetChessPiece(int row, int col) {
         if (!InBounds(row, col)) {
             return null;

@@ -7,6 +7,7 @@ public class RookPiece : ChessPiece
     private void Awake()
     {
         SetPieceValue(MiniMaxAI.ROOK_VAL);
+        SetPieceChar(StockfishAI.ROOK_CHAR);
     }
 
     void Update()

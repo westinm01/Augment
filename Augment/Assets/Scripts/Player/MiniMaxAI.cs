@@ -86,4 +86,9 @@ public class MiniMaxAI : AIPlayer
             return (whiteScore - blackScore);
         }
     }
+
+    void UpdateBoard()
+    {
+
+    }
 }

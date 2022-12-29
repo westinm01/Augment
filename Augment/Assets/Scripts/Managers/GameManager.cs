@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     
     public StatusManager statusManager;
 
+    int numFullMoves = 1;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -62,6 +64,11 @@ public class GameManager : MonoBehaviour
         return events;
     }
 
+    public int GetNumFullMoves()
+    {
+        return numFullMoves;
+    }
+
     public void UpdateAllPossibleMoves() {
         whitePlayer.UpdatePossibleMoves();
         blackPlayer.UpdatePossibleMoves();
@@ -76,6 +83,8 @@ public class GameManager : MonoBehaviour
         }
         else {
             currPlayer = whitePlayer;
+
+            numFullMoves++;
         }
         statusManager.TurnUpdate();
 

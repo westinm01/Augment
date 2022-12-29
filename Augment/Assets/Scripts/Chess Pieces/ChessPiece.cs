@@ -20,6 +20,7 @@ public class ChessPiece : MonoBehaviour
     public int status = 0; //to determine what status it has.
     public bool canMove = true;
     public int pieceValue = 0;
+    public char pieceChar;
     protected Player thisPlayer;
     
 
@@ -188,5 +189,10 @@ public class ChessPiece : MonoBehaviour
     protected void SetPieceValue(int value)
     {
         pieceValue = value;
+    }
+
+    protected void SetPieceChar(char c)
+    {
+        pieceChar = c;
     }
 }

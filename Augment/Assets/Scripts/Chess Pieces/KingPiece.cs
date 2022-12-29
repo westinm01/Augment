@@ -7,6 +7,7 @@ public class KingPiece : ChessPiece
     private void Awake()
     {
         SetPieceValue(MiniMaxAI.KING_VAL);
+        SetPieceChar(StockfishAI.KING_CHAR);
     }
 
     private List<Vector2Int> allPossibleSpaces = new List<Vector2Int> { new Vector2Int(-1, 1), 
