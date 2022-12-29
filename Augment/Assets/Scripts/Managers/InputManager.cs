@@ -13,12 +13,14 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     private InputState state = InputState.Wait;
     private Vector3 initialPos;
+    private bool isFrozen;
 
     private TriggerManager tm;
 
     void Start()
     {
         tm = GetComponent<TriggerManager>();
+        isFrozen = false;
     }
 
     void Update()
@@ -28,6 +30,10 @@ public class InputManager : MonoBehaviour
             if (!currAI.isMakingMove) {
                 currAI.StartMove();
             }
+            return;
+        }
+
+        if (isFrozen) {
             return;
         }
 
@@ -161,5 +167,9 @@ public class InputManager : MonoBehaviour
             
             state = InputState.Wait;
         }
+    }
+
+    public void ToggleInput() {
+        isFrozen = !isFrozen;
     }
 }
