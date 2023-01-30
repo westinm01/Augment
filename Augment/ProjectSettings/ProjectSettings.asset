@@ -875,11 +875,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 
+  cloudProjectId: 5b0cdbd9-7203-4a18-9684-6ab9051a5c6e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Augment
+  organizationId: myong01
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
