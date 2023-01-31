@@ -929,7 +929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7b227e8e0e26c64f9d1dcf27c7fe2d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputLobbyCode: {fileID: 34992817}
+  inputLobbyCode: {fileID: 1430816189}
   numPlayers: {fileID: 1247634802}
   lobbyCode: {fileID: 253914420}
 --- !u!4 &1187155903

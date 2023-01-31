@@ -11,7 +11,7 @@ using TMPro;
 public class LobbyManager : NetworkBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI inputLobbyCode;
+    private TMP_InputField inputLobbyCode;
     [SerializeField]
     private TextMeshProUGUI numPlayers;
     [SerializeField]
@@ -87,6 +87,7 @@ public class LobbyManager : NetworkBehaviour
     }
 
     public void JoinLobbyButton() {
+        Debug.Log(inputLobbyCode.text);
         JoinLobbyByCode(inputLobbyCode.text);
     }
 
