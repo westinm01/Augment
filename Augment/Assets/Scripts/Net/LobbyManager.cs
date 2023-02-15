@@ -32,11 +32,14 @@ public class LobbyManager : NetworkBehaviour
         HandleLobbyHeartbeat();
     }
 
+    /// <summary>
+    /// Handles how long a lobby is created for
+    /// </summary>
     private void HandleLobbyHeartbeat() {
         if (hostLobby != null) {
             heartbeatTimer -= Time.deltaTime;
             if (heartbeatTimer < 0f) {
-                float heartbeatTimerMax = 15;
+                float heartbeatTimerMax = 30;
                 heartbeatTimer = heartbeatTimerMax;
 
                 LobbyService.Instance.SendHeartbeatPingAsync(hostLobby.Id);
@@ -44,6 +47,10 @@ public class LobbyManager : NetworkBehaviour
         }
     }
 
+    /// <summary>
+    /// Creates a lobby private by default
+    /// </summary>
+    /// <returns></returns>
     public async void CreateLobby() {
         try{
             string lobbyName = "MyLobby";
@@ -63,6 +70,10 @@ public class LobbyManager : NetworkBehaviour
         }
     }
 
+    /// <summary>
+    /// Lists all public lobbies
+    /// </summary>
+    /// <returns></returns>
     public async void ListLobbies() {
         try {
             QueryLobbiesOptions queryLobbiesOptions = new QueryLobbiesOptions{
