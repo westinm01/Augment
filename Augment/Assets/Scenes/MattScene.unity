@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 1896146139}
   - component: {fileID: 1896146138}
   - component: {fileID: 1896146137}
+  - component: {fileID: 1896146140}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -404,6 +405,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1896146140
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896146136}
+  m_Enabled: 1
 --- !u!1001 &1016504711906601575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -412,14 +421,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1016504711927523080, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
-      propertyPath: player1
-      value: 
-      objectReference: {fileID: 1468011883}
-    - target: {fileID: 1016504711927523080, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
-      propertyPath: player2
-      value: 
-      objectReference: {fileID: 1179473132}
     - target: {fileID: 1016504711927523081, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -472,14 +473,6 @@ PrefabInstance:
       propertyPath: whitePlayer
       value: 
       objectReference: {fileID: 1468011883}
-    - target: {fileID: 1016504711927523083, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
-      propertyPath: player1
-      value: 
-      objectReference: {fileID: 1468011883}
-    - target: {fileID: 1016504711927523083, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
-      propertyPath: player2
-      value: 
-      objectReference: {fileID: 1179473132}
     - target: {fileID: 1016504711927523084, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
       propertyPath: m_Name
       value: GameManager

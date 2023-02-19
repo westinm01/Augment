@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     private TriggerManager tm;
     private EventsManager events;
+    private AudioManager audioManager;
     
     public StatusManager statusManager;
 
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
         tm = GetComponent<TriggerManager>();
         statusManager = GetComponent<StatusManager>();
         events = GetComponent<EventsManager>();
+        audioManager = GetComponentInChildren<AudioManager>();
     }
 
     // Update is called once per frame
@@ -83,6 +85,10 @@ public class GameManager : MonoBehaviour
 
     public TriggerManager GetTriggerManager() {
         return tm;
+    }
+
+    public AudioManager GetAudioManager() {
+        return audioManager;
     }
 
     public int GetNumFullMoves()

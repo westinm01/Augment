@@ -42,7 +42,14 @@ public class CanvasManager : MonoBehaviour
     private float fastPopupMoveSpeed;   // How fast the text/background moves to the middle/away
     [SerializeField]
     private float slowPopupMoveSpeed;   // How fast the text/background moves in the middle of the screen
-    
+
+    [Header("Augmentor Flash")]
+    [SerializeField]
+    private GameObject augmentorFlashSprite;
+    [SerializeField]
+    private float fastAugmentorFlashMoveSpeed;   // How fast the augmentor moves to the middle/away
+    [SerializeField]
+    private float slowAugmentorFlashMoveSpeed;   // How fast the augmentor moves in the middle of the screen
 
 
     private ChessPiece currSelected;
@@ -169,5 +176,40 @@ public class CanvasManager : MonoBehaviour
         checkmatePopupText.transform.position = textOrigin;
         checkmatePopupBackground.transform.position = backgroundOrigin;
         checkPopup.SetActive(false);
+    }
+
+    public IEnumerator AugmentorFlash(Augmentor augmentor)
+    {
+        augmentorFlashSprite.SetActive(true);
+        augmentorFlashSprite.GetComponent<SpriteRenderer>().sprite = augmentor.sprite;
+
+        Vector3 augmentorOrigin = augmentorFlashSprite.transform.position;
+        Vector3 destination = augmentorOrigin;
+        destination.x = -destination.x;
+
+        // Augmentor flies in from the right
+        // Augmentor moving towards middle fast
+        // Add a slight buffer to the mid point to prevent sliding too far
+        while (augmentorFlashSprite.transform.localPosition.x > 100) {
+            augmentorFlashSprite.transform.position -= new Vector3(fastAugmentorFlashMoveSpeed * Time.deltaTime, 0, 0);
+            yield return null;
+        }
+
+        // Augmentor moving in middle slowly
+        augmentor.PlayRandomBark();
+        AudioManager am = GameManager.Instance.GetAudioManager();
+        while (am.IsPlayingFX()) {
+            augmentorFlashSprite.transform.position -= new Vector3(slowAugmentorFlashMoveSpeed * Time.deltaTime, 0, 0);
+            yield return null;
+        }
+
+        // Augmentor moving away from middle fast
+        while (augmentorFlashSprite.transform.position.x > -augmentorOrigin.x) {
+            augmentorFlashSprite.transform.position -= new Vector3(fastAugmentorFlashMoveSpeed * Time.deltaTime, 0, 0);
+            yield return null;
+        }
+
+        augmentorFlashSprite.transform.position = augmentorOrigin;
+        augmentorFlashSprite.SetActive(false);
     }
 }

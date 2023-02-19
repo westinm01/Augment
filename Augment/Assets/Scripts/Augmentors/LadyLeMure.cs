@@ -16,6 +16,8 @@ public class LadyLeMure : Augmentor
     public AugmentorObject ghostAugment;
     public override void UseAugment()
     {
+        StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
+
         Player currPlayer = GameManager.Instance.GetCurrentPlayer();
         ChessPiece lastEaten = currPlayer.GetLastPieceEaten();
         Debug.Log(lastEaten);

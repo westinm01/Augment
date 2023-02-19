@@ -13,4 +13,5 @@ public class AugmentorObject : ScriptableObject
     public Color backgroundColor;
     public int triggerVal;
     public bool hasPrompt;
+    public List<AudioClip> barks;
 }

@@ -17,7 +17,7 @@ public class Augmentor : MonoBehaviour
     public ChessPiece augmentPiece;
     public AugmentorObject augmentor;
     public bool canActivate = false;
-    public List<AudioClip> barks = new List<AudioClip>();
+    public List<AudioClip> barks;
 
     protected virtual void Start(){
         UpdateInformation();
@@ -31,6 +31,7 @@ public class Augmentor : MonoBehaviour
         this.backgroundColor = augmentor.backgroundColor;
         this.triggerVal = augmentor.triggerVal;
         this.hasPrompt = augmentor.hasPrompt;
+        this.barks = augmentor.barks;
 
         this.augmentPiece = GetComponent<ChessPiece>();
     }
@@ -39,7 +40,7 @@ public class Augmentor : MonoBehaviour
     {
         if(canActivate)
         {
-
+            StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
         }
     }
     public virtual void PlayVFX()
@@ -49,6 +50,11 @@ public class Augmentor : MonoBehaviour
     public virtual void PlayRandomBark()
     {
         //play random audio clip from barks.
+        if (barks.Count > 0)
+        {
+            int randIndex = Random.Range(0, barks.Count);
+            GameManager.Instance.GetAudioManager().PlaySound(barks[randIndex]);
+        }
     }
     public virtual void PlaySFX()
     {
