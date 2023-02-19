@@ -179,6 +179,7 @@ MonoBehaviour:
   augmentor: {fileID: 11400000, guid: f5a429d265a8ce7469fff12d38872471, type: 2}
   canActivate: 0
   barks: []
+  ghostAugment: {fileID: 11400000, guid: 4afada38f0a7ee740a44e35b6d59ec75, type: 2}
 --- !u!20 &1055322546 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8314416890425352240, guid: 53a881ddec34d8945ab330f3579267ae, type: 3}
@@ -218,6 +219,7 @@ MonoBehaviour:
   playerPieces: []
   threateningPieces: []
   checkPath: []
+  capturedPieces: []
 --- !u!4 &1179473133
 Transform:
   m_ObjectHideFlags: 0
@@ -267,6 +269,7 @@ MonoBehaviour:
   playerPieces: []
   threateningPieces: []
   checkPath: []
+  capturedPieces: []
   moveDelay: 1
   isMakingMove: 0
 --- !u!4 &1193725145
@@ -318,6 +321,7 @@ MonoBehaviour:
   playerPieces: []
   threateningPieces: []
   checkPath: []
+  capturedPieces: []
 --- !u!4 &1468011884
 Transform:
   m_ObjectHideFlags: 0

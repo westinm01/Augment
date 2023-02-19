@@ -120,6 +120,7 @@ public class BoardManager : MonoBehaviour
         //!!!!!!!!CHECK TRIGGERS: 3!!!!!!!!!!!!!!!!!!!!!!!
         if(pieceEaten)
         {
+            Debug.Log("Checking trigger");
             tm.CheckTrigger(3, piece);
         }
         
@@ -167,8 +168,11 @@ public class BoardManager : MonoBehaviour
         // Debug.Log(em.CallFunc(piece));
 
         Player piecePlayer = GameManager.Instance.GetPlayer(piece.team);
+        Player enemyPlayer = GameManager.Instance.GetPlayer(!piece.team);
+        enemyPlayer.capturedPieces.Add(piece);
         piecePlayer.playerPieces.Remove(piece);
-        Destroy(piece.gameObject);
+        // Destroy(piece.gameObject);
+        piece.gameObject.SetActive(false);
     }
 
     public void HighlightPossibleMoves(ChessPiece piece)

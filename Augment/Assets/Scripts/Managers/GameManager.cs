@@ -60,6 +60,14 @@ public class GameManager : MonoBehaviour
         return currPlayer;
     }
 
+    /// <summary>
+    /// Returns the opponent of the current player
+    /// </summary>
+    /// <returns></returns>
+    public Player GetEnemyPlayer() {
+        return GetPlayer(!currPlayer.playerTeam);
+    }
+
     public Player GetPlayer(bool team) {
         if (team) {
             return whitePlayer;
@@ -71,6 +79,10 @@ public class GameManager : MonoBehaviour
 
     public EventsManager GetEventsManager() {
         return events;
+    }
+
+    public TriggerManager GetTriggerManager() {
+        return tm;
     }
 
     public int GetNumFullMoves()

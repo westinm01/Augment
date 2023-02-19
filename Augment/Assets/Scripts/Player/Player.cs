@@ -9,9 +9,11 @@ public class Player : MonoBehaviour
     public List<ChessPiece> playerPieces;
     public List<ChessPiece> threateningPieces;
     public List<Vector2Int> checkPath;
+    public List<ChessPiece> capturedPieces;
 
     void Start() {
         checkPath = new List<Vector2Int>();
+        capturedPieces = new List<ChessPiece>();
 
         GameObject[] pieces = GameObject.FindGameObjectsWithTag("ChessPiece");
         foreach (GameObject piece in pieces) {
@@ -76,6 +78,15 @@ public class Player : MonoBehaviour
         return true;
     }
 
+    /// <summary>
+    /// Returns the last piece that the player ate
+    /// </summary>
+    /// <returns></returns>
+    public ChessPiece GetLastPieceEaten()
+    {
+        return capturedPieces[capturedPieces.Count-1];
+    }
+
     private KingPiece GetKingPiece() {
         foreach (ChessPiece piece in playerPieces) {
             KingPiece king;
@@ -86,5 +97,4 @@ public class Player : MonoBehaviour
         
         return null;
     }
-
 }
