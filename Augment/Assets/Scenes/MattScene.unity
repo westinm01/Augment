@@ -216,6 +216,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTeam: 0
   inCheck: 0
+  maxTotalTime: 600
+  maxTurnTime: 60
+  totalTimer: 0
   playerPieces: []
   threateningPieces: []
   checkPath: []
@@ -266,6 +269,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTeam: 0
   inCheck: 0
+  maxTotalTime: 0
+  maxTurnTime: 0
+  totalTimer: 0
   playerPieces: []
   threateningPieces: []
   checkPath: []
@@ -318,6 +324,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTeam: 1
   inCheck: 0
+  maxTotalTime: 600
+  maxTurnTime: 60
+  totalTimer: 0
   playerPieces: []
   threateningPieces: []
   checkPath: []

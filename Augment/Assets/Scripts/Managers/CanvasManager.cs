@@ -51,6 +51,14 @@ public class CanvasManager : MonoBehaviour
     [SerializeField]
     private float slowAugmentorFlashMoveSpeed;   // How fast the augmentor moves in the middle of the screen
 
+    [Header("Timers")]
+    [SerializeField]
+    private TextMeshProUGUI whiteTotalTimer;
+    [SerializeField]
+    private TextMeshProUGUI blackTotalTimer;
+    [SerializeField]
+    private TextMeshProUGUI currTimer;
+
 
     private ChessPiece currSelected;
 
@@ -61,6 +69,11 @@ public class CanvasManager : MonoBehaviour
         else {
             Instance = this;
         }
+    }
+
+    private void Update()
+    {
+        UpdateTimers();
     }
 
     public void ActivateAugmentPrompt(ChessPiece piece) {
@@ -211,5 +224,22 @@ public class CanvasManager : MonoBehaviour
 
         augmentorFlashSprite.transform.position = augmentorOrigin;
         augmentorFlashSprite.SetActive(false);
+    }
+
+    private void UpdateTimers() {
+        float whiteTimer = GameManager.Instance.GetPlayer(true).totalTimer;
+        float blackTimer = GameManager.Instance.GetPlayer(false).totalTimer;
+
+        whiteTotalTimer.text = ConvertTimerToString(whiteTimer);
+        blackTotalTimer.text = ConvertTimerToString(blackTimer);
+        currTimer.text = ConvertTimerToString(GameManager.Instance.turnTimer);
+    }
+
+    private string ConvertTimerToString(float time)
+    {
+        int minutes = (int) time / 60;
+        float seconds = time - (minutes * 60f);
+        seconds = (int)(seconds * 100) / 100f;  // Truncate to 2 decimal points
+        return minutes + ":" + seconds;
     }
 }

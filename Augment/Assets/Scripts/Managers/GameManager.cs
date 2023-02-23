@@ -16,8 +16,9 @@ public class GameManager : MonoBehaviour
     private TriggerManager tm;
     private EventsManager events;
     private AudioManager audioManager;
-    
     public StatusManager statusManager;
+
+    public float turnTimer {get; private set; }
 
 
     int numFullMoves = 1;
@@ -50,12 +51,18 @@ public class GameManager : MonoBehaviour
         statusManager = GetComponent<StatusManager>();
         events = GetComponent<EventsManager>();
         audioManager = GetComponentInChildren<AudioManager>();
+
+        turnTimer = currPlayer.maxTurnTime;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        turnTimer -= Time.deltaTime;
+        currPlayer.DecrementTime(Time.deltaTime);
+        if (turnTimer <= 0) {
+            SwitchTeams();
+        }
     }
 
     public Player GetCurrentPlayer() {
@@ -115,12 +122,16 @@ public class GameManager : MonoBehaviour
         }
         statusManager.TurnUpdate();
 
-         //!!!!!!!!CHECK CURRPLAYER TRIGGERS: 0!!!!!!!!!!!!!!!!!!!!!!!!
-         tm.CheckTrigger(0, currPlayer.playerTeam);
-         events.CallOnTurnEnd();
+        //!!!!!!!!CHECK CURRPLAYER TRIGGERS: 0!!!!!!!!!!!!!!!!!!!!!!!!
+        tm.CheckTrigger(0, currPlayer.playerTeam);
+        events.CallOnTurnEnd();
+
+        turnTimer = currPlayer.maxTurnTime;
+        currPlayer.DecrementTime(Time.deltaTime);
     }
 
     public void EndGame() {
+        Debug.Log("Game over");
     }
 
     #region Events
