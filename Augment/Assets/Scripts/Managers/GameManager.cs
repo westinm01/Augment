@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
         turnTimer -= Time.deltaTime;
         currPlayer.DecrementTime(Time.deltaTime);
         if (turnTimer <= 0) {
+            board.UnHighlightPieces();
             SwitchTeams();
         }
     }

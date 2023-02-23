@@ -6,8 +6,8 @@ public class Player : MonoBehaviour
 {
     public bool playerTeam;
     public bool inCheck;
-    public float maxTotalTime;
-    public float maxTurnTime;
+    public float maxTotalTime=600f;
+    public float maxTurnTime=60f;
     [HideInInspector] public float totalTimer;
     public List<ChessPiece> playerPieces;
     public List<ChessPiece> threateningPieces;
