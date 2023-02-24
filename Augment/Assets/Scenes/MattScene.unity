@@ -165,7 +165,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 724195013}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ca87dc2c874f274d88e946a9255c244, type: 3}
+  m_Script: {fileID: 11500000, guid: 77e62b01bef3dbf4eba9ca45292c5a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
@@ -176,10 +176,10 @@ MonoBehaviour:
   triggerVal: 0
   hasPrompt: 0
   augmentPiece: {fileID: 0}
-  augmentor: {fileID: 11400000, guid: f5a429d265a8ce7469fff12d38872471, type: 2}
+  augmentor: {fileID: 11400000, guid: ec564a0c701f9d443aef80673678b217, type: 2}
   canActivate: 0
   barks: []
-  ghostAugment: {fileID: 11400000, guid: 4afada38f0a7ee740a44e35b6d59ec75, type: 2}
+  enemyNextTurnTime: 5
 --- !u!20 &1055322546 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8314416890425352240, guid: 53a881ddec34d8945ab330f3579267ae, type: 3}

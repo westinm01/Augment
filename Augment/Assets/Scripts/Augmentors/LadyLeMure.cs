@@ -20,7 +20,6 @@ public class LadyLeMure : Augmentor
 
         Player currPlayer = GameManager.Instance.GetCurrentPlayer();
         ChessPiece lastEaten = currPlayer.GetLastPieceEaten();
-        Debug.Log(lastEaten);
 
         // Remove the old augment
         lastEaten.gameObject.SetActive(true);

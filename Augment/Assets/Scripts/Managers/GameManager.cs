@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public StatusManager statusManager;
 
     public float turnTimer {get; private set; }
+    private float nextTurnTime;
 
 
     int numFullMoves = 1;
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
         audioManager = GetComponentInChildren<AudioManager>();
 
         turnTimer = currPlayer.maxTurnTime;
+        nextTurnTime = currPlayer.maxTurnTime;
     }
 
     // Update is called once per frame
@@ -127,8 +129,17 @@ public class GameManager : MonoBehaviour
         tm.CheckTrigger(0, currPlayer.playerTeam);
         events.CallOnTurnEnd();
 
-        turnTimer = currPlayer.maxTurnTime;
+        turnTimer = nextTurnTime;
+        if (nextTurnTime != currPlayer.maxTurnTime)
+        {
+            nextTurnTime = currPlayer.maxTurnTime;
+        }
         currPlayer.DecrementTime(Time.deltaTime);
+    }
+
+    public void SetNextTurnTimer(float time)
+    {
+        nextTurnTime = time;
     }
 
     public void EndGame() {
