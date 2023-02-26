@@ -29,6 +29,7 @@ public class Augmentor : MonoBehaviour
         this.augmentDesc = augmentor.description;
         this.sprite = augmentor.sprite;
         this.backgroundColor = augmentor.backgroundColor;
+        this.backgroundColor.a = 1;
         this.triggerVal = augmentor.triggerVal;
         this.hasPrompt = augmentor.hasPrompt;
         this.barks = augmentor.barks;
