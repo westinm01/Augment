@@ -42,7 +42,22 @@ public class CanvasManager : MonoBehaviour
     private float fastPopupMoveSpeed;   // How fast the text/background moves to the middle/away
     [SerializeField]
     private float slowPopupMoveSpeed;   // How fast the text/background moves in the middle of the screen
-    
+
+    [Header("Augmentor Flash")]
+    [SerializeField]
+    private GameObject augmentorFlashSprite;
+    [SerializeField]
+    private float fastAugmentorFlashMoveSpeed;   // How fast the augmentor moves to the middle/away
+    [SerializeField]
+    private float slowAugmentorFlashMoveSpeed;   // How fast the augmentor moves in the middle of the screen
+
+    [Header("Timers")]
+    [SerializeField]
+    private TextMeshProUGUI whiteTotalTimer;
+    [SerializeField]
+    private TextMeshProUGUI blackTotalTimer;
+    [SerializeField]
+    private TextMeshProUGUI currTimer;
 
 
     private ChessPiece currSelected;
@@ -54,6 +69,11 @@ public class CanvasManager : MonoBehaviour
         else {
             Instance = this;
         }
+    }
+
+    private void Update()
+    {
+        UpdateTimers();
     }
 
     public void ActivateAugmentPrompt(ChessPiece piece) {
@@ -169,5 +189,57 @@ public class CanvasManager : MonoBehaviour
         checkmatePopupText.transform.position = textOrigin;
         checkmatePopupBackground.transform.position = backgroundOrigin;
         checkPopup.SetActive(false);
+    }
+
+    public IEnumerator AugmentorFlash(Augmentor augmentor)
+    {
+        augmentorFlashSprite.SetActive(true);
+        augmentorFlashSprite.GetComponent<SpriteRenderer>().sprite = augmentor.sprite;
+
+        Vector3 augmentorOrigin = augmentorFlashSprite.transform.position;
+        Vector3 destination = augmentorOrigin;
+        destination.x = -destination.x;
+
+        // Augmentor flies in from the right
+        // Augmentor moving towards middle fast
+        // Add a slight buffer to the mid point to prevent sliding too far
+        while (augmentorFlashSprite.transform.localPosition.x > 100) {
+            augmentorFlashSprite.transform.position -= new Vector3(fastAugmentorFlashMoveSpeed * Time.deltaTime, 0, 0);
+            yield return null;
+        }
+
+        // Augmentor moving in middle slowly
+        augmentor.PlayRandomBark();
+        AudioManager am = GameManager.Instance.GetAudioManager();
+        while (am.IsPlayingFX()) {
+            augmentorFlashSprite.transform.position -= new Vector3(slowAugmentorFlashMoveSpeed * Time.deltaTime, 0, 0);
+            yield return null;
+        }
+
+        // Augmentor moving away from middle fast
+        while (augmentorFlashSprite.transform.position.x > -augmentorOrigin.x) {
+            augmentorFlashSprite.transform.position -= new Vector3(fastAugmentorFlashMoveSpeed * Time.deltaTime, 0, 0);
+            yield return null;
+        }
+
+        augmentorFlashSprite.transform.position = augmentorOrigin;
+        augmentorFlashSprite.SetActive(false);
+    }
+
+    private void UpdateTimers() {
+        float whiteTimer = GameManager.Instance.GetPlayer(true).totalTimer;
+        float blackTimer = GameManager.Instance.GetPlayer(false).totalTimer;
+
+        whiteTotalTimer.text = ConvertTimerToString(whiteTimer);
+        blackTotalTimer.text = ConvertTimerToString(blackTimer);
+        currTimer.text = ConvertTimerToString(GameManager.Instance.turnTimer);
+    }
+
+    private string ConvertTimerToString(float time)
+    {
+        int minutes = (int) time / 60;
+        float seconds = time - (minutes * 60f);
+        seconds = (int)(seconds * 100) / 100f;  // Truncate to 2 decimal points
+        return minutes + ":" + seconds;
     }
 }

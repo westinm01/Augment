@@ -120,6 +120,7 @@ public class BoardManager : MonoBehaviour
         //!!!!!!!!CHECK TRIGGERS: 3!!!!!!!!!!!!!!!!!!!!!!!
         if(pieceEaten)
         {
+            Debug.Log("Checking trigger");
             tm.CheckTrigger(3, piece);
         }
         
@@ -153,9 +154,25 @@ public class BoardManager : MonoBehaviour
     /// Eats piece in parameter
     /// </summary>
     public void EatPiece(ChessPiece piece) {
+        // EventsManager em = GameManager.Instance.GetEventsManager();
+        // // em.CallOnPieceEaten(piece);
+        // // if (em.cancelPieceEaten) {
+        // //     em.cancelPieceEaten = false;
+        // //     return;
+        // // }
+
+        // // List<bool> b = em.CallFunc(piece);
+        // // foreach (bool temp in b) {
+        // //     Debug.Log(temp);
+        // // } 
+        // Debug.Log(em.CallFunc(piece));
+
         Player piecePlayer = GameManager.Instance.GetPlayer(piece.team);
+        Player enemyPlayer = GameManager.Instance.GetPlayer(!piece.team);
+        enemyPlayer.capturedPieces.Add(piece);
         piecePlayer.playerPieces.Remove(piece);
-        Destroy(piece.gameObject);
+        // Destroy(piece.gameObject);
+        piece.gameObject.SetActive(false);
     }
 
     public void HighlightPossibleMoves(ChessPiece piece)

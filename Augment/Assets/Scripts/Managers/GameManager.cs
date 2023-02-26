@@ -15,8 +15,11 @@ public class GameManager : MonoBehaviour
 
     private TriggerManager tm;
     private EventsManager events;
-    
+    private AudioManager audioManager;
     public StatusManager statusManager;
+
+    public float turnTimer {get; private set; }
+    private float nextTurnTime;
 
 
     int numFullMoves = 1;
@@ -48,16 +51,33 @@ public class GameManager : MonoBehaviour
         tm = GetComponent<TriggerManager>();
         statusManager = GetComponent<StatusManager>();
         events = GetComponent<EventsManager>();
+        audioManager = GetComponentInChildren<AudioManager>();
+
+        turnTimer = currPlayer.maxTurnTime;
+        nextTurnTime = currPlayer.maxTurnTime;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        turnTimer -= Time.deltaTime;
+        currPlayer.DecrementTime(Time.deltaTime);
+        if (turnTimer <= 0) {
+            board.UnHighlightPieces();
+            SwitchTeams();
+        }
     }
 
     public Player GetCurrentPlayer() {
         return currPlayer;
+    }
+
+    /// <summary>
+    /// Returns the opponent of the current player
+    /// </summary>
+    /// <returns></returns>
+    public Player GetEnemyPlayer() {
+        return GetPlayer(!currPlayer.playerTeam);
     }
 
     public Player GetPlayer(bool team) {
@@ -71,6 +91,14 @@ public class GameManager : MonoBehaviour
 
     public EventsManager GetEventsManager() {
         return events;
+    }
+
+    public TriggerManager GetTriggerManager() {
+        return tm;
+    }
+
+    public AudioManager GetAudioManager() {
+        return audioManager;
     }
 
     public int GetNumFullMoves()
@@ -97,12 +125,25 @@ public class GameManager : MonoBehaviour
         }
         statusManager.TurnUpdate();
 
-         //!!!!!!!!CHECK CURRPLAYER TRIGGERS: 0!!!!!!!!!!!!!!!!!!!!!!!!
-         tm.CheckTrigger(0, currPlayer.playerTeam);
-         events.CallOnTurnEnd();
+        //!!!!!!!!CHECK CURRPLAYER TRIGGERS: 0!!!!!!!!!!!!!!!!!!!!!!!!
+        tm.CheckTrigger(0, currPlayer.playerTeam);
+        events.CallOnTurnEnd();
+
+        turnTimer = nextTurnTime;
+        if (nextTurnTime != currPlayer.maxTurnTime)
+        {
+            nextTurnTime = currPlayer.maxTurnTime;
+        }
+        currPlayer.DecrementTime(Time.deltaTime);
+    }
+
+    public void SetNextTurnTimer(float time)
+    {
+        nextTurnTime = time;
     }
 
     public void EndGame() {
+        Debug.Log("Game over");
     }
 
     #region Events

@@ -185,6 +185,24 @@ public class ChessPiece : MonoBehaviour
         }
     }
 
+    public virtual void SwitchTeams() {
+        team = !team;
+        Player oldPlayer = thisPlayer;
+        Player newPlayer = GameManager.Instance.GetPlayer(team);
+        Debug.Log(oldPlayer);
+        oldPlayer.playerPieces.Remove(this);
+        newPlayer.playerPieces.Add(this);
+        thisPlayer = newPlayer;
+
+        SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
+        if (team) {     // piece is white team
+            sr.sprite = whiteSprite;
+        }
+        else {
+            sr.sprite = blackSprite;
+        }
+    }
+
     //Eating & CheckMate will be done by a game manager
     protected void SetPieceValue(int value)
     {

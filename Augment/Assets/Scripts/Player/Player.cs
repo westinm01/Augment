@@ -6,13 +6,19 @@ public class Player : MonoBehaviour
 {
     public bool playerTeam;
     public bool inCheck;
+    public float maxTotalTime=600f;
+    public float maxTurnTime=60f;
+    [HideInInspector] public float totalTimer;
     public List<ChessPiece> playerPieces;
     public List<ChessPiece> threateningPieces;
     public List<Vector2Int> checkPath;
+    public List<ChessPiece> capturedPieces;
 
     void Start() {
         checkPath = new List<Vector2Int>();
+        capturedPieces = new List<ChessPiece>();
 
+        totalTimer = maxTotalTime;
         GameObject[] pieces = GameObject.FindGameObjectsWithTag("ChessPiece");
         foreach (GameObject piece in pieces) {
             ChessPiece cPiece = piece.GetComponent<ChessPiece>();
@@ -76,6 +82,23 @@ public class Player : MonoBehaviour
         return true;
     }
 
+    /// <summary>
+    /// Returns the last piece that the player ate
+    /// </summary>
+    /// <returns></returns>
+    public ChessPiece GetLastPieceEaten()
+    {
+        return capturedPieces[capturedPieces.Count-1];
+    }
+
+    public void DecrementTime(float decrease)
+    {
+        totalTimer -= decrease;
+        if (totalTimer <= 0) {
+            GameManager.Instance.EndGame();
+        }
+    }
+
     private KingPiece GetKingPiece() {
         foreach (ChessPiece piece in playerPieces) {
             KingPiece king;
@@ -86,5 +109,4 @@ public class Player : MonoBehaviour
         
         return null;
     }
-
 }

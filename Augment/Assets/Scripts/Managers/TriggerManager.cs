@@ -96,5 +96,13 @@ public class TriggerManager : MonoBehaviour
             }
         }
     }
+
+    public void AddToBin(ChessPiece newPiece, int triggerVal)
+    {
+        if (bins[triggerVal] == null) {
+            bins[triggerVal] = new List<ChessPiece>();
+        }
+        bins[triggerVal].Add(newPiece);
+    }
     
 }

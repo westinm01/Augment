@@ -62,4 +62,10 @@ public class PawnPiece : ChessPiece
 
         return (space == leftDiagonal || space == rightDiagonal);
     }
+
+    public override void SwitchTeams()
+    {
+        base.SwitchTeams();
+        direction = -direction;
+    }
 }

@@ -219,6 +219,427 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3276577040851349408, guid: c9e8077fd4b435c439953026c785d271, type: 3}
   m_PrefabInstance: {fileID: 3276577040775962638}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &93393653
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 844452741}
+    m_Modifications:
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: "\tIt is within everyone, the dream to be free. To soar through the
+        streets, the wind flowing through one\u2019s hair, unshackled by burdens
+        of tradition and responsibility. It is the dream that Tahira had, and one
+        that pushed her to go beyond her limits and away from the cage that trapped
+        her.\r\n\tShe\u2019d been born to immigrant parents, who wanted a new life
+        in a strange but beautiful country. Like many parents, they held the belief
+        that one would only succeed if they followed the strict formula every first
+        generation child is told. Study hard, go to a good college then work in a
+        high paying career. It worked for all her older cousins, who found careers
+        in business, or medicine; the usual life paths all parents desire for their
+        children.\r\n \tHer parents were the same, encouraging her to stick to the
+        formula, telling her how to dress and behave. It was all they knew, and Tahira
+        knew her parents wanted her to become more. She was an excellent student
+        who scored top marks and was praised by her teachers for her conduct in class.
+        But to Tahira, it was all one big facade to keep her parents at bay, and
+        pursue her true dream of becoming a famous skateboarder. She wanted nothing
+        more than to be recognized as one of the best in the country, participating
+        in competitions to see who can perform the best and most dangerous tricks.
+        She lived for the adrenaline rush that came from flying off ramps and railings.\r\n\tAfter
+        school, Tahira would head straight to the skatepark where she could finally
+        cut loose. She\u2019d meet with other skaters, compare the undersides of
+        their boards and see who could land the farthest after jumping off a rail,
+        or take the hardest fall. They\u2019d laugh about it later and she\u2019d
+        return home with a false reason for her returning late. Her parents did not
+        mind;, their daughter was \u201Cperfect\u201D for all they knew. The skatepark
+        was her escape, and it would also be her opportunity to reach her dream.\r\n\tAt
+        the skatepark, she caught wind of a competition being held for junior skaters.
+        The winner would be given the chance to travel the globe for a series of
+        extreme games. On the day of, Tahira skipped class and signed upon. Her parents
+        were notified of the truancy, and they set out to figure out their daughter's
+        whereabouts. Using a tracker they implanted on her phone, they discovered
+        her at the skatepark.\r\n\tWhen it came to her turn, Tahira was given a half-pipe
+        to perform on. All sorts of tricks she could perform went through her mind,
+        but she\u2019d never done any of them before. Taking a chance, Tahira readied
+        herself and stepped onto the board, immediately dropping into the halfpipe.
+        She flew but the moment she caught sight of her parents pushing their way
+        through the crowd, her body lost momentum. She fell and slid off the side
+        of the half-pipe, crushing her left leg in the process. Her parents attempted
+        to push through the barriers. Fearing reprisal, Tahira got up, hopped on
+        her skateboard and fled. Powered by both fear and adrenaline, Tahira tore
+        through the skateboard, flying off and kick flipping off railings and ramps
+        at intense speeds. The crowd was awed by the speed and the difficulty of
+        each trick. Her parents, too, were shocked at their daughter\u2019s power.\r\n\tTahira
+        escaped into the streets and rode her board for miles. She believed she couldn\u2019t
+        return home, now that her parents have seen the real her. But the cool evening
+        breeze running through her hair reminded her of her dream. The pressure from
+        her parents, and the stress of keeping up her facade were swept away by the
+        wind.. She decided to keep on riding, without a particular destination in
+        mind, but what she did have at this moment was freedom.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorName
+      value: Tahira
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorTitle
+      value: The Resilient
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: infoPanelObject
+      value: 
+      objectReference: {fileID: 842792208}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Name
+      value: Augmentor3 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 325
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.101326115
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.53173554
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3c430b64f5ec783488d632cb9d80dcd4, type: 3}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -36
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+--- !u!224 &144509587 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+  m_PrefabInstance: {fileID: 1717176020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &167829573 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+  m_PrefabInstance: {fileID: 446527612}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &183042890
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 844452741}
+    m_Modifications:
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: "\tMagic always came naturally to Otto. Born into an affluent family,
+        he was expected to become an adept spellcaster by his parents and peers.
+        Studying mystical text and practicing casting was a daily routine, and though
+        Otto appreciated the arts and hard work, his parents had other matters in
+        mind. With magic came power, and with power, influence and privilege. Otto
+        was meant to continue the family legacy of distinguished mages, securing
+        power for the family. The scion wanted no part, strained by the relentless
+        pressure and prospects of his future - a future not of his own volition.
+        He dreaded the thought of constantly striving higher with no end in sight,
+        and surrounding himself with others who thought and talked about nothing
+        but power. \r\n\tOtto could not confess to his peers and mentors, for they
+        were too indoctrinated in the mentality of climbing societal ranks, fearing
+        that they might disclose his innermost thoughts to his parents, who would
+        in turn would certainly trap him within the walls of his house for good.
+        Having no one to confide in, he turned to spells as a means to escape. After
+        secretly studying additional spells along his usual agenda, Otto eventually
+        learned the means to cast a teleportation spell. He gathered components to
+        cast it though covert deals with peers, offering bribes and making promises
+        to complete their assignments for them. Despite the additional burdens, he
+        always kept his end goal in mind, to eventually secure his freedom.  \r\n\tSoon,
+        the day where he could complete the spell arrived, and Otto carefully prepared
+        the ritual in his room. Just as he finished the arrangement, his parents
+        barged into the room,  proclaiming that they heard he was trying to run away
+        from another student, and that they were here to put a stop to his defiance.
+        Otto frantically activated the spell, wishing to get as far away from his
+        family as possible. \r\n\tA large rift opened within the room, pulling the
+        scion in. Otto found himself in a different realm, completely foreign to
+        what he once knew. He succeeded, but was not fully satisfied; Otto desired
+        for a world he was more accustomed to. Fortunately, he procured more than
+        enough ingredients to perform the ritual many more times, and with another
+        rift opened, the scion ventured forth into his new life.\r\n\tOtto traveled
+        through countless worlds, each time finding his new destination unfit as
+        a final resting place, and each time needing to find the reagents to repeat
+        his spell. Other spells he learned countless years ago helped keep his youth
+        and health preserved. Now in this reality, he wanders the city, hearing news
+        of other people with magic, or Augments, as they call it. Interested in a
+        display of them, and if they can aid in his search, he registers himself
+        in a chess game that\u2019s rising in popularity.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorName
+      value: Otto
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorTitle
+      value: The Resilient
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: infoPanelObject
+      value: 
+      objectReference: {fileID: 842792208}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 'Wrap Around:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Name
+      value: Augmentor3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -575
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.08930106
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a16e922d24d43eb489c18ea301868c9d, type: 3}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -76
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
 --- !u!1 &220706531
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,6 +1145,203 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360612390}
   m_CullTransparentMesh: 1
+--- !u!1001 &446527612
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 844452741}
+    m_Modifications:
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: "\tWagner\u2019s life was filled with luck, though not always the fortunate
+        kind. As a child, they were in a plane crash with their parents, to which
+        they were the only survivor. However, this also meant they inherited the
+        family\u2019s enormous fortune. Deciding to spend it and have fun, Wagner
+        spent their youth in casinos, playing arcade machines and gambling. Despite
+        their young age, the managers of the establishment permitted it because the
+        incredible and unexplainable luck streaks displayed awed everyone, drawing
+        many customers to see them first hand, raising the profits of the casino.
+        However, the constant winning began to bore Wagner, and they decided one
+        day to quit playing and left to find more excitement.\r\n\tFurious about
+        the decision and nervous about the loss of profits, the managers kidnapped 
+        Wagner to have their luck all to themselves. Ambushing them near a dark alley,
+        they threw a trash bag over their head and stuffed them in a van, planning
+        to return to the casino. Luckily, the van hit a deep pothole, flipping over
+        and injuring everyone inside - all except Wagner. The door of the van burst
+        open, allowing them to escape. Coincidentally, Wagner found a lottery ticket
+        inside the trash bag, and turned it in for a ludicrous reward. \r\n\tSo became
+        Wagner\u2019s life: bad luck followed by good luck. They traveled the world,
+        witnessing many sights and surviving many plane crashes. Each new experience
+        filled them with dopamine, and the accidents with adrenaline, though those
+        effects soon wore off. Wagner became obsessed with the feeling, and sought
+        activities that would give them the most buzz. They skydived without a parachute,
+        and landed in a stack of hay in a remote farm. They chased storms and surfed
+        tsunamis, they barreled down waterfalls and wrestled grizzly bears, all while
+        ending up unscathed. They\u2019ve tried everything at least once, but the
+        craving always returned right after; Wagner was insatiable. \r\n\tScouring
+        the internet for more activities to do, word of a novel chess game involving
+        people with extraordinary abilities caught Wagner\u2019s attention. People
+        with supernatural talents, just like them, would all be in the same place
+        to perform. That sounded like fun. Deciding to take the scenic way over,
+        Wagner unintentionally derailed trains and sank ships reaching the arena.
+        Looking optimistically, Wagner took it as a sign that the game would be the
+        luckiest event in their life."
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorName
+      value: Wagner
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorTitle
+      value: The Resilient
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: infoPanelObject
+      value: 
+      objectReference: {fileID: 842792208}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 'Risk & Reward: Select a target. If that piece is eaten in the next
+        3 turns, it joins your team for the rest of the match. Otherwise, this piece
+        dies.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Name
+      value: Augmentor3 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 475
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5071645
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8207547
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.60394895
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2092a58f27e5daf4495bbddf8c4c8675, type: 3}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -76
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
 --- !u!1 &461090263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,7 +1730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -725
+      value: -275
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1304,10 +1922,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &746998415 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+  m_PrefabInstance: {fileID: 1476508983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &795428533 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
   m_PrefabInstance: {fileID: 445593251767066216}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &795904635 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+  m_PrefabInstance: {fileID: 183042890}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &842792208
 GameObject:
@@ -1441,6 +2069,16 @@ RectTransform:
   - {fileID: 2065184278}
   - {fileID: 1206299862}
   - {fileID: 301640305}
+  - {fileID: 866013166}
+  - {fileID: 795904635}
+  - {fileID: 1265143415}
+  - {fileID: 2008080525}
+  - {fileID: 1458930000}
+  - {fileID: 746998415}
+  - {fileID: 1301196462}
+  - {fileID: 167829573}
+  - {fileID: 1653103253}
+  - {fileID: 144509587}
   m_Father: {fileID: 49642372}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1449,6 +2087,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 142}
   m_SizeDelta: {x: 2800, y: 300}
   m_Pivot: {x: 0, y: 1}
+--- !u!224 &866013166 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+  m_PrefabInstance: {fileID: 2028264628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &883277465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,6 +2287,169 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1001 &946554522
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 844452741}
+    m_Modifications:
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: Lore still a rough draft
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorName
+      value: Duke
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorTitle
+      value: The Resilient
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: infoPanelObject
+      value: 
+      objectReference: {fileID: 842792208}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Name
+      value: Augmentor3 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 775
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.81960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6704647
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c590cac7f8e3434bb5f573639117491, type: 3}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -46
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
 --- !u!1 &961069348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,7 +2788,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1484645945}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.09740916
+  m_Size: 0.09740918
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2165,6 +2971,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226592378}
   m_CullTransparentMesh: 1
+--- !u!224 &1265143415 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+  m_PrefabInstance: {fileID: 1861530367}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1301196462 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+  m_PrefabInstance: {fileID: 93393653}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1315153262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2315,7 +3131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1025
+      value: -1175
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2507,7 +3323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -575
+      value: 625
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2552,6 +3368,213 @@ PrefabInstance:
     - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -26
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+--- !u!224 &1458930000 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+  m_PrefabInstance: {fileID: 1830227597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1476508983
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 844452741}
+    m_Modifications:
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: "\tThe wealthy and powerful have always sought ways to secure and grow
+        their wealth.. While many turned to bankers and advisors, the more eccentric
+        of them desired materialistic guidance through mystical means, often turning
+        to diviners, people who claim to see the future through objects like crystal
+        balls or tarot cards. Others hired mediums, who supposedly spoke to the dead,
+        to contact deceased relatives for financial advice. This brought them to
+        the doorstep of a certain woman who did both.\r\n\tThey called her Lady LeMure,
+        diviner of futures and voice of the dead. In truth, her name was Annette
+        Fontame, actress, con artist and master thief. As Lady LeMure, she was often
+        called to visit the homes of clientele who could afford her expensive but
+        sham medium services. There, she performed by-the-book con artist methods
+        to collect information. Clients who were not careful or were overtaken by
+        grief overshared details about deceased relatives, special dates and numbers
+        or information pertaining to objects of worth hidden throughout the home.
+        Once clients were eased, or distracted, Lady LeMure began her treasure hunt.
+        She had always succeeded in doing so, escaping just in time before she could
+        be attributed to the theft.\r\n\tShe would live a lavish lifestyle, full
+        of expensive dresses, wines and pastimes, but like her clients, the call
+        of greed remained. On one fateful night, she would be invited to perform
+        readings at a party hosted by one of the richest men in the country. Her
+        target was a safe, said to house a valuable heirloom. Once she had gathered
+        enough information from her drunken client, and the guests were distracted,
+        Lady LeMure slipped away to comb through the mansion. It led her to a quaint
+        office, and with the press of a button, revealed the safe behind a painting.\r\n\tBefore
+        she could touch the lock, the client, in drunken stupor, appeared by the
+        doorway armed with an antique hunting rifle. He shot her in the head, killing
+        her instantly. Her corpse was sent away and buried in an unmarked grave.
+        She was posthumously branded a fraud, and the money she\u2019d accumulated
+        was plundered from her home. The legendary Lady LeMure was dead. A shame,
+        as there was so much more to enjoy, and much to steal.\r\n\tLady LeMure rose
+        again, spurned by the desire to live. She wasn\u2019t human anymore, nor
+        was she undead, instead bordering the lines between the living and dead.
+        In a twist of fate, she gained the ability to both see and speak to ghosts.
+        She donned her favorite dress, and wore a masquerade mask resembling a skull
+        to hide the scar on her forehead. Lady LeMure would make a shining comeback,
+        this time truly aided by spirits. With charms and talent, she would persuade
+        or intimidate spirits to help her find the treasures she craved.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorName
+      value: Lady LeMure
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorTitle
+      value: The Resilient
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: infoPanelObject
+      value: 
+      objectReference: {fileID: 842792208}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 'From the Grave: Upon eating an enemy piece, that piece becomes an ally
+        Ghost for 2 turns. A ghost retains the piece''s movement ability, but it
+        does not retain its augmentation. It shares a space with its "killer" unless
+        you chose to move it in your next turn.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Name
+      value: Augmentor3 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.21176468
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.24624054
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80f4031ffa00e694bbd900ccc2aaf9e0, type: 3}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -76
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -2889,6 +3912,206 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520070220}
   m_CullTransparentMesh: 1
+--- !u!224 &1653103253 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+  m_PrefabInstance: {fileID: 946554522}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1717176020
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 844452741}
+    m_Modifications:
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: "\tJiva always had an appreciation for anything art. For them, \u201Cart\u201D
+        was a broad definition, encompassing many branches: paintings, music, literature,
+        sculptures and architecture, among countless others. Across many societies,
+        Jiva marveled and revered them all. Their fascination began when they attended
+        a world history course in high school. The amount of advancements mentioned
+        there drove them to research more about foreign countries, and the people
+        who lived there. Gradually, they engrossed themselves in learning about other
+        languages, culture, and practices.\r\n\tAfter graduating high school with
+        exceptional grades, Jiva took to traveling the world to continue learning
+        about art. During that time, they encountered someone with an Augment for
+        the first time. They were bewildered at the oddity, and pressed them for
+        questions regarding the nature of it. Jiva requested for a demonstration,
+        to which the Augmentor complied. They were delighted to see such a performance,
+        and jokingly tried to replicate it. Sure enough, a copy of the ability was
+        produced. \r\n\tThis newfound revelation about themselves shifted Jiva\u2019s
+        trajectory, causing them to pursue Augment research. They recognized the
+        potential for their power to revolutionize how people see Augmentors, and
+        it would also help them understand their own abilities and identity. There,
+        at a research facility, they met Vincente, who shared similar interests.
+        They admired his passion to understand Augments, though kept their relationship
+        professional and strictly work-related. Together, they worked to uncover
+        the creation and nature of Augments - The two would witness an Augmentor
+        perform, and Jiva would replicate their ability, then conduct interviews
+        to satisfy their queries. Vincente would then document and compile their
+        notes.\r\n\tThe two would eventually encounter a small problem: they\u2019ve
+        studied and interviewed all of the Augmentors in their local vicinity, and
+        it was too small of a sample size to draw any conclusive results. They required
+        more participants. Understanding how art brings people together, Jiva suggested
+        they build an attraction to draw Augmentors from around the world, so that
+        they can research even more strange and unique powers. Vincente recommended
+        a monetary incentive, and through several iterations on the idea, the two
+        settled on a chess tournament, where Augmentors could showcase their powers
+        to the masses, all while they could continue their research.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorName
+      value: Jiva
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorTitle
+      value: The Resilient
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: infoPanelObject
+      value: 
+      objectReference: {fileID: 842792208}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Name
+      value: Augmentor3 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 925
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.43529415
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2913cb22a23bcd243b1b15ed49ea2deb, type: 3}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -71
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
 --- !u!1001 &1730673727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3021,7 +4244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -875
+      value: -1025
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3154,7 +4377,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 220706532}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.42871666
+  m_Size: 0.34959528
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3332,6 +4555,402 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815830020}
   m_CullTransparentMesh: 1
+--- !u!1001 &1830227597
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 844452741}
+    m_Modifications:
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: "\tWhen most think of blacksmiths, they\u2019re commonly depicted in
+        medieval times, forging weapons and armor to be used in battle. Their trade
+        revolves around violence and conflict, crafting tools to perpetuate it. Now,
+        they are a relic of the past, made obsolete by mass production and the advent
+        of superior weaponry. \r\n\tFelipe strived to disprove these notions. Finding
+        an aptitude with the profession at a young age, he enrolled in a trade school
+        to refine his skills. To him, blacksmithing was a way to kindle happiness
+        in others, especially those in his community. He prided himself on constructing
+        trinkets for children, or decorative furniture and sculptures for clients.
+        Each piece took days, or even months to complete, and Felipe oftentimes felt
+        absorbed in his work, losing track of time. Despite that, it was well worth
+        it in the end to see his recipients marvel at his creations. \r\n\tDuring
+        one winter, Felipe and his neighborhood received a notice that in a week,
+        new buildings were being developed in their area to provide for more housing
+        in the aim to attract new business and wealth. The community was eager about
+        the new prospects, until the reality of the process arrived at their doorsteps.
+        To create areas to construct, older buildings - those that held significance
+        within the neighborhood - were torn down. Gradually, the price of living
+        increased as wealthier people began to make a home for themselves. Those
+        who could not keep up with leases were evicted, forced to move to places
+        far from where employment was.\r\n\tRemaining in the area with his own forge
+        and family, Felipe welcomed those who had been displaced to take refuge near
+        the fire\u2019s warmth, producing heaters and stoves to aid against the harsh
+        cold. Dozens of families depended on his craft to keep warm and survive,
+        but Felipe also made time to address the coldness in their hearts. Kind words
+        of reassurance stoked the fading embers in the downtrodden, keeping the flame
+        of hope burning. It wasn\u2019t much solace for the given circumstances,
+        especially with contractors threatening legal action to continue to drive
+        them out, but Felipe encouraged them to remain optimistic. Plans for positive
+        change couldn\u2019t be made with minds clouded of despair. He worked tirelessly,
+        never losing sight of who he must care for. In this crucible, an Augment
+        was forged.\r\n\tFrom the inextinguishable determination to provide for his
+        people, Felipe found himself able to construct works at a much faster rate,
+        all while preserving the same quality as he normally did. Working together,
+        the community made it through the winter, despite the schemes of the contractors.
+        Understanding the need to raise money to hire lawyers for an impending lawsuit,
+        Felipe left his forge to participate in a chess tournament, hoping to win,
+        spread awareness of his plight, and to use his newfound ability to help others,
+        so that they may have their basic needs met to enact positive change in the
+        world.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorName
+      value: Felipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorTitle
+      value: The Resilient
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: infoPanelObject
+      value: 
+      objectReference: {fileID: 842792208}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Name
+      value: Augmentor3 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7263642
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.21368816
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d8769dd82d0c6724da4dd16ee993b5bc, type: 3}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -46
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+--- !u!1001 &1861530367
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 844452741}
+    m_Modifications:
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: "\tTime is a delicate quantity. Even the slightest alternation can spiral
+        into unforeseeable, often catastrophic outcomes. To prevent this from unstabling
+        the many timelines in a timestream, the Ward, an interdimensional organization
+        was founded to correct anomalies that may arise. Not much is known about
+        the group, ot her than those who serve in it act as law enforcement and go
+        by the title of \u201CDoctors.\u201D\r\n\tDoc-14, or just Doc, was one of
+        the many agents licensed to carry out this task. Sharing names, along with
+        one\u2019s history or befriending others, was not encouraged by the Ward,
+        as connections may interfere with their duty of traveling across timelines
+        to rectify problems. She understood this well, having done several missions,
+        though it wasn\u2019t to say she entirely approved of it. Work for Doc mostly
+        consisted of being at a desk, with the occasional field assignment. It was
+        monotonous, but she persevered, longing for her work day to end or to get
+        some air outside the cubicle. \r\n\tWhen she arrived back into her apartment
+        after a long day, Doc felt as if she could breathe. In the comfort of her
+        own home, she found peace and solitude. It was here where she could reconnect
+        with herself; kept hidden and always on her was a simple locket pendant,
+        reminding her of something she could never return to. Doc cherished the memory,
+        but was keen about not thinking about it too much. The Ward was able to track
+        her in many different timelines, even ones where her thoughts were able to
+        be read from an outside perspective. She understood that when she signed
+        up for the job; the Ward was a higher calling for her, but it didn\u2019t
+        ease the pain of having to lose everything for it. Doc evoked the vow she
+        made to herself, to never forget her origins, unlike the rest of her colleagues.
+        Doing her job kept everything in order, and it ensured the safety of those
+        she cared about.\r\n\tOne day, Doc received an assignment on her desk regarding
+        an immortal teenager rapidly hopping through timelines. She scoffed at the
+        kid\u2019s carelessness and lamented about how much work she\u2019d need
+        to do fixing his mess. Wanting to waste minimal time, she donned her uniform
+        and set off on the trail, aiming to catch the fugitive and return him to
+        the timeline where he belonged."
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorName
+      value: Doc
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorTitle
+      value: The Resilient
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: infoPanelObject
+      value: 
+      objectReference: {fileID: 842792208}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 'Time Killer: Every time this piece eats an enemy piece, reduce the
+        opponent''s timer by 15 seconds. OR only 5 seconds to make their next move.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Name
+      value: Augmentor3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -425
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6792453
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.14417945
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.67870796
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2af472cc2b5ed594c8e566968f23a5ae, type: 3}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -66
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
 --- !u!1 &1891519053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3405,6 +5024,208 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891519053}
   m_CullTransparentMesh: 1
+--- !u!1001 &1901786180
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 844452741}
+    m_Modifications:
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: "\tFor generations, the Lucerna family prided themselves in chandlery.
+        Only the most ethically sourced beeswax and fragrances from organically grown
+        plants were considered acceptable to be used, and the results were phenomenal.
+        Homes felt most comforting with the variety of peaceful aroma, and the sanctity
+        of religious temples flourished with the intricate wax carvings. Lucy was
+        the 25th generation of candle makers, and honored her duty to uphold her
+        family heritage. All aspects of chandlery were second-nature to her, such
+        as selecting the correct fragrance for the right mood, or carving designs
+        into candles for the appropriate occasion. But most importantly, the secret
+        component was her family\u2019s Augment - to ignite fire from within to light
+        their candles with passion. \r\n\tEven in the modern age, Lucy still did
+        her best to promote her profession. While she tended to her garden and shop
+        alone, she still received some help from her relatives. She asked them to
+        help her create a website to receive orders and to deliver candles to far
+        places, but slowly, more and more family members began to focus more on their
+        own lives - holding jobs that had more relevance in the contemporary world.
+        Lucy became alone. Moreover, the mass production of LED lights made candles
+        obsolete, reserved for the sparse occasions and events. \r\n\tOne night,
+        Lucy received a letter from a nearby lighting manufacturer. They wished to
+        purchase her shop\u2019s location, so they could sell their products in a
+        prime location. An office address was provided for her to come meet and arrange
+        the details of their expansion.\r\n\tAn ember of rage stoked within Lucy.
+        What right did they have to simply stomp over her and her family\u2019s legacy?
+        Their lights had no soul in them; they still felt dark. She wrote down the
+        office\u2019s location, then burned the letter. Traveling to the place in
+        the cover of night, she set the building ablaze. The inferno felt comforting,
+        as if the pain she felt would be shared, easing her burden. Lucy fled the
+        scene, and by daylight, no one could identify the culprit. \r\n\tFearing
+        the repercussions, Lucy decided to light candles in her shop to calm her
+        nerves. News broke out about an attack on a lighting company online, and
+        Lucy saw mixed feelings regarding the incident. While the media scorned the
+        culprit, many anonymous commenters expressed their support and admiration
+        for the arsonist, claiming they were enacting justice against worker exploitation.
+        With a new motive ignited within, Lucy set off to deliver her next act of
+        vigilantism.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorName
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorTitle
+      value: The Resilient
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: infoPanelObject
+      value: 
+      objectReference: {fileID: 842792208}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 'Trailblazer:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Name
+      value: Augmentor3 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.48900855
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.53207076
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ed763ea29e0ffc47aee9268c131c131, type: 3}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -26
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+--- !u!224 &2008080525 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+  m_PrefabInstance: {fileID: 1901786180}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2013232127
 GameObject:
   m_ObjectHideFlags: 0
@@ -3573,7 +5394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1175
+      value: -875
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3619,6 +5440,205 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
   m_PrefabInstance: {fileID: 2026958378}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2028264628
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 844452741}
+    m_Modifications:
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorLore
+      value: "\tIn a little beach town like Alejandra\u2019s, a lifeguard is both
+        an essential and beloved profession. It takes bravery to become a lifeguard,
+        especially when one lives on an island far away from the mainland. Storms
+        are common, and nearby fish migrations are followed by dangerous oceanic
+        predators like sharks. Yet that never stopped the townspeople nor tourists
+        from enjoying a day at the beach.\r\n\tAlejandra had been keeping her usual
+        watch. It was summer; school was out, people relaxed en masse and visited
+        the island to experience the cool waters. Unbeknownst to the town, a storm
+        had been brewing and was on fast approach.\r\n\tThe skies turned gray, the
+        waters churned and rose, prompting Alejandra to evacuate the beach. As she
+        moved beachgoers further into town, Alejandra glimpsed bright colors disappearing
+        and reappearing between waves. It was a young boy, flailing his arms as the
+        waves tossed him carelessly. Without hesitation, Alejandra jumped into the
+        frigid water. Though she was thrashed against the waves, she powered through
+        like a ship. Just as she had reached the boy, a giant wave collapsed on them
+        and knocked her out. She sank, falling deeper into the dark depths. Her vision
+        darkened. The last thing she\u2019d seen was the boy\u2019s motionless body.
+        She apologized for her failure, and thought of the loss the boy\u2019s family
+        would feel.\r\n\tNo, this would not be the end so long as someone else was
+        in danger. Determined to rescue the boy, a warm feeling grew from her heart
+        and swept the chill of the water away. A golden life ring formed in her arms.
+        Alejandra swam further below to find him in the darkness, with the life ring
+        as a lantern and guide. She found the boy and placed the life ring over him.
+        With him in tow, she swam back to the surface and rode the waves back to
+        the shore. She gathered the boy in her arms and hurried through the storm
+        back to safety.\r\n\tAlejandra  laid the boy on the floor, a crowd encircling
+        the two. As she attempted to resuscitate the boy, the life ring burst into
+        a golden dust and entered the boy's nose. By miracle, he awoke, coughing
+        up water. His parents thanked and hugged Alejandra for saving their son,
+        but she assured them that she'd just been doing her duty. The people hailed
+        Alejandra and her newfound powers as a blessing. She became a hometown hero,
+        the pride of the little beach town. However, she wanted more than just being
+        the town's newest tourist attraction. A noble soul, Alejandra wanted to share
+        her powers with the rest of the world, performing miracles to give people
+        another chance at life.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorName
+      value: Alejandra
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentorTitle
+      value: The Resilient
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: infoPanelObject
+      value: 
+      objectReference: {fileID: 842792208}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 'Life Saver: This piece has an extra life. If an enemy piece eats this
+        one, they return to their space, and this piece loses a life. If this piece
+        is on its last life, it is eaten, and the enemy piece doesn''t return.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Name
+      value: Augmentor3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -725
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6037736
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.032008767
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c287d73343a8b4c4a9a387747dedb0db, type: 3}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593253088029007, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -66
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
 --- !u!224 &2065184278 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
