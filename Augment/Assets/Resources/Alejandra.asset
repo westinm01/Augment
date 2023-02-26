@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb484efb7e083504bbbc60df1fce67af, type: 3}
+  m_Name: Alejandra
+  m_EditorClassIdentifier: 
+  characterName: Alejandra
+  augmentName: Life Saver
+  description: This piece has an extra life. If an enemy piece eats this one, they
+    return to their space, and this piece loses a life. If this piece is on its last
+    life, it is eaten, and the enemy piece doesn't return.
+  sprite: {fileID: 21300000, guid: c287d73343a8b4c4a9a387747dedb0db, type: 3}
+  backgroundColor: {r: 0.284437, g: 0.43923196, b: 0.461, a: 1}
+  triggerVal: 0
+  hasPrompt: 0
