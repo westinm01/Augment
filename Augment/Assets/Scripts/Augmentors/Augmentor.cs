@@ -44,6 +44,23 @@ public class Augmentor : MonoBehaviour
             StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
         }
     }
+
+    public virtual void UseAugment(Vector2Int space)
+    {
+        if(canActivate)
+        {
+            StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
+        }
+    }
+
+    public virtual void UseAugment(ChessPiece piece)
+    {
+        if(canActivate)
+        {
+            StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
+        }
+    } 
+
     public virtual void PlayVFX()
     {
         //play animation or particle effects.

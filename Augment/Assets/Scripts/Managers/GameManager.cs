@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private TriggerManager tm;
     private EventsManager events;
     private AudioManager audioManager;
+    private InputManager inputManager;
     public StatusManager statusManager;
 
     public float turnTimer {get; private set; }
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
         statusManager = GetComponent<StatusManager>();
         events = GetComponent<EventsManager>();
         audioManager = GetComponentInChildren<AudioManager>();
+        inputManager = GetComponent<InputManager>();
 
         turnTimer = currPlayer.maxTurnTime;
         nextTurnTime = currPlayer.maxTurnTime;
@@ -99,6 +101,10 @@ public class GameManager : MonoBehaviour
 
     public AudioManager GetAudioManager() {
         return audioManager;
+    }
+
+    public InputManager GetInputManager() {
+        return inputManager;
     }
 
     public int GetNumFullMoves()

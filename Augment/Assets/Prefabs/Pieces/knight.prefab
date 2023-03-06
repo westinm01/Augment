@@ -101,12 +101,18 @@ MonoBehaviour:
   coord: {x: 0, y: 0}
   possibleSpaces: []
   possibleEats: []
+  possibleProtects: []
   team: 1
+  isVisible: 1
   blackSprite: {fileID: 21300000, guid: ac474d3746b32544e991a65436d4c85d, type: 3}
   whiteSprite: {fileID: 21300000, guid: 46e2b15ce45d61d4193f257e6535f9ba, type: 3}
   canJump: 0
   statusTimer: 0
+  pieceAugmentor: {fileID: 0}
   status: 0
+  canMove: 1
+  pieceValue: 3
+  pieceChar: 0
 --- !u!61 &8774392961501673264
 BoxCollider2D:
   m_ObjectHideFlags: 0

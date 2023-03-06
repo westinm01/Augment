@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum InputState{
-    Wait, TouchHold, TouchRelease, Move
+    Wait, TouchHold, TouchRelease, Select
 }
 
 public class InputManager : MonoBehaviour
 {
     public GameObject currSelected;
+    public Augmentor currentAugmentor;  // Used to call UseAugment function again after getting input;
 
     [SerializeField]
     private InputState state = InputState.Wait;
@@ -94,17 +95,11 @@ public class InputManager : MonoBehaviour
                     Touch t = Input.GetTouch(0);        // Get first touch
                     GameObject tempSelected = GetTouchedPiece(t.position);
 
-                    if (tempSelected != null && tempSelected.tag == "ChessPiece")
-                    {
-                        if (tempSelected.GetComponent<ChessPiece>().team == GameManager.Instance.GetCurrentPlayer().playerTeam) {
-                            SelectPiece(tempSelected);
-                        }
-                    }
-                    else if (t.phase == TouchPhase.Ended)    // Check if first touch is end of touch
+                    if (t.phase == TouchPhase.Ended)    // Check if first touch is end of touch
                     {
                         if (tempSelected != null && tempSelected.tag == "PossibleSpace")
                         {
-                            MovePiece(tempSelected.transform.position);
+                            // Use augment
                         }
                         else
                         {
@@ -115,7 +110,44 @@ public class InputManager : MonoBehaviour
                     }
                 }
                 break;
+            
+            case InputState.Select:
+                if (Input.touchCount > 0) {
+                    Touch t = Input.GetTouch(0);
+                    currSelected.transform.position = Camera.main.ScreenToWorldPoint(t.position) + new Vector3(0, 0, 10);   // piece follows users finger while holding, add 10 to z to match other pieces
+                    
+                    // If the player let go
+                    if (t.phase == TouchPhase.Ended)
+                    {
+                        Debug.Log("Released");
+                        GameObject tempSelected = GetTouchedPiece(t.position);      // Check if touch was on a piece
+                        
+                        // if the player let go on top of a possible space
+                        if (tempSelected != null && tempSelected.tag == "PossibleSpace" && currSelected.GetComponent<ChessPiece>().canMove)
+                        {
+                            // Move the piece to the empty space
+                            MovePiece(tempSelected.transform.position);
+                        }
+                        else {
+                            // Released over empty space, keep highlight
+                            currSelected.transform.position = initialPos;
+                            state = InputState.TouchRelease;
+                        }
+                    }
+                }
+                break;
         }
+    }
+
+    public void ToggleInput() {
+        isFrozen = !isFrozen;
+    }
+
+    public void SelectSquare(List<Vector2Int> coordinates)
+    {
+        state = InputState.Select;
+        GameManager.Instance.board.UnHighlightPieces();
+        GameManager.Instance.board.HighlightSquares(coordinates);
     }
 
     /// <summary>
@@ -167,9 +199,5 @@ public class InputManager : MonoBehaviour
             
             state = InputState.Wait;
         }
-    }
-
-    public void ToggleInput() {
-        isFrozen = !isFrozen;
     }
 }
