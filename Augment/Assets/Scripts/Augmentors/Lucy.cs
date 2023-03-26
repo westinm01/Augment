@@ -5,6 +5,7 @@ using UnityEngine;
 public class Lucy : Augmentor
 {
     public GameObject fireBlock;
+    public int turnCount = 2;
     public override void UseAugment()
     {
         StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
@@ -14,5 +15,6 @@ public class Lucy : Augmentor
         FireBlock fire = fireBlock.GetComponent<FireBlock>();
         fire.coord = cp.coord;
         fire.team = cp.team;
+        fire.turnCount = turnCount;
     }
 }
