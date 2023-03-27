@@ -20,11 +20,11 @@ public class TriggerManager : MonoBehaviour
         for (int i = 1; i < field.transform.childCount; i++)
         {
             ChessPiece cp = field.transform.GetChild(i).gameObject.GetComponent<ChessPiece>();
-            int index = 0; 
-            if (cp.pieceAugmentor != null)
+            int index = 3; 
+            if (cp && cp.pieceAugmentor != null)
             {
                 index = cp.pieceAugmentor.triggerVal;
-                index = 3;
+                //index = 3;
             }
             Debug.Log(index);
             bins[index].Add(cp);
@@ -47,9 +47,9 @@ public class TriggerManager : MonoBehaviour
          for(int i = 0; i < bins[triggerVal].Count; i++)
         {
             ChessPiece cp = bins[triggerVal][i];
-            if(cp.pieceAugmentor != null)
+            if(cp && cp.pieceAugmentor != null)
             {
-                Debug.Log("Triggered");
+                Debug.Log("Triggered: " + triggerVal);
                 cp.pieceAugmentor.UseAugment();//perform augment   
             }
         }
@@ -64,11 +64,11 @@ public class TriggerManager : MonoBehaviour
         for(int i = 0; i < bins[triggerVal].Count; i++)
         {
             ChessPiece cp = bins[triggerVal][i];
-            if(cp.pieceAugmentor != null)
+            if(cp && cp.pieceAugmentor != null)
             {
                 if(cp.team == team)
                 {
-                    Debug.Log("Triggered");
+                    Debug.Log("Triggered" + triggerVal);
                     cp.pieceAugmentor.UseAugment();//perform augment   
                 }
                  
@@ -85,11 +85,11 @@ public class TriggerManager : MonoBehaviour
         for(int i = 0; i < bins[triggerVal].Count; i++)
         {
             ChessPiece cp = bins[triggerVal][i];
-            if(cp.pieceAugmentor != null)
+            if(cp && cp.pieceAugmentor != null)
             {
                 if(cp == piece)
                 {
-                    Debug.Log("Triggered");
+                    Debug.Log("Triggered//" + triggerVal);
                     cp.pieceAugmentor.UseAugment();//perform augment   
                 }
                  
