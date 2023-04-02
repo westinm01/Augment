@@ -15,6 +15,7 @@ public class Augmentor : MonoBehaviour
 
     [Header("Class variables")]
     public ChessPiece augmentPiece;
+    public ChessPiece targetPiece;
     public AugmentorObject augmentor;
     public bool canActivate = false;
     public List<AudioClip> barks;
