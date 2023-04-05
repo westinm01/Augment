@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour
 {
     public GameObject currSelected;
     public Augmentor currentAugmentor;  // Used to call UseAugment function again after getting input;
+    
 
     [SerializeField]
     private InputState state = InputState.Wait;
@@ -17,6 +18,9 @@ public class InputManager : MonoBehaviour
     private bool isFrozen;
 
     private TriggerManager tm;
+
+    private bool augmentActivated;
+    
 
     void Start()
     {
@@ -55,9 +59,14 @@ public class InputManager : MonoBehaviour
                             // If selected piece matches current player's turn
                             // if team == false, then black turn, (false != true) = true
                             // if team == true, then white turn, (true != false) = true
-                            if (tempSelected.GetComponent<ChessPiece>().team == GameManager.Instance.GetCurrentPlayer().playerTeam) {
-                                SelectPiece(tempSelected);
+                            if(tempSelected.GetComponent<ChessPiece>().team == GameManager.Instance.GetCurrentPlayer().playerTeam){
+                                if(augmentActivated){
+                                    SelectTargetPiece(tempSelected); //If we want to be able to select enemy pieces in the future, there can be a quick fix for that
+                                }else{
+                                    SelectPiece(tempSelected);
+                                }
                             }
+        
                         }
                     }
                 }
@@ -199,5 +208,28 @@ public class InputManager : MonoBehaviour
             
             state = InputState.Wait;
         }
+    }
+
+    public void AugmentActivation(Augmentor aug, bool x){
+        augmentActivated = true;
+        StartCoroutine(AugmentActivation(aug));
+        // piece = augmentTarget.GetComponent<ChessPiece>();
+    }
+
+    private IEnumerator AugmentActivation(Augmentor aug){
+        augmentActivated = true;
+        while(augmentActivated){
+            yield return new WaitForSeconds(0.1f);
+        }
+        aug.targetPiece = currSelected.GetComponent<ChessPiece>();
+        yield return null;
+    }
+
+    private ChessPiece SelectTargetPiece(GameObject target){
+
+        Debug.Log("awa");
+        augmentActivated = false;
+        currSelected = target;
+        return null;
     }
 }

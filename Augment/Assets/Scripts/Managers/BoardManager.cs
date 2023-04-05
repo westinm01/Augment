@@ -305,4 +305,19 @@ public class BoardManager : MonoBehaviour
         }
         return spaces;
     }
+    
+    public void SwapPiece(ChessPiece piece1, ChessPiece piece2){
+        Vector2Int temp = piece1.coord;
+        Vector3 tempPos = piece1.transform.position;
+        piece1.coord.x = piece2.coord.x;
+        piece1.coord.y = piece2.coord.y;
+        piece1.transform.position = new Vector3(piece2.coord.x, -piece2.coord.y, 0);
+
+
+        piece2.coord.x = temp.x;
+        piece2.coord.y = temp.y;
+        piece2.transform.position = new Vector3(tempPos.x, tempPos.y, 0);
+
+        board.SwapPieces(piece1.coord.x, piece1.coord.y, piece2.coord.x, piece2.coord.y);
+    }
 }
