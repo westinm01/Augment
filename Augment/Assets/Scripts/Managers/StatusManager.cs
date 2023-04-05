@@ -11,6 +11,7 @@ public class StatusManager : MonoBehaviour
     //3 constructing
     //4 beingConstructed
     //5 vanished
+    public List<BoardObject> boardObjects = new List<BoardObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,15 @@ public class StatusManager : MonoBehaviour
                     ReverseStatus(cp, i);
                     bins[i].Remove(cp);
                 }
+            }
+        }
+        for(int i = 0; i < boardObjects.Count; i++)
+        {
+            boardObjects[i].turnCount--;
+            if(boardObjects[i].turnCount == 0)
+            {
+                Destroy(boardObjects[i].gameObject);
+                
             }
         }
     }

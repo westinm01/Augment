@@ -96,6 +96,7 @@ public class BoardManager : MonoBehaviour
     public void MovePiece(ChessPiece piece, int newX, int newY)
     {
         // Check if moving piece eats another piece
+        tm.CheckTrigger(1, piece);
         bool pieceEaten = false;
         ChessPiece tempPiece = GetChessPiece(newX, -newY);
         if (tempPiece != null && tempPiece.team != piece.team) {
@@ -106,10 +107,11 @@ public class BoardManager : MonoBehaviour
             
             pieceEaten = true;
         }
-
+        
         // Move the backend values in the board array
         board.MovePiece(piece.coord.x, piece.coord.y, newX, -newY);
-
+                 //!!!!!!!!CHECK TRIGGERS: 1!!!!!!!!!!!!!!!!!!!!!!!!
+        
         // Update new coordinates
         piece.coord.x = newX;
         piece.coord.y = -newY;
@@ -145,8 +147,7 @@ public class BoardManager : MonoBehaviour
                 StartCoroutine(CanvasManager.Instance.CheckCoroutine());
             }
         }
-         //!!!!!!!!CHECK TRIGGERS: 1!!!!!!!!!!!!!!!!!!!!!!!!
-         tm.CheckTrigger(1, piece);
+
          
     }
 
