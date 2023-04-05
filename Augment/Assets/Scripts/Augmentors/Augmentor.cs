@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class Augmentor : MonoBehaviour
 {
-    [Header("AugmentorObject")]
+    [Header("AugmentorObject")] // Filled out automatically by ScriptableObject
+    [HideInInspector]
     public string characterName;
+    [HideInInspector]
     public string augmentName;
+    [HideInInspector]
     public string augmentDesc;
+    [HideInInspector]
     public Sprite sprite;
+    [HideInInspector]
     public Color backgroundColor;
+    [HideInInspector]
     public int triggerVal;
+    [HideInInspector]
     public bool hasPrompt = false;
+    [HideInInspector]
 
     [Header("Class variables")]
     public ChessPiece augmentPiece;
     public AugmentorObject augmentor;
     public bool canActivate = false;
+    [HideInInspector]
     public List<AudioClip> barks;
 
     protected virtual void Start(){

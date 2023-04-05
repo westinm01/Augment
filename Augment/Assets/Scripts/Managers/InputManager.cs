@@ -99,7 +99,7 @@ public class InputManager : MonoBehaviour
                     {
                         if (tempSelected != null && tempSelected.tag == "PossibleSpace")
                         {
-                            // Use augment
+                            MovePiece(tempSelected.transform.position);
                         }
                         else
                         {
