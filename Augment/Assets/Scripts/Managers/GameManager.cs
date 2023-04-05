@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     private Player currPlayer;
 
     private TriggerManager tm;
-    private InputManager im;
     private EventsManager events;
     private AudioManager audioManager;
     private InputManager inputManager;
@@ -53,7 +52,6 @@ public class GameManager : MonoBehaviour
         tm = GetComponent<TriggerManager>();
         statusManager = GetComponent<StatusManager>();
         events = GetComponent<EventsManager>();
-        im = GetComponent<InputManager>();
         audioManager = GetComponentInChildren<AudioManager>();
         inputManager = GetComponent<InputManager>();
 
@@ -104,11 +102,6 @@ public class GameManager : MonoBehaviour
     public AudioManager GetAudioManager() {
         return audioManager;
     }
-    
-    public InputManager GetInputManager(){
-        return im;
-    }
-
 
     public InputManager GetInputManager() {
         return inputManager;
