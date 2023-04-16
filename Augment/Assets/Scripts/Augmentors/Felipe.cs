@@ -12,6 +12,7 @@ public class Felipe : Augmentor
     //     augmentDesc = "This Augment can create a piece of equal or lower value in a free space next to it. The more powerful the piece, the more number of turns it takes to construct it. This piece cannot move while constructing.";
     //     triggerVal = 7;
     // }
+
     private bool hasActivated;
     private int turnsLeft;
     private InputManager inputManager;
@@ -29,7 +30,18 @@ public class Felipe : Augmentor
             if (!hasActivated) {
                 hasActivated = true;
                 hasPrompt = false;
-                inputManager.currentAugmentor = this;
+                // inputManager.currentAugmentor = this;
+                GameObject piece = GameManager.Instance.GetChessPiecePrefab(augmentPiece.pieceValue);
+                List<Vector2Int> freeSpaces = GameManager.Instance.board.GetFreeAdjacentSpaces(this.augmentPiece.coord);
+                if (freeSpaces.Count > 0) {
+                    int randIndex = Random.Range(0, freeSpaces.Count-1);
+                    Vector2Int randSpace = freeSpaces[randIndex];
+                    GameObject newPiece = Instantiate(piece, new Vector3(randSpace.x, -randSpace.y, 0), Quaternion.identity);
+                    ChessPiece newChessPiece = newPiece.GetComponent<ChessPiece>();
+                    newChessPiece.team = augmentPiece.team;
+                    augmentPiece.GetPlayer().playerPieces.Add(newChessPiece);
+                    // GameManager.Instance.board.AddPiece(newChessPiece, randSpace.y, randSpace.x);
+                }
             }
             else {
                 hasActivated = false;

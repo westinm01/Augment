@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb484efb7e083504bbbc60df1fce67af, type: 3}
-  m_Name: Filipe
+  m_Name: Felipe
   m_EditorClassIdentifier: 
-  characterName: 
-  augmentName: 
-  description: 
-  sprite: {fileID: 0}
+  characterName: Felipe
+  augmentName: Piece Creation
+  description: This Augment can create a piece of equal or lower value in a free
+    space next to it. The more powerful the piece, the more number of turns it takes
+    to construct it. This piece cannot move while constructing.
+  sprite: {fileID: 21300000, guid: d8769dd82d0c6724da4dd16ee993b5bc, type: 3}
   backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   triggerVal: 0
-  hasPrompt: 0
+  hasPrompt: 1
   barks: []

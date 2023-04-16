@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     private InputManager inputManager;
     public StatusManager statusManager;
 
+    public List<ChessPiece> piecePrefabs;   // List of possible pieces sorted by value
+
     public float turnTimer {get; private set; }
     private float nextTurnTime;
 
@@ -150,6 +152,30 @@ public class GameManager : MonoBehaviour
 
     public void EndGame() {
         Debug.Log("Game over");
+    }
+
+    /// <summary>
+    /// Returns a chess piece with equal or lesser value than the input value
+    /// Used to get a piece for Felipe augment
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    public GameObject GetChessPiecePrefab(int value) {
+        int maxIndex = 0;
+        if (value >= 30) {   // bishop/knght
+            maxIndex += 2; 
+        }
+        if (value >= 50) {   // rook
+            maxIndex++;
+        }
+        if (value >= 90) {   // queen
+            maxIndex++;
+        }
+        if (value >= 900) {  // king
+            maxIndex++;
+        }
+        int randIndex = UnityEngine.Random.Range(0, maxIndex);
+        return piecePrefabs[randIndex].gameObject;
     }
 
     #region Events

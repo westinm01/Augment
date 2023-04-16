@@ -19,7 +19,7 @@ public class ChessPiece : MonoBehaviour
     public Augmentor pieceAugmentor;
     public int status = 0; //to determine what status it has.
     public bool canMove = true;
-    public int pieceValue = 0;
+    public int pieceValue;
     public char pieceChar;
     protected Player thisPlayer;
     
@@ -201,6 +201,10 @@ public class ChessPiece : MonoBehaviour
         else {
             sr.sprite = blackSprite;
         }
+    }
+
+    public Player GetPlayer() {
+        return thisPlayer;
     }
 
     //Eating & CheckMate will be done by a game manager
