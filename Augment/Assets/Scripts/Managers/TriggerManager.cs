@@ -70,8 +70,8 @@ public class TriggerManager : MonoBehaviour
             {
                 if(cp.team == team)
                 {
-                    Debug.Log("Triggered" + triggerVal);
-                    cp.pieceAugmentor.UseAugment();//perform augment   
+                    // Debug.Log("Triggered" + triggerVal);
+                    // cp.pieceAugmentor.UseAugment();//perform augment   
                 }
                  
             }
@@ -91,8 +91,8 @@ public class TriggerManager : MonoBehaviour
             {
                 if(cp == piece)
                 {
-                    Debug.Log("Triggered//" + triggerVal);
-                    cp.pieceAugmentor.UseAugment();//perform augment   
+                    // Debug.Log("Triggered//" + triggerVal);
+                    // cp.pieceAugmentor.UseAugment();//perform augment   
                 }
                  
             }
