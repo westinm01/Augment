@@ -40,6 +40,8 @@ public class Felipe : Augmentor
                     ChessPiece newChessPiece = newPiece.GetComponent<ChessPiece>();
                     newChessPiece.team = augmentPiece.team;
                     augmentPiece.GetPlayer().playerPieces.Add(newChessPiece);
+                    GameManager.Instance.GetEventsManager().OnTurnEnd += Wait;
+                    this.augmentPiece.canMove = false;
                     // GameManager.Instance.board.AddPiece(newChessPiece, randSpace.y, randSpace.x);
                 }
             }
@@ -49,10 +51,18 @@ public class Felipe : Augmentor
             }
         }
     }
-
     public override void UseAugment(Vector2Int space)
     {
-        base.UseAugment(space);
-        
+        base.UseAugment(space);   
+    }
+
+    public void Wait() {
+        if (turnsLeft == 0) {
+            Debug.Log("Finished waiting");
+            UseAugment();
+        }
+        else {
+            turnsLeft--;
+        }
     }
 }

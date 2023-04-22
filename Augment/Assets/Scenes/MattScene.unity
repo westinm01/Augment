@@ -128,16 +128,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4774815353039868090, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
   m_PrefabInstance: {fileID: 3053927876371101412}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &427232339
+--- !u!114 &427232342 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1063774053073496092, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+  m_PrefabInstance: {fileID: 3053927876371101412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427232337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00a0225df418234d9249c5bf57baec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &427232344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427232337}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa0c6d4b02a75744084c12d31f35f6e8, type: 3}
+  m_Script: {fileID: 11500000, guid: bd739f5f225714f489ec522c6ce26596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
@@ -148,8 +159,9 @@ MonoBehaviour:
   triggerVal: 0
   hasPrompt: 0
   augmentPiece: {fileID: 0}
-  augmentor: {fileID: 11400000, guid: e134e737f88df2c4390995b34a809c91, type: 2}
-  canActivate: 0
+  targetPiece: {fileID: 427232342}
+  augmentor: {fileID: 11400000, guid: 7621a6dc28abb904bafdd2a24363ed85, type: 2}
+  canActivate: 1
   barks: []
 --- !u!1 &724195013 stripped
 GameObject:
@@ -176,10 +188,40 @@ MonoBehaviour:
   triggerVal: 0
   hasPrompt: 0
   augmentPiece: {fileID: 0}
+  targetPiece: {fileID: 0}
   augmentor: {fileID: 11400000, guid: ec564a0c701f9d443aef80673678b217, type: 2}
   canActivate: 0
   barks: []
   enemyNextTurnTime: 5
+--- !u!1 &854034925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3053927876038541135, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+  m_PrefabInstance: {fileID: 3053927876371101412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &854034930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854034925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0c6d4b02a75744084c12d31f35f6e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: 
+  augmentName: 
+  augmentDesc: 
+  sprite: {fileID: 0}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+  triggerVal: 0
+  hasPrompt: 0
+  augmentPiece: {fileID: 0}
+  targetPiece: {fileID: 0}
+  augmentor: {fileID: 11400000, guid: e134e737f88df2c4390995b34a809c91, type: 2}
+  canActivate: 0
+  barks: []
 --- !u!20 &1055322546 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8314416890425352240, guid: 53a881ddec34d8945ab330f3579267ae, type: 3}
@@ -473,6 +515,34 @@ PrefabInstance:
       propertyPath: whitePlayer
       value: 
       objectReference: {fileID: 1468011883}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: piecePrefabs.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: piecePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 3333120927014364357, guid: fa07661cc1978f94d8e30a2127548a32, type: 3}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: piecePrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7424550076465688234, guid: facbf6ec0176c934486c8883888862f6, type: 3}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: piecePrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: -6583431543290635219, guid: cfddb5c2e6267eb4ca2103ffeabd91b2, type: 3}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: piecePrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: -8598840077166151425, guid: f42efdc17f8e2fb4597bfcbdb6a5a7e9, type: 3}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: piecePrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1858988971150090434, guid: 53b7397e73d5754428b922d3db80beaf, type: 3}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: piecePrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 6788517337657436718, guid: 0e005e2a03dc63c45b3542c28fb65554, type: 3}
     - target: {fileID: 1016504711927523084, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
       propertyPath: m_Name
       value: GameManager

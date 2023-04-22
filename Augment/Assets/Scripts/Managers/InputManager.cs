@@ -56,17 +56,11 @@ public class InputManager : MonoBehaviour
                         //Check if the selected piece is a chess piece and gets the piece's ChessPiece component to check which team and if it is black's turn
                         if (tempSelected != null && tempSelected.tag == "ChessPiece")
                         {
-                            // If selected piece matches current player's turn
-                            // if team == false, then black turn, (false != true) = true
-                            // if team == true, then white turn, (true != false) = true
-                            if(tempSelected.GetComponent<ChessPiece>().team == GameManager.Instance.GetCurrentPlayer().playerTeam){
-                                if(augmentActivated){
-                                    SelectTargetPiece(tempSelected); //If we want to be able to select enemy pieces in the future, there can be a quick fix for that
-                                }else{
-                                    SelectPiece(tempSelected);
-                                }
+                            if(augmentActivated){
+                                SelectTargetPiece(tempSelected); //If we want to be able to select enemy pieces in the future, there can be a quick fix for that
+                            }else{
+                                SelectPiece(tempSelected);
                             }
-        
                         }
                     }
                 }
@@ -183,12 +177,17 @@ public class InputManager : MonoBehaviour
         initialPos = currSelected.transform.position;      
 
         GameManager.Instance.board.UnHighlightPieces();
-        GameManager.Instance.board.HighlightPiece(currSelected);
-        GameManager.Instance.board.HighlightPossibleMoves(currSelected.GetComponent<ChessPiece>());
 
-        state = InputState.TouchHold;
-         //!!!!!!!!CHECK TRIGGERS: 2!!!!!!!!!!!!!!!!!!!!!!!! 
-          tm.CheckTrigger(2, currSelected);
+        // If selected piece matches current player's turn and piece can move, highlight possibel spaces
+        ChessPiece tempPiece = tempSelected.GetComponent<ChessPiece>();
+        if (tempPiece.team == GameManager.Instance.GetCurrentPlayer().playerTeam && tempPiece.canMove) {
+            GameManager.Instance.board.HighlightPiece(currSelected);
+            GameManager.Instance.board.HighlightPossibleMoves(currSelected.GetComponent<ChessPiece>());
+            //!!!!!!!!CHECK TRIGGERS: 2!!!!!!!!!!!!!!!!!!!!!!!! 
+            tm.CheckTrigger(2, currSelected);
+            state = InputState.TouchHold;
+        }
+
         CanvasManager.Instance.ActivateAugmentPrompt(currSelected.GetComponent<ChessPiece>());
     }
 
