@@ -46,23 +46,23 @@ public class BoardManager : MonoBehaviour
         return board;
     }
 
-    public ChessPiece GetChessPiece(int row, int col) {
-        if (!InBounds(row, col)) {
+    public ChessPiece GetChessPiece(int x, int y) {
+        if (!InBounds(x, y)) {
             return null;
         }
-        return board.GetPiece(row, col);
+        return board.GetPiece(x, y);
     }
 
     // Checks to see if a space is within bounds and not occupied
-    public bool isValidMoveSpace(int row, int col)
+    public bool isValidMoveSpace(int x, int y)
     {
-        return InBounds(row, col) && !isSpaceOccupied(row, col);
+        return InBounds(x, y) && !isSpaceOccupied(x, y);
     }
 
     // Checks to see if space is occupied by another piece
-    public bool isSpaceOccupied(int row, int col)
+    public bool isSpaceOccupied(int x, int y)
     {
-        return board.GetPiece(row, col) != null;
+        return board.GetPiece(x, y) != null;
     }
 
     // Checks to see if space is within bounds of board
@@ -194,6 +194,16 @@ public class BoardManager : MonoBehaviour
         }
     }
 
+    public void HighlightSquares(List<Vector2Int> squares)
+    {
+        foreach (Vector2Int space in squares)
+        {
+            Vector3 pos = new Vector3(space.x, -space.y, -5);   // Set z to -5 to prioritize raycast to hit highlighter rather than chess piece
+            GameObject newHighlight = Instantiate(possibleSpaceHighlighter, pos, Quaternion.Euler(0, 0, 0));
+            possibleSpaceHighlights.Add(newHighlight);
+        }
+    }
+
     public void HighlightPiece(GameObject piece)
     {
         selectedPieceHighlighter.SetActive(true);
@@ -273,6 +283,29 @@ public class BoardManager : MonoBehaviour
         return spaces;
     }
 
+    /// <summary>
+    /// Returns a list of all spaces adjacent to input that aren't taken
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <returns></returns>
+    public List<Vector2Int> GetFreeAdjacentSpaces(Vector2Int pos)
+    {
+        List<Vector2Int> spaces = new List<Vector2Int>();
+        if (isValidMoveSpace(pos.x-1, pos.y)) {
+            spaces.Add(new Vector2Int(pos.x-1, pos.y));
+        }
+        if (isValidMoveSpace(pos.x+1, pos.y)) {
+            spaces.Add(new Vector2Int(pos.x+1, pos.y));
+        }
+        if (isValidMoveSpace(pos.x, pos.y-1)) {
+            spaces.Add(new Vector2Int(pos.x, pos.y-1));
+        }
+        if (isValidMoveSpace(pos.x, pos.y+1)) {
+            spaces.Add(new Vector2Int(pos.x, pos.y+1));
+        }
+        return spaces;
+    }
+    
     public void SwapPiece(ChessPiece piece1, ChessPiece piece2){
         Vector2Int temp = piece1.coord;
         Vector3 tempPos = piece1.transform.position;

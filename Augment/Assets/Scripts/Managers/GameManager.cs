@@ -14,10 +14,12 @@ public class GameManager : MonoBehaviour
     private Player currPlayer;
 
     private TriggerManager tm;
-    private InputManager im;
     private EventsManager events;
     private AudioManager audioManager;
+    private InputManager inputManager;
     public StatusManager statusManager;
+
+    public List<ChessPiece> piecePrefabs;   // List of possible pieces sorted by value
 
     public float turnTimer {get; private set; }
     private float nextTurnTime;
@@ -52,8 +54,8 @@ public class GameManager : MonoBehaviour
         tm = GetComponent<TriggerManager>();
         statusManager = GetComponent<StatusManager>();
         events = GetComponent<EventsManager>();
-        im = GetComponent<InputManager>();
         audioManager = GetComponentInChildren<AudioManager>();
+        inputManager = GetComponent<InputManager>();
 
         turnTimer = currPlayer.maxTurnTime;
         nextTurnTime = currPlayer.maxTurnTime;
@@ -102,11 +104,10 @@ public class GameManager : MonoBehaviour
     public AudioManager GetAudioManager() {
         return audioManager;
     }
-    
-    public InputManager GetInputManager(){
-        return im;
-    }
 
+    public InputManager GetInputManager() {
+        return inputManager;
+    }
 
     public int GetNumFullMoves()
     {
@@ -151,6 +152,30 @@ public class GameManager : MonoBehaviour
 
     public void EndGame() {
         Debug.Log("Game over");
+    }
+
+    /// <summary>
+    /// Returns a chess piece with equal or lesser value than the input value
+    /// Used to get a piece for Felipe augment
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    public GameObject GetChessPiecePrefab(int value) {
+        int maxIndex = 0;
+        if (value >= 30) {   // bishop/knght
+            maxIndex += 2; 
+        }
+        if (value >= 50) {   // rook
+            maxIndex++;
+        }
+        if (value >= 90) {   // queen
+            maxIndex++;
+        }
+        if (value >= 900) {  // king
+            maxIndex++;
+        }
+        int randIndex = UnityEngine.Random.Range(0, maxIndex);
+        return piecePrefabs[randIndex].gameObject;
     }
 
     #region Events
