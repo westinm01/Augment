@@ -92,7 +92,7 @@ public class CanvasManager : MonoBehaviour
         characterPortrait.sprite = piece.pieceAugmentor.sprite;
         background.color = piece.pieceAugmentor.backgroundColor;
         bool currPlayer = GameManager.Instance.GetCurrentPlayer().playerTeam;
-        if (piece.pieceAugmentor.hasPrompt && piece.team == currPlayer) {
+        if (piece.pieceAugmentor.hasPrompt && piece.team == currPlayer && piece.pieceAugmentor.canActivate) {
             useAugmentButton.SetActive(true);
             useAugmentButton.GetComponentInChildren<TextMeshProUGUI>().text = "Use Augment";
         }

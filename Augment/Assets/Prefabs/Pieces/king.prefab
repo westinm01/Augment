@@ -111,7 +111,7 @@ MonoBehaviour:
   pieceAugmentor: {fileID: 0}
   status: 0
   canMove: 1
-  pieceValue: 10
+  pieceValue: 900
   pieceChar: 0
 --- !u!61 &-8568912277899510133
 BoxCollider2D:

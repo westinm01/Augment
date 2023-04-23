@@ -137,6 +137,6 @@ MonoBehaviour:
   pieceAugmentor: {fileID: 0}
   status: 0
   canMove: 1
-  pieceValue: 1
+  pieceValue: 10
   pieceChar: 0
   direction: 1

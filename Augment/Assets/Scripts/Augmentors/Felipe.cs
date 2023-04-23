@@ -13,13 +13,11 @@ public class Felipe : Augmentor
     //     triggerVal = 7;
     // }
 
-    private bool hasActivated;
     private int turnsLeft;
     private InputManager inputManager;
     protected override void Start()
     {
         base.Start();
-        hasActivated = false;
         turnsLeft = 0;   
         inputManager = GameManager.Instance.GetInputManager();
     }
@@ -27,27 +25,12 @@ public class Felipe : Augmentor
     public override void UseAugment()
     {
         if (canActivate) {
-            if (!hasActivated) {
-                hasActivated = true;
-                hasPrompt = false;
-                // inputManager.currentAugmentor = this;
-                GameObject piece = GameManager.Instance.GetChessPiecePrefab(augmentPiece.pieceValue);
-                List<Vector2Int> freeSpaces = GameManager.Instance.board.GetFreeAdjacentSpaces(this.augmentPiece.coord);
-                if (freeSpaces.Count > 0) {
-                    int randIndex = Random.Range(0, freeSpaces.Count-1);
-                    Vector2Int randSpace = freeSpaces[randIndex];
-                    GameObject newPiece = Instantiate(piece, new Vector3(randSpace.x, -randSpace.y, 0), Quaternion.identity);
-                    ChessPiece newChessPiece = newPiece.GetComponent<ChessPiece>();
-                    newChessPiece.team = augmentPiece.team;
-                    augmentPiece.GetPlayer().playerPieces.Add(newChessPiece);
-                    GameManager.Instance.GetEventsManager().OnTurnEnd += Wait;
-                    this.augmentPiece.canMove = false;
-                    // GameManager.Instance.board.AddPiece(newChessPiece, randSpace.y, randSpace.x);
-                }
-            }
-            else {
-                hasActivated = false;
-                hasPrompt = true;
+            if (turnsLeft == 0) {
+                canActivate = false;
+                this.augmentPiece.canMove = false;
+                targetPiece = GameManager.Instance.GetChessPiecePrefab(augmentPiece.pieceValue).GetComponent<ChessPiece>();
+                turnsLeft = (targetPiece.pieceValue / 5) + 1;
+                GameManager.Instance.GetEventsManager().OnTurnEnd += Wait;
             }
         }
     }
@@ -59,10 +42,27 @@ public class Felipe : Augmentor
     public void Wait() {
         if (turnsLeft == 0) {
             Debug.Log("Finished waiting");
-            UseAugment();
+            CreatePiece();
+            canActivate = true;
         }
         else {
             turnsLeft--;
         }
+    }
+
+    private void CreatePiece() {
+        List<Vector2Int> freeSpaces = GameManager.Instance.board.GetFreeAdjacentSpaces(this.augmentPiece.coord);
+        if (freeSpaces.Count > 0) {
+            int randIndex = Random.Range(0, freeSpaces.Count-1);
+            Vector2Int randSpace = freeSpaces[randIndex];
+            GameObject newPiece = Instantiate(targetPiece.gameObject, new Vector3(randSpace.x, -randSpace.y, 0), Quaternion.identity);
+            ChessPiece newChessPiece = newPiece.GetComponent<ChessPiece>();
+            newChessPiece.team = augmentPiece.team;
+            augmentPiece.GetPlayer().playerPieces.Add(newChessPiece);
+            GameManager.Instance.board.AddPiece(newChessPiece, randSpace.y, randSpace.x);
+        }
+
+        GameManager.Instance.GetEventsManager().OnTurnEnd -= Wait;
+        this.augmentPiece.canMove = true;
     }
 }
