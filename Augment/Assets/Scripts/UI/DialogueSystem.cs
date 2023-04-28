@@ -84,4 +84,11 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
+    public void ClearDialogueMenu()
+    {
+        currentSpeakers.Clear();
+        dialogueOrder.Clear();
+        index = 0;
+    }
+
 }
