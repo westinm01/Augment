@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class RookPiece : ChessPiece
 {
+    public bool canCastle;
+
     private void Awake()
     {
+        canCastle = true;
         SetPieceValue(MiniMaxAI.ROOK_VAL);
         SetPieceChar(StockfishAI.ROOK_CHAR);
-    }
-
-    void Update()
-    {
-        
     }
 
     public override void GetPossibleSpaces()
@@ -82,5 +80,9 @@ public class RookPiece : ChessPiece
         else {
             return false;
         }
+    }
+
+    public void updateCastle(){
+        canCastle = false;
     }
 }

@@ -134,7 +134,7 @@ public class BoardManager : MonoBehaviour
         Player enemyPlayer = GameManager.Instance.GetPlayer(!GameManager.Instance.GetCurrentPlayer().playerTeam);
         if (enemyPlayer.isInCheck()) {
             Debug.Log("CHECK!");
-            //Maybe add visual queues!
+            //Maybe add visual cues!
 
             // Update the player moves again to only allow moves that escape check
             enemyPlayer.UpdatePossibleMoves();
@@ -146,6 +146,16 @@ public class BoardManager : MonoBehaviour
             else {
                 StartCoroutine(CanvasManager.Instance.CheckCoroutine());
             }
+        }
+
+        //Check for Special cases
+        if(piece.pieceChar == StockfishAI.KING_CHAR){
+            KingPiece temp = (KingPiece) piece;
+            temp.firstMove();
+
+        }else if(piece.pieceChar == StockfishAI.ROOK_CHAR){
+            RookPiece temp = (RookPiece) piece;
+            temp.updateCastle();
         }
 
          

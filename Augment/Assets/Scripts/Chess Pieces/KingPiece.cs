@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KingPiece : ChessPiece
-{
+{   
+    private bool moved;
+    private RookPiece kingSide = null;
+    private RookPiece queenSide = null;
+
     private void Awake()
     {
         SetPieceValue(MiniMaxAI.KING_VAL);
         SetPieceChar(StockfishAI.KING_CHAR);
+        moved = false;
     }
 
     private List<Vector2Int> allPossibleSpaces = new List<Vector2Int> { new Vector2Int(-1, 1), 
@@ -49,6 +54,11 @@ public class KingPiece : ChessPiece
                 }
             }
         }
+
+        if(canCastle()){
+            
+        }
+
     }
 
     private bool CanMoveBackwardsInCheck(Vector2Int nextMove) {
@@ -62,5 +72,31 @@ public class KingPiece : ChessPiece
         }
 
         return true;
+    }
+
+    public bool canCastle(){//Neither king nor specific rook can have been moved, and you can't castle out or into check.
+        
+        if(kingSide == null && queenSide == null){
+            kingSide = (RookPiece) GameManager.Instance.board.GetChessPiece(coord.x + 3, coord.y);
+            queenSide = (RookPiece) GameManager.Instance.board.GetChessPiece(coord.x - 4, coord.y);
+        }
+        
+        
+
+        if(!moved){
+            // if(typeof(GameManager.Instance.board.GetChessPiece(coord.x + 3, coord.y)) == typeof(RookPiece)){//Kingside
+            //     Debug.Log("kingside");
+            // }else if(false){//Queenside
+            //     Debug.Log("kingside");
+            // }
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public void firstMove(){
+        Debug.Log("King Moved");
+        moved = true;
     }
 }
