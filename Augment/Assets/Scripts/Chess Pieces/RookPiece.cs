@@ -82,7 +82,7 @@ public class RookPiece : ChessPiece
         }
     }
 
-    public void updateCastle(){
+    public void UpdateCastle(){
         canCastle = false;
     }
 }

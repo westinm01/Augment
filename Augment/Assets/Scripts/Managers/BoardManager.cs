@@ -107,6 +107,20 @@ public class BoardManager : MonoBehaviour
             
             pieceEaten = true;
         }
+
+        //Check if special case (Castling or En Passant)
+        if(piece.pieceChar == StockfishAI.KING_CHAR){//If it's a king and it's moved to a castleable spot
+            KingPiece temp = (KingPiece) piece;
+
+            if(temp.canCastle(0) && newX == temp.coord.x + 3){ //Kingside
+                Castle(0, temp, temp.kingSide);
+            }else if(temp.canCastle(1)  && newX == temp.coord.x - 4){ //Queenside
+                Castle(0, temp, temp.kingSide);
+            }
+
+            
+            temp.firstMove();
+        }
         
         // Move the backend values in the board array
         board.MovePiece(piece.coord.x, piece.coord.y, newX, -newY);
@@ -148,14 +162,10 @@ public class BoardManager : MonoBehaviour
             }
         }
 
-        //Check for Special cases
-        if(piece.pieceChar == StockfishAI.KING_CHAR){
-            KingPiece temp = (KingPiece) piece;
-            temp.firstMove();
-
-        }else if(piece.pieceChar == StockfishAI.ROOK_CHAR){
+        //Check for Special cases (castling or en passant conditions)
+        if(piece.pieceChar == StockfishAI.ROOK_CHAR){
             RookPiece temp = (RookPiece) piece;
-            temp.updateCastle();
+            temp.UpdateCastle();
         }
 
          
@@ -296,5 +306,13 @@ public class BoardManager : MonoBehaviour
         piece2.transform.position = new Vector3(tempPos.x, tempPos.y, 0);
 
         board.SwapPieces(piece1.coord.x, piece1.coord.y, piece2.coord.x, piece2.coord.y);
+    }
+
+    private void Castle(int i, KingPiece king, RookPiece rook){
+        if(i == 0){
+            MovePiece(rook, king.coord.x+1, rook.coord.y);
+        }else if(i == 1){
+            MovePiece(rook, king.coord.x-2, rook.coord.y);
+        }
     }
 }

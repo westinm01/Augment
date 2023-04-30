@@ -5,8 +5,8 @@ using UnityEngine;
 public class KingPiece : ChessPiece
 {   
     private bool moved;
-    private RookPiece kingSide = null;
-    private RookPiece queenSide = null;
+    public RookPiece kingSide = null;
+    public RookPiece queenSide = null;
 
     private void Awake()
     {
@@ -55,8 +55,16 @@ public class KingPiece : ChessPiece
             }
         }
 
-        if(canCastle()){
-            
+        if(canCastle(0)){
+            for(!GameManager.Instance.board.isSpaceOccupied(coord.x + 1, coord.y) && !GameManager.Instance.board.isSpaceOccupied(coord.x + 2, coord.y)){
+                possibleSPaces.Add(coord.x + 3);
+            }
+        }
+
+        if(canCastle(1)){
+            for(!GameManager.Instance.board.isSpaceOccupied(coord.x - 1, coord.y) && !GameManager.Instance.board.isSpaceOccupied(coord.x - 2, coord.y) && !GameManager.Instance.board.isSpaceOccupied(coord.x - 2, coord.y)){
+                possibleSPaces.Add(coord.x - 4);
+            }
         }
 
     }
@@ -74,7 +82,7 @@ public class KingPiece : ChessPiece
         return true;
     }
 
-    public bool canCastle(){//Neither king nor specific rook can have been moved, and you can't castle out or into check.
+    public bool canCastle(int i){//Neither king nor specific rook can have been moved, and you can't castle out or into check. 0 is kingside, 1 is queenside
         
         if(kingSide == null && queenSide == null){
             kingSide = (RookPiece) GameManager.Instance.board.GetChessPiece(coord.x + 3, coord.y);
@@ -84,12 +92,11 @@ public class KingPiece : ChessPiece
         
 
         if(!moved){
-            // if(typeof(GameManager.Instance.board.GetChessPiece(coord.x + 3, coord.y)) == typeof(RookPiece)){//Kingside
-            //     Debug.Log("kingside");
-            // }else if(false){//Queenside
-            //     Debug.Log("kingside");
-            // }
-            return true;
+            if(i == 0 && kingSide.canCastle || i==1 && queenSide.canCastle){//
+                return true;
+            }else{
+                return false;
+            }
         }else{
             return false;
         }
