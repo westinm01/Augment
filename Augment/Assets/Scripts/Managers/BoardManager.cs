@@ -111,11 +111,14 @@ public class BoardManager : MonoBehaviour
         //Check if special case (Castling or En Passant)
         if(piece.pieceChar == StockfishAI.KING_CHAR){//If it's a king and it's moved to a castleable spot
             KingPiece temp = (KingPiece) piece;
+            Debug.Log(new Vector2(newX, newY));
 
             if(temp.canCastle(0) && newX == temp.coord.x + 3){ //Kingside
                 Castle(0, temp, temp.kingSide);
+                newX--;
             }else if(temp.canCastle(1)  && newX == temp.coord.x - 4){ //Queenside
-                Castle(0, temp, temp.kingSide);
+                Castle(1, temp, temp.queenSide);
+                newX = newX+1;
             }
 
             
@@ -309,10 +312,15 @@ public class BoardManager : MonoBehaviour
     }
 
     private void Castle(int i, KingPiece king, RookPiece rook){
+        Debug.Log("Castling!");
         if(i == 0){
-            MovePiece(rook, king.coord.x+1, rook.coord.y);
+            Debug.Log("Coords:" + new Vector2(king.coord.x + 1, -rook.coord.y));
+            MovePiece(rook, king.coord.x + 1, -rook.coord.y);
+            Debug.Log("Rook Moved" + rook.coord);
+            MovePiece(king, king.coord.x-1, -king.coord.y);
         }else if(i == 1){
-            MovePiece(rook, king.coord.x-2, rook.coord.y);
+            Debug.Log("Coords:" + new Vector2(king.coord.x -2 , -rook.coord.y));
+            MovePiece(rook, king.coord.x-2, -rook.coord.y);
         }
     }
 }

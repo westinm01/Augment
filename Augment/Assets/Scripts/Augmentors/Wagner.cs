@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lin : Augmentor
+public class Wagner : Augmentor
 {
-
     [SerializeField] int turnsLeft;
     [SerializeField] int cooldownTime;
 
@@ -32,7 +31,7 @@ public class Lin : Augmentor
         if(canActivate){
             Debug.Log("Can Activate");
             canActivate = false;
-            StartCoroutine(UseWarp());
+            StartCoroutine(UseRR());
         }else{
             Debug.Log("Can't activate :'3");
             
@@ -40,21 +39,31 @@ public class Lin : Augmentor
         }
     }
 
-    private IEnumerator UseWarp(){
+    private IEnumerator UseRR(){
         //Piece Selection
         GameManager.Instance.GetInputManager().AugmentActivation(this, true);
         while(targetPiece == null){
             yield return new WaitForSeconds(0.1f);
         }        
 
-        //Swap + cooldown
+        //RiskReward
         GameManager.Instance.GetEventsManager().OnTurnEnd += Cooldown;
-        GameManager.Instance.board.SwapPiece(augmentPiece, targetPiece);
-        GameManager.Instance.SwitchTeams(); //Switch turns to end turn
+        // GameManager.Instance.GetEventsManager().OnPieceEaten += targetCheck;
+       
 
     }
 
     public void setSelection(GameObject piece){
         targetPiece = piece.GetComponent<ChessPiece>();
     }
+
+    public void targetCheck(){
+        if(!targetPiece.gameObject.activeSelf){
+            turnsLeft = -1;
+
+            //Place it back and move your piece back
+        }
+    }
+
+
 }

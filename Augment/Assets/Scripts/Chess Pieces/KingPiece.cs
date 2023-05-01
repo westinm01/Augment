@@ -56,14 +56,14 @@ public class KingPiece : ChessPiece
         }
 
         if(canCastle(0)){
-            for(!GameManager.Instance.board.isSpaceOccupied(coord.x + 1, coord.y) && !GameManager.Instance.board.isSpaceOccupied(coord.x + 2, coord.y)){
-                possibleSPaces.Add(coord.x + 3);
+            if(!GameManager.Instance.board.isSpaceOccupied(coord.x + 1, coord.y) && !GameManager.Instance.board.isSpaceOccupied(coord.x + 2, coord.y)){
+                possibleSpaces.Add(new Vector2Int(coord.x + 3, coord.y));
             }
         }
 
         if(canCastle(1)){
-            for(!GameManager.Instance.board.isSpaceOccupied(coord.x - 1, coord.y) && !GameManager.Instance.board.isSpaceOccupied(coord.x - 2, coord.y) && !GameManager.Instance.board.isSpaceOccupied(coord.x - 2, coord.y)){
-                possibleSPaces.Add(coord.x - 4);
+            if(!GameManager.Instance.board.isSpaceOccupied(coord.x - 1, coord.y) && !GameManager.Instance.board.isSpaceOccupied(coord.x - 2, coord.y) && !GameManager.Instance.board.isSpaceOccupied(coord.x - 2, coord.y)){
+                possibleSpaces.Add(new Vector2Int(coord.x - 4, coord.y));
             }
         }
 

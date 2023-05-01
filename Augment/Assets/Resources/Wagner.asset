@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb484efb7e083504bbbc60df1fce67af, type: 3}
   m_Name: Wagner
   m_EditorClassIdentifier: 
-  characterName: 
-  augmentName: 
-  description: 
-  sprite: {fileID: 0}
+  characterName: Wagner
+  augmentName: Risk & Reward
+  description: Risk & Reward - Select a target. If that piece is eaten in the next
+    3 turns, it joins your team for the rest of the match. Otherwise, this piece
+    dies.
+  sprite: {fileID: 21300000, guid: 2092a58f27e5daf4495bbddf8c4c8675, type: 3}
   backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   triggerVal: 0
-  hasPrompt: 0
+  hasPrompt: 1
   barks: []
