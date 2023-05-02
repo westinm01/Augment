@@ -102,6 +102,15 @@ public class BoardManager : MonoBehaviour
             Debug.Log("Eating piece " + tempPiece);
             //!!!!!!!!CHECK TRIGGERS: 4!!!!!!!!!!!!!!!!!!!!!!!!
             tm.CheckTrigger(4, tempPiece);
+            if (tempPiece.TryGetComponent<Alejandra>(out Alejandra alejandra))
+            {
+                if (alejandra.GetHasExtraLife())
+                {
+                    alejandra.UseExtraLife();
+                    GameManager.Instance.SwitchTeams();
+                    return;
+                }
+            }
             EatPiece(tempPiece);
             
             pieceEaten = true;
