@@ -4,19 +4,29 @@ using UnityEngine;
 
 public class Augmentor : MonoBehaviour
 {
-    [Header("AugmentorObject")]
+    [Header("AugmentorObject")] // Filled out automatically by ScriptableObject
+    [HideInInspector]
     public string characterName;
+    [HideInInspector]
     public string augmentName;
+    [HideInInspector]
     public string augmentDesc;
+    [HideInInspector]
     public Sprite sprite;
+    [HideInInspector]
     public Color backgroundColor;
+    [HideInInspector]
     public int triggerVal;
+    [HideInInspector]
     public bool hasPrompt = false;
+    [HideInInspector]
 
     [Header("Class variables")]
     public ChessPiece augmentPiece;
+    public ChessPiece targetPiece;
     public AugmentorObject augmentor;
     public bool canActivate = false;
+    [HideInInspector]
     public List<AudioClip> barks;
 
     protected virtual void Start(){
@@ -44,6 +54,23 @@ public class Augmentor : MonoBehaviour
             StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
         }
     }
+
+    public virtual void UseAugment(Vector2Int space)
+    {
+        if(canActivate)
+        {
+            StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
+        }
+    }
+
+    public virtual void UseAugment(ChessPiece piece)
+    {
+        if(canActivate)
+        {
+            StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
+        }
+    } 
+
     public virtual void PlayVFX()
     {
         //play animation or particle effects.

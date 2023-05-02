@@ -1472,20 +1472,76 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.b
-      value: 0.004227493
+      value: 0.7254902
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.g
-      value: 0.8962264
+      value: 0.9254902
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.r
-      value: 0.19940554
+      value: 0.21176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorLore
+      value: "\tWhen most think of blacksmiths, they\u2019re commonly depicted in
+        medieval times, forging weapons and armor to be used in battle. Their trade
+        revolves around violence and conflict, crafting tools to perpetuate it. Now,
+        they are a relic of the past, made obsolete by mass production and the advent
+        of superior weaponry. \r\n\tFelipe strived to disprove these notions. Finding
+        an aptitude with the profession at a young age, he enrolled in a trade school
+        to refine his skills. To him, blacksmithing was a way to kindle happiness
+        in others, especially those in his community. He prided himself on constructing
+        trinkets for children, or decorative furniture and sculptures for clients.
+        Each piece took days, or even months to complete, and Felipe oftentimes felt
+        absorbed in his work, losing track of time. Despite that, it was well worth
+        it in the end to see his recipients marvel at his creations. \r\n\tDuring
+        one winter, Felipe and his neighborhood received a notice that in a week,
+        new buildings were being developed in their area to provide for more housing
+        in the aim to attract new business and wealth. The community was eager about
+        the new prospects, until the reality of the process arrived at their doorsteps.
+        To create areas to construct, older buildings - those that held significance
+        within the neighborhood - were torn down. Gradually, the price of living
+        increased as wealthier people began to make a home for themselves. Those
+        who could not keep up with leases were evicted, forced to move to places
+        far from where employment was.\r\n\tRemaining in the area with his own forge
+        and family, Felipe welcomed those who had been displaced to take refuge near
+        the fire\u2019s warmth, producing heaters and stoves to aid against the harsh
+        cold. Dozens of families depended on his craft to keep warm and survive,
+        but Felipe also made time to address the coldness in their hearts. Kind words
+        of reassurance stoked the fading embers in the downtrodden, keeping the flame
+        of hope burning. It wasn\u2019t much solace for the given circumstances,
+        especially with contractors threatening legal action to continue to drive
+        them out, but Felipe encouraged them to remain optimistic. Plans for positive
+        change couldn\u2019t be made with minds clouded of despair. He worked tirelessly,
+        never losing sight of who he must care for. In this crucible, an Augment
+        was forged.\r\n\tFrom the inextinguishable determination to provide for his
+        people, Felipe found himself able to construct works at a much faster rate,
+        all while preserving the same quality as he normally did. Working together,
+        the community made it through the winter, despite the schemes of the contractors.
+        Understanding the need to raise money to hire lawyers for an impending lawsuit,
+        Felipe left his forge to participate in a chess tournament, hoping to win,
+        spread awareness of his plight, and to use his newfound ability to help others,
+        so that they may have their basic needs met to enact positive change in the
+        world.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorName
+      value: Felipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorTitle
+      value: The Jolly Blacksmith
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: infoPanelObject
       value: 
       objectReference: {fileID: 1356491758}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentDescription
+      value: 'Piece Creation: This piece can create a piece of equal or less value
+        on an adjacent space over several turns.'
+      objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849835, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1518,6 +1574,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1917622946795163641, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d8769dd82d0c6724da4dd16ee993b5bc, type: 3}
     - target: {fileID: 2068229041836727091, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_text
       value: 1600
@@ -2306,15 +2366,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Story
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
+  m_sharedMaterial: {fileID: -8520518597383263340, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2331,13 +2391,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 140
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontSizeMax: 140
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2627,6 +2687,7 @@ RectTransform:
   - {fileID: 1799883833}
   - {fileID: 972096326}
   - {fileID: 136641280}
+  - {fileID: 534006002}
   m_Father: {fileID: 1709926170}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2794,7 +2855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3452,7 +3513,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 102931148}
   m_HandleRect: {fileID: 102931147}
   m_Direction: 2
-  m_Value: 1.0000001
+  m_Value: 1.0000002
   m_Size: 0.6006381
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4605,6 +4666,7 @@ RectTransform:
   - {fileID: 1695023678}
   - {fileID: 872292816}
   - {fileID: 552324716}
+  - {fileID: 670788686}
   m_Father: {fileID: 1709926170}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5827,6 +5889,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2867340569682816245, guid: cab42c39b20111a4e958c6f1f864a765, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3579075407700441848, guid: cab42c39b20111a4e958c6f1f864a765, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -6528,15 +6594,59 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.b
-      value: 0.2735849
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.g
-      value: 0.2735849
+      value: 0.9529412
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.r
-      value: 0.2735849
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorLore
+      value: "\tJiva always had an appreciation for anything art. For them, \u201Cart\u201D
+        was a broad definition, encompassing many branches: paintings, music, literature,
+        sculptures and architecture, among countless others. Across many societies,
+        Jiva marveled and revered them all. Their fascination began when they attended
+        a world history course in high school. The amount of advancements mentioned
+        there drove them to research more about foreign countries, and the people
+        who lived there. Gradually, they engrossed themselves in learning about other
+        languages, culture, and practices.\r\n\tAfter graduating high school with
+        exceptional grades, Jiva took to traveling the world to continue learning
+        about art. During that time, they encountered someone with an Augment for
+        the first time. They were bewildered at the oddity, and pressed them for
+        questions regarding the nature of it. Jiva requested for a demonstration,
+        to which the Augmentor complied. They were delighted to see such a performance,
+        and jokingly tried to replicate it. Sure enough, a copy of the ability was
+        produced. \r\n\tThis newfound revelation about themselves shifted Jiva\u2019s
+        trajectory, causing them to pursue Augment research. They recognized the
+        potential for their power to revolutionize how people see Augmentors, and
+        it would also help them understand their own abilities and identity. There,
+        at a research facility, they met Vincente, who shared similar interests.
+        They admired his passion to understand Augments, though kept their relationship
+        professional and strictly work-related. Together, they worked to uncover
+        the creation and nature of Augments - The two would witness an Augmentor
+        perform, and Jiva would replicate their ability, then conduct interviews
+        to satisfy their queries. Vincente would then document and compile their
+        notes.\r\n\tThe two would eventually encounter a small problem: they\u2019ve
+        studied and interviewed all of the Augmentors in their local vicinity, and
+        it was too small of a sample size to draw any conclusive results. They required
+        more participants. Understanding how art brings people together, Jiva suggested
+        they build an attraction to draw Augmentors from around the world, so that
+        they can research even more strange and unique powers. Vincente recommended
+        a monetary incentive, and through several iterations on the idea, the two
+        settled on a chess tournament, where Augmentors could showcase their powers
+        to the masses, all while they could continue their research.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorName
+      value: Jiva
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorTitle
+      value: The Artist
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: infoPanelObject
@@ -6574,6 +6684,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1917622946795163641, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2913cb22a23bcd243b1b15ed49ea2deb, type: 3}
     - target: {fileID: 2068229041836727091, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_text
       value: 2500
@@ -6712,7 +6826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.y
@@ -7047,7 +7161,7 @@ RectTransform:
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.38561785, y: 1}
+  m_AnchorMax: {x: 0.34949592, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7282,9 +7396,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Sali
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -7317,7 +7431,7 @@ MonoBehaviour:
   m_fontSizeMax: 100
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -7348,7 +7462,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &427541040
@@ -7536,141 +7650,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452512448}
-  m_CullTransparentMesh: 1
---- !u!1 &473284005
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 473284006}
-  - component: {fileID: 473284008}
-  - component: {fileID: 473284007}
-  m_Layer: 5
-  m_Name: Buy Gold Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &473284006
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473284005}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1241578716}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 300}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &473284007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473284005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Buy Gold
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 112
-  m_fontSizeBase: 112
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &473284008
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473284005}
   m_CullTransparentMesh: 1
 --- !u!1 &496493520
 GameObject:
@@ -7956,13 +7935,68 @@ PrefabInstance:
     m_TransformParent: {fileID: 779365249}
     m_Modifications:
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Color.b
+      value: 0.23137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.g
-      value: 0.08445278
+      value: 0.42352942
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorLore
+      value: "\tFor generations, the Lucerna family prided themselves in chandlery.
+        Only the most ethically sourced beeswax and fragrances from organically grown
+        plants were considered acceptable to be used, and the results were phenomenal.
+        Homes felt most comforting with the variety of peaceful aroma, and the sanctity
+        of religious temples flourished with the intricate wax carvings. Lucy was
+        the 25th generation of candle makers, and honored her duty to uphold her
+        family heritage. All aspects of chandlery were second-nature to her, such
+        as selecting the correct fragrance for the right mood, or carving designs
+        into candles for the appropriate occasion. But most importantly, the secret
+        component was her family\u2019s Augment - to ignite fire from within to light
+        their candles with passion. \r\n\tEven in the modern age, Lucy still did
+        her best to promote her profession. While she tended to her garden and shop
+        alone, she still received some help from her relatives. She asked them to
+        help her create a website to receive orders and to deliver candles to far
+        places, but slowly, more and more family members began to focus more on their
+        own lives - holding jobs that had more relevance in the contemporary world.
+        Lucy became alone. Moreover, the mass production of LED lights made candles
+        obsolete, reserved for the sparse occasions and events. \r\n\tOne night,
+        Lucy received a letter from a nearby lighting manufacturer. They wished to
+        purchase her shop\u2019s location, so they could sell their products in a
+        prime location. An office address was provided for her to come meet and arrange
+        the details of their expansion.\r\n\tAn ember of rage stoked within Lucy.
+        What right did they have to simply stomp over her and her family\u2019s legacy?
+        Their lights had no soul in them; they still felt dark. She wrote down the
+        office\u2019s location, then burned the letter. Traveling to the place in
+        the cover of night, she set the building ablaze. The inferno felt comforting,
+        as if the pain she felt would be shared, easing her burden. Lucy fled the
+        scene, and by daylight, no one could identify the culprit. \r\n\tFearing
+        the repercussions, Lucy decided to light candles in her shop to calm her
+        nerves. News broke out about an attack on a lighting company online, and
+        Lucy saw mixed feelings regarding the incident. While the media scorned the
+        culprit, many anonymous commenters expressed their support and admiration
+        for the arsonist, claiming they were enacting justice against worker exploitation.
+        With a new motive ignited within, Lucy set off to deliver her next act of
+        vigilantism.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorName
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorTitle
+      value: The Candlemaker
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: infoPanelObject
       value: 
       objectReference: {fileID: 1356491758}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentDescription
+      value: 'Trailblazer: Upon moving this piece, a trail of fire is left after,
+        preventing enemies from moving onto these spaces.'
+      objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849835, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -7995,6 +8029,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1917622946795163641, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ed763ea29e0ffc47aee9268c131c131, type: 3}
     - target: {fileID: 2068229041836727091, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_text
       value: 1000
@@ -8230,6 +8268,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530267619}
   m_CullTransparentMesh: 1
+--- !u!1 &534006001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 534006002}
+  - component: {fileID: 534006004}
+  - component: {fileID: 534006003}
+  m_Layer: 5
+  m_Name: Image_Logo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &534006002
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534006001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 133954978}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 500}
+  m_SizeDelta: {x: 600, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &534006003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534006001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3f5eee25769a6e943a5c1b5a76a1f672, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &534006004
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534006001}
+  m_CullTransparentMesh: 1
 --- !u!1001 &552324715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8242,6 +8356,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Skip
       objectReference: {fileID: 0}
+    - target: {fileID: 8796674400957693346, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a3a8826611c207c4c9d19ae7cd4ea133, type: 3}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8325,6 +8443,50 @@ PrefabInstance:
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796674400957693349, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796674400957693349, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796674400957693349, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796674400957693349, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 927878785}
+    - target: {fileID: 8796674400957693349, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSceneName
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796674400957693349, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetBGColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796674400957693349, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetPieceColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796674400957693349, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796674400957693349, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: BGInterp, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796674400957693349, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796674400957693349, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: battle1
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693351, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_Name
@@ -8490,11 +8652,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8679,7 +8841,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 576771877}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 226503630}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1230039781}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1810564714}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &576771877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8874,20 +9072,71 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.14117648
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.g
-      value: 0.5286541
+      value: 0.0627451
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.77254903
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorLore
+      value: "\tLong ago, a man dressed in a red cloak arrived in a village begging
+        for food. The villagers refused him out of distrust. But, a little girl offered
+        him a fruit. Impressed by the girl\u2019s courage, the man revealed himself
+        to be a spider god. As thanks, he gifted her a cloak of spider silk and bestowed
+        upon her the ability to weave. The cloak would be passed to her descendants,
+        the ones who inherit the title of chief of their tribe.\r\n\tAsabi was given
+        a simple but stuffy life. With his mother passed and father absent, Asabi
+        was raised by his grandfather, the chief of their tribe. His grandfather
+        taught him their people\u2019s traditions to prepare him for chiefdom. Asabi
+        was taught their history, the laws of the land protecting them and of the
+        legend of the spider god and his gift of weaving. Asabi was especially fond
+        of weaving, a common skill among the tribe. They were known for their beautiful
+        and intricate patterns that attracted many to visit their lands. He utilized
+        his skill in many of his pranks, strewing fake webs around the branches of
+        trees to frighten unsuspecting tourists, getting a kick out of hearing them
+        panic and retreat.\r\n\tHe loved the forest, often sneaking away in the dead
+        of night to wander the pristine wilderness. His grandfather had taught him
+        to appreciate the land, its bounty and the many lives that called it home.
+        For every berry eaten, he\u2019d plant a seed. For every fish caught, he\u2019d
+        fertilize the ground with its bones. \r\n\tOn one adventure, Asabi discovered
+        a cave. He ventured in but slipped, tumbling deep into the cavern and injuring
+        his legs. Unable to climb nor see, he waited for help, for his grandfather
+        or the villagers to come rescue him. No one came. While trapped, he thought
+        of home, the villagers and his grandfather to kindle hope. But it was thoughts
+        of the forest that kept him alive, and Asabi refused to let the cavern be
+        his grave. His resolve was short lived, and he soon collapsed.\r\n\tAsabi
+        awoke to find his body had changed. He could see in the dark and spin webs
+        from his arms. With his new abilities, Asabi climbed and soon clambered out
+        of the cave\u2019s mouth. Seeing his reflection in water, Asabi was shocked
+        at what he\u2019d become. He\u2019d grown eight spider legs, each protruding
+        from his back. His grandfather and tribe would think they\u2019d been cursed
+        by the spider god if they saw his transformation. Asabi secluded himself
+        in the forest, learning to further understand his powers. Time alone could
+        get boring, however. Asabi entertained himself with old habits, pranking
+        clueless campers or lost hikers with his usual tricks.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorName
+      value: Asabi
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorTitle
+      value: The Spider Soul
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: infoPanelObject
       value: 
       objectReference: {fileID: 1356491758}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentDescription
+      value: 'Web Trap: Choose a space to place a web that is hidden to your opponent.
+        If an enemy piece is placed on this space, it is stunned for 2 turns.'
+      objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849835, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -8931,7 +9180,7 @@ PrefabInstance:
     - target: {fileID: 1917622946795163641, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7f39266c81484df42a9ce4e3ab07d9a6, type: 3}
+      objectReference: {fileID: 21300000, guid: f2268b0506ede104c8aaa0987319d094, type: 3}
     - target: {fileID: 2068229041836727091, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_text
       value: 1000
@@ -9090,9 +9339,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: The Jumproping Prodigy
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -9125,7 +9374,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -9156,7 +9405,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &592732515
@@ -10026,6 +10275,78 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
   m_PrefabInstance: {fileID: 661436963}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &661849697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7778558435068644802, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+  m_PrefabInstance: {fileID: 2041522373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &661849702 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7778558435068644806, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+  m_PrefabInstance: {fileID: 2041522373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661849697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddcdd604a328c4ab296f048eb7b3a925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &661849703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661849697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1268654402}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 661849702}
+        m_TargetAssemblyTypeName: Yarn.Unity.LineView, Assembly-CSharp
+        m_MethodName: OnContinueClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &663181399
 GameObject:
   m_ObjectHideFlags: 0
@@ -10416,6 +10737,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670136974}
   m_CullTransparentMesh: 1
+--- !u!4 &670788686 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+  m_PrefabInstance: {fileID: 2041522373}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &680774215
 GameObject:
   m_ObjectHideFlags: 0
@@ -10561,20 +10887,84 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
-      propertyPath: m_Color.g
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.r
-      value: 0.5601826
+      value: 0.58431375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorLore
+      value: "\tIt is within everyone, the dream to be free. To soar through the
+        streets, the wind flowing through one\u2019s hair, unshackled by burdens
+        of tradition and responsibility. It is the dream that Tahira had, and one
+        that pushed her to go beyond her limits and away from the cage that trapped
+        her.\r\n\tShe\u2019d been born to immigrant parents, who wanted a new life
+        in a strange but beautiful country. Like many parents, they held the belief
+        that one would only succeed if they followed the strict formula every first
+        generation child is told. Study hard, go to a good college then work in a
+        high paying career. It worked for all her older cousins, who found careers
+        in business, or medicine; the usual life paths all parents desire for their
+        children.\r\n \tHer parents were the same, encouraging her to stick to the
+        formula, telling her how to dress and behave. It was all they knew, and Tahira
+        knew her parents wanted her to become more. She was an excellent student
+        who scored top marks and was praised by her teachers for her conduct in class.
+        But to Tahira, it was all one big facade to keep her parents at bay, and
+        pursue her true dream of becoming a famous skateboarder. She wanted nothing
+        more than to be recognized as one of the best in the country, participating
+        in competitions to see who can perform the best and most dangerous tricks.
+        She lived for the adrenaline rush that came from flying off ramps and railings.\r\n\tAfter
+        school, Tahira would head straight to the skatepark where she could finally
+        cut loose. She\u2019d meet with other skaters, compare the undersides of
+        their boards and see who could land the farthest after jumping off a rail,
+        or take the hardest fall. They\u2019d laugh about it later and she\u2019d
+        return home with a false reason for her returning late. Her parents did not
+        mind;, their daughter was \u201Cperfect\u201D for all they knew. The skatepark
+        was her escape, and it would also be her opportunity to reach her dream.\r\n\tAt
+        the skatepark, she caught wind of a competition being held for junior skaters.
+        The winner would be given the chance to travel the globe for a series of
+        extreme games. On the day of, Tahira skipped class and signed upon. Her parents
+        were notified of the truancy, and they set out to figure out their daughter's
+        whereabouts. Using a tracker they implanted on her phone, they discovered
+        her at the skatepark.\r\n\tWhen it came to her turn, Tahira was given a half-pipe
+        to perform on. All sorts of tricks she could perform went through her mind,
+        but she\u2019d never done any of them before. Taking a chance, Tahira readied
+        herself and stepped onto the board, immediately dropping into the halfpipe.
+        She flew but the moment she caught sight of her parents pushing their way
+        through the crowd, her body lost momentum. She fell and slid off the side
+        of the half-pipe, crushing her left leg in the process. Her parents attempted
+        to push through the barriers. Fearing reprisal, Tahira got up, hopped on
+        her skateboard and fled. Powered by both fear and adrenaline, Tahira tore
+        through the skateboard, flying off and kick flipping off railings and ramps
+        at intense speeds. The crowd was awed by the speed and the difficulty of
+        each trick. Her parents, too, were shocked at their daughter\u2019s power.\r\n\tTahira
+        escaped into the streets and rode her board for miles. She believed she couldn\u2019t
+        return home, now that her parents have seen the real her. But the cool evening
+        breeze running through her hair reminded her of her dream. The pressure from
+        her parents, and the stress of keeping up her facade were swept away by the
+        wind.. She decided to keep on riding, without a particular destination in
+        mind, but what she did have at this moment was freedom.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorName
+      value: Tahira
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorTitle
+      value: The Double-life Skateboarder
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: infoPanelObject
       value: 
       objectReference: {fileID: 1356491758}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentDescription
+      value: Skate Trick
+      objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849835, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -10607,6 +10997,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1917622946795163641, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3c430b64f5ec783488d632cb9d80dcd4, type: 3}
     - target: {fileID: 2068229041836727091, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_text
       value: 1600
@@ -10842,7 +11236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorTitle
-      value: The Resilient
+      value: The Ghost Whisperer
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: infoPanelObject
@@ -11583,7 +11977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.y
@@ -11720,8 +12114,8 @@ RectTransform:
   - {fileID: 591755933}
   - {fileID: 518668386}
   - {fileID: 64551663}
-  - {fileID: 692817419}
   - {fileID: 1854567180}
+  - {fileID: 692817419}
   - {fileID: 969186658}
   - {fileID: 1706680326}
   - {fileID: 2109167159}
@@ -12211,7 +12605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7924528, g: 0.68612915, b: 0.36258456, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12971,7 +13365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.47760582, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.4784317, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13357,7 +13751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.y
@@ -13667,7 +14061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.y
@@ -14708,6 +15102,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922087533}
   m_CullTransparentMesh: 1
+--- !u!1 &927878782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2753718018764665327, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+  m_PrefabInstance: {fileID: 2041522373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &927878785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927878782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a040ea61e6fb16247a07aa84db7c03a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &939676161 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3579075407700441848, guid: cab42c39b20111a4e958c6f1f864a765, type: 3}
@@ -14786,7 +15197,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 08e6665b14880b844ba69278d1bd91b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14819,20 +15230,70 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.b
-      value: 0.71566486
+      value: 0.26666668
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.3882353
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.65882355
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorLore
+      value: "\tWagner\u2019s life was filled with luck, though not always the fortunate
+        kind. As a child, they were in a plane crash with their parents, to which
+        they were the only survivor. However, this also meant they inherited the
+        family\u2019s enormous fortune. Deciding to spend it and have fun, Wagner
+        spent their youth in casinos, playing arcade machines and gambling. Despite
+        their young age, the managers of the establishment permitted it because the
+        incredible and unexplainable luck streaks displayed awed everyone, drawing
+        many customers to see them first hand, raising the profits of the casino.
+        However, the constant winning began to bore Wagner, and they decided one
+        day to quit playing and left to find more excitement.\r\n\tFurious about
+        the decision and nervous about the loss of profits, the managers kidnapped 
+        Wagner to have their luck all to themselves. Ambushing them near a dark alley,
+        they threw a trash bag over their head and stuffed them in a van, planning
+        to return to the casino. Luckily, the van hit a deep pothole, flipping over
+        and injuring everyone inside - all except Wagner. The door of the van burst
+        open, allowing them to escape. Coincidentally, Wagner found a lottery ticket
+        inside the trash bag, and turned it in for a ludicrous reward. \r\n\tSo became
+        Wagner\u2019s life: bad luck followed by good luck. They traveled the world,
+        witnessing many sights and surviving many plane crashes. Each new experience
+        filled them with dopamine, and the accidents with adrenaline, though those
+        effects soon wore off. Wagner became obsessed with the feeling, and sought
+        activities that would give them the most buzz. They skydived without a parachute,
+        and landed in a stack of hay in a remote farm. They chased storms and surfed
+        tsunamis, they barreled down waterfalls and wrestled grizzly bears, all while
+        ending up unscathed. They\u2019ve tried everything at least once, but the
+        craving always returned right after; Wagner was insatiable. \r\n\tScouring
+        the internet for more activities to do, word of a novel chess game involving
+        people with extraordinary abilities caught Wagner\u2019s attention. People
+        with supernatural talents, just like them, would all be in the same place
+        to perform. That sounded like fun. Deciding to take the scenic way over,
+        Wagner unintentionally derailed trains and sank ships reaching the arena.
+        Looking optimistically, Wagner took it as a sign that the game would be the
+        luckiest event in their life."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorName
+      value: Wagner
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorTitle
+      value: The Hyper-lucky Gambler
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: infoPanelObject
       value: 
       objectReference: {fileID: 1356491758}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentDescription
+      value: 'Risk & Reward: Select a target. If that piece is eaten in the next
+        3 turns, it joins your team for the rest of the match. Otherwise, this piece
+        dies.'
+      objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849835, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -14865,6 +15326,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1917622946795163641, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2092a58f27e5daf4495bbddf8c4c8675, type: 3}
     - target: {fileID: 2068229041836727091, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_text
       value: 1600
@@ -15110,7 +15575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.60618854, g: 0.9339623, b: 0.5506853, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15168,10 +15633,10 @@ RectTransform:
   m_Father: {fileID: 1810564715}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 125}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -125, y: -5}
+  m_SizeDelta: {x: 350, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &975094896
 MonoBehaviour:
@@ -15193,10 +15658,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 9999999
+  m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
+  m_sharedMaterial: {fileID: -8520518597383263340, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15220,14 +15685,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 120
   m_fontSizeBase: 72
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_fontSizeMax: 120
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -15238,7 +15703,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
@@ -15463,7 +15928,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 08e6665b14880b844ba69278d1bd91b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15909,8 +16374,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
+  m_sharedMaterial: {fileID: -8520518597383263340, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15934,13 +16399,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 112
+  m_fontSize: 150
   m_fontSizeBase: 112
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontSizeMax: 150
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -16603,15 +17068,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Augmentors
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
+  m_sharedMaterial: {fileID: -8520518597383263340, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16628,13 +17093,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 81.55
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontSizeMax: 200
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -16738,8 +17203,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Profile Icons
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
+  m_sharedMaterial: {fileID: -8520518597383263340, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16763,13 +17228,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 112
+  m_fontSize: 150
   m_fontSizeBase: 112
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontSizeMax: 150
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -17448,7 +17913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorTitle
-      value: The Resilient
+      value: The Candlemaker
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: infoPanelObject
@@ -17456,7 +17921,8 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 'Trailblazer:'
+      value: 'Trailblazer: Upon moving this piece, a trail of fire is left after,
+        preventing enemies from moving onto these spaces.'
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -18542,128 +19008,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelsCompleted: 0
---- !u!1 &1241578715
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1241578716}
-  - component: {fileID: 1241578719}
-  - component: {fileID: 1241578718}
-  - component: {fileID: 1241578717}
-  m_Layer: 5
-  m_Name: Buy Gold BG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1241578716
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241578715}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 473284006}
-  m_Father: {fileID: 1855557055}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 594.03827, y: -1650}
-  m_SizeDelta: {x: 800, y: 300}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1241578717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241578715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1241578718}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1241578718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241578715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.6499834, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1241578719
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241578715}
-  m_CullTransparentMesh: 1
 --- !u!1 &1252614925
 GameObject:
   m_ObjectHideFlags: 0
@@ -19146,15 +19490,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
+  m_sharedMaterial: {fileID: -8520518597383263340, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -19171,13 +19515,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 113.4
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontSizeMax: 150
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -19221,6 +19565,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268175301}
   m_CullTransparentMesh: 1
+--- !u!114 &1268654402 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7778558434911714087, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+  m_PrefabInstance: {fileID: 2041522373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1279351396
 GameObject:
   m_ObjectHideFlags: 0
@@ -19639,7 +19994,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 382032065}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.38561785
+  m_Size: 0.34949592
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -19770,7 +20125,7 @@ MonoBehaviour:
   m_fontSize: 50
   m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -21014,9 +21369,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Hopper: This piece can jump over any ally piece.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -21080,7 +21435,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1422817226
@@ -21099,10 +21454,69 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 779365249}
     m_Modifications:
+    - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorLore
+      value: "\tTime is a delicate quantity. Even the slightest alternation can spiral
+        into unforeseeable, often catastrophic outcomes. To prevent this from unstabling
+        the many timelines in a timestream, the Ward, an interdimensional organization
+        was founded to correct anomalies that may arise. Not much is known about
+        the group, ot her than those who serve in it act as law enforcement and go
+        by the title of \u201CDoctors.\u201D\r\n\tDoc-14, or just Doc, was one of
+        the many agents licensed to carry out this task. Sharing names, along with
+        one\u2019s history or befriending others, was not encouraged by the Ward,
+        as connections may interfere with their duty of traveling across timelines
+        to rectify problems. She understood this well, having done several missions,
+        though it wasn\u2019t to say she entirely approved of it. Work for Doc mostly
+        consisted of being at a desk, with the occasional field assignment. It was
+        monotonous, but she persevered, longing for her work day to end or to get
+        some air outside the cubicle. \r\n\tWhen she arrived back into her apartment
+        after a long day, Doc felt as if she could breathe. In the comfort of her
+        own home, she found peace and solitude. It was here where she could reconnect
+        with herself; kept hidden and always on her was a simple locket pendant,
+        reminding her of something she could never return to. Doc cherished the memory,
+        but was keen about not thinking about it too much. The Ward was able to track
+        her in many different timelines, even ones where her thoughts were able to
+        be read from an outside perspective. She understood that when she signed
+        up for the job; the Ward was a higher calling for her, but it didn\u2019t
+        ease the pain of having to lose everything for it. Doc evoked the vow she
+        made to herself, to never forget her origins, unlike the rest of her colleagues.
+        Doing her job kept everything in order, and it ensured the safety of those
+        she cared about.\r\n\tOne day, Doc received an assignment on her desk regarding
+        an immortal teenager rapidly hopping through timelines. She scoffed at the
+        kid\u2019s carelessness and lamented about how much work she\u2019d need
+        to do fixing his mess. Wanting to waste minimal time, she donned her uniform
+        and set off on the trail, aiming to catch the fugitive and return him to
+        the timeline where he belonged."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorName
+      value: Doc
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorTitle
+      value: The Highest Rank
+      objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: infoPanelObject
       value: 
       objectReference: {fileID: 1356491758}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentDescription
+      value: 'Time Killer: Every time this piece eats an enemy piece, reduce the
+        opponent''s timer by 15 seconds. OR only 5 seconds to make their next move.'
+      objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849835, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -21135,6 +21549,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1917622946795163641, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2af472cc2b5ed594c8e566968f23a5ae, type: 3}
     - target: {fileID: 2068229042651093990, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Name
       value: AugmentorShopPanel
@@ -21652,15 +22070,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Multiplayer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
+  m_sharedMaterial: {fileID: -8520518597383263340, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -21677,13 +22095,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 78.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontSizeMax: 200
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -22334,128 +22752,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 445593252113570013, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
   m_PrefabInstance: {fileID: 1519884267}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1539690917
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1539690918}
-  - component: {fileID: 1539690921}
-  - component: {fileID: 1539690920}
-  - component: {fileID: 1539690919}
-  m_Layer: 5
-  m_Name: Emotes BG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1539690918
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539690917}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2039697232}
-  m_Father: {fileID: 1855557055}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 594.03827, y: -1275}
-  m_SizeDelta: {x: 800, y: 300}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1539690919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539690917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1539690920}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1539690920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539690917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.32553998, g: 0, b: 0.6039216, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1539690921
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539690917}
-  m_CullTransparentMesh: 1
 --- !u!1 &1554281562
 GameObject:
   m_ObjectHideFlags: 0
@@ -23022,7 +23318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorTitle
-      value: The Resilient
+      value: The Hyper-lucky Gambler
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: infoPanelObject
@@ -23137,6 +23433,10 @@ PrefabInstance:
     - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Color.r
       value: 0.6603774
+      objectReference: {fileID: 0}
+    - target: {fileID: 445593252113570014, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 445593253088028992, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Sprite
@@ -23612,7 +23912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.y
@@ -24113,7 +24413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -24262,6 +24562,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1694850387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1694850388}
+  - component: {fileID: 1694850390}
+  - component: {fileID: 1694850389}
+  m_Layer: 5
+  m_Name: IMAGE_Gold
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1694850388
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694850387}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1810564715}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 50, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1694850389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694850387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 968e46dd93783a142bfc540f3fa34c4c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1694850390
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694850387}
+  m_CullTransparentMesh: 1
 --- !u!1 &1695023677
 GameObject:
   m_ObjectHideFlags: 0
@@ -24279,7 +24655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1695023678
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24350,20 +24726,76 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.9411765
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.g
-      value: 0.35444742
+      value: 0.41960785
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.r
-      value: 0.5283019
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorLore
+      value: "\tLin never knew how it felt to be loved. She\u2019d never seen her
+        parents, her earliest memory being the ugly face of the orphanage director.
+        She was a cruel taskmaster who sent children to work as soon as they could
+        walk and speak; she was particularly terrible to Lin, whom she states owes
+        the director their life for taking them in. Lin was often beaten or whipped
+        to her feet for failing to finish her chores. To the other children, Lin
+        was the primary verbal punching bag to release their own frustrations, as
+        she was often viewed as the weakest among them.. Lin learned the futility
+        of crying for help, as many of the town\u2019s residents were either bribed
+        or silenced by the director. Whenever officials came to evaluate the orphanage,
+        Lin was locked in her room.\r\n\tLin grew numb to the pain as she aged, but
+        behind the teenager\u2019s stoic face was a burning hatred and desire to
+        rebel against the director. She fled the orphanage in the dead of night,
+        jumping over backyard fences and running across lawns. Unfortunately, a neighbor
+        who\u2019d been under the director\u2019s thumb had caught her, immediately
+        taking Lin back to the orphanage where she received the worst beating of
+        her life. With each strike of the belt, she began to hear the director\u2019s
+        vitriolic thoughts. With each lash, she heard the fearful cries of the other
+        orphans. And with the final blow to the face, the stoic facade shattered,
+        leaving behind a star shaped scar.\r\n\tThe voices never ended. All around
+        her, she could hear everyone\u2019s thoughts. Nothing could silence them.
+        The other kids\u2019 disgust and amusement towards her, the director\u2019s
+        spiteful criticism, and the neighbors\u2019 meaningless pity for Lin and
+        the other orphans, took a toll on her mind and body. Lin found that the constant,
+        involuntary use of her power deteriorated her eyesight and would soon be
+        rendered blind. Every night, she buried herself under her covers and sandwiched
+        her head between the pillows, but nothing could stop the endless flow of
+        thought violating her mind. She was willing to do anything to finally put
+        an end to the voices.\r\n\tIn her insanity, she stole a cleaver from the
+        kitchen, and butchered her own arm. Her pained screams were heard by all,
+        and soon the director, belt in hand, barged into her room. Cleaver in hand,
+        Lin hacked the director to death. With each swing, the director\u2019s cruel
+        thoughts turned into cries for help, yet no one could hear her until she
+        drew her last breath. Lin fled the orphanage that night, and soon the voices
+        ceased, for a time.\r\n\tNow a grown woman, Lin put the past behind her,
+        but still holds onto the memory of each childhood ordeal; her arm, magically
+        healed yet scarred, was a constant reminder. Though her power has rendered
+        her blind, Lin considers it a small price to pay for her new life purpose:
+        Listening close for the faint cries of abuse victims and giving them a chance
+        to live the life she couldn\u2019t.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorName
+      value: Lin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorTitle
+      value: The Resilient
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: infoPanelObject
       value: 
       objectReference: {fileID: 1356491758}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentDescription
+      value: 'Reality Warp: Once per game, you can switch the positions of 2 enemy
+        pieces or 2 ally pieces.'
+      objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849835, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -24396,6 +24828,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1917622946795163641, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b2c0a345b461ecc429be05f7e9862b23, type: 3}
     - target: {fileID: 2068229041836727091, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_text
       value: 2500
@@ -24699,7 +25135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4009434, g: 0.7176371, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -25276,9 +25712,45 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\tThe eldest of five, Sali had always been accustomed to looking after
+    others. Years ago,  when she was a teenager, she, along with her parents, lived
+    in a home among the outskirts of a metropolitan area, with a well knit neighborhood
+    community. Her father was a florist, and her mother a teacher. Though her responsibilities
+    were plentiful, she always made time to hang out with her siblings and other
+    kids. Outdoor activities were their favored passtime, even with the limited amount
+    of playthings. Sali became to be viewed as the group\u2019s big sister, and no
+    one could best her in a jump rope competition. \r\n\tThat happy reality shattered
+    when a wave of sickness washed over the area, infecting Sali\u2019s parents with
+    a crippling disease. They became bedridden, and Sali stepped up to handle their
+    duties. Her workload increased, though she never thought of it as a burden. Others
+    from the community pitched in as well, tending to her father\u2019s garden and
+    donating what they can to both their treatment. Despite everyone\u2019s efforts,
+    the two succumbed to their sickness. \r\n\tSali buried herself in work, not willing
+    to rest for a moment, or else she feared she\u2019d have to face reality. Concerned
+    that the sickness could be genetic, she gathered her siblings to partake in rigorous
+    exercise and stricter diets in an attempt to strengthen their physical health.
+    Every day  started with waking up before dawn, followed by grueling jogs and
+    endless stretches. Junk food was thrown out of the house, replaced with vegetables
+    and whole wheat bread. She got a tattoo: two black bands, forever having a reminder
+    of the parents she lost. \r\nThis relentless determination went on for weeks,
+    and Sali\u2019s training eventually culminated in her attaining an Augment. The
+    same couldn\u2019t be said for her siblings, and they collectively voiced their
+    discomfort from the training regiment. They pleaded with Sali, and she realized
+    that while she prioritized their physical well being, she neglected their mental
+    health. She yielded, reducing the severity of training and the diets, though
+    compromised that they\u2019d still train at least once a week. \r\nHer siblings
+    suggested that their time playing outdoors with other kids could double as exercise,
+    and Sali could look into combining the two. She did, organizing community workout
+    sessions to improve the health of others, and to take their minds off the sadness.
+    \r\n\tIt was a success; not only were people exercising and being fit, they were
+    enjoying it, too. Sali took up her jump rope again, this time incorporating it
+    into her exercise. Her neighbors informed her that a certain scientist was scouting
+    for people with Augments to participate in chess matches; the popularity of the
+    games and the money that comes with it could be used to improve the community
+    and acquire better treatment for future diseases. With her newfound goal in mind,
+    Sali registers herself to partake in the game.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -25342,7 +25814,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1758248125
@@ -25726,8 +26198,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
+  m_sharedMaterial: {fileID: -8520518597383263340, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -25751,13 +26223,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 112
+  m_fontSize: 150
   m_fontSizeBase: 112
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontSizeMax: 150
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -25870,9 +26342,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6d5d29749ff0da048ac0b5ac7a6bca76, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ab111010c1b8b7a4e96a0f326ef89382, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -26308,6 +26780,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 975094895}
+  - {fileID: 1694850388}
   m_Father: {fileID: 1709926170}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26329,7 +26802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9624374, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.9624374, g: 1, b: 0, a: 0.34117648}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -26832,16 +27305,75 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.b
-      value: 0.9654913
+      value: 0.9254902
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.21176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Color.r
+      value: 0.45882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorLore
+      value: "\tThe wealthy and powerful have always sought ways to secure and grow
+        their wealth.. While many turned to bankers and advisors, the more eccentric
+        of them desired materialistic guidance through mystical means, often turning
+        to diviners, people who claim to see the future through objects like crystal
+        balls or tarot cards. Others hired mediums, who supposedly spoke to the dead,
+        to contact deceased relatives for financial advice. This brought them to
+        the doorstep of a certain woman who did both.\r\n\tThey called her Lady LeMure,
+        diviner of futures and voice of the dead. In truth, her name was Annette
+        Fontame, actress, con artist and master thief. As Lady LeMure, she was often
+        called to visit the homes of clientele who could afford her expensive but
+        sham medium services. There, she performed by-the-book con artist methods
+        to collect information. Clients who were not careful or were overtaken by
+        grief overshared details about deceased relatives, special dates and numbers
+        or information pertaining to objects of worth hidden throughout the home.
+        Once clients were eased, or distracted, Lady LeMure began her treasure hunt.
+        She had always succeeded in doing so, escaping just in time before she could
+        be attributed to the theft.\r\n\tShe would live a lavish lifestyle, full
+        of expensive dresses, wines and pastimes, but like her clients, the call
+        of greed remained. On one fateful night, she would be invited to perform
+        readings at a party hosted by one of the richest men in the country. Her
+        target was a safe, said to house a valuable heirloom. Once she had gathered
+        enough information from her drunken client, and the guests were distracted,
+        Lady LeMure slipped away to comb through the mansion. It led her to a quaint
+        office, and with the press of a button, revealed the safe behind a painting.\r\n\tBefore
+        she could touch the lock, the client, in drunken stupor, appeared by the
+        doorway armed with an antique hunting rifle. He shot her in the head, killing
+        her instantly. Her corpse was sent away and buried in an unmarked grave.
+        She was posthumously branded a fraud, and the money she\u2019d accumulated
+        was plundered from her home. The legendary Lady LeMure was dead. A shame,
+        as there was so much more to enjoy, and much to steal.\r\n\tLady LeMure rose
+        again, spurned by the desire to live. She wasn\u2019t human anymore, nor
+        was she undead, instead bordering the lines between the living and dead.
+        In a twist of fate, she gained the ability to both see and speak to ghosts.
+        She donned her favorite dress, and wore a masquerade mask resembling a skull
+        to hide the scar on her forehead. Lady LeMure would make a shining comeback,
+        this time truly aided by spirits. With charms and talent, she would persuade
+        or intimidate spirits to help her find the treasures she craved.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorName
+      value: Lady LeMure
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorTitle
+      value: The Ghost Whisperer
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: infoPanelObject
       value: 
       objectReference: {fileID: 1356491758}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentDescription
+      value: 'From the Grave: Upon eating an enemy piece, that piece becomes an ally
+        Ghost for 2 turns. A ghost retains the piece''s movement ability, but it
+        does not retain its augmentation. It shares a space with its "killer" unless
+        you chose to move it in your next turn.'
+      objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849835, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -26874,6 +27406,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1917622946795163641, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80f4031ffa00e694bbd900ccc2aaf9e0, type: 3}
     - target: {fileID: 2068229041836727091, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_text
       value: 1600
@@ -26983,6 +27519,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1653388961}
     m_Modifications:
     - target: {fileID: 7146888356588347875, guid: 042e2e1dc7e685e4c8589d47be50f52c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7146888356588347875, guid: 042e2e1dc7e685e4c8589d47be50f52c, type: 3}
       propertyPath: m_MovementType
       value: 2
       objectReference: {fileID: 0}
@@ -27082,6 +27622,10 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7146888357126249211, guid: 042e2e1dc7e685e4c8589d47be50f52c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7146888357456640570, guid: 042e2e1dc7e685e4c8589d47be50f52c, type: 3}
       propertyPath: m_Pivot.y
       value: 1
@@ -27108,7 +27652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7146888357456640570, guid: 042e2e1dc7e685e4c8589d47be50f52c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7146888357456640570, guid: 042e2e1dc7e685e4c8589d47be50f52c, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -27116,7 +27660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7146888357456640570, guid: 042e2e1dc7e685e4c8589d47be50f52c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7146888357913242812, guid: 042e2e1dc7e685e4c8589d47be50f52c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -27141,12 +27685,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7146888357456640570, guid: 042e2e1dc7e685e4c8589d47be50f52c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 663181400}
-    - targetCorrespondingSourceObject: {fileID: 7146888357456640570, guid: 042e2e1dc7e685e4c8589d47be50f52c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1539690918}
-    - targetCorrespondingSourceObject: {fileID: 7146888357456640570, guid: 042e2e1dc7e685e4c8589d47be50f52c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1241578716}
   m_SourcePrefab: {fileID: 100100000, guid: 042e2e1dc7e685e4c8589d47be50f52c, type: 3}
 --- !u!224 &1855557054 stripped
 RectTransform:
@@ -27625,15 +28163,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Shop
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
+  m_sharedMaterial: {fileID: -8520518597383263340, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -27650,13 +28188,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 110
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontSizeMax: 110
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -28299,7 +28837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.7176471, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -28399,7 +28937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.y
@@ -28684,7 +29222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorTitle
-      value: The Resilient
+      value: The Highest Rank
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: infoPanelObject
@@ -29017,143 +29555,385 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030281142}
   m_CullTransparentMesh: 1
---- !u!1 &2039697231
-GameObject:
+--- !u!1001 &2041522373
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2039697232}
-  - component: {fileID: 2039697234}
-  - component: {fileID: 2039697233}
-  m_Layer: 5
-  m_Name: Emotes Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2039697232
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039697231}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1539690918}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 300}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2039697233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039697231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 'Emotes
-
-'
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
+  serializedVersion: 2
+  m_Modification:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 112
-  m_fontSizeBase: 112
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &2039697234
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039697231}
-  m_CullTransparentMesh: 1
+    m_TransformParent: {fileID: 226503631}
+    m_Modifications:
+    - target: {fileID: 2753718018764665327, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_Name
+      value: Dialogue System
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4396402
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4396402
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4396402
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -539.86505
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -960.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292657645895612462, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292657647476544605, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292657647476544605, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292657647476544605, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 639.7301
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292657647476544605, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292657647476544605, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 339.86505
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292657647476544605, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: yarnProject
+      value: 
+      objectReference: {fileID: 7545569452688597077, guid: d62ebaa7c8adc604ea600c6f809d64ea, type: 3}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: onNodeComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: onNodeComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: onNodeComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 927878785}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSceneName
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: battle1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739197626111815070, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739197626111815070, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_OverridePixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540255442126730747, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084386685998634907, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084386685998634907, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084386685998634907, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1079.7301
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084386685998634907, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1920.4799
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084386685998634907, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.69461805
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084386685998634907, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.69461805
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084386685998634907, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.69461805
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084386685998634907, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084386685998634907, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084386685998634907, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084386685998634907, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 375
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084386685998634907, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 667
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434935992802, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434935992803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434935992803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434935992803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434976753271, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434976753271, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434976753271, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1039.7301
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434976753271, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 145.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434976753271, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 539.86505
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434976753271, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -232.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434976753272, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_fontSize
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434976753272, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434976753272, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435068644803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435068644803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 325.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435068644803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435068644803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435068644804, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_ChildAlignment
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435068644804, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_ChildControlHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435732307477, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435732307477, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435732307477, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1039.7301
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435732307477, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 80.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435732307477, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 539.86505
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435732307477, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435732307478, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435732307478, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435930151348, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435930151348, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435930151348, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 96.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435930151348, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 26.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435930151348, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 56.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435930151348, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -21.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435930151349, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558436452782398, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558436452782398, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558436452782398, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1039.7301
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558436452782398, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558436452782398, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 539.86505
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558436452782398, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -130.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869241421422109459, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869241421422109459, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869241421422109459, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1920
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
 --- !u!1 &2042070623
 GameObject:
   m_ObjectHideFlags: 0
@@ -29796,7 +30576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorTitle
-      value: The Resilient
+      value: The Double-life Skateboarder
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: infoPanelObject
@@ -29804,7 +30584,7 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 
+      value: Skate Trick
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -30065,20 +30845,36 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.b
-      value: 0.9056604
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.g
-      value: 0.7729249
+      value: 0.69803923
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849831, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.46666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorLore
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorName
+      value: Duke
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentorTitle
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: infoPanelObject
       value: 
       objectReference: {fileID: 1356491758}
+    - target: {fileID: 1917622945283849832, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: augmentDescription
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1917622945283849835, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -30111,6 +30907,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1917622946795163641, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c590cac7f8e3434bb5f573639117491, type: 3}
     - target: {fileID: 2068229041836727091, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_text
       value: 2500
@@ -30507,7 +31307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8796674400957693348, guid: 543683101b84d4f8e97e5aa207b4b768, type: 3}
       propertyPath: m_SizeDelta.y

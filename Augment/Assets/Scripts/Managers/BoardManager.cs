@@ -46,23 +46,23 @@ public class BoardManager : MonoBehaviour
         return board;
     }
 
-    public ChessPiece GetChessPiece(int row, int col) {
-        if (!InBounds(row, col)) {
+    public ChessPiece GetChessPiece(int x, int y) {
+        if (!InBounds(x, y)) {
             return null;
         }
-        return board.GetPiece(row, col);
+        return board.GetPiece(x, y);
     }
 
     // Checks to see if a space is within bounds and not occupied
-    public bool isValidMoveSpace(int row, int col)
+    public bool isValidMoveSpace(int x, int y)
     {
-        return InBounds(row, col) && !isSpaceOccupied(row, col);
+        return InBounds(x, y) && !isSpaceOccupied(x, y);
     }
 
     // Checks to see if space is occupied by another piece
-    public bool isSpaceOccupied(int row, int col)
+    public bool isSpaceOccupied(int x, int y)
     {
-        return board.GetPiece(row, col) != null;
+        return board.GetPiece(x, y) != null;
     }
 
     // Checks to see if space is within bounds of board
@@ -96,6 +96,7 @@ public class BoardManager : MonoBehaviour
     public void MovePiece(ChessPiece piece, int newX, int newY)
     {
         // Check if moving piece eats another piece
+        tm.CheckTrigger(1, piece);
         bool pieceEaten = false;
         ChessPiece tempPiece = GetChessPiece(newX, -newY);
         if (tempPiece != null && tempPiece.team != piece.team) {
@@ -115,10 +116,11 @@ public class BoardManager : MonoBehaviour
             
             pieceEaten = true;
         }
-
+        
         // Move the backend values in the board array
         board.MovePiece(piece.coord.x, piece.coord.y, newX, -newY);
-
+                 //!!!!!!!!CHECK TRIGGERS: 1!!!!!!!!!!!!!!!!!!!!!!!!
+        
         // Update new coordinates
         piece.coord.x = newX;
         piece.coord.y = -newY;
@@ -154,8 +156,7 @@ public class BoardManager : MonoBehaviour
                 StartCoroutine(CanvasManager.Instance.CheckCoroutine());
             }
         }
-         //!!!!!!!!CHECK TRIGGERS: 1!!!!!!!!!!!!!!!!!!!!!!!!
-         tm.CheckTrigger(1, piece);
+
          
     }
 
@@ -199,6 +200,16 @@ public class BoardManager : MonoBehaviour
             Vector3 pos = new Vector3(space.x, -space.y, -5);   // Set z to -5 to prioritize raycast to hit highlighter rather than chess piece
             GameObject newHighlight = Instantiate(possibleEatHighlighter, pos, Quaternion.Euler(0, 0, 0));
             possibleEatHighlights.Add(newHighlight);
+        }
+    }
+
+    public void HighlightSquares(List<Vector2Int> squares)
+    {
+        foreach (Vector2Int space in squares)
+        {
+            Vector3 pos = new Vector3(space.x, -space.y, -5);   // Set z to -5 to prioritize raycast to hit highlighter rather than chess piece
+            GameObject newHighlight = Instantiate(possibleSpaceHighlighter, pos, Quaternion.Euler(0, 0, 0));
+            possibleSpaceHighlights.Add(newHighlight);
         }
     }
 
@@ -279,5 +290,43 @@ public class BoardManager : MonoBehaviour
         }
 
         return spaces;
+    }
+
+    /// <summary>
+    /// Returns a list of all spaces adjacent to input that aren't taken
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <returns></returns>
+    public List<Vector2Int> GetFreeAdjacentSpaces(Vector2Int pos)
+    {
+        List<Vector2Int> spaces = new List<Vector2Int>();
+        if (isValidMoveSpace(pos.x-1, pos.y)) {
+            spaces.Add(new Vector2Int(pos.x-1, pos.y));
+        }
+        if (isValidMoveSpace(pos.x+1, pos.y)) {
+            spaces.Add(new Vector2Int(pos.x+1, pos.y));
+        }
+        if (isValidMoveSpace(pos.x, pos.y-1)) {
+            spaces.Add(new Vector2Int(pos.x, pos.y-1));
+        }
+        if (isValidMoveSpace(pos.x, pos.y+1)) {
+            spaces.Add(new Vector2Int(pos.x, pos.y+1));
+        }
+        return spaces;
+    }
+    
+    public void SwapPiece(ChessPiece piece1, ChessPiece piece2){
+        Vector2Int temp = piece1.coord;
+        Vector3 tempPos = piece1.transform.position;
+        piece1.coord.x = piece2.coord.x;
+        piece1.coord.y = piece2.coord.y;
+        piece1.transform.position = new Vector3(piece2.coord.x, -piece2.coord.y, 0);
+
+
+        piece2.coord.x = temp.x;
+        piece2.coord.y = temp.y;
+        piece2.transform.position = new Vector3(tempPos.x, tempPos.y, 0);
+
+        board.SwapPieces(piece1.coord.x, piece1.coord.y, piece2.coord.x, piece2.coord.y);
     }
 }

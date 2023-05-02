@@ -10,6 +10,8 @@ public class ChessBoard : MonoBehaviour
     private int width;
     private int height;
     private ChessPiece[,] grid;
+    
+
 
     public ChessBoard(int width, int height)
     {
@@ -48,8 +50,8 @@ public class ChessBoard : MonoBehaviour
         return height;
     }
 
-    public ChessPiece GetPiece(int row, int col){
-        return grid[col, row];
+    public ChessPiece GetPiece(int x, int y){
+        return grid[y, x];
     }
 
     public void SetGrid(ChessPiece[,] newGrid)
@@ -95,6 +97,7 @@ public class ChessBoard : MonoBehaviour
     public void MovePiece(int x1, int y1, int x2, int y2) {
         grid[y2, x2] = grid[y1, x1];
         grid[y1, x1] = null;
+        Debug.Log("ChessBoard.CS MovePiece");
     }
 
     public void SwapPieces(int x1, int y1, int x2, int y2) {

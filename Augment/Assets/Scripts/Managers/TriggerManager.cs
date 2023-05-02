@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerManager : MonoBehaviour
 {
-    public List<ChessPiece> [] bins = new List<ChessPiece> [8]; //each index corresponds to a triggerVal. ie. All ChessPieces in index 0 have an Augmentor triggerval of 0.
+    public List<ChessPiece> [] bins = new List<ChessPiece> [9]; //each index corresponds to a triggerVal. ie. All ChessPieces in index 0 have an Augmentor triggerval of 0.
     private StatusManager sm;
     // Start is called before the first frame update
     void Start()
@@ -12,7 +12,7 @@ public class TriggerManager : MonoBehaviour
         
         //populate bins with all pieces
         GameObject field = GameObject.FindGameObjectsWithTag("Field")[0];
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < 8; i++)
         {
             List<ChessPiece> l = new List<ChessPiece>();
             bins[i] = l;
@@ -20,11 +20,13 @@ public class TriggerManager : MonoBehaviour
         for (int i = 1; i < field.transform.childCount; i++)
         {
             ChessPiece cp = field.transform.GetChild(i).gameObject.GetComponent<ChessPiece>();
-            int index = 0; 
-            if (cp.pieceAugmentor != null)
+            int index = 7;
+            //this area is causing major issues. Triggers dont work when expected. 
+            if (cp && cp.pieceAugmentor != null)
             {
+                Debug.Log("Actually added Augmentor: " + cp.pieceAugmentor.name);
                 index = cp.pieceAugmentor.triggerVal;
-                index = 3;
+                //index = 3;
             }
             Debug.Log(index);
             bins[index].Add(cp);
@@ -47,9 +49,9 @@ public class TriggerManager : MonoBehaviour
          for(int i = 0; i < bins[triggerVal].Count; i++)
         {
             ChessPiece cp = bins[triggerVal][i];
-            if(cp.pieceAugmentor != null)
+            if(cp && cp.pieceAugmentor != null)
             {
-                Debug.Log("Triggered");
+                Debug.Log("Triggered: " + triggerVal);
                 cp.pieceAugmentor.UseAugment();//perform augment   
             }
         }
@@ -64,12 +66,12 @@ public class TriggerManager : MonoBehaviour
         for(int i = 0; i < bins[triggerVal].Count; i++)
         {
             ChessPiece cp = bins[triggerVal][i];
-            if(cp.pieceAugmentor != null)
+            if(cp && cp.pieceAugmentor != null)
             {
                 if(cp.team == team)
                 {
-                    Debug.Log("Triggered");
-                    cp.pieceAugmentor.UseAugment();//perform augment   
+                    // Debug.Log("Triggered" + triggerVal);
+                    // cp.pieceAugmentor.UseAugment();//perform augment   
                 }
                  
             }
@@ -85,12 +87,12 @@ public class TriggerManager : MonoBehaviour
         for(int i = 0; i < bins[triggerVal].Count; i++)
         {
             ChessPiece cp = bins[triggerVal][i];
-            if(cp.pieceAugmentor != null)
+            if(cp && cp.pieceAugmentor != null)
             {
                 if(cp == piece)
                 {
-                    Debug.Log("Triggered");
-                    cp.pieceAugmentor.UseAugment();//perform augment   
+                    // Debug.Log("Triggered//" + triggerVal);
+                    // cp.pieceAugmentor.UseAugment();//perform augment   
                 }
                  
             }
