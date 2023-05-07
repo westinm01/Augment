@@ -6,11 +6,6 @@ using UnityEngine;
 
 public class BishopPiece : ChessPiece
 {
-    private void Awake()
-    {
-        SetPieceValue(MiniMaxAI.BISHOP_VAL);
-        SetPieceChar(StockfishAI.BISHOP_CHAR);
-    }
     void Update()
     {
         

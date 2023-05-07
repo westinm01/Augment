@@ -7,8 +7,9 @@ public class Alejandra : Augmentor
 {
     private bool hasExtraLife = false;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         canActivate = true;
     }
 
@@ -16,16 +17,31 @@ public class Alejandra : Augmentor
     {
         if (canActivate)
         {
-            Debug.Log("Use alejandra's augment");
-
             base.UseAugment();
 
-            hasExtraLife = true;
-            canActivate = false;
-            GameManager.Instance.SwitchTeams();
+            if (hasExtraLife)
+            {
+                UseExtraLife();
+            }
+            else
+            {
+                GainExtraLife();
+            }
         }
-        
+
         // might want to do VFX and add a effect to the augmented piece to represent it has an extra life
+    }
+
+    private void GainExtraLife()
+    {
+        hasExtraLife = true;
+
+        // now we only want to activate while eaten
+        GameManager.Instance.GetTriggerManager().RemoveFromBin(gameObject.GetComponent<ChessPiece>(), triggerVal);
+        triggerVal = 4;         
+        GameManager.Instance.GetTriggerManager().AddToBin(gameObject.GetComponent<ChessPiece>(), triggerVal);
+        
+        GameManager.Instance.SwitchTeams();
     }
 
     public bool GetHasExtraLife()
@@ -38,7 +54,12 @@ public class Alejandra : Augmentor
         if (hasExtraLife)
         {
             hasExtraLife = false;
-            canActivate = true; // We might not want to do this for balance?
+            
+            // back to activate as turn --We might not want to do this for balance?
+            GameManager.Instance.GetTriggerManager().RemoveFromBin(gameObject.GetComponent<ChessPiece>(), triggerVal);
+            triggerVal = 2;
+            GameManager.Instance.GetTriggerManager().AddToBin(gameObject.GetComponent<ChessPiece>(), triggerVal);
+            GameManager.Instance.SwitchTeams();
         }
         else
         {

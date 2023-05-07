@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class KnightPiece : ChessPiece
 {
-    private void Awake()
-    {
-        SetPieceValue(MiniMaxAI.KNIGHT_VAL);
-        SetPieceChar(StockfishAI.KNIGHT_CHAR);
-    }
-
     // More efficient to hard code lol
     private List<Vector2Int> allPossibleSpaces = new List<Vector2Int>{  new Vector2Int(-2, 1),
                                                                         new Vector2Int(-2, -1),
