@@ -6,6 +6,9 @@ public class Wagner : Augmentor
 {
     [SerializeField] int turnsLeft;
     [SerializeField] int cooldownTime;
+    public bool augmentActivated;
+    private bool targetEliminated;
+
 
     // Start is called before the first frame update
     protected override void Start() {
@@ -20,8 +23,29 @@ public class Wagner : Augmentor
             turnsLeft = cooldownTime;
             canActivate = true;
             GameManager.Instance.GetEventsManager().OnTurnEnd -= Cooldown;
+            augmentActivated = false;
+            if(!targetEliminated){
+                augmentPiece.gameObject.SetActive(false);
+            }
+      
         }else{
             turnsLeft--;
+            
+        }
+    }
+
+    public void TargetCheck(ChessPiece pieceEaten, ChessPiece eater){
+        if(!pieceEaten.gameObject.activeSelf && augmentActivated){
+            turnsLeft = -1;
+
+            //Place it back and move your piece back
+            pieceEaten.SwitchTeams();
+            Player piecePlayer = GameManager.Instance.GetPlayer(augmentPiece.team);
+            piecePlayer.playerPieces.Add(pieceEaten);
+            pieceEaten.gameObject.SetActive(true);
+            targetEliminated =true;
+            
+
         }
     }
     
@@ -31,6 +55,7 @@ public class Wagner : Augmentor
         if(canActivate){
             Debug.Log("Can Activate");
             canActivate = false;
+            augmentActivated = true;
             StartCoroutine(UseRR());
         }else{
             Debug.Log("Can't activate :'3");
@@ -48,7 +73,7 @@ public class Wagner : Augmentor
 
         //RiskReward
         GameManager.Instance.GetEventsManager().OnTurnEnd += Cooldown;
-        // GameManager.Instance.GetEventsManager().OnPieceEaten += targetCheck;
+        GameManager.Instance.GetEventsManager().OnPieceEaten += TargetCheck;//Currently these parameters don't mean very much
        
 
     }
@@ -57,13 +82,9 @@ public class Wagner : Augmentor
         targetPiece = piece.GetComponent<ChessPiece>();
     }
 
-    public void targetCheck(){
-        if(!targetPiece.gameObject.activeSelf){
-            turnsLeft = -1;
 
-            //Place it back and move your piece back
-        }
-    }
+
+
 
 
 }

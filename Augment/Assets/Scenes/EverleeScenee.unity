@@ -123,6 +123,49 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &646716384 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5299686062816001880, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+  m_PrefabInstance: {fileID: 1000651309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &646716386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646716384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d03500e4c710448b1e0bcb675242d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: 
+  augmentName: 
+  augmentDesc: 
+  sprite: {fileID: 0}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+  triggerVal: 0
+  hasPrompt: 0
+  augmentPiece: {fileID: 646716387}
+  targetPiece: {fileID: 0}
+  augmentor: {fileID: 11400000, guid: 22f99b66e9fa4a843bdf256e13e8719f, type: 2}
+  canActivate: 0
+  barks: []
+  turnsLeft: 0
+  cooldownTime: 3
+  augmentActivated: 0
+--- !u!114 &646716387 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 297278171175149456, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+  m_PrefabInstance: {fileID: 1000651309}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646716384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade48d216eba0b04c80ca0c09471a2db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1000651309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -390,12 +433,12 @@ MonoBehaviour:
   triggerVal: 0
   hasPrompt: 1
   augmentPiece: {fileID: 1676722162}
+  targetPiece: {fileID: 0}
   augmentor: {fileID: 11400000, guid: a0e511d10f1d2db4d8017e229556a0f6, type: 2}
   canActivate: 0
   barks: []
   turnsLeft: 0
   cooldownTime: 10
-  selectedPiece: {fileID: 1741705551}
 --- !u!114 &1676722162 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3723860785332615201, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
@@ -443,6 +486,7 @@ MonoBehaviour:
   triggerVal: 0
   hasPrompt: 0
   augmentPiece: {fileID: 1741705551}
+  targetPiece: {fileID: 0}
   augmentor: {fileID: 11400000, guid: e134e737f88df2c4390995b34a809c91, type: 2}
   canActivate: 0
   barks: []

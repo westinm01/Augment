@@ -42,7 +42,7 @@ public class Lin : Augmentor
 
     private IEnumerator UseWarp(){
         //Piece Selection
-        GameManager.Instance.GetInputManager().AugmentActivation(this, true);
+        GameManager.Instance.GetInputManager().AugmentActivation(this, false);
         while(targetPiece == null){
             yield return new WaitForSeconds(0.1f);
         }        

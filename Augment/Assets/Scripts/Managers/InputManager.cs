@@ -19,12 +19,14 @@ public class InputManager : MonoBehaviour
     private TriggerManager tm;
 
     private bool augmentActivated;
+    private bool canSelectEnemy;
     
 
     void Start()
     {
         tm = GetComponent<TriggerManager>();
         isFrozen = false;
+        canSelectEnemy = false;
     }
 
     void Update()
@@ -63,6 +65,11 @@ public class InputManager : MonoBehaviour
                                     SelectTargetPiece(tempSelected); //If we want to be able to select enemy pieces in the future, there can be a quick fix for that
                                 }else{
                                     SelectPiece(tempSelected);
+                                }
+                            }else{
+                                if(augmentActivated && canSelectEnemy){
+                                    SelectTargetPiece(tempSelected); //If we want to be able to select enemy pieces in the future, there can be a quick fix for that
+                                    canSelectEnemy = false;
                                 }
                             }
         
@@ -187,6 +194,8 @@ public class InputManager : MonoBehaviour
     public void AugmentActivation(Augmentor aug, bool x){
         augmentActivated = true;
         StartCoroutine(AugmentActivation(aug));
+
+        canSelectEnemy = x;
         // piece = augmentTarget.GetComponent<ChessPiece>();
     }
 

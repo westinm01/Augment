@@ -103,9 +103,25 @@ public class BoardManager : MonoBehaviour
             Debug.Log("Eating piece " + tempPiece);
             //!!!!!!!!CHECK TRIGGERS: 4!!!!!!!!!!!!!!!!!!!!!!!!
             tm.CheckTrigger(4, tempPiece);
+
+
+            //Is there an augmentor && is the taken piece the same as the target piece
+            if(piece.GetComponent<Augmentor>() && tempPiece == piece.GetComponent<Augmentor>().targetPiece){
+                //Going to make it wagner-specific for nwo but if we have more augmentors it's a qucik fix
+                if(piece.GetComponent<Augmentor>().characterName == "Wagner" && ((Wagner)piece.GetComponent<Augmentor>()).augmentActivated ){
+                    
+                    newX = piece.coord.x;
+                    newY = -piece.coord.y;
+                }
+            }
+
             EatPiece(tempPiece);
+            GameManager.Instance.GetEventsManager().CallOnPieceEaten(tempPiece, piece);
             
             pieceEaten = true;
+
+
+            
         }
 
         //Check if special case (Castling or En Passant)
@@ -190,6 +206,8 @@ public class BoardManager : MonoBehaviour
         // //     Debug.Log(temp);
         // // } 
         // Debug.Log(em.CallFunc(piece));
+
+        
 
         Player piecePlayer = GameManager.Instance.GetPlayer(piece.team);
         Player enemyPlayer = GameManager.Instance.GetPlayer(!piece.team);
