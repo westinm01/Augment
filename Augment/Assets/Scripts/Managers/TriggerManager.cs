@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TriggerManager : MonoBehaviour
@@ -92,7 +93,7 @@ public class TriggerManager : MonoBehaviour
                 if(cp == piece)
                 {
                     // Debug.Log("Triggered//" + triggerVal);
-                    // cp.pieceAugmentor.UseAugment();//perform augment   
+                    cp.pieceAugmentor.UseAugment();//perform augment   
                 }
                  
             }
@@ -104,7 +105,20 @@ public class TriggerManager : MonoBehaviour
         if (bins[triggerVal] == null) {
             bins[triggerVal] = new List<ChessPiece>();
         }
+        if (bins[triggerVal].Contains(newPiece))
+        {
+            return;
+        }
         bins[triggerVal].Add(newPiece);
+    }
+
+    public void RemoveFromBin(ChessPiece piece, int triggerVal)
+    {
+        if (bins[triggerVal].Contains(piece))
+        {
+            bins[triggerVal].Remove(piece);
+        }
+        
     }
     
 }

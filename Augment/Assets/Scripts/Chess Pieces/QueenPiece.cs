@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class QueenPiece : ChessPiece
 {
-    private void Awake()
-    {
-        SetPieceValue(MiniMaxAI.QUEEN_VAL);
-        SetPieceChar(StockfishAI.QUEEN_CHAR);
-    }
-
     void Update()
     {
 

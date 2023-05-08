@@ -333,9 +333,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTeam: 0
   inCheck: 0
+  maxTotalTime: 600
+  maxTurnTime: 60
+  totalTimer: 0
   playerPieces: []
   threateningPieces: []
   checkPath: []
+  capturedPieces: []
   moveDelay: 1
   isMakingMove: 0
 --- !u!4 &520019002
@@ -451,9 +455,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTeam: 1
   inCheck: 0
+  maxTotalTime: 600
+  maxTurnTime: 60
+  totalTimer: 0
   playerPieces: []
   threateningPieces: []
   checkPath: []
+  capturedPieces: []
 --- !u!4 &1263088404
 Transform:
   m_ObjectHideFlags: 0
@@ -647,9 +655,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTeam: 0
   inCheck: 0
+  maxTotalTime: 600
+  maxTurnTime: 60
+  totalTimer: 0
   playerPieces: []
   threateningPieces: []
   checkPath: []
+  capturedPieces: []
 --- !u!4 &1743676815
 Transform:
   m_ObjectHideFlags: 0

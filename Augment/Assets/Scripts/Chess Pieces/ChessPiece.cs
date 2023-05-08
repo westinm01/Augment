@@ -22,7 +22,12 @@ public class ChessPiece : MonoBehaviour
     public int pieceValue;
     public char pieceChar;
     protected Player thisPlayer;
-    
+
+
+    private void Awake()
+    {
+        pieceAugmentor = GetComponent<Augmentor>();
+    }
 
     // Start is called before the first frame update
     public void Start()
@@ -35,8 +40,6 @@ public class ChessPiece : MonoBehaviour
         else {
             sr.sprite = blackSprite;
         }
-
-        pieceAugmentor = GetComponent<Augmentor>();
 
         // automatically finds coord on board using gameObject position
         coord.x = (int)gameObject.transform.position.x;

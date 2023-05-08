@@ -19,5 +19,6 @@ MonoBehaviour:
     life, it is eaten, and the enemy piece doesn't return.
   sprite: {fileID: 21300000, guid: c287d73343a8b4c4a9a387747dedb0db, type: 3}
   backgroundColor: {r: 0.284437, g: 0.43923196, b: 0.461, a: 1}
-  triggerVal: 0
-  hasPrompt: 0
+  triggerVal: 2
+  hasPrompt: 1
+  barks: []

@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class KingPiece : ChessPiece
 {
-    private void Awake()
-    {
-        SetPieceValue(MiniMaxAI.KING_VAL);
-        SetPieceChar(StockfishAI.KING_CHAR);
-    }
 
     private List<Vector2Int> allPossibleSpaces = new List<Vector2Int> { new Vector2Int(-1, 1), 
                                                                         new Vector2Int(-1, -1), 
@@ -54,7 +49,7 @@ public class KingPiece : ChessPiece
     private bool CanMoveBackwardsInCheck(Vector2Int nextMove) {
         if (thisPlayer.inCheck) {
             foreach (ChessPiece piece in thisPlayer.threateningPieces) {
-                if (piece.InPath(nextMove)) {
+                if (piece.InPath(nextMove) && piece.coord != nextMove) {
                     // Debug.Log("Preventing king from moving to " + nextMove);
                     return false;
                 }

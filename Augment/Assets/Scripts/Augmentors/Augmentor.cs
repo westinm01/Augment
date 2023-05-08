@@ -29,6 +29,11 @@ public class Augmentor : MonoBehaviour
     [HideInInspector]
     public List<AudioClip> barks;
 
+    protected virtual void Awake()
+    {
+        UpdateInformation();
+    }
+
     protected virtual void Start(){
         UpdateInformation();
     }
