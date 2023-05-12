@@ -20,12 +20,14 @@ public class InputManager : MonoBehaviour
     private TriggerManager tm;
 
     private bool augmentActivated;
+    private bool canSelectEnemy;
     
 
     void Start()
     {
         tm = GetComponent<TriggerManager>();
         isFrozen = false;
+        canSelectEnemy = false;
     }
 
     void Update()
@@ -56,10 +58,27 @@ public class InputManager : MonoBehaviour
                         //Check if the selected piece is a chess piece and gets the piece's ChessPiece component to check which team and if it is black's turn
                         if (tempSelected != null && tempSelected.tag == "ChessPiece")
                         {
-                            if(augmentActivated){
+                            //The following 4 lines are commented out. These are from Wes, and the lines following are from Everlee.
+                            /*if(augmentActivated){
                                 SelectTargetPiece(tempSelected); //If we want to be able to select enemy pieces in the future, there can be a quick fix for that
                             }else{
                                 SelectPiece(tempSelected);
+                            }
+                            */ 
+                            // If selected piece matches current player's turn
+                            // if team == false, then black turn, (false != true) = true
+                            // if team == true, then white turn, (true != false) = true
+                            if(tempSelected.GetComponent<ChessPiece>().team == GameManager.Instance.GetCurrentPlayer().playerTeam){
+                                if(augmentActivated){
+                                    SelectTargetPiece(tempSelected); //If we want to be able to select enemy pieces in the future, there can be a quick fix for that
+                                }else{
+                                    SelectPiece(tempSelected);
+                                }
+                            }else{
+                                if(augmentActivated && canSelectEnemy){
+                                    SelectTargetPiece(tempSelected); //If we want to be able to select enemy pieces in the future, there can be a quick fix for that
+                                    canSelectEnemy = false;
+                                }
                             }
                         }
                     }
@@ -212,6 +231,8 @@ public class InputManager : MonoBehaviour
     public void AugmentActivation(Augmentor aug, bool x){
         augmentActivated = true;
         StartCoroutine(AugmentActivation(aug));
+
+        canSelectEnemy = x;
         // piece = augmentTarget.GetComponent<ChessPiece>();
     }
 

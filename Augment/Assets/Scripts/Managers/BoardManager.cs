@@ -103,9 +103,42 @@ public class BoardManager : MonoBehaviour
             Debug.Log("Eating piece " + tempPiece);
             //!!!!!!!!CHECK TRIGGERS: 4!!!!!!!!!!!!!!!!!!!!!!!!
             tm.CheckTrigger(4, tempPiece);
+
+
+            //Is there an augmentor && is the taken piece the same as the target piece
+            if(piece.GetComponent<Augmentor>() && tempPiece == piece.GetComponent<Augmentor>().targetPiece){
+                //Going to make it wagner-specific for nwo but if we have more augmentors it's a qucik fix
+                if(piece.GetComponent<Augmentor>().characterName == "Wagner" && ((Wagner)piece.GetComponent<Augmentor>()).augmentActivated ){
+                    
+                    newX = piece.coord.x;
+                    newY = -piece.coord.y;
+                }
+            }
+
             EatPiece(tempPiece);
+            GameManager.Instance.GetEventsManager().CallOnPieceEaten(tempPiece, piece);
             
             pieceEaten = true;
+
+
+            
+        }
+
+        //Check if special case (Castling or En Passant)
+        if(piece.pieceChar == StockfishAI.KING_CHAR){//If it's a king and it's moved to a castleable spot
+            KingPiece temp = (KingPiece) piece;
+            Debug.Log(new Vector2(newX, newY));
+
+            if(temp.canCastle(0) && newX == temp.coord.x + 3){ //Kingside
+                Castle(0, temp, temp.kingSide);
+                newX--;
+            }else if(temp.canCastle(1)  && newX == temp.coord.x - 4){ //Queenside
+                Castle(1, temp, temp.queenSide);
+                newX = newX+1;
+            }
+
+            
+            temp.firstMove();
         }
         
         // Move the backend values in the board array
@@ -134,7 +167,7 @@ public class BoardManager : MonoBehaviour
         Player enemyPlayer = GameManager.Instance.GetPlayer(!GameManager.Instance.GetCurrentPlayer().playerTeam);
         if (enemyPlayer.isInCheck()) {
             Debug.Log("CHECK!");
-            //Maybe add visual queues!
+            //Maybe add visual cues!
 
             // Update the player moves again to only allow moves that escape check
             enemyPlayer.UpdatePossibleMoves();
@@ -146,6 +179,12 @@ public class BoardManager : MonoBehaviour
             else {
                 StartCoroutine(CanvasManager.Instance.CheckCoroutine());
             }
+        }
+
+        //Check for Special cases (castling or en passant conditions)
+        if(piece.pieceChar == StockfishAI.ROOK_CHAR){
+            RookPiece temp = (RookPiece) piece;
+            temp.UpdateCastle();
         }
 
          
@@ -167,6 +206,8 @@ public class BoardManager : MonoBehaviour
         // //     Debug.Log(temp);
         // // } 
         // Debug.Log(em.CallFunc(piece));
+
+        
 
         Player piecePlayer = GameManager.Instance.GetPlayer(piece.team);
         Player enemyPlayer = GameManager.Instance.GetPlayer(!piece.team);
@@ -319,5 +360,18 @@ public class BoardManager : MonoBehaviour
         piece2.transform.position = new Vector3(tempPos.x, tempPos.y, 0);
 
         board.SwapPieces(piece1.coord.x, piece1.coord.y, piece2.coord.x, piece2.coord.y);
+    }
+
+    private void Castle(int i, KingPiece king, RookPiece rook){
+        Debug.Log("Castling!");
+        if(i == 0){
+            Debug.Log("Coords:" + new Vector2(king.coord.x + 1, -rook.coord.y));
+            MovePiece(rook, king.coord.x + 1, -rook.coord.y);
+            Debug.Log("Rook Moved" + rook.coord);
+            MovePiece(king, king.coord.x-1, -king.coord.y);
+        }else if(i == 1){
+            Debug.Log("Coords:" + new Vector2(king.coord.x -2 , -rook.coord.y));
+            MovePiece(rook, king.coord.x-2, -rook.coord.y);
+        }
     }
 }
