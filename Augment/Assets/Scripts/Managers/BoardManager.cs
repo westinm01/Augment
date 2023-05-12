@@ -96,6 +96,7 @@ public class BoardManager : MonoBehaviour
     public void MovePiece(ChessPiece piece, int newX, int newY)
     {
         // Check if moving piece eats another piece
+        Debug.Log("Old coord: " + piece.coord.x + ", " + piece.coord.y);
         tm.CheckTrigger(1, piece);
         bool pieceEaten = false;
         ChessPiece tempPiece = GetChessPiece(newX, -newY);
@@ -148,7 +149,7 @@ public class BoardManager : MonoBehaviour
         // Update new coordinates
         piece.coord.x = newX;
         piece.coord.y = -newY;
-
+        Debug.Log("New coord: " + piece.coord.x + ", " + piece.coord.y);
         // Update physical location in scene
         piece.transform.position = new Vector3(newX, newY, 0);
 

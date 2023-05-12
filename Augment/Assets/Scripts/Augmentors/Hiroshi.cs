@@ -22,6 +22,7 @@ public class Hiroshi : Augmentor
         base.Start();
         isInvis = false;
         turnsLeft = 0;   
+        canActivate = true;
     }
 
     public void Wait() {
