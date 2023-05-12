@@ -15,11 +15,13 @@ public class Lucy : Augmentor
         
         g.transform.parent = this.gameObject.transform.parent;
         FireBlock fire = g.GetComponent<FireBlock>();
-
+        //fire.coord = new Vector2(GetComponent<ChessPiece>().coord.x, GetComponent<ChessPiece>().coord.y);
         StatusManager sm = FindObjectOfType<StatusManager>();
         sm.boardObjects.Add(fire);
         fire.coord = cp.coord;
-        fire.team = cp.team;
+        fire.team = !(cp.team);
         fire.turnCount = turnCount;
+        BoardManager cb = FindObjectOfType<BoardManager>();
+        cb.AddPiece(fire, fire.coord.x, fire.coord.y);
     }
 }

@@ -12,6 +12,8 @@ public class StatusManager : MonoBehaviour
     //4 beingConstructed
     //5 vanished
     public List<BoardObject> boardObjects = new List<BoardObject>();
+    [SerializeField]
+    private BoardManager cb;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,7 @@ public class StatusManager : MonoBehaviour
             List<ChessPiece> l = new List<ChessPiece>();
             bins[i] = l;
         }
+        cb = FindObjectOfType<BoardManager>();//can assign in editor pretty easily
     }
 
     // Update is called once per frame
@@ -51,6 +54,7 @@ public class StatusManager : MonoBehaviour
             boardObjects[i].turnCount--;
             if(boardObjects[i].turnCount == 0)
             {
+                cb.RemovePiece(boardObjects[i].coord.x, boardObjects[i].coord.y);
                 Destroy(boardObjects[i].gameObject);
                 
             }

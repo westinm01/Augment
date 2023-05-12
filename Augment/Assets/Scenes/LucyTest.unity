@@ -148,9 +148,21 @@ MonoBehaviour:
   triggerVal: 0
   hasPrompt: 0
   augmentPiece: {fileID: 0}
+  targetPiece: {fileID: 0}
   augmentor: {fileID: 11400000, guid: e134e737f88df2c4390995b34a809c91, type: 2}
   canActivate: 0
   barks: []
+--- !u!114 &664160138 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2507224865218116052, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+  m_PrefabInstance: {fileID: 3053927876371101412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc5935bc1e0adb41be805508094c5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &724195013 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8325514315307428471, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
@@ -176,10 +188,22 @@ MonoBehaviour:
   triggerVal: 0
   hasPrompt: 0
   augmentPiece: {fileID: 0}
+  targetPiece: {fileID: 0}
   augmentor: {fileID: 11400000, guid: ec564a0c701f9d443aef80673678b217, type: 2}
   canActivate: 0
   barks: []
   enemyNextTurnTime: 5
+--- !u!114 &724195018 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2507224866107192500, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+  m_PrefabInstance: {fileID: 3053927876371101412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724195013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc5935bc1e0adb41be805508094c5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &1055322546 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8314416890425352240, guid: 53a881ddec34d8945ab330f3579267ae, type: 3}
@@ -447,6 +471,7 @@ MonoBehaviour:
   triggerVal: 0
   hasPrompt: 0
   augmentPiece: {fileID: 0}
+  targetPiece: {fileID: 0}
   augmentor: {fileID: 0}
   canActivate: 0
   barks: []
@@ -455,6 +480,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 221322888354332229, guid: 7d272a951a7a549c9b17c7b69ab0c6f6, type: 3}
   m_PrefabInstance: {fileID: 6555512553416877644}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2124572306 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2507224865678142506, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+  m_PrefabInstance: {fileID: 3053927876371101412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc5935bc1e0adb41be805508094c5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2139055051 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8872341587752193591, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+  m_PrefabInstance: {fileID: 3053927876371101412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc5935bc1e0adb41be805508094c5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1016504711906601575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -745,6 +792,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6881100714915084899, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+      propertyPath: kingSide
+      value: 
+      objectReference: {fileID: 2124572306}
+    - target: {fileID: 6881100714915084899, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+      propertyPath: queenSide
+      value: 
+      objectReference: {fileID: 2139055051}
     - target: {fileID: 8325514314955253525, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2
@@ -753,6 +808,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -4
       objectReference: {fileID: 0}
+    - target: {fileID: 8382346471221148010, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+      propertyPath: kingSide
+      value: 
+      objectReference: {fileID: 724195018}
+    - target: {fileID: 8382346471221148010, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
+      propertyPath: queenSide
+      value: 
+      objectReference: {fileID: 664160138}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3053927877880718895, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
@@ -789,6 +852,7 @@ MonoBehaviour:
   triggerVal: 0
   hasPrompt: 0
   augmentPiece: {fileID: 0}
+  targetPiece: {fileID: 0}
   augmentor: {fileID: 11400000, guid: 78688bdf91318d54087fd04bd5682d0e, type: 2}
   canActivate: 0
   barks: []
