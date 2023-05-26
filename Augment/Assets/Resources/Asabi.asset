@@ -20,7 +20,7 @@ MonoBehaviour:
     is entangled, this piece may move again, using its standard movement. "
   sprite: {fileID: 21300000, guid: f2268b0506ede104c8aaa0987319d094, type: 3}
   backgroundColor: {r: 0.5754717, g: 0, b: 0, a: 0}
-  triggerVal: 2
-  hasPrompt: 1
+  triggerVal: 1
+  hasPrompt: 0
   barks:
   - {fileID: 8300000, guid: dad887777babeaa40b5b1e30cb7fdca6, type: 3}
