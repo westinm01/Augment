@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,9 @@ public class BoardManager : MonoBehaviour
     private List<GameObject> possibleEatHighlights;
 
     private TriggerManager tm;
+
+    // Internal
+    private bool cancelMovement = false;
 
     private void Awake()
     {
@@ -103,9 +107,20 @@ public class BoardManager : MonoBehaviour
             Debug.Log("Eating piece " + tempPiece);
             //!!!!!!!!CHECK TRIGGERS: 4!!!!!!!!!!!!!!!!!!!!!!!!
             tm.CheckTrigger(4, tempPiece);
-            EatPiece(tempPiece);
             
-            pieceEaten = true;
+            // Check if movement got cancelled
+            if (cancelMovement)
+            {
+                cancelMovement = false;
+                newX = piece.coord.x; 
+                newY = -piece.coord.y;
+                pieceEaten = false;
+            }
+            else
+            {
+                EatPiece(tempPiece);
+                pieceEaten = true;
+            }
         }
         
         // Move the backend values in the board array
@@ -319,5 +334,10 @@ public class BoardManager : MonoBehaviour
         piece2.transform.position = new Vector3(tempPos.x, tempPos.y, 0);
 
         board.SwapPieces(piece1.coord.x, piece1.coord.y, piece2.coord.x, piece2.coord.y);
+    }
+
+    public void CancelMovement()
+    {
+        cancelMovement = true;
     }
 }

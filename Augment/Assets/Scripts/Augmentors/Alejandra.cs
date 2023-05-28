@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Alejandra : Augmentor
 {
-    private bool hasExtraLife = false;
+    private bool hasExtraLife = true;
 
     protected override void Awake()
     {
@@ -15,21 +15,21 @@ public class Alejandra : Augmentor
 
     public override void UseAugment()
     {
+        base.UseAugment();
+
         if (canActivate)
         {
-            base.UseAugment();
-
-            if (hasExtraLife)
-            {
-                UseExtraLife();
-            }
-            else
-            {
-                GainExtraLife();
-            }
+            UseExtraLife();
         }
 
         // might want to do VFX and add a effect to the augmented piece to represent it has an extra life
+    }
+
+    public void UseExtraLife()
+    {
+        hasExtraLife = false;
+        canActivate = false;
+        GameManager.Instance.board.CancelMovement();
     }
 
     private void GainExtraLife()
@@ -49,21 +49,4 @@ public class Alejandra : Augmentor
         return hasExtraLife;
     }
 
-    public void UseExtraLife()
-    {
-        if (hasExtraLife)
-        {
-            hasExtraLife = false;
-            
-            // back to activate as turn --We might not want to do this for balance?
-            GameManager.Instance.GetTriggerManager().RemoveFromBin(gameObject.GetComponent<ChessPiece>(), triggerVal);
-            triggerVal = 2;
-            GameManager.Instance.GetTriggerManager().AddToBin(gameObject.GetComponent<ChessPiece>(), triggerVal);
-            GameManager.Instance.SwitchTeams();
-        }
-        else
-        {
-            Debug.LogError("Tried to use an extra life when Alejandra did not have one.");
-        }
-    }
 }
