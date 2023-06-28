@@ -18,7 +18,7 @@ MonoBehaviour:
     return to their space, and this piece loses a life. If this piece is on its last
     life, it is eaten, and the enemy piece doesn't return.
   sprite: {fileID: 21300000, guid: c287d73343a8b4c4a9a387747dedb0db, type: 3}
-  backgroundColor: {r: 0.284437, g: 0.43923196, b: 0.461, a: 1}
-  triggerVal: 2
+  backgroundColor: {r: 1, g: 0, b: 0, a: 1}
+  triggerVal: 4
   hasPrompt: 1
   barks: []
