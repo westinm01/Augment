@@ -80,9 +80,21 @@ PrefabInstance:
       propertyPath: m_text
       value: Sali
       objectReference: {fileID: 0}
+    - target: {fileID: 2068229041836727091, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_fontSize
+      value: 66.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2068229041836727091, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
+    - target: {fileID: 2068229041836727091, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8520518597383263340, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
     - target: {fileID: 2068229042651093990, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Name
-      value: AugmentorSelectPanel
+      value: AugmentorSelectPanel Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2068229042651093991, guid: fad4db6bafc0d0844877fff8a0352022, type: 3}
       propertyPath: m_Pivot.x
