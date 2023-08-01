@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireBlock Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6479430894746740284, guid: f42efdc17f8e2fb4597bfcbdb6a5a7e9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6479430894746740285, guid: f42efdc17f8e2fb4597bfcbdb6a5a7e9, type: 3}
       propertyPath: m_Size.x
       value: 5.12
@@ -43,6 +47,18 @@ PrefabInstance:
     - target: {fileID: 6479430894746740285, guid: f42efdc17f8e2fb4597bfcbdb6a5a7e9, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6479430894746740285, guid: f42efdc17f8e2fb4597bfcbdb6a5a7e9, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6479430894746740285, guid: f42efdc17f8e2fb4597bfcbdb6a5a7e9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6479430894746740285, guid: f42efdc17f8e2fb4597bfcbdb6a5a7e9, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1488664837
       objectReference: {fileID: 0}
     - target: {fileID: 6479430894746740285, guid: f42efdc17f8e2fb4597bfcbdb6a5a7e9, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -62,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6479430894746740286, guid: f42efdc17f8e2fb4597bfcbdb6a5a7e9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6479430894746740286, guid: f42efdc17f8e2fb4597bfcbdb6a5a7e9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4895,10 +4911,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coord: {x: 0, y: 0}
+  possibleSpaces: []
+  possibleEats: []
+  possibleProtects: []
   team: 1
-  correspondingAugmentor: {fileID: 0}
-  correspondingPiece: {fileID: 0}
-  blocksEnemies: 1
-  blocksAllies: 1
-  viewableToEnemies: 1
+  isVisible: 1
+  blackSprite: {fileID: 0}
+  whiteSprite: {fileID: 0}
+  canJump: 0
+  statusTimer: 0
+  pieceAugmentor: {fileID: 0}
+  status: 0
+  canMove: 1
+  pieceValue: 0
+  pieceChar: 0
   turnCount: -1

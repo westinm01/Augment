@@ -13,7 +13,7 @@ public class Lucy : Augmentor
         StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
 
         ChessPiece cp = gameObject.GetComponent<ChessPiece>();
-        GameObject g = Instantiate(fireBlock, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -1), Quaternion.identity);
+        GameObject g = Instantiate(fireBlock, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -10), Quaternion.identity);
         //GameObject g = Instantiate(fireBlock, new Vector3(0,0,-1), Quaternion.identity);
         g.transform.parent = this.gameObject.transform.parent;
         FireBlock fire = g.GetComponent<FireBlock>();

@@ -7,6 +7,8 @@ TagManager:
   - ChessPiece
   - PossibleSpace
   - AugmentorsInfoPanel
+  - GameManager
+  - Field
   layers:
   - Default
   - TransparentFX
@@ -41,6 +43,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 4159956499
+    locked: 0
+  - name: UI
+    uniqueID: 2806302459
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: AugmentorFlash
+    uniqueID: 2896047275
     locked: 0
