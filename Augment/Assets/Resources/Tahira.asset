@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb484efb7e083504bbbc60df1fce67af, type: 3}
-  m_Name: Gabe
+  m_Name: Tahira
   m_EditorClassIdentifier: 
-  characterName: Gabe
-  augmentName: Zappetizer
-  description: When this piece eats an enemy piece, all adjacent enemy pieces are
-    stunned for 2 turns.
-  sprite: {fileID: 21300000, guid: a516dcbcaf65aa8418f5ab217d13b87d, type: 3}
-  backgroundColor: {r: 1, g: 1, b: 1, a: 0}
+  characterName: Tahira
+  augmentName: Skater Trick
+  description: 'You can perform 2 tricks: 1) Upon eating 2 pawns back-to-back, you
+    gain an extra pawn. 2) Upon eating a pawn, knight, pawn, you gain an extra knight.'
+  sprite: {fileID: 21300000, guid: 3c430b64f5ec783488d632cb9d80dcd4, type: 3}
+  backgroundColor: {r: 0.62841654, g: 1, b: 0, a: 1}
   triggerVal: 3
   hasPrompt: 0
   barks: []

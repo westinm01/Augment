@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public Player whitePlayer;
     public Player blackPlayer;
-    private Player currPlayer;
+    public Player currPlayer;
 
     private TriggerManager tm;
     private EventsManager events;

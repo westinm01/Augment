@@ -8,6 +8,12 @@ public class Lucy : Augmentor
     public int turnCount = 2;
     int lastCol = 0;
     int lastRow = 0;
+    private GameObject managers;
+
+    void Start()
+    {
+        //managers = GameObject.FindGameObjectsWithTag("GameManager");
+    }
     public override void UseAugment()
     {
         StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
@@ -15,6 +21,8 @@ public class Lucy : Augmentor
         ChessPiece cp = gameObject.GetComponent<ChessPiece>();
         GameObject g = Instantiate(fireBlock, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -1), Quaternion.identity);
         //GameObject g = Instantiate(fireBlock, new Vector3(0,0,-1), Quaternion.identity);
+        //BoardManager bm = managers.GetComponent<BoardManager>();
+        //List<Vector2> spaces = bm.GetSpacesInbetween()
         g.transform.parent = this.gameObject.transform.parent;
         FireBlock fire = g.GetComponent<FireBlock>();
         //fire.coord = new Vector2(GetComponent<ChessPiece>().coord.x, GetComponent<ChessPiece>().coord.y);

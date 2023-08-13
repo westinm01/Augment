@@ -340,4 +340,20 @@ public class BoardManager : MonoBehaviour
     {
         cancelMovement = true;
     }
+
+    public void FreezeBoard(bool isFrozen)
+    {
+        for(int i = 0; i < board.getWidth(); i++)
+        {
+            for(int j = 0; j < board.getHeight(); j++)
+            {
+                ChessPiece piece = board.GetPiece(i,j);
+                if(piece != null)
+                {
+                    piece.canMove = !isFrozen;
+                }
+
+            }
+        }
+    }
 }

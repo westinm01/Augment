@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb484efb7e083504bbbc60df1fce67af, type: 3}
-  m_Name: Gabe
+  m_Name: MainSolveig
   m_EditorClassIdentifier: 
-  characterName: Gabe
-  augmentName: Zappetizer
-  description: When this piece eats an enemy piece, all adjacent enemy pieces are
-    stunned for 2 turns.
-  sprite: {fileID: 21300000, guid: a516dcbcaf65aa8418f5ab217d13b87d, type: 3}
-  backgroundColor: {r: 1, g: 1, b: 1, a: 0}
-  triggerVal: 3
+  characterName: Main & Solveig
+  augmentName: Twin Telepathy
+  description: Move twice
+  sprite: {fileID: 21300000, guid: 7f39266c81484df42a9ce4e3ab07d9a6, type: 3}
+  backgroundColor: {r: 0.19339621, g: 0.7972854, b: 1, a: 1}
+  triggerVal: 1
   hasPrompt: 0
   barks: []
