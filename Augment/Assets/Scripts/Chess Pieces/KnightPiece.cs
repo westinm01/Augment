@@ -22,6 +22,17 @@ public class KnightPiece : ChessPiece
         {
             int newX = coord.x + vec.x;
             int newY = coord.y + vec.y;
+            if(TryGetComponent<Otto>(out Otto ottoInstance))
+            {
+                if(newX < 0)
+                {
+                    newX = 8 + newX;
+                }
+                if(newX > 7)
+                {
+                    newX = newX % 8;//change these values to board width
+                }
+            }
             Vector2Int nextMove = new Vector2Int(newX, newY);
             if (ValidMoveInCheck(nextMove)) {
                 if (GameManager.Instance.board.isValidMoveSpace(newX, newY))

@@ -23,17 +23,47 @@ public class RookPiece : ChessPiece
          */
 
         // Get all spaces to right
-        for (int i = coord.x + 1; i < GameManager.Instance.board.getWidth(); i++)
+        int right = 1;
+        int left = -1;
+        int up = 1;
+        int down = -1;
+
+        if (TryGetComponent<Otto>(out Otto ottoInstance))
         {
-            if (!CheckHorizontalAndVertical(i, coord.y)) {
-                break;
+            for (int i = coord.x + 1; i <= GameManager.Instance.board.getWidth(); i = (i + 1)%8)
+            {
+                if (!CheckHorizontalAndVertical(i%8, coord.y)) {
+                    break;
+                }
+            }
+            // Get all spaces to left
+            for (int i = coord.x - 1; i >= -1; i--)
+            {
+                if(i < 0)
+                {
+                    i = 7;
+                }
+                if (!CheckHorizontalAndVertical(i, coord.y)) {
+                    break;
+                }
+                
             }
         }
-        // Get all spaces to left
-        for (int i = coord.x - 1; i >= 0; i--)
+
+        else
         {
-            if (!CheckHorizontalAndVertical(i, coord.y)) {
-                break;
+            for (int i = coord.x + 1; i < GameManager.Instance.board.getWidth(); i++)
+            {
+                if (!CheckHorizontalAndVertical(i, coord.y)) {
+                    break;
+                }
+            }
+            // Get all spaces to left
+            for (int i = coord.x - 1; i >= 0; i--)
+            {
+                if (!CheckHorizontalAndVertical(i, coord.y)) {
+                    break;
+                }
             }
         }
         // Get all spaces up
@@ -50,6 +80,7 @@ public class RookPiece : ChessPiece
                 break;
             }
         }
+        
     }
 
     public override bool InPath(Vector2Int possibleMove) {
