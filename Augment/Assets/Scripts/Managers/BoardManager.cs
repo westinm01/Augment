@@ -100,7 +100,8 @@ public class BoardManager : MonoBehaviour
     public void MovePiece(ChessPiece piece, int newX, int newY)
     {
         // Check if moving piece eats another piece
-        tm.CheckTrigger(1, piece);
+        
+        
         bool pieceEaten = false;
         ChessPiece tempPiece = GetChessPiece(newX, -newY);
         if (tempPiece != null && tempPiece.team != piece.team) {
@@ -122,7 +123,7 @@ public class BoardManager : MonoBehaviour
                 pieceEaten = true;
             }
         }
-        
+        piece.lastCoord = piece.coord; //save last position!
         // Move the backend values in the board array
         board.MovePiece(piece.coord.x, piece.coord.y, newX, -newY);
                  //!!!!!!!!CHECK TRIGGERS: 1!!!!!!!!!!!!!!!!!!!!!!!!
@@ -133,6 +134,7 @@ public class BoardManager : MonoBehaviour
 
         // Update physical location in scene
         piece.transform.position = new Vector3(newX, newY, 0);
+        tm.CheckTrigger(1, piece);
 
         //!!!!!!!!CHECK TRIGGERS: 3!!!!!!!!!!!!!!!!!!!!!!!
         if(pieceEaten)
@@ -145,7 +147,7 @@ public class BoardManager : MonoBehaviour
         // Update moves for all pieces
         GameManager.Instance.UpdateAllPossibleMoves();
 
-        // Check if opposing player is now in check
+        // Check if opposing player is now in CHECK
         Player enemyPlayer = GameManager.Instance.GetPlayer(!GameManager.Instance.GetCurrentPlayer().playerTeam);
         if (enemyPlayer.isInCheck()) {
             Debug.Log("CHECK!");
@@ -264,7 +266,7 @@ public class BoardManager : MonoBehaviour
 
     public List<Vector2Int> GetSpacesInbetween(Vector2Int pos1, Vector2Int pos2) {
         List<Vector2Int> spaces = new List<Vector2Int>();
-
+        Debug.Log("COMPARING: " + pos1 +" // " + pos2);
         int xPos = pos1.x;
         int yPos = pos1.y;
         int xDir = 0;
@@ -284,13 +286,13 @@ public class BoardManager : MonoBehaviour
         else if (pos2.y < yPos) {
             yDir = -1;
         }
-
+        Debug.Log("X Direction: " + xDir + "| Y Direction: " + yDir);
         xPos += xDir;
         yPos += yDir;
-        while (xPos != pos2.x && yPos != pos2.y && InBounds(yPos, xPos)) {
+        while ((xPos != pos2.x || yPos != pos2.y) && InBounds(yPos, xPos)) {
             Vector2Int newSpace = new Vector2Int(xPos, yPos);
             spaces.Add(newSpace);
-
+            Debug.Log("x: " + xPos + "| y: " + yPos);
             xPos += xDir;
             yPos += yDir;
         }

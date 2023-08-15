@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     private AudioManager audioManager;
     private InputManager inputManager;
     public StatusManager statusManager;
-
     public List<ChessPiece> piecePrefabs;   // List of possible pieces sorted by value
 
     public float turnTimer {get; private set; }

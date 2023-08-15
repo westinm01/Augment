@@ -6,6 +6,7 @@ using UnityEngine;
 public class ChessPiece : MonoBehaviour
 {
     public Vector2Int coord;
+    public Vector2Int lastCoord;
     public List<Vector2Int> possibleSpaces = new List<Vector2Int>(); //calculated at the start of your turn.
     public List<Vector2Int> possibleEats = new List<Vector2Int>(); //calculated at the start of your turn.
     public List<Vector2Int> possibleProtects = new List<Vector2Int>();
@@ -48,6 +49,7 @@ public class ChessPiece : MonoBehaviour
         GameManager.Instance.board.AddPiece(this, coord.y, coord.x);
         GameManager.Instance.board.PrintBoard();    // for testing
         GetPossibleSpaces();
+        lastCoord = coord;
     }
 
     // Update is called once per frame

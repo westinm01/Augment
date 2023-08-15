@@ -12,27 +12,30 @@ public class Lucy : Augmentor
 
     void Start()
     {
-        //managers = GameObject.FindGameObjectsWithTag("GameManager");
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
     }
     public override void UseAugment()
     {
         StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
 
         ChessPiece cp = gameObject.GetComponent<ChessPiece>();
-        GameObject g = Instantiate(fireBlock, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -10), Quaternion.identity);
-        //GameObject g = Instantiate(fireBlock, new Vector3(0,0,-1), Quaternion.identity);
-        //BoardManager bm = managers.GetComponent<BoardManager>();
-        //List<Vector2> spaces = bm.GetSpacesInbetween()
-        g.transform.parent = this.gameObject.transform.parent;
-        FireBlock fire = g.GetComponent<FireBlock>();
-        //fire.coord = new Vector2(GetComponent<ChessPiece>().coord.x, GetComponent<ChessPiece>().coord.y);
+        BoardManager bm = managers.GetComponent<BoardManager>();
+        List<Vector2Int> spaces = bm.GetSpacesInbetween(cp.lastCoord, cp.coord);
+        spaces.Add(cp.lastCoord);
         StatusManager sm = FindObjectOfType<StatusManager>();
-        sm.boardObjects.Add(fire);
-        fire.coord = cp.coord;
-        fire.team = !(cp.team);
-        fire.turnCount = turnCount;
-        BoardManager cb = FindObjectOfType<BoardManager>();
-        Debug.Log("Fire coord: " + fire.coord.x + ", " + fire.coord.y);
-        cb.AddPiece(fire, fire.coord.x, fire.coord.y);
+        foreach(Vector2Int coords in spaces)
+        {
+            GameObject g = Instantiate(fireBlock, new Vector3(coords.x, -1 * coords.y, -10), Quaternion.identity);
+            FireBlock fire = g.GetComponent<FireBlock>();
+            
+            sm.boardObjects.Add(fire);
+            fire.coord = coords;
+            fire.team = !(cp.team);
+            fire.turnCount = turnCount;
+            BoardManager cb = FindObjectOfType<BoardManager>();
+            Debug.Log("Fire coord: " + fire.coord.x + ", " + fire.coord.y);
+            cb.AddPiece(fire, fire.coord.x, fire.coord.y);
+
+        }
     }
 }
