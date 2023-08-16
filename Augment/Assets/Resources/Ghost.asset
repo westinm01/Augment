@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb484efb7e083504bbbc60df1fce67af, type: 3}
   m_Name: Ghost
   m_EditorClassIdentifier: 
-  characterName: 
-  augmentName: 
-  description: 
-  sprite: {fileID: 0}
+  characterName: Ghost
+  augmentName: ' '
+  description: ' '
+  sprite: {fileID: 21300000, guid: 80f4031ffa00e694bbd900ccc2aaf9e0, type: 3}
   backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   triggerVal: 7
   hasPrompt: 0
+  barks: []
