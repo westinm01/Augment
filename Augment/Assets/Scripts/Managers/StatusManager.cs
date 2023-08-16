@@ -73,7 +73,7 @@ public class StatusManager : MonoBehaviour
                 target.canMove = false;
             break;
             case 2:
-
+                target.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f, .6f);
             break;
             case 3:
                 target.canMove = false;
@@ -98,7 +98,8 @@ public class StatusManager : MonoBehaviour
                 target.canMove = true;
             break;
             case 2:
-
+                //maybe make it fade first?
+                Destroy(target.gameObject);
             break;
             case 3:
                 target.canMove = true;

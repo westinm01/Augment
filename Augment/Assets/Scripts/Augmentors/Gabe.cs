@@ -18,6 +18,7 @@ public class Gabe : Augmentor
     
     public override void UseAugment()
     {
+        bool stunned = false;
         ChessPiece cp = gameObject.GetComponent<ChessPiece>();
         Vector2Int spaceVal = cp.coord;
         
@@ -50,6 +51,7 @@ public class Gabe : Augmentor
                                 Debug.Log("ZAPPETIZER: Stunned enemy at (" + spaceCheck.x + ", " +spaceCheck.y + ")");
                                 StatusManager sm = managers.GetComponent<StatusManager>();
                                 sm.ApplyStatus(possibleEnemy, 0);
+                                stunned = true;
                                 
                             }
                         }
@@ -58,5 +60,10 @@ public class Gabe : Augmentor
                 }    
             }
         }
+        if(stunned)
+        {
+            StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
+        }
+        
     }
 }

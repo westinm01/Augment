@@ -14,6 +14,13 @@ public class LadyLeMure : Augmentor
     //     triggerVal = 3;
     // }
     public AugmentorObject ghostAugment;
+    private GameObject managers;
+
+    void Start()
+    {
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+    }
+
     public override void UseAugment()
     {
         StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
@@ -35,6 +42,11 @@ public class LadyLeMure : Augmentor
         ghost.UpdateInformation();
         TriggerManager tm = GameManager.Instance.GetTriggerManager();
         tm.AddToBin(lastEaten, ghost.triggerVal);
+        
+        StatusManager sm = managers.GetComponent<StatusManager>();
+        lastEaten.statusTimer = 6; //ghost is alive for 6 turns
+        sm.ApplyStatus(lastEaten, 2); // apply ghost status
         lastEaten.SwitchTeams();
+        //sometimes doesn't switch turns
     }
 }
