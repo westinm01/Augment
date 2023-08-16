@@ -14,7 +14,7 @@ public class Gabe : Augmentor
     //     augmentDesc = "Upon eating an enemy piece, all adjacent enemy pieces are stunned for 2 turns.";
     //     triggerVal = 3;
     // }
-
+    public GameObject electricGameObject;
     
     public override void UseAugment()
     {
@@ -52,7 +52,8 @@ public class Gabe : Augmentor
                                 StatusManager sm = managers.GetComponent<StatusManager>();
                                 sm.ApplyStatus(possibleEnemy, 0);
                                 stunned = true;
-                                
+                                GameObject effect = Instantiate(electricGameObject, possibleEnemy.transform.localPosition, Quaternion.identity);
+                                sm.otherObjects.Add(effect);
                             }
                         }
                         

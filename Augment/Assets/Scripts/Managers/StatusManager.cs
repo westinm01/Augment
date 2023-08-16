@@ -12,6 +12,7 @@ public class StatusManager : MonoBehaviour
     //4 beingConstructed
     //5 vanished
     public List<BoardObject> boardObjects = new List<BoardObject>();
+    public List<GameObject> otherObjects = new List<GameObject>();
     [SerializeField]
     private BoardManager cb;
 
@@ -56,6 +57,18 @@ public class StatusManager : MonoBehaviour
             {
                 cb.RemovePiece(boardObjects[i].coord.x, boardObjects[i].coord.y);
                 Destroy(boardObjects[i].gameObject);
+                
+            }
+        }
+        for(int i = 0; i < otherObjects.Count; i++)
+        {
+            otherObjects[i].GetComponent<TurnCount>().turnCount--;
+            if(otherObjects[i].GetComponent<TurnCount>().turnCount == 0)
+            {
+                GameObject o = otherObjects[i];
+                otherObjects.RemoveAt(i);
+                Destroy(o);
+                i--;
                 
             }
         }

@@ -8,6 +8,7 @@ public class RookPiece : ChessPiece
 
     private void Awake()
     {
+        pieceAugmentor = GetComponent<Augmentor>();
         canCastle = true;
         SetPieceValue(MiniMaxAI.ROOK_VAL);
         SetPieceChar(StockfishAI.ROOK_CHAR);
