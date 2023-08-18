@@ -177,6 +177,11 @@ public class GameManager : MonoBehaviour
         return piecePrefabs[randIndex].gameObject;
     }
 
+    public GameObject GetChessPiecePrefabByIndex(int index)
+    {
+        return piecePrefabs[index].gameObject;
+    }
+
     #region Events
     private void RegisterEvents()
     {

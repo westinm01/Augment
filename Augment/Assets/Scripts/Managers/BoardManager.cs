@@ -141,6 +141,7 @@ public class BoardManager : MonoBehaviour
         {
             Debug.Log("Checking trigger");
             tm.CheckTrigger(3, piece);
+            
         }
         
 
@@ -191,6 +192,7 @@ public class BoardManager : MonoBehaviour
         piecePlayer.playerPieces.Remove(piece);
         // Destroy(piece.gameObject);
         piece.gameObject.SetActive(false);
+        board.RemovePiece(piece.coord.y, piece.coord.x);
     }
 
     public void HighlightPossibleMoves(ChessPiece piece)

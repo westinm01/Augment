@@ -8,6 +8,14 @@ public class Tahira : Augmentor
     //
     enum SkateState {init, onePawn, pawnKnight, pawnKnightpawn};
     SkateState currState = SkateState.init;
+    
+    private GameObject managers;
+    private BoardManager bm;
+
+    [SerializeField]
+    private GameObject pawnObject;
+    [SerializeField]
+    private GameObject knightObject;
 
     Player piecePlayer;
     Player enemyPlayer;
@@ -15,11 +23,36 @@ public class Tahira : Augmentor
     {
         piecePlayer = GameManager.Instance.GetPlayer(this.gameObject.GetComponent<ChessPiece>().team);
         enemyPlayer = GameManager.Instance.GetPlayer(!this.gameObject.GetComponent<ChessPiece>().team);
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        bm = managers.gameObject.GetComponent<BoardManager>();
         
     }
 
     public override void UseAugment()
     {
+        int numEaten = piecePlayer.capturedPieces.Count;
+        if(numEaten >= 2)
+        {
+            if(piecePlayer.capturedPieces[numEaten - 1].GetType() == typeof(PawnPiece))
+                if(piecePlayer.capturedPieces[numEaten - 2].GetType() == typeof(PawnPiece))
+                {
+                    CreateTahiraPiece(true, this.gameObject.GetComponent<ChessPiece>().team);
+                    StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
+                }
+                else if(piecePlayer.capturedPieces[numEaten - 2].GetType() == typeof(KnightPiece))
+                {
+                    if(numEaten >= 3)
+                    {
+                        if(piecePlayer.capturedPieces[numEaten - 3].GetType() == typeof(PawnPiece))
+                        {
+                            //create knight
+                            CreateTahiraPiece(false, this.gameObject.GetComponent<ChessPiece>().team);
+                            StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
+                        }
+                    }
+                }
+        }
+    /*
         //transition states
         switch(currState)
         {
@@ -75,9 +108,60 @@ public class Tahira : Augmentor
 
         }
 
-            
+            */
+    }
 
+    void AddTahiraPieceToBoard(bool piece, int i, int j)
+    {
+        GameObject g;
         
+        if (piece)
+        {
+            targetPiece = GameManager.Instance.GetChessPiecePrefabByIndex(0).GetComponent<ChessPiece>(); //piece with value 0
+        }
+        else
+        {
+            targetPiece = GameManager.Instance.GetChessPiecePrefabByIndex(1).GetComponent<ChessPiece>(); //piece with value 1
+        }
+        GameObject newPiece = Instantiate(targetPiece.gameObject, new Vector3(i, -j, 0), Quaternion.identity);
+        ChessPiece newChessPiece = newPiece.GetComponent<ChessPiece>();
+        bm.AddPiece(newChessPiece, j, i);
+        newChessPiece.team = this.gameObject.GetComponent<ChessPiece>().team;
+        piecePlayer.playerPieces.Add(newChessPiece);
+        newPiece.transform.parent = this.gameObject.transform.parent;
         
+    }
+
+    private bool CreateTahiraPiece(bool piece, bool team)
+    {
+        if (team)
+        {
+            for(int j = bm.getHeight() - 1; j >= 0; j--)
+            {
+                for(int i = 0; i < bm.getWidth() - 1; i++)
+                {
+                    if(bm.isValidMoveSpace(i, j))
+                    {
+                        AddTahiraPieceToBoard(piece, i, j);
+                        return true; //added piece successfully!
+                    }
+                }
+            }
+        }
+        else
+        {
+            for(int j = 0; j < bm.getHeight() - 1; j++)
+            {
+                for(int i = 0; j < bm.getWidth() - 1; i++)
+                {
+                    if(bm.isValidMoveSpace(i, j))
+                    {
+                        AddTahiraPieceToBoard(piece,i,j);
+                        return true; // added piece successfully!
+                    }
+                }
+            }
+        }
+        return false; //could not add piece
     }
 }

@@ -1442,6 +1442,8 @@ MonoBehaviour:
   augmentor: {fileID: 11400000, guid: 29d26736089254c389e6d950cde2a5cc, type: 2}
   canActivate: 0
   barks: []
+  pawnObject: {fileID: 7200692150030271501, guid: fa07661cc1978f94d8e30a2127548a32, type: 3}
+  knightObject: {fileID: 7503619830318343307, guid: cfddb5c2e6267eb4ca2103ffeabd91b2, type: 3}
 --- !u!1 &1896146136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,6 +1579,34 @@ PrefabInstance:
       propertyPath: whitePlayer
       value: 
       objectReference: {fileID: 1468011883}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: piecePrefabs.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: piecePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 3333120927014364357, guid: fa07661cc1978f94d8e30a2127548a32, type: 3}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: piecePrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: -6583431543290635219, guid: cfddb5c2e6267eb4ca2103ffeabd91b2, type: 3}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: piecePrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 7424550076465688234, guid: facbf6ec0176c934486c8883888862f6, type: 3}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: piecePrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: -8598840077166151425, guid: f42efdc17f8e2fb4597bfcbdb6a5a7e9, type: 3}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: piecePrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1858988971150090434, guid: 53b7397e73d5754428b922d3db80beaf, type: 3}
+    - target: {fileID: 1016504711927523082, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: piecePrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 6788517337657436718, guid: 0e005e2a03dc63c45b3542c28fb65554, type: 3}
     - target: {fileID: 1016504711927523083, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
       propertyPath: player1
       value: 
