@@ -20,6 +20,6 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: c287d73343a8b4c4a9a387747dedb0db, type: 3}
   backgroundColor: {r: 1, g: 0, b: 0, a: 1}
   triggerVal: 4
-  hasPrompt: 1
+  hasPrompt: 0
   barks:
   - {fileID: 8300000, guid: c24654580f93ec940b39a81b2c75fe49, type: 3}

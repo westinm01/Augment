@@ -13,6 +13,7 @@ public class Lucy : Augmentor
     void Start()
     {
         managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        fireBlock = managers.GetComponent<HoldingManager>().augmentorEffectObjects[0]; // get fire effect
     }
     public override void UseAugment()
     {

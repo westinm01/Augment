@@ -93,7 +93,7 @@ public class InputManager : MonoBehaviour
                     // If the player let go
                     if (t.phase == TouchPhase.Ended)
                     {
-                        Debug.Log("Released");
+                        //Debug.Log("Released");
                         GameObject tempSelected = GetTouchedPiece(t.position);      // Check if touch was on a piece
                         
                         // if the player let go on top of a possible space
@@ -141,7 +141,7 @@ public class InputManager : MonoBehaviour
                     // If the player let go
                     if (t.phase == TouchPhase.Ended)
                     {
-                        Debug.Log("Released");
+                        //Debug.Log("Released");
                         GameObject tempSelected = GetTouchedPiece(t.position);      // Check if touch was on a piece
                         
                         // if the player let go on top of a possible space
@@ -182,7 +182,7 @@ public class InputManager : MonoBehaviour
         RaycastHit2D raycast = Physics2D.Raycast(tPos, Vector2.zero);
         if (raycast)                    // Check if touch hit any colliders
         {
-            Debug.Log("Touched " + raycast.transform.gameObject);
+            //Debug.Log("Touched " + raycast.transform.gameObject);
             return raycast.transform.gameObject;                // Set currSelected to touched piece
         }
         return null;
@@ -247,7 +247,7 @@ public class InputManager : MonoBehaviour
 
     private ChessPiece SelectTargetPiece(GameObject target){
 
-        Debug.Log("awa");
+        
         augmentActivated = false;
         currSelected = target;
         return null;

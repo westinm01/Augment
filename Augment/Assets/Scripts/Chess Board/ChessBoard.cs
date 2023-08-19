@@ -37,7 +37,7 @@ public class ChessBoard : MonoBehaviour
         }
         //Debug.DrawLine(new Vector3(0, height), new Vector3(width, height), Color.white, 100f);
         //Debug.DrawLine(new Vector3(width, 0), new Vector3(width, height), Color.white, 100f);
-        Debug.Log(sb);
+        //Debug.Log(sb);
     }
 
     public int getWidth()
@@ -97,7 +97,7 @@ public class ChessBoard : MonoBehaviour
     public void MovePiece(int x1, int y1, int x2, int y2) {
         grid[y2, x2] = grid[y1, x1];
         grid[y1, x1] = null;
-        Debug.Log("ChessBoard.CS MovePiece");
+        //Debug.Log("ChessBoard.CS MovePiece");
     }
 
     public void SwapPieces(int x1, int y1, int x2, int y2) {

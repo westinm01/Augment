@@ -7,11 +7,14 @@ public class Alejandra : Augmentor
 {
     private bool hasExtraLife = true;
     public GameObject lifesaver;
+    public GameObject managers;
 
     protected override void Awake()
     {
         base.Awake();
         canActivate = true;
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        lifesaver = managers.GetComponent<HoldingManager>().augmentorEffectObjects[2]; // get lifesaver effect
     }
 
     public override void UseAugment()

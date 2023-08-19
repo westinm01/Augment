@@ -70,7 +70,7 @@ public class Wagner : Augmentor
         while(targetPiece == null){
             yield return new WaitForSeconds(0.1f);
         }        
-
+        Debug.Log("WAGNER: Target Piece set");
         //RiskReward
         GameManager.Instance.GetEventsManager().OnTurnEnd += Cooldown;
         GameManager.Instance.GetEventsManager().OnPieceEaten += TargetCheck;//Currently these parameters don't mean very much

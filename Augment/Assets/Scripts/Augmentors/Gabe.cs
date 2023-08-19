@@ -14,7 +14,14 @@ public class Gabe : Augmentor
     //     augmentDesc = "Upon eating an enemy piece, all adjacent enemy pieces are stunned for 2 turns.";
     //     triggerVal = 3;
     // }
+    GameObject managers;
     public GameObject electricGameObject;
+
+    void Start()
+    {
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        electricGameObject = managers.GetComponent<HoldingManager>().augmentorEffectObjects[1]; // get electric effect
+    }
     
     public override void UseAugment()
     {
@@ -23,7 +30,7 @@ public class Gabe : Augmentor
         Vector2Int spaceVal = cp.coord;
         
         
-        GameObject managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+         
         BoardManager g = managers.GetComponent<BoardManager>();
         for (int i = -1; i <= 1; i++)
         {

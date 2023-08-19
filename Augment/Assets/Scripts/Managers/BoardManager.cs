@@ -141,7 +141,6 @@ public class BoardManager : MonoBehaviour
         //!!!!!!!!CHECK TRIGGERS: 3!!!!!!!!!!!!!!!!!!!!!!!
         if(pieceEaten)
         {
-            Debug.Log("Checking trigger");
             tm.CheckTrigger(3, piece);
             
         }
@@ -270,7 +269,6 @@ public class BoardManager : MonoBehaviour
 
     public List<Vector2Int> GetSpacesInbetween(Vector2Int pos1, Vector2Int pos2) {
         List<Vector2Int> spaces = new List<Vector2Int>();
-        Debug.Log("COMPARING: " + pos1 +" // " + pos2);
         int xPos = pos1.x;
         int yPos = pos1.y;
         int xDir = 0;
@@ -290,13 +288,12 @@ public class BoardManager : MonoBehaviour
         else if (pos2.y < yPos) {
             yDir = -1;
         }
-        Debug.Log("X Direction: " + xDir + "| Y Direction: " + yDir);
+
         xPos += xDir;
         yPos += yDir;
         while ((xPos != pos2.x || yPos != pos2.y) && InBounds(yPos, xPos)) {
             Vector2Int newSpace = new Vector2Int(xPos, yPos);
             spaces.Add(newSpace);
-            Debug.Log("x: " + xPos + "| y: " + yPos);
             xPos += xDir;
             yPos += yDir;
         }

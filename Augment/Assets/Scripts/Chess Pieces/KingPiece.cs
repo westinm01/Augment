@@ -10,6 +10,16 @@ public class KingPiece : ChessPiece
 
     private void Awake()
     {
+
+        if(TryGetComponent<Augmentor>(out Augmentor aug))
+        {
+            pieceAugmentor = aug;
+            if (this.gameObject.transform.GetChild(0).TryGetComponent<SpriteRenderer>(out SpriteRenderer s))
+            {
+                s.color = pieceAugmentor.augmentor.backgroundColor;
+            }
+        }
+
         SetPieceValue(MiniMaxAI.KING_VAL);
         SetPieceChar(StockfishAI.KING_CHAR);
         moved = false;

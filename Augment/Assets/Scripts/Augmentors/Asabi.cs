@@ -9,10 +9,13 @@ public class Asabi : Augmentor
     int turnCount = 5;
     int lastCol = 0;
     int lastRow = 0;
+    public GameObject managers;
 
     protected override void Start() {
         base.Start();
         canActivate = true;
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        webTile = managers.GetComponent<HoldingManager>().augmentorEffectObjects[3]; // get web effect
         
     }
 
