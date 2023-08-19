@@ -17,7 +17,8 @@ MonoBehaviour:
   description: Every time this piece eats an enemy piece, reduce the opponent's turn
     timer to 5 seconds for their next turn.
   sprite: {fileID: 21300000, guid: 2af472cc2b5ed594c8e566968f23a5ae, type: 3}
-  backgroundColor: {r: 0, g: 0.33929694, b: 0.5566038, a: 0}
+  backgroundColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
   triggerVal: 3
   hasPrompt: 0
-  barks: []
+  barks:
+  - {fileID: 8300000, guid: 4515e6be6bb05b749a0df5c2491abbd6, type: 3}

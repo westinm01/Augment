@@ -125,10 +125,11 @@ public class Tahira : Augmentor
         }
         GameObject newPiece = Instantiate(targetPiece.gameObject, new Vector3(i, -j, 0), Quaternion.identity);
         ChessPiece newChessPiece = newPiece.GetComponent<ChessPiece>();
-        bm.AddPiece(newChessPiece, j, i);
-        newChessPiece.team = this.gameObject.GetComponent<ChessPiece>().team;
+        
+        newChessPiece.SetTeam(this.gameObject.GetComponent<ChessPiece>().team);
         piecePlayer.playerPieces.Add(newChessPiece);
         newPiece.transform.parent = this.gameObject.transform.parent;
+        bm.AddPiece(newChessPiece, j, i);
         
     }
 

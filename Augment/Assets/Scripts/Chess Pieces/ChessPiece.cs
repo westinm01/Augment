@@ -27,7 +27,20 @@ public class ChessPiece : MonoBehaviour
 
     private void Awake()
     {
-        pieceAugmentor = GetComponent<Augmentor>();
+        if(TryGetComponent<Augmentor>(out Augmentor aug))
+        {
+            pieceAugmentor = aug;
+            if (this.gameObject.transform.GetChild(0).TryGetComponent<SpriteRenderer>(out SpriteRenderer s))
+            {
+                s.color = pieceAugmentor.augmentor.backgroundColor;
+            }
+        }
+        else
+        {
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        
+        
     }
 
     // Start is called before the first frame update
@@ -68,7 +81,7 @@ public class ChessPiece : MonoBehaviour
         possibleEats.Clear();
         possibleProtects.Clear();
     }
-
+ 
     virtual public void GetPossibleSpaces()
     {
         ClearAllSpaces();
@@ -222,4 +235,11 @@ public class ChessPiece : MonoBehaviour
     {
         pieceChar = c;
     }
+       
+    public void SetTeam(bool newTeam)
+    {
+        team = newTeam;
+        thisPlayer = GameManager.Instance.GetPlayer(team);
+    }
+
 }

@@ -17,7 +17,7 @@ MonoBehaviour:
   description: Moving this piece leaves a flame on any space it passes through that
     lasts for 1 turn. Enemies cannot land on this space.
   sprite: {fileID: 21300000, guid: 6ed763ea29e0ffc47aee9268c131c131, type: 3}
-  backgroundColor: {r: 1, g: 0.32040966, b: 0, a: 0}
+  backgroundColor: {r: 1, g: 0.32040966, b: 0, a: 1}
   triggerVal: 1
   hasPrompt: 0
   barks:

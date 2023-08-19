@@ -6,6 +6,7 @@ using UnityEngine;
 public class Alejandra : Augmentor
 {
     private bool hasExtraLife = true;
+    public GameObject lifesaver;
 
     protected override void Awake()
     {
@@ -20,7 +21,10 @@ public class Alejandra : Augmentor
         if (canActivate)
         {
             UseExtraLife();
+            StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
+            Instantiate(lifesaver, this.gameObject.transform.position, Quaternion.identity);
         }
+        
 
         // might want to do VFX and add a effect to the augmented piece to represent it has an extra life
     }

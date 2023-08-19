@@ -16,7 +16,7 @@ MonoBehaviour:
   augmentName: Wrap-Around
   description: This piece's movement can wrap-around the board horizontally.
   sprite: {fileID: 21300000, guid: a16e922d24d43eb489c18ea301868c9d, type: 3}
-  backgroundColor: {r: 0.6694201, g: 0.20392154, b: 0.9607843, a: 1}
+  backgroundColor: {r: 0.82614, g: 0.36320752, b: 1, a: 1}
   triggerVal: 0
   hasPrompt: 0
   barks: []

@@ -8,7 +8,18 @@ public class RookPiece : ChessPiece
 
     private void Awake()
     {
-        pieceAugmentor = GetComponent<Augmentor>();
+        if(TryGetComponent<Augmentor>(out Augmentor aug))
+        {
+            pieceAugmentor = aug;
+            if (this.gameObject.transform.GetChild(0).TryGetComponent<SpriteRenderer>(out SpriteRenderer s))
+            {
+                s.color = pieceAugmentor.augmentor.backgroundColor;
+            }
+        }
+        else
+        {
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
         canCastle = true;
         SetPieceValue(MiniMaxAI.ROOK_VAL);
         SetPieceChar(StockfishAI.ROOK_CHAR);

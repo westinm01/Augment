@@ -21,4 +21,5 @@ MonoBehaviour:
   backgroundColor: {r: 1, g: 0, b: 0, a: 1}
   triggerVal: 4
   hasPrompt: 1
-  barks: []
+  barks:
+  - {fileID: 8300000, guid: c24654580f93ec940b39a81b2c75fe49, type: 3}

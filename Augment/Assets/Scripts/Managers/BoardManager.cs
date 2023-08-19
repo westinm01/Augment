@@ -116,6 +116,8 @@ public class BoardManager : MonoBehaviour
                 newX = piece.coord.x; 
                 newY = -piece.coord.y;
                 pieceEaten = false;
+                return;
+                cancelMovement = true;//?
             }
             else
             {

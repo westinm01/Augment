@@ -54,6 +54,7 @@ public class Gabe : Augmentor
                                 stunned = true;
                                 GameObject effect = Instantiate(electricGameObject, possibleEnemy.transform.localPosition, Quaternion.identity);
                                 sm.otherObjects.Add(effect);
+                                effect.SetActive(true);
                             }
                         }
                         

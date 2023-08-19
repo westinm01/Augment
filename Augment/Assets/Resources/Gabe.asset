@@ -22,8 +22,5 @@ MonoBehaviour:
   hasPrompt: 0
   barks:
   - {fileID: 8300000, guid: 832315e838738874eb7b7d120864b1c6, type: 3}
-  - {fileID: 8300000, guid: 5c914fe25c7aee949a0c67b3af559f47, type: 3}
   - {fileID: 8300000, guid: e2d07dd3dffa48e41accad233062742a, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: c49ea2c5b7a4ca04080efe1b460a4f2f, type: 3}

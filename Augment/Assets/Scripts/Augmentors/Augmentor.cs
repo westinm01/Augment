@@ -25,7 +25,7 @@ public class Augmentor : MonoBehaviour
     public ChessPiece augmentPiece;
     public ChessPiece targetPiece;
     public AugmentorObject augmentor;
-    public bool canActivate = false;
+    public bool canActivate = true;
     [HideInInspector]
     public List<AudioClip> barks;
 
