@@ -42,7 +42,7 @@ public class BishopPiece : ChessPiece
                 }
             }
             wrapAround = false;
-            // Get all spaces top right
+            // Get all spaces bottom right
             for (int i = 1; i <= (GameManager.Instance.board.getHeight()); i++)
             {
                 if(!CheckAndMovePos(i, right, down, true))
@@ -231,6 +231,10 @@ public class BishopPiece : ChessPiece
             // Spot is open, add it to possible spaces
             if (ValidMoveInCheck(nextMove)) {
                 possibleSpaces.Add(new Vector2Int(xCheck, yCheck));
+                if(wrapAround)
+                {
+                    augmentedSpaces.Add(new Vector2Int(xCheck, yCheck));
+                }
             }
             return true;
         }
