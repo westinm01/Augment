@@ -23,18 +23,19 @@ public class Asabi : Augmentor
     {
         StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
         ChessPiece cp = gameObject.GetComponent<ChessPiece>();
-        GameObject g = Instantiate(webTile, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -1), Quaternion.identity);
-        //GameObject g = Instantiate(fireBlock, new Vector3(0,0,-1), Quaternion.identity);
+        GameObject g = Instantiate(webTile, new Vector3(cp.lastCoord.x, -1 * cp.lastCoord.y, 0), Quaternion.identity);
+       
         g.transform.parent = this.gameObject.transform.parent;
         BoardObject web = g.GetComponent<BoardObject>();
-        //fire.coord = new Vector2(GetComponent<ChessPiece>().coord.x, GetComponent<ChessPiece>().coord.y);
+        g.GetComponent<SpriteRenderer>().sprite = webTile.GetComponent<SpriteRenderer>().sprite;
         StatusManager sm = FindObjectOfType<StatusManager>();
-        sm.boardObjects.Add(web);
-        web.coord = cp.coord;
-        web.team = !(cp.team);
+        //add web such that it doesn't block movement
+        web.coord = cp.lastCoord;
+        web.team = (cp.team);
         web.turnCount = turnCount;
-        BoardManager cb = FindObjectOfType<BoardManager>();
-        Debug.Log("Web coord: " + web.coord.x + ", " + web.coord.y);
-        cb.AddPiece(web, web.coord.x, web.coord.y);
+        sm.boardObjects.Add(web);
+        //BoardManager cb = FindObjectOfType<BoardManager>();
+        //Debug.Log("Web coord: " + web.coord.x + ", " + web.coord.y);
+        //cb.AddPiece(web, web.coord.x, web.coord.y);
     }
 }
