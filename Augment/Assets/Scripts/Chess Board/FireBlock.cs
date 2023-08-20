@@ -4,5 +4,13 @@ using UnityEngine;
 
 public class FireBlock : BoardObject
 {
-    
+    private void Awake()
+    {
+
+    }
+
+    private void Start()
+    {
+
+    }
 }

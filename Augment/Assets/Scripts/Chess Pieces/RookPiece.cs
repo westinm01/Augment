@@ -5,7 +5,8 @@ using UnityEngine;
 public class RookPiece : ChessPiece
 {
     public bool canCastle;
-
+    private bool jumped = false;
+    private bool wrapAround = false;
     private void Awake()
     {
         if(TryGetComponent<Augmentor>(out Augmentor aug))
@@ -24,7 +25,7 @@ public class RookPiece : ChessPiece
         SetPieceValue(MiniMaxAI.ROOK_VAL);
         SetPieceChar(StockfishAI.ROOK_CHAR);
     }
-
+    //how do i make it so that if this piece has the Sali component, it can jump over ally pieces?
     public override void GetPossibleSpaces()
     {
         base.GetPossibleSpaces();
@@ -42,21 +43,35 @@ public class RookPiece : ChessPiece
 
         if (TryGetComponent<Otto>(out Otto ottoInstance))
         {
+            wrapAround = false;
             for (int i = coord.x + 1; i <= GameManager.Instance.board.getWidth(); i = (i + 1)%8)
             {
                 if (!CheckHorizontalAndVertical(i%8, coord.y)) {
                     break;
                 }
+                if(i == 0)
+                {
+                    wrapAround = true;
+                }
+                if(wrapAround){
+                    augmentedSpaces.Add(new Vector2Int(i%8, coord.y));
+                }
             }
             // Get all spaces to left
+            wrapAround = false;
             for (int i = coord.x - 1; i >= -1; i--)
             {
                 if(i < 0)
                 {
                     i = 7;
+                    wrapAround = true;
                 }
                 if (!CheckHorizontalAndVertical(i, coord.y)) {
                     break;
+                }
+                if(wrapAround)
+                {
+                    augmentedSpaces.Add(new Vector2Int(i, coord.y));
                 }
                 
             }
@@ -64,33 +79,53 @@ public class RookPiece : ChessPiece
 
         else
         {
+            jumped = false;
             for (int i = coord.x + 1; i < GameManager.Instance.board.getWidth(); i++)
             {
                 if (!CheckHorizontalAndVertical(i, coord.y)) {
                     break;
                 }
+                if(jumped)
+                {
+                    augmentedSpaces.Add(new Vector2Int(i, coord.y));
+                }
             }
             // Get all spaces to left
+            jumped = false;
             for (int i = coord.x - 1; i >= 0; i--)
             {
                 if (!CheckHorizontalAndVertical(i, coord.y)) {
                     break;
                 }
+                if(jumped)
+                {
+                    augmentedSpaces.Add(new Vector2Int(i, coord.y));
+                }
             }
         }
         // Get all spaces up
+        jumped = false;
         for (int i = coord.y + 1; i < GameManager.Instance.board.getHeight(); i++)
         {
             if (!CheckHorizontalAndVertical(coord.x, i)) {
                 break;
             }
+            if(jumped)
+            {
+                augmentedSpaces.Add(new Vector2Int(coord.x, i));
+            }
         }
         // Get all spaces down
+        jumped = false;
         for (int i = coord.y - 1; i >= 0; i--)
         {
             if (!CheckHorizontalAndVertical(coord.x, i)) {
                 break;
             }
+            if(jumped)
+                {
+                    augmentedSpaces.Add(new Vector2Int(coord.x, i));
+                }
         }
         
     }
@@ -108,8 +143,44 @@ public class RookPiece : ChessPiece
             }
             return true;
         }
+        else if(TryGetComponent<Sali>(out Sali sali))
+        {
+            Debug.Log("Has Sali");
+            //check if x and y are occupied by an ally
+            ChessPiece temp = GameManager.Instance.board.GetChessPiece(x, y);
+            if (GameManager.Instance.board.InBounds(x, y) && temp != null && temp.team == this.team)
+            {
+                jumped = true;
+                return true;
+            }
+            else if (GameManager.Instance.board.InBounds(x, y) && temp != null && temp.team != this.team)
+            {
+                possibleEats.Add(nextMove);
+                if(jumped)
+                {
+                    augmentedSpaces.Add(nextMove);
+                }
+                return false;
+            }
+            else
+            {
+                if (ValidMoveInCheck(nextMove))
+                {
+                    possibleSpaces.Add(nextMove);
+                    if(jumped)
+                    {
+                        augmentedSpaces.Add(nextMove);
+                    }
+                }
+                return true;
+            }
+        }
         else if (CheckIfCanEat(x, y)) {
             possibleEats.Add(nextMove);
+            if(wrapAround)
+            {
+                augmentedSpaces.Add(nextMove);
+            }
             return false;
         }
         else if (CheckIfCanProtect(x, y))
@@ -117,9 +188,15 @@ public class RookPiece : ChessPiece
             // Spot is on an enemy piece, return false to prevent from moving further
             if (ValidMoveInCheck(nextMove)) {
                 possibleProtects.Add(new Vector2Int(x, y));
+                if(wrapAround)
+                {
+                    augmentedSpaces.Add(nextMove);
+                }
             }
+            
             return false;
         }
+        
         else {
             return false;
         }

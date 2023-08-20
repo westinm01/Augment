@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class BishopPiece : ChessPiece
 {
+    private bool jumped = false;
+    private bool wrapAround = false;
     void Update()
     {
         
@@ -21,6 +23,7 @@ public class BishopPiece : ChessPiece
 
         if (TryGetComponent<Otto>(out Otto ottoInstance))
         {
+            wrapAround = false;
             //top right
             for (int i = 1; i <= 7; i++)
             {
@@ -29,6 +32,7 @@ public class BishopPiece : ChessPiece
                     break;
                 }
             }
+            wrapAround = false;
             // Get all spaces to top left
             for (int i = 1; i <= 7; i++)
             {
@@ -37,6 +41,7 @@ public class BishopPiece : ChessPiece
                     break;
                 }
             }
+            wrapAround = false;
             // Get all spaces top right
             for (int i = 1; i <= (GameManager.Instance.board.getHeight()); i++)
             {
@@ -45,6 +50,7 @@ public class BishopPiece : ChessPiece
                     break;
                 }
             }
+            wrapAround = false;
             // Get all spaces bottom left
             for (int i = 1; i <= 7; i++)
             {
@@ -53,9 +59,10 @@ public class BishopPiece : ChessPiece
                     break;
                 }
             }
+            return;
         }
 
-
+        jumped = false;
         // Get all spaces to bottom right
         for (int i = 1; i <= (GameManager.Instance.board.getWidth() - coord.y); i++)
         {
@@ -64,6 +71,7 @@ public class BishopPiece : ChessPiece
                 break;
             }
         }
+        jumped = false;
         // Get all spaces to top left
         for (int i = 1; i <= coord.x; i++)
         {
@@ -72,6 +80,7 @@ public class BishopPiece : ChessPiece
                 break;
             }
         }
+        jumped = false;
         // Get all spaces top right
         for (int i = 1; i <= (GameManager.Instance.board.getHeight() - coord.x); i++)
         {
@@ -80,6 +89,7 @@ public class BishopPiece : ChessPiece
                 break;
             }
         }
+        jumped = false;
         // Get all spaces bottom left
         for (int i = 1; i <= coord.y; i++)
         {
@@ -134,8 +144,48 @@ public class BishopPiece : ChessPiece
             // Spot is open, add it to possible spaces
             if (ValidMoveInCheck(nextMove)) {
                 possibleSpaces.Add(nextMove);
+                if(jumped)
+                {
+                    augmentedSpaces.Add(nextMove);
+                }
             }
             return true;
+        }
+        else if(TryGetComponent<Sali>(out Sali sali))
+        {
+            if(!GameManager.Instance.board.InBounds(xCheck, yCheck))
+            {
+                return false;
+            }
+            //check if x and y are occupied by an ally
+            ChessPiece temp = GameManager.Instance.board.GetChessPiece(xCheck, yCheck);
+            if (GameManager.Instance.board.InBounds(xCheck, yCheck) && temp != null && temp.team == this.team)
+            {
+                jumped = true;
+                augmentedSpaces.Add(nextMove);
+                return true;
+            }
+            else if (GameManager.Instance.board.InBounds(xCheck, yCheck) && temp != null && temp.team != this.team)
+            {
+                possibleEats.Add(nextMove);
+                if(jumped)
+                {
+                    augmentedSpaces.Add(nextMove);
+                }
+                return false;
+            }
+            else
+            {
+                if (ValidMoveInCheck(nextMove))
+                {
+                    possibleSpaces.Add(nextMove);
+                    if(jumped)
+                    {
+                        augmentedSpaces.Add(nextMove);
+                    }
+                }
+                return true;
+            }
         }
         else if (CheckIfCanEat(xCheck, yCheck) && ValidMoveInCheck(nextMove))
         {
@@ -162,10 +212,12 @@ public class BishopPiece : ChessPiece
         if(xCheck < 0)
         {
             xCheck = 8 + xCheck;
+            wrapAround = true;
         }
         if(xCheck >= 8)
         {
             xCheck = xCheck % 8;
+            wrapAround = true;
         }
         int yCheck = coord.y + yDir * distance;
 
@@ -187,6 +239,10 @@ public class BishopPiece : ChessPiece
             // Spot is on an enemy piece, return false to prevent from moving further
             if (ValidMoveInCheck(nextMove)) {
                 possibleEats.Add(new Vector2Int(xCheck, yCheck));
+                if(wrapAround)
+                {
+                    augmentedSpaces.Add(new Vector2Int(xCheck, yCheck));
+                }
             }
             return false;
         }
@@ -195,6 +251,10 @@ public class BishopPiece : ChessPiece
             // Spot is on an enemy piece, return false to prevent from moving further
             if (ValidMoveInCheck(nextMove)) {
                 possibleProtects.Add(new Vector2Int(xCheck, yCheck));
+                if(wrapAround)
+                {
+                    augmentedSpaces.Add(new Vector2Int(xCheck, yCheck));
+                }
             }
             return false;
         }

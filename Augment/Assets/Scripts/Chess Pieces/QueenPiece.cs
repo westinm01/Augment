@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class QueenPiece : ChessPiece
 {
+    private bool wrapAround = false;
+    private bool jumped = false;
     void Update()
     {
 
@@ -23,20 +25,29 @@ public class QueenPiece : ChessPiece
                 if (!CheckHorizontalAndVertical(i, coord.y)) {
                     break;
                 }
+                if(i == 0)
+                {
+                    wrapAround = true;
+                }
+                if(wrapAround){
+                    augmentedSpaces.Add(new Vector2Int(i%8, coord.y));
+                }
             }
             // Get all spaces to left
+            wrapAround = false;
             for (int i = coord.x - 1; i >= -1; i--)
             {
                 if(i < 0)
                 {
                     i = 7;
+                    wrapAround = true;
                 }
                 if (!CheckHorizontalAndVertical(i, coord.y)) {
                     break;
                 }
                 
             }
-
+            wrapAround = false;
             //top right
             for (int i = 1; i <= 7; i++)
             {
@@ -45,6 +56,7 @@ public class QueenPiece : ChessPiece
                     break;
                 }
             }
+            wrapAround = false;
             // Get all spaces to top left
             for (int i = 1; i <= 7; i++)
             {
@@ -53,6 +65,7 @@ public class QueenPiece : ChessPiece
                     break;
                 }
             }
+            wrapAround = false;
             // Get all spaces top right
             for (int i = 1; i <= (GameManager.Instance.board.getHeight()); i++)
             {
@@ -61,6 +74,7 @@ public class QueenPiece : ChessPiece
                     break;
                 }
             }
+            wrapAround = false;
             // Get all spaces bottom left
             for (int i = 1; i <= 7; i++)
             {
@@ -69,12 +83,11 @@ public class QueenPiece : ChessPiece
                     break;
                 }
             }
+            return;
         }
-        else
-        {
-            
-        }
+
         // Get all spaces to the right
+        jumped = false;
         for (int i = coord.x + 1; i < GameManager.Instance.board.getWidth(); i++)
         {
             if (!CheckHorizontalAndVertical(i, coord.y)) {
@@ -82,6 +95,7 @@ public class QueenPiece : ChessPiece
             }
         }
         // Get all spaces to left
+        jumped = false;
         for (int i = coord.x - 1; i >= 0; i--)
         {
             if (!CheckHorizontalAndVertical(i, coord.y)) {
@@ -89,6 +103,7 @@ public class QueenPiece : ChessPiece
             }
         }
         // Get all spaces up
+        jumped = false;
         for (int i = coord.y + 1; i < GameManager.Instance.board.getHeight(); i++)
         {
             if (!CheckHorizontalAndVertical(coord.x, i)) {
@@ -96,6 +111,7 @@ public class QueenPiece : ChessPiece
             }
         }
         // Get all spaces down
+        jumped = false;
         for (int i = coord.y - 1; i >= 0; i--)
         {
             if (!CheckHorizontalAndVertical(coord.x, i)) {
@@ -107,6 +123,7 @@ public class QueenPiece : ChessPiece
         
 
         // Get all spaces to bottom right
+        jumped = false;
         for (int i = 1; i <= (GameManager.Instance.board.getWidth() - coord.y); i++)
         {
             if(!CheckAndMovePos(i, right, up))
@@ -115,6 +132,7 @@ public class QueenPiece : ChessPiece
             }
         }
         // Get all spaces to top left
+        jumped = false;
         for (int i = 1; i <= coord.x; i++)
         {
             if(!CheckAndMovePos(i, left, up))
@@ -123,6 +141,7 @@ public class QueenPiece : ChessPiece
             }
         }
         // Get all spaces top right
+        jumped = false;
         for (int i = 1; i <= (GameManager.Instance.board.getHeight() - coord.x); i++)
         {
             if(!CheckAndMovePos(i, right, down))
@@ -131,6 +150,7 @@ public class QueenPiece : ChessPiece
             }
         }
         // Get all spaces bottom left
+        jumped = false;
         for (int i = 1; i <= coord.y; i++)
         {
             if(!CheckAndMovePos(i, left, down))
@@ -187,8 +207,47 @@ public class QueenPiece : ChessPiece
             // Spot is open, add it to possible spaces
             if (ValidMoveInCheck(nextMove)) {
                 possibleSpaces.Add(new Vector2Int(xCheck, yCheck));
+                if(jumped)
+                {
+                    augmentedSpaces.Add(nextMove);
+                }
             }
             return true;
+        }
+        else if(TryGetComponent<Sali>(out Sali sali))
+        {
+            if(!GameManager.Instance.board.InBounds(xCheck, yCheck))
+            {
+                return false;
+            }
+            //check if x and y are occupied by an ally
+            ChessPiece temp = GameManager.Instance.board.GetChessPiece(xCheck, yCheck);
+            if (GameManager.Instance.board.InBounds(xCheck, yCheck) && temp != null && temp.team == this.team)
+            {
+                jumped = true;
+                return true;
+            }
+            else if (GameManager.Instance.board.InBounds(xCheck, yCheck) && temp != null && temp.team != this.team)
+            {
+                if(jumped)
+                {
+                    augmentedSpaces.Add(nextMove);
+                }
+                possibleEats.Add(nextMove);
+                return false;
+            }
+            else
+            {
+                if (ValidMoveInCheck(nextMove))
+                {
+                    if(jumped)
+                    {
+                        augmentedSpaces.Add(nextMove);
+                    }
+                    possibleSpaces.Add(nextMove);
+                }
+                return true;
+            }
         }
         else if (CheckIfCanEat(xCheck, yCheck))
         {
@@ -219,10 +278,12 @@ public class QueenPiece : ChessPiece
         if(xCheck < 0)
         {
             xCheck = 8 + xCheck;
+            wrapAround = true;
         }
         if(xCheck >= 8)
         {
             xCheck = xCheck % 8;
+            wrapAround = true;
         }
         int yCheck = coord.y + yDir * distance;
 
@@ -236,6 +297,10 @@ public class QueenPiece : ChessPiece
             // Spot is open, add it to possible spaces
             if (ValidMoveInCheck(nextMove)) {
                 possibleSpaces.Add(new Vector2Int(xCheck, yCheck));
+                if(wrapAround)
+                {
+                    augmentedSpaces.Add(nextMove);
+                }
             }
             return true;
         }
@@ -244,6 +309,10 @@ public class QueenPiece : ChessPiece
             // Spot is on an enemy piece, return false to prevent from moving further
             if (ValidMoveInCheck(nextMove)) {
                 possibleEats.Add(new Vector2Int(xCheck, yCheck));
+                if(wrapAround)
+                {
+                    augmentedSpaces.Add(nextMove);
+                }
             }
             return false;
         }
@@ -251,6 +320,10 @@ public class QueenPiece : ChessPiece
         {
             // Spot is on an enemy piece, return false to prevent from moving further
             if (ValidMoveInCheck(nextMove)) {
+                if(wrapAround)
+                {
+                    augmentedSpaces.Add(nextMove);
+                }
                 possibleProtects.Add(new Vector2Int(xCheck, yCheck));
             }
             return false;
@@ -270,9 +343,48 @@ public class QueenPiece : ChessPiece
         if (GameManager.Instance.board.isValidMoveSpace(x, y)) {
             if (ValidMoveInCheck(nextMove)) {
                 possibleSpaces.Add(nextMove);
+                if(jumped)
+                {
+                    augmentedSpaces.Add(nextMove);
+                }
             }
             return true;
         }
+        
+        else if(TryGetComponent<Sali>(out Sali sali))
+        {
+            Debug.Log("Has Sali");
+            //check if x and y are occupied by an ally
+            ChessPiece temp = GameManager.Instance.board.GetChessPiece(x, y);
+            if (GameManager.Instance.board.InBounds(x, y) && temp != null && temp.team == this.team)
+            {
+                jumped = true;
+                augmentedSpaces.Add(nextMove);
+                return true;
+            }
+            else if (GameManager.Instance.board.InBounds(x, y) && temp != null && temp.team != this.team)
+            {
+                possibleEats.Add(nextMove);
+                if(jumped)
+                {
+                    augmentedSpaces.Add(nextMove);
+                }
+                return false;
+            }
+            else
+            {
+                if (ValidMoveInCheck(nextMove))
+                {
+                    possibleSpaces.Add(nextMove);
+                    if(jumped)
+                    {
+                        augmentedSpaces.Add(nextMove);
+                    }
+                }
+                return true;
+            }
+        }
+
         else if (CheckIfCanEat(x, y)) {
             possibleEats.Add(nextMove);
             return false;

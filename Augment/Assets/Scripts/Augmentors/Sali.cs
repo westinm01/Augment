@@ -2,13 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Otto : Augmentor
+public class Sali : Augmentor
 {
-    
-    void Start()
-    {
-
-    }
     public override void UseAugment()
     {
         ChessPiece cp = this.gameObject.GetComponent<ChessPiece>();
@@ -17,5 +12,6 @@ public class Otto : Augmentor
         {
             StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
         }
+        
     }
 }

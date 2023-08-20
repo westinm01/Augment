@@ -10,6 +10,7 @@ public class ChessPiece : MonoBehaviour
     public List<Vector2Int> possibleSpaces = new List<Vector2Int>(); //calculated at the start of your turn.
     public List<Vector2Int> possibleEats = new List<Vector2Int>(); //calculated at the start of your turn.
     public List<Vector2Int> possibleProtects = new List<Vector2Int>();
+    public List<Vector2Int> augmentedSpaces = new List<Vector2Int>(); //mainly used for Sali and Otto
 
     public bool team = true; //true if white, false if black. True by default.
     public bool isVisible = true;
@@ -23,6 +24,7 @@ public class ChessPiece : MonoBehaviour
     public int pieceValue;
     public char pieceChar;
     protected Player thisPlayer;
+    
 
 
     private void Awake()
@@ -80,6 +82,7 @@ public class ChessPiece : MonoBehaviour
         possibleSpaces.Clear();
         possibleEats.Clear();
         possibleProtects.Clear();
+        augmentedSpaces.Clear();
     }
  
     virtual public void GetPossibleSpaces()

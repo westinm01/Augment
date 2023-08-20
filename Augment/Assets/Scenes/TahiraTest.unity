@@ -157,7 +157,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4968339127732810804, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
   m_PrefabInstance: {fileID: 1000651309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &41882425
+--- !u!114 &41882430
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 41882420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94def3a096ba8446f9a38375f4c18d87, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c0e626b98f7e7945ab464d8fdbfac5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
@@ -178,8 +178,8 @@ MonoBehaviour:
   hasPrompt: 0
   augmentPiece: {fileID: 0}
   targetPiece: {fileID: 0}
-  augmentor: {fileID: 11400000, guid: f584171caf5a9423eb71a4c883f831ce, type: 2}
-  canActivate: 0
+  augmentor: {fileID: 11400000, guid: 8065339768948b845933f046a572cda9, type: 2}
+  canActivate: 1
   barks: []
 --- !u!4 &79052558 stripped
 Transform:
@@ -1303,7 +1303,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8325514314955253527, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
   m_PrefabInstance: {fileID: 1000651309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1475860448
+--- !u!114 &1475860453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1312,7 +1312,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1475860443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 424990328690449038e103efc64deaf3, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c0e626b98f7e7945ab464d8fdbfac5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
@@ -1324,10 +1324,9 @@ MonoBehaviour:
   hasPrompt: 0
   augmentPiece: {fileID: 0}
   targetPiece: {fileID: 0}
-  augmentor: {fileID: 11400000, guid: fab2a2a47cfd64f0ea9ca424d88dcb36, type: 2}
-  canActivate: 0
+  augmentor: {fileID: 11400000, guid: 8065339768948b845933f046a572cda9, type: 2}
+  canActivate: 1
   barks: []
-  movedTwice: 0
 --- !u!1 &1524076479 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5299686062900211673, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
@@ -1471,7 +1470,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6411113500168090177, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
   m_PrefabInstance: {fileID: 1000651309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1676722179
+--- !u!114 &1676722184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1480,23 +1479,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1676722158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00086ec648068f144be8fe54bdae95f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c0e626b98f7e7945ab464d8fdbfac5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
   augmentName: 
   augmentDesc: 
-  sprite: {fileID: 21300000, guid: c287d73343a8b4c4a9a387747dedb0db, type: 3}
+  sprite: {fileID: 0}
   backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   triggerVal: 0
   hasPrompt: 0
   augmentPiece: {fileID: 0}
   targetPiece: {fileID: 0}
-  augmentor: {fileID: 11400000, guid: 0b3738a09aac3b94cbb32b33aea34a60, type: 2}
+  augmentor: {fileID: 11400000, guid: 8065339768948b845933f046a572cda9, type: 2}
   canActivate: 1
   barks: []
-  lifesaver: {fileID: 0}
-  managers: {fileID: 0}
 --- !u!1 &1896146136
 GameObject:
   m_ObjectHideFlags: 0

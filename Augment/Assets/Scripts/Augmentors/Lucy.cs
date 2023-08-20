@@ -26,7 +26,9 @@ public class Lucy : Augmentor
         StatusManager sm = FindObjectOfType<StatusManager>();
         foreach(Vector2Int coords in spaces)
         {
-            GameObject g = Instantiate(fireBlock, new Vector3(coords.x, -1 * coords.y, -10), Quaternion.identity);
+            GameObject g = Instantiate(fireBlock, new Vector3(coords.x, -1 * coords.y, -10), Quaternion.identity);//how do i instantiate this such that it is not in front of UI?
+            g.transform.parent = this.gameObject.transform.parent;
+            
             FireBlock fire = g.GetComponent<FireBlock>();
             
             sm.boardObjects.Add(fire);
