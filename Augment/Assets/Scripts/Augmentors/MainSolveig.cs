@@ -26,9 +26,9 @@ public class MainSolveig : Augmentor
         //TODO: Prompt for second move
         //TODO: Only allow second move if there are available spaces
         
-        if(!movedTwice)
+        if(!movedTwice && (cp.possibleSpaces.Count > 1 || cp.possibleEats.Count > 0 || cp.possibleProtects.Count > 1))
         {
-            
+            Debug.Log(cp.possibleSpaces.Count);
             MoveTwice();
         }
         else{
@@ -55,6 +55,7 @@ public class MainSolveig : Augmentor
         else{
             gm.currPlayer =gm.whitePlayer;
         }
+        StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
 
 
     }
@@ -66,7 +67,7 @@ public class MainSolveig : Augmentor
         //pieces unfrozen
 
         
-        StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
+        //StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
         
     }
 }

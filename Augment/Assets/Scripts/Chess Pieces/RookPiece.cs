@@ -145,7 +145,7 @@ public class RookPiece : ChessPiece
         }
         else if(TryGetComponent<Sali>(out Sali sali))
         {
-            Debug.Log("Has Sali");
+            //Debug.Log("Has Sali");
             //check if x and y are occupied by an ally
             ChessPiece temp = GameManager.Instance.board.GetChessPiece(x, y);
             if (GameManager.Instance.board.InBounds(x, y) && temp != null && temp.team == this.team)

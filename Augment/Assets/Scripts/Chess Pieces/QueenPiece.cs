@@ -47,6 +47,24 @@ public class QueenPiece : ChessPiece
                 }
                 
             }
+
+                // Get all spaces up
+            wrapAround = false;
+            for (int i = coord.y + 1; i < GameManager.Instance.board.getHeight(); i++)
+            {
+                if (!CheckHorizontalAndVertical(coord.x, i)) {
+                    break;
+                }
+            }
+            // Get all spaces down
+            
+            for (int i = coord.y - 1; i >= 0; i--)
+            {
+                if (!CheckHorizontalAndVertical(coord.x, i)) {
+                    break;
+                }
+            }
+
             wrapAround = false;
             //top right
             for (int i = 1; i <= 7; i++)
@@ -353,7 +371,7 @@ public class QueenPiece : ChessPiece
         
         else if(TryGetComponent<Sali>(out Sali sali))
         {
-            Debug.Log("Has Sali");
+            //Debug.Log("Has Sali");
             //check if x and y are occupied by an ally
             ChessPiece temp = GameManager.Instance.board.GetChessPiece(x, y);
             if (GameManager.Instance.board.InBounds(x, y) && temp != null && temp.team == this.team)

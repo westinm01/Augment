@@ -213,14 +213,14 @@ MonoBehaviour:
   augmentPiece: {fileID: 0}
   targetPiece: {fileID: 0}
   augmentor: {fileID: 11400000, guid: 7621a6dc28abb904bafdd2a24363ed85, type: 2}
-  canActivate: 0
+  canActivate: 1
   barks: []
 --- !u!1 &183435345 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5299686063861555565, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
   m_PrefabInstance: {fileID: 1000651309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &183435350
+--- !u!114 &183435347
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 183435345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab20559fe305cd47a06dffcbeaa28b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 424990328690449038e103efc64deaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
@@ -241,10 +241,10 @@ MonoBehaviour:
   hasPrompt: 0
   augmentPiece: {fileID: 0}
   targetPiece: {fileID: 0}
-  augmentor: {fileID: 11400000, guid: fdf50d0b50e43cd40af31e228e9c3ba1, type: 2}
-  canActivate: 0
+  augmentor: {fileID: 11400000, guid: fab2a2a47cfd64f0ea9ca424d88dcb36, type: 2}
+  canActivate: 1
   barks: []
-  electricGameObject: {fileID: 797825414}
+  movedTwice: 0
 --- !u!1 &232547604 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4968339128236528899, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
@@ -365,7 +365,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5299686063181660878, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
   m_PrefabInstance: {fileID: 1000651309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &671184091
+--- !u!114 &671184088
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 671184086}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab20559fe305cd47a06dffcbeaa28b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 424990328690449038e103efc64deaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
@@ -386,10 +386,10 @@ MonoBehaviour:
   hasPrompt: 0
   augmentPiece: {fileID: 0}
   targetPiece: {fileID: 0}
-  augmentor: {fileID: 11400000, guid: fdf50d0b50e43cd40af31e228e9c3ba1, type: 2}
-  canActivate: 0
+  augmentor: {fileID: 11400000, guid: fab2a2a47cfd64f0ea9ca424d88dcb36, type: 2}
+  canActivate: 1
   barks: []
-  electricGameObject: {fileID: 797825414}
+  movedTwice: 0
 --- !u!1 &675868988 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5299686062507966708, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
@@ -688,7 +688,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5299686062816001880, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
   m_PrefabInstance: {fileID: 1000651309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1000651316
+--- !u!114 &1000651312
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000651310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab20559fe305cd47a06dffcbeaa28b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 424990328690449038e103efc64deaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
@@ -709,10 +709,10 @@ MonoBehaviour:
   hasPrompt: 0
   augmentPiece: {fileID: 0}
   targetPiece: {fileID: 0}
-  augmentor: {fileID: 11400000, guid: fdf50d0b50e43cd40af31e228e9c3ba1, type: 2}
-  canActivate: 0
+  augmentor: {fileID: 11400000, guid: fab2a2a47cfd64f0ea9ca424d88dcb36, type: 2}
+  canActivate: 1
   barks: []
-  electricGameObject: {fileID: 797825414}
+  movedTwice: 0
 --- !u!20 &1055322546 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8314416890425352240, guid: 53a881ddec34d8945ab330f3579267ae, type: 3}
@@ -753,7 +753,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5299686062809772126, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
   m_PrefabInstance: {fileID: 1000651309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1092696619
+--- !u!114 &1092696616
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1092696614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab20559fe305cd47a06dffcbeaa28b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 424990328690449038e103efc64deaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
@@ -774,16 +774,16 @@ MonoBehaviour:
   hasPrompt: 0
   augmentPiece: {fileID: 0}
   targetPiece: {fileID: 0}
-  augmentor: {fileID: 11400000, guid: fdf50d0b50e43cd40af31e228e9c3ba1, type: 2}
-  canActivate: 0
+  augmentor: {fileID: 11400000, guid: fab2a2a47cfd64f0ea9ca424d88dcb36, type: 2}
+  canActivate: 1
   barks: []
-  electricGameObject: {fileID: 797825414}
+  movedTwice: 0
 --- !u!1 &1113062176 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5299686063772979943, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
   m_PrefabInstance: {fileID: 1000651309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1113062181
+--- !u!114 &1113062178
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -792,7 +792,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1113062176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab20559fe305cd47a06dffcbeaa28b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 424990328690449038e103efc64deaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
@@ -804,10 +804,10 @@ MonoBehaviour:
   hasPrompt: 0
   augmentPiece: {fileID: 0}
   targetPiece: {fileID: 0}
-  augmentor: {fileID: 11400000, guid: fdf50d0b50e43cd40af31e228e9c3ba1, type: 2}
-  canActivate: 0
+  augmentor: {fileID: 11400000, guid: fab2a2a47cfd64f0ea9ca424d88dcb36, type: 2}
+  canActivate: 1
   barks: []
-  electricGameObject: {fileID: 797825414}
+  movedTwice: 0
 --- !u!1 &1149788878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,7 +1185,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5299686063280011244, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
   m_PrefabInstance: {fileID: 1000651309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1386030166
+--- !u!114 &1386030163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1194,7 +1194,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1386030161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab20559fe305cd47a06dffcbeaa28b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 424990328690449038e103efc64deaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
@@ -1206,10 +1206,10 @@ MonoBehaviour:
   hasPrompt: 0
   augmentPiece: {fileID: 0}
   targetPiece: {fileID: 0}
-  augmentor: {fileID: 11400000, guid: fdf50d0b50e43cd40af31e228e9c3ba1, type: 2}
-  canActivate: 0
+  augmentor: {fileID: 11400000, guid: fab2a2a47cfd64f0ea9ca424d88dcb36, type: 2}
+  canActivate: 1
   barks: []
-  electricGameObject: {fileID: 797825414}
+  movedTwice: 0
 --- !u!1 &1429967342 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5299686063014953852, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
@@ -1332,7 +1332,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5299686062900211673, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
   m_PrefabInstance: {fileID: 1000651309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1524076484
+--- !u!114 &1524076481
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1341,7 +1341,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1524076479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab20559fe305cd47a06dffcbeaa28b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 424990328690449038e103efc64deaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
@@ -1353,10 +1353,10 @@ MonoBehaviour:
   hasPrompt: 0
   augmentPiece: {fileID: 0}
   targetPiece: {fileID: 0}
-  augmentor: {fileID: 11400000, guid: fdf50d0b50e43cd40af31e228e9c3ba1, type: 2}
-  canActivate: 0
+  augmentor: {fileID: 11400000, guid: fab2a2a47cfd64f0ea9ca424d88dcb36, type: 2}
+  canActivate: 1
   barks: []
-  electricGameObject: {fileID: 797825414}
+  movedTwice: 0
 --- !u!1 &1537072686 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4774815353039868090, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
@@ -1384,7 +1384,7 @@ MonoBehaviour:
   augmentPiece: {fileID: 0}
   targetPiece: {fileID: 0}
   augmentor: {fileID: 11400000, guid: 7621a6dc28abb904bafdd2a24363ed85, type: 2}
-  canActivate: 0
+  canActivate: 1
   barks: []
 --- !u!1 &1634038171
 GameObject:
@@ -1440,7 +1440,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5299686063325550128, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
   m_PrefabInstance: {fileID: 1000651309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1641255037
+--- !u!114 &1641255034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1449,7 +1449,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1641255032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab20559fe305cd47a06dffcbeaa28b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 424990328690449038e103efc64deaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
@@ -1461,10 +1461,10 @@ MonoBehaviour:
   hasPrompt: 0
   augmentPiece: {fileID: 0}
   targetPiece: {fileID: 0}
-  augmentor: {fileID: 11400000, guid: fdf50d0b50e43cd40af31e228e9c3ba1, type: 2}
-  canActivate: 0
+  augmentor: {fileID: 11400000, guid: fab2a2a47cfd64f0ea9ca424d88dcb36, type: 2}
+  canActivate: 1
   barks: []
-  electricGameObject: {fileID: 797825414}
+  movedTwice: 0
 --- !u!1 &1676722158 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6411113500168090177, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
@@ -1566,7 +1566,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 93234366821598482, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
   m_PrefabInstance: {fileID: 1000651309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1935176629
+--- !u!114 &1935176634
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1575,7 +1575,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1935176624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ab46d735be39c4986c04048cd8b13c, type: 3}
+  m_Script: {fileID: 11500000, guid: f98dd9878565744dcbd3768690e3761e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
@@ -1587,11 +1587,10 @@ MonoBehaviour:
   hasPrompt: 0
   augmentPiece: {fileID: 0}
   targetPiece: {fileID: 0}
-  augmentor: {fileID: 11400000, guid: a0e511d10f1d2db4d8017e229556a0f6, type: 2}
+  augmentor: {fileID: 11400000, guid: 929cacbdadeda451cae77aefcd1382d2, type: 2}
   canActivate: 1
   barks: []
-  turnsLeft: 4
-  cooldownTime: 4
+  turnsToEat: 4
 --- !u!1001 &1016504711906601575
 PrefabInstance:
   m_ObjectHideFlags: 0

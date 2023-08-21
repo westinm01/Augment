@@ -14,7 +14,7 @@ public class BoardManager : MonoBehaviour
     private List<GameObject> possibleEatHighlights;
 
     private TriggerManager tm;
-
+    public ChessPiece lastEater = null;
     // Internal
     private bool cancelMovement = false;
 
@@ -121,6 +121,7 @@ public class BoardManager : MonoBehaviour
             }
             else
             {
+                lastEater = piece;//for duke
                 EatPiece(tempPiece);
                 pieceEaten = true;
             }

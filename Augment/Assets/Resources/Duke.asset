@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb484efb7e083504bbbc60df1fce67af, type: 3}
+  m_Name: Duke
+  m_EditorClassIdentifier: 
+  characterName: Duke
+  augmentName: Magical Musician
+  description: Choose an ally. If that ally eats a piece within 2 turns, you can
+    move the enemy king by 1 space.
+  sprite: {fileID: 21300000, guid: 7c590cac7f8e3434bb5f573639117491, type: 3}
+  backgroundColor: {r: 0, g: 0.4245283, b: 0.17688683, a: 1}
+  triggerVal: 0
+  hasPrompt: 1
+  barks: []

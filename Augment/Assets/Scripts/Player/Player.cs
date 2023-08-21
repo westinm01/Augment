@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private KingPiece GetKingPiece() {
+    public KingPiece GetKingPiece() {
         foreach (ChessPiece piece in playerPieces) {
             KingPiece king;
             if ( piece.TryGetComponent<KingPiece>(out king) ) {

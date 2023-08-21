@@ -12,11 +12,18 @@ public class Jiva : Augmentor
         piecePlayer = GameManager.Instance.GetPlayer(this.gameObject.GetComponent<ChessPiece>().team);
     }
 
+    
     public override void UseAugment()
     {
+        //make it so that when you eat a piece, you get its augmentor component
+        //copy the Augmentor component attached to the gameobject of the chess piece that you eat
+        //then change this piece's augmentor to the new one
         
+
+        /*
         if(!augmentChanged)
         {
+
             /*
             augmentChanged = true;
             StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
@@ -38,8 +45,8 @@ public class Jiva : Augmentor
                     s.color = new Vector4(1f, 1f, 1f, 0f); //no outline
                 }
             }
-            */
             
-        }
+            
+        }*/
     }
 }
