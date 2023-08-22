@@ -20,8 +20,16 @@ public class Lucy : Augmentor
         StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
 
         ChessPiece cp = gameObject.GetComponent<ChessPiece>();
+        
+        List<Vector2Int> spaces = new List<Vector2Int>();
         BoardManager bm = managers.GetComponent<BoardManager>();
-        List<Vector2Int> spaces = bm.GetSpacesInbetween(cp.lastCoord, cp.coord);
+        //check if cp is of type KnightPiece
+
+        if (cp.GetType() != typeof(KnightPiece))
+        {
+            spaces = bm.GetSpacesInbetween(cp.lastCoord, cp.coord);
+        }
+
         spaces.Add(cp.lastCoord);
         StatusManager sm = FindObjectOfType<StatusManager>();
         foreach(Vector2Int coords in spaces)

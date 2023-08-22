@@ -24,7 +24,6 @@ public class MainSolveig : Augmentor
     public override void UseAugment()
     {
         //TODO: Prompt for second move
-        //TODO: Only allow second move if there are available spaces
         
         if(!movedTwice && (cp.possibleSpaces.Count > 1 || cp.possibleEats.Count > 0 || cp.possibleProtects.Count > 1))
         {
