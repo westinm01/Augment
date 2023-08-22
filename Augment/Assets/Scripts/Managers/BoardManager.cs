@@ -20,6 +20,7 @@ public class BoardManager : MonoBehaviour
 
     private void Awake()
     {
+        lastEater = null;
         // Create new chess board with 8 rows and 8 cols
         board = new ChessBoard(8, 8);
         possibleSpaceHighlights = new List<GameObject>();

@@ -1702,6 +1702,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6255821763395546690, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: augmentorEffectObjects.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255821763395546690, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
+      propertyPath: augmentorEffectObjects.Array.data[4]
+      value: 
+      objectReference: {fileID: 6798921951171377675, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 78d048a9059ca9a489be0733025525ab, type: 3}
@@ -2041,6 +2049,69 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c50e10e0f5e8694397772a61eecc711, type: 3}
+--- !u!1001 &6798921951661667805
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6798921951171377668, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798921951171377668, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798921951171377668, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798921951171377668, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798921951171377668, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798921951171377668, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798921951171377668, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798921951171377668, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798921951171377668, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798921951171377668, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798921951171377668, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798921951171377675, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
+      propertyPath: m_Name
+      value: DukeNoteEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798921951171377675, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0de41d007191a284eab527e4cd58fb4d, type: 3}
 --- !u!1001 &8314416891082239244
 PrefabInstance:
   m_ObjectHideFlags: 0
