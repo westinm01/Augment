@@ -39,6 +39,10 @@ public class Augmentor : MonoBehaviour
     }
 
     public void UpdateInformation() {
+        if (augmentor == null)
+        {
+            return;
+        }
         this.characterName = augmentor.characterName;
         this.augmentName = augmentor.augmentName;
         this.augmentDesc = augmentor.description;
