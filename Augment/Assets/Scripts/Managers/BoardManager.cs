@@ -176,8 +176,8 @@ public class BoardManager : MonoBehaviour
     /// Eats piece in parameter
     /// </summary>
     public void EatPiece(ChessPiece piece) {
-        // EventsManager em = GameManager.Instance.GetEventsManager();
-        // // em.CallOnPieceEaten(piece);
+        EventsManager em = GameManager.Instance.GetEventsManager();
+        
         // // if (em.cancelPieceEaten) {
         // //     em.cancelPieceEaten = false;
         // //     return;
@@ -196,6 +196,7 @@ public class BoardManager : MonoBehaviour
         // Destroy(piece.gameObject);
         piece.gameObject.SetActive(false);
         board.RemovePiece(piece.coord.y, piece.coord.x);
+        em.CallOnPieceEaten(piece, lastEater);
     }
 
     public void HighlightPossibleMoves(ChessPiece piece)

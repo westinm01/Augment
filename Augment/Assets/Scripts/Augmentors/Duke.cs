@@ -11,10 +11,19 @@ public class Duke : Augmentor
     GameManager gm;
     public KingPiece enemyKing;
     GameObject noteEffect;
+
+    protected override void Awake()
+    {
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        HoldingManager hm = managers.GetComponent<HoldingManager>();
+        this.augmentor = hm.augmentorObjects[3];
+        base.Awake();
+
+    }
     // Start is called before the first frame update
     void Start()
     {
-        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        //managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
         gm = managers.GetComponent<GameManager>();
         noteEffect = managers.GetComponent<HoldingManager>().augmentorEffectObjects[4]; //get note effect
         bm = managers.GetComponent<BoardManager>();

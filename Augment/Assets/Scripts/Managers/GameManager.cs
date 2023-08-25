@@ -182,6 +182,11 @@ public class GameManager : MonoBehaviour
         return piecePrefabs[index].gameObject;
     }
 
+    public HoldingManager GetHoldingManager()
+    {
+        return GetComponent<HoldingManager>();
+    }
+
     #region Events
     private void RegisterEvents()
     {

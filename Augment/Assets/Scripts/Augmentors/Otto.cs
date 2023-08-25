@@ -5,8 +5,12 @@ using UnityEngine;
 public class Otto : Augmentor
 {
     
-    void Start()
+    protected override void Awake()
     {
+        GameObject managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        HoldingManager hm = managers.GetComponent<HoldingManager>();
+        this.augmentor = hm.augmentorObjects[13];
+        base.Awake();
 
     }
     public override void UseAugment()

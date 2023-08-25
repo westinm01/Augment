@@ -12,14 +12,22 @@ public class MainSolveig : Augmentor
 
     public bool movedTwice = false;
     
+        protected override void Awake()
+    {
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        HoldingManager hm = managers.GetComponent<HoldingManager>();
+        this.augmentor = hm.augmentorObjects[12];
+        base.Awake();
+    }
+
     void Start()
     {
         //get chess board
-        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
         gm = managers.GetComponent<GameManager>();
         bm = managers.GetComponent<BoardManager>();
         board = bm.GetBoard();
         cp = gameObject.GetComponent<ChessPiece>();
+        movedTwice = false;
     }
     public override void UseAugment()
     {
@@ -55,12 +63,14 @@ public class MainSolveig : Augmentor
             gm.currPlayer =gm.whitePlayer;
         }
         StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
+        //TODO: Fix bug that allows you to move more than twice if you eat an enemy piece
 
 
     }
 
     public void ContinueGame()
     {
+        Debug.Log("Game Continued...");
         movedTwice = false;
         bm.FreezeBoard(false);
         //pieces unfrozen

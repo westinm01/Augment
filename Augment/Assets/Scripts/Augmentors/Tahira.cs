@@ -19,11 +19,19 @@ public class Tahira : Augmentor
 
     Player piecePlayer;
     Player enemyPlayer;
+        protected override void Awake()
+    {
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        HoldingManager hm = managers.GetComponent<HoldingManager>();
+        this.augmentor = hm.augmentorObjects[15];
+        base.Awake();
+
+    }
     void Start()
     {
         piecePlayer = GameManager.Instance.GetPlayer(this.gameObject.GetComponent<ChessPiece>().team);
         enemyPlayer = GameManager.Instance.GetPlayer(!this.gameObject.GetComponent<ChessPiece>().team);
-        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        //managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
         bm = managers.gameObject.GetComponent<BoardManager>();
         
     }

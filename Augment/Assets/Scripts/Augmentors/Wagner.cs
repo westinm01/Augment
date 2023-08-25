@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class Wagner : Augmentor
 {
-    [SerializeField] int turnsLeft;
-    [SerializeField] int cooldownTime;
+    [SerializeField] int turnsLeft = 3;
+    [SerializeField] int cooldownTime = 4;
     public bool augmentActivated;
     private bool targetEliminated;
+    public GameObject managers;
 
 
+    protected override void Awake()
+    {
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        HoldingManager hm = managers.GetComponent<HoldingManager>();
+        this.augmentor = hm.augmentorObjects[16];
+        base.Awake();
+    }
     // Start is called before the first frame update
     protected override void Start() {
         base.Start();
@@ -35,17 +43,22 @@ public class Wagner : Augmentor
     }
 
     public void TargetCheck(ChessPiece pieceEaten, ChessPiece eater){
+        //Debug.Log("WAGNER: " + !pieceEaten.gameObject.activeSelf + augmentActivated);
         if(!pieceEaten.gameObject.activeSelf && augmentActivated){
             turnsLeft = -1;
-
+            GameManager.Instance.board.MovePiece(eater, eater.lastCoord.x, -1 * eater.lastCoord.y);
+            //upodate the board
+            //GameManager.Instance.GetBoardManager().GetBoard().UpdateBoard(eater.coord, eater);
             //Place it back and move your piece back
             pieceEaten.SwitchTeams();
             Player piecePlayer = GameManager.Instance.GetPlayer(augmentPiece.team);
             piecePlayer.playerPieces.Add(pieceEaten);
             pieceEaten.gameObject.SetActive(true);
             targetEliminated =true;
-            
-
+            Debug.Log("WAGNER: Target Replaced");
+            GameManager.Instance.board.AddPiece(pieceEaten, pieceEaten.coord.x, pieceEaten.coord.y);
+            Debug.Log("WAGNER " + GameManager.Instance.board.GetChessPiece(pieceEaten.coord.x, pieceEaten.coord.y).name);
+            StartCoroutine(CanvasManager.Instance.AugmentorFlash(this));
         }
     }
     

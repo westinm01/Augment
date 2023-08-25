@@ -17,6 +17,14 @@ public class Gabe : Augmentor
     GameObject managers;
     public GameObject electricGameObject;
 
+    protected override void Awake()
+    {
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        HoldingManager hm = managers.GetComponent<HoldingManager>();
+        this.augmentor = hm.augmentorObjects[5];
+        base.Awake();
+
+    }
     void Start()
     {
         managers = GameObject.FindGameObjectsWithTag("GameManager")[0];

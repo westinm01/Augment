@@ -7,7 +7,16 @@ public class Lin : Augmentor
 
     [SerializeField] int turnsLeft;
     [SerializeField] int cooldownTime;
+    public GameObject managers;
 
+    protected override void Awake()
+    {
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        HoldingManager hm = managers.GetComponent<HoldingManager>();
+        this.augmentor = hm.augmentorObjects[10];
+        base.Awake();
+
+    }
     // Start is called before the first frame update
     protected override void Start() {
         base.Start();

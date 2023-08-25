@@ -6,6 +6,7 @@ public class HoldingManager : MonoBehaviour
 {
     //Holding Manager is used for holding resources
     public List<GameObject> augmentorEffectObjects;
+    public List<AugmentorObject> augmentorObjects = new List<AugmentorObject>();
 
 
 

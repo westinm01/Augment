@@ -11,10 +11,13 @@ public class Alejandra : Augmentor
 
     protected override void Awake()
     {
-        base.Awake();
+        
         canActivate = true;
         managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
-        lifesaver = managers.GetComponent<HoldingManager>().augmentorEffectObjects[2]; // get lifesaver effect
+        HoldingManager hm = managers.GetComponent<HoldingManager>();
+        this.augmentor = hm.augmentorObjects[0];
+        lifesaver = hm.augmentorEffectObjects[2]; // get lifesaver effect
+        base.Awake();
     }
 
     public override void UseAugment()

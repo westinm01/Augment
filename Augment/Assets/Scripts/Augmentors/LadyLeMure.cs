@@ -16,9 +16,13 @@ public class LadyLeMure : Augmentor
     public AugmentorObject ghostAugment;
     private GameObject managers;
 
-    void Start()
+        protected override void Awake()
     {
         managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        HoldingManager hm = managers.GetComponent<HoldingManager>();
+        this.augmentor = hm.augmentorObjects[8];
+        base.Awake();
+
     }
 
     public override void UseAugment()
@@ -37,7 +41,7 @@ public class LadyLeMure : Augmentor
 
         // Add new ghost augment to destroy after 2 turns
         Ghost ghost = lastEaten.gameObject.AddComponent<Ghost>();
-        ghost.augmentor = ghostAugment;
+        //ghost.augmentor = ghostAugment;
         lastEaten.pieceAugmentor = ghost;
         ghost.UpdateInformation();
         TriggerManager tm = GameManager.Instance.GetTriggerManager();

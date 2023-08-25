@@ -179,6 +179,7 @@ public class ChessPiece : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<BoxCollider2D>().enabled = false;
         GameManager.Instance.board.RemovePiece(this.coord.y, this.coord.x);
+        GetComponentsInChildren<SpriteRenderer>()[0].enabled = false;
 
     }
 
@@ -186,6 +187,7 @@ public class ChessPiece : MonoBehaviour
         GetPossibleSpaces();
         GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<BoxCollider2D>().enabled = true;
+        GetComponentsInChildren<SpriteRenderer>()[0].enabled = true;
         ChessPiece existingPiece = GameManager.Instance.board.GetChessPiece(coord.x, coord.y);
 
         Debug.Log(existingPiece);

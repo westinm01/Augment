@@ -15,6 +15,16 @@ public class Felipe : Augmentor
 
     private int turnsLeft;
     private InputManager inputManager;
+    public GameObject managers;
+
+    protected override void Awake()
+    {
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        HoldingManager hm = managers.GetComponent<HoldingManager>();
+        this.augmentor = hm.augmentorObjects[4];
+        base.Awake();
+
+    }
     protected override void Start()
     {
         base.Start();

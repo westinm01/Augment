@@ -10,9 +10,16 @@ public class Lucy : Augmentor
     int lastRow = 0;
     private GameObject managers;
 
-    void Start()
+    protected override void Awake()
     {
         managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        HoldingManager hm = managers.GetComponent<HoldingManager>();
+        this.augmentor = hm.augmentorObjects[11];
+        base.Awake();
+
+    }
+    void Start()
+    {
         fireBlock = managers.GetComponent<HoldingManager>().augmentorEffectObjects[0]; // get fire effect
     }
     public override void UseAugment()

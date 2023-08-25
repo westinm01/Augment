@@ -5,6 +5,15 @@ using UnityEngine;
 public class Ghost : Augmentor
 {
     private int counter = 7;
+    public GameObject managers;
+    protected override void Awake()
+    {
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        HoldingManager hm = managers.GetComponent<HoldingManager>();
+        this.augmentor = hm.augmentorObjects[9];
+        base.Awake();
+
+    }
     public override void UseAugment()
     {
         counter--;

@@ -17,7 +17,16 @@ public class Hiroshi : Augmentor
 
     private bool isInvis;
     private int turnsLeft;
+    public GameObject managers;
 
+        protected override void Awake()
+    {
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        HoldingManager hm = managers.GetComponent<HoldingManager>();
+        this.augmentor = hm.augmentorObjects[6];
+        base.Awake();
+
+    }
     protected override void Start() {
         base.Start();
         isInvis = false;

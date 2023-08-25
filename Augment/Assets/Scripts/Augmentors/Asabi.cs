@@ -11,6 +11,13 @@ public class Asabi : Augmentor
     int lastRow = 0;
     public GameObject managers;
 
+    protected override void Awake()
+    {
+        managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+        HoldingManager hm = managers.GetComponent<HoldingManager>();
+        this.augmentor = hm.augmentorObjects[1];
+        base.Awake();
+    }
     protected override void Start() {
         base.Start();
         canActivate = true;
