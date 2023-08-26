@@ -979,6 +979,30 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1602841044327676699, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 235
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841044327676699, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -330
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841045035840559, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841045035840559, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841045270938984, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841045270938984, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -370
+      objectReference: {fileID: 0}
     - target: {fileID: 1602841045467648771, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
       propertyPath: m_Name
       value: BoardCanvas
@@ -1071,9 +1095,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1602841045748141689, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841045748141689, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -450
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841046072722504, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6cfb68164a81307449d472107f454765, type: 3}
     - target: {fileID: 1602841046072722504, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841046072722519, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841046072722519, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841046072722519, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841046192826135, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841046267283917, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -550
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
