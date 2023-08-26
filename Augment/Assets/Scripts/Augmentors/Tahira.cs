@@ -23,6 +23,8 @@ public class Tahira : Augmentor
     {
         managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
         HoldingManager hm = managers.GetComponent<HoldingManager>();
+        pawnObject = hm.augmentorEffectObjects[5];
+        knightObject = hm.augmentorEffectObjects[6];
         this.augmentor = hm.augmentorObjects[15];
         base.Awake();
 

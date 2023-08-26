@@ -31,7 +31,7 @@ public class InputManager : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
         AIPlayer currAI;
         if (GameManager.Instance.GetCurrentPlayer().TryGetComponent<AIPlayer>(out currAI)) {
             if (!currAI.isMakingMove) {

@@ -9,7 +9,6 @@ public class HoldingManager : MonoBehaviour
     public List<AugmentorObject> augmentorObjects = new List<AugmentorObject>();
 
 
-
     
     // Start is called before the first frame update
     void Start()

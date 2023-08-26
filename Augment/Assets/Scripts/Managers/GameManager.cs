@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
         RegisterEvents();//maybe here or at end of start.
+        AugmentPieces();
+        currPlayer = whitePlayer;
     }
 
     // Start is called before the first frame update
@@ -185,6 +187,84 @@ public class GameManager : MonoBehaviour
     public HoldingManager GetHoldingManager()
     {
         return GetComponent<HoldingManager>();
+    }
+
+    private void AugmentPieces()
+    {
+        GameObject field = GameObject.FindGameObjectsWithTag("Field")[0];
+
+        GameObject king2 = field.transform.GetChild(1).gameObject;
+        AddAugmentorToPiece(king2, PlayerPrefs.GetInt("King2"));
+        GameObject queen2 = field.transform.GetChild(2).gameObject;
+        AddAugmentorToPiece(queen2, PlayerPrefs.GetInt("Queen2"));
+        GameObject bishop2 = field.transform.GetChild(3).gameObject;
+        AddAugmentorToPiece(bishop2, PlayerPrefs.GetInt("Bishop2"));
+        GameObject bishop2b = field.transform.GetChild(4).gameObject;
+        AddAugmentorToPiece(bishop2b, PlayerPrefs.GetInt("Bishop2"));
+        GameObject knight2 = field.transform.GetChild(5).gameObject;
+        AddAugmentorToPiece(knight2, PlayerPrefs.GetInt("Knight2"));
+        GameObject knight2b = field.transform.GetChild(6).gameObject;
+        AddAugmentorToPiece(knight2b, PlayerPrefs.GetInt("Knight2"));
+        GameObject rook2 = field.transform.GetChild(7).gameObject;
+        AddAugmentorToPiece(rook2, PlayerPrefs.GetInt("Rook2"));
+        GameObject rook2b = field.transform.GetChild(8).gameObject;
+        AddAugmentorToPiece(rook2b, PlayerPrefs.GetInt("Rook2"));
+        for(int i = 0; i < 8; i++)
+        {
+            GameObject pawn2 = field.transform.GetChild(9 + i).gameObject;
+            AddAugmentorToPiece(pawn2, PlayerPrefs.GetInt("Pawn2"));
+        }
+        for(int i = 0; i < 8; i++)
+        {
+            GameObject pawn1 = field.transform.GetChild(17 + i).gameObject;
+            AddAugmentorToPiece(pawn1, PlayerPrefs.GetInt("Pawn1"));
+        }
+        GameObject king1 = field.transform.GetChild(25).gameObject;
+        AddAugmentorToPiece(king1, PlayerPrefs.GetInt("King1"));
+        GameObject queen1 = field.transform.GetChild(26).gameObject;
+        AddAugmentorToPiece(queen1, PlayerPrefs.GetInt("Queen1"));
+        GameObject bishop1 = field.transform.GetChild(27).gameObject;
+        AddAugmentorToPiece(bishop1, PlayerPrefs.GetInt("Bishop1"));
+        GameObject bishop1b = field.transform.GetChild(28).gameObject;
+        AddAugmentorToPiece(bishop1b, PlayerPrefs.GetInt("Bishop1"));
+        GameObject knight1 = field.transform.GetChild(29).gameObject;
+        AddAugmentorToPiece(knight1, PlayerPrefs.GetInt("Knight1"));
+        GameObject knight1b = field.transform.GetChild(30).gameObject;
+        AddAugmentorToPiece(knight1b, PlayerPrefs.GetInt("Knight1"));
+        GameObject rook1 = field.transform.GetChild(31).gameObject;
+        AddAugmentorToPiece(rook1, PlayerPrefs.GetInt("Rook1"));
+        GameObject rook1b = field.transform.GetChild(32).gameObject;
+        AddAugmentorToPiece(rook1b, PlayerPrefs.GetInt("Rook1"));
+
+    }
+
+    private void AddAugmentorToPiece(GameObject g, int aug)
+    {
+        ChessPiece cp = g.GetComponent<ChessPiece>();
+        Debug.Log(aug);
+        
+        AugmentorObject ao = GetHoldingManager().augmentorObjects[aug];
+        Type t;
+        if(aug == 12)
+        {
+            t = Type.GetType("MainSolveig");
+        }
+        else if(aug == 8)
+        {
+            t = Type.GetType("LadyLeMure");
+        }
+        else
+        {
+            t = Type.GetType(ao.characterName);
+        }
+        Component c = g.AddComponent(t);
+        Augmentor a = c as Augmentor;
+        
+        a.augmentor = ao;
+        cp.pieceAugmentor = a;
+        a.UpdateInformation();
+        TriggerManager tm = GetComponent<TriggerManager>();
+        tm.AddToBin(cp, a.augmentor.triggerVal);
     }
 
     #region Events
