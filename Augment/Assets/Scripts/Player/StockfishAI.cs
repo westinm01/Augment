@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using UnityEngine;
-using static UnityEditor.Rendering.CameraUI;
+//using static UnityEditor.Rendering.CameraUI;
 using System.IO;
 using System.Security.Cryptography;
+
 
 public class StockfishAI : AIPlayer
 {
@@ -159,3 +160,6 @@ public class StockfishAI : AIPlayer
         return bestMoveInAlgebraicNotation;
     }
 }
+/*
+COMMENTED OUT FOR BUG TEST BUILDING
+*/ 

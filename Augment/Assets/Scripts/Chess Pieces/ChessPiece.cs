@@ -49,6 +49,18 @@ public class ChessPiece : MonoBehaviour
     public void Start()
     {
         thisPlayer = GameManager.Instance.GetPlayer(team);
+        if(TryGetComponent<Augmentor>(out Augmentor aug))
+        {
+            pieceAugmentor = aug;
+            if (this.gameObject.transform.GetChild(0).TryGetComponent<SpriteRenderer>(out SpriteRenderer s))
+            {
+                s.color = pieceAugmentor.augmentor.backgroundColor;
+            }
+        }
+        else
+        {
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
         if (team) {     // piece is white team
             sr.sprite = whiteSprite;

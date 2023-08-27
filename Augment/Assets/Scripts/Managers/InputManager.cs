@@ -219,11 +219,14 @@ public class InputManager : MonoBehaviour
 
         GameManager.Instance.board.UnHighlightPieces();
         if (currSelected.GetComponent<ChessPiece>().canMove){
-            GameManager.Instance.board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
+
+            GameObject managers = GameObject.FindGameObjectsWithTag("GameManager")[0];
+            managers.GetComponent<GameManager>().board.MovePiece(currSelected.GetComponent<ChessPiece>(), newX, newY);
 
             currSelected = null;
-            GameManager.Instance.SwitchTeams();
             
+            managers.GetComponent<GameManager>().SwitchTeams();
+            Debug.Log("TEAMS SWITCHED CORRECTLY");
             state = InputState.Wait;
         }
     }

@@ -22,6 +22,7 @@ public class RookPiece : ChessPiece
             this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
         canCastle = true;
+        //COMMENTED OUT NEXT 2 LINES FOR BUG TESTING BUILDING
         SetPieceValue(MiniMaxAI.ROOK_VAL);
         SetPieceChar(StockfishAI.ROOK_CHAR);
     }

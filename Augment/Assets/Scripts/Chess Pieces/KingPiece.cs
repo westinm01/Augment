@@ -19,7 +19,7 @@ public class KingPiece : ChessPiece
                 s.color = pieceAugmentor.augmentor.backgroundColor;
             }
         }
-
+        //COMMENTED OUT FOR BUG TESTING BUILDING
         SetPieceValue(MiniMaxAI.KING_VAL);
         SetPieceChar(StockfishAI.KING_CHAR);
         moved = false;
@@ -110,7 +110,7 @@ public class KingPiece : ChessPiece
     }
 
     public bool canCastle(int i){//Neither king nor specific rook can have been moved, and you can't castle out or into check. 0 is kingside, 1 is queenside
-        
+        return false;
         if(thisPlayer.inCheck) return false;
 
         if(kingSide == null && queenSide == null){
