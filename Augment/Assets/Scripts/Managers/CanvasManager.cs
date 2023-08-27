@@ -196,7 +196,8 @@ public class CanvasManager : MonoBehaviour
         augmentorFlashSprite.SetActive(true);
         augmentorFlashSprite.GetComponent<SpriteRenderer>().sprite = augmentor.sprite;
 
-        Vector3 augmentorOrigin = augmentorFlashSprite.transform.position;
+        //Vector3 augmentorOrigin = augmentorFlashSprite.transform.position;
+        Vector3 augmentorOrigin = new Vector3(1000, 0, 0);
         Vector3 destination = augmentorOrigin;
         destination.x = -destination.x;
 
@@ -217,12 +218,12 @@ public class CanvasManager : MonoBehaviour
         }
 
         // Augmentor moving away from middle fast
-        while (augmentorFlashSprite.transform.position.x > -augmentorOrigin.x) {
+        while (augmentorFlashSprite.transform.localPosition.x > -1000) {
             augmentorFlashSprite.transform.position -= new Vector3(fastAugmentorFlashMoveSpeed * Time.deltaTime, 0, 0);
             yield return null;
         }
 
-        augmentorFlashSprite.transform.position = augmentorOrigin;
+        augmentorFlashSprite.transform.localPosition = augmentorOrigin;
         augmentorFlashSprite.SetActive(false);
     }
 

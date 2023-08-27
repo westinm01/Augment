@@ -49,7 +49,7 @@ public class Jiva : Augmentor
             {
                 s.color = cp.pieceAugmentor.augmentor.backgroundColor;
             }
-            Destroy(this);
+            Destroy(this,5);
 
         }
     }
