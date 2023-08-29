@@ -9,6 +9,7 @@ public class LevelLoader : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        PlayerPrefs.SetInt("levelsCompleted", 5);
         levelsCompleted = PlayerPrefs.GetInt("levelsCompleted", 0);
         for(int i = 0; i <= levelsCompleted; i++)
         {
