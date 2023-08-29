@@ -12,7 +12,6 @@ public class StoryButton : MonoBehaviour
     public List<int> speakers = new List<int>();
     public DialogueSystem dialogueSystem;
     public int chapter;
-    public YarnProject yarnProject;
 
     private void Awake()
     {

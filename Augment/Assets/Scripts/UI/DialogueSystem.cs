@@ -14,12 +14,12 @@ public class DialogueSystem : MonoBehaviour
 
     public int chapter = 1;
 
-    private DialogueRunner dialogueRunner;
+    public DialogueRunner dialogueRunner;
 
     // Start is called before the first frame update
     void Start()
     {
-        dialogueRunner = FindObjectOfType<DialogueRunner>();
+        //dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
 
     // Update is called once per frame
