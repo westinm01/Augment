@@ -200,5 +200,16 @@ public class SaveSelection : MonoBehaviour
                 break;
         }
     }
+
+    public void SetPlayer2IsHuman(bool b)
+    {
+        player2IsHuman = b;
+    }
+
+    public void ResetReady()
+    {
+        player1Ready = false;
+        player2Ready = false;
+    }
     
 }

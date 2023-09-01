@@ -16896,7 +16896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc98be2ebf5a64617bdd1e3549064651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueOrder: 010000000200000001000000020000000100000004000000010000000400000001000000040000000200000004000000010000000400000001000000
+  dialogueOrder: 010000000200000001000000030000000100000004000000010000000400000001000000040000000200000004000000010000000400000001000000
   speakers: 07000000010000000900000005000000
   dialogueSystem: {fileID: 212987082}
   chapter: 39
@@ -19820,7 +19820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc98be2ebf5a64617bdd1e3549064651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueOrder: 01000000020000000c0000000300000002000000030000000200000003000000020000000300000002000000030000000200000003000000
+  dialogueOrder: 010000000200000001000000020000000300000002000000030000000200000003000000020000000300000002000000030000000200000003000000
   speakers: 050000000700000011000000
   dialogueSystem: {fileID: 212987082}
   chapter: 40
@@ -24522,6 +24522,18 @@ MonoBehaviour:
   camera: {fileID: 317910231}
   piecesImage: {fileID: 1691915029}
   changeTime: 0.25
+--- !u!114 &939676169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939676161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a040ea61e6fb16247a07aa84db7c03a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &956400507
 GameObject:
   m_ObjectHideFlags: 0
@@ -27712,7 +27724,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 713.43585}
-  m_SizeDelta: {x: 1080, y: 4000}
+  m_SizeDelta: {x: 1080, y: 4200}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1175935358
 MonoBehaviour:
@@ -37266,6 +37278,30 @@ MonoBehaviour:
           m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1107107720}
+        m_TargetAssemblyTypeName: SaveSelection, Assembly-CSharp
+        m_MethodName: SetPlayer2IsHuman
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 939676169}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadSceneName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Select
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1711603830

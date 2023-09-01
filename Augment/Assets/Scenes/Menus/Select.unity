@@ -2642,7 +2642,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1465701390}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1457181672}
+        m_TargetAssemblyTypeName: SaveSelection, Assembly-CSharp
+        m_MethodName: ResetReady
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1563995812}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadSceneName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Main
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1465701390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2916,6 +2940,7 @@ GameObject:
   - component: {fileID: 1563995806}
   - component: {fileID: 1563995810}
   - component: {fileID: 1563995811}
+  - component: {fileID: 1563995812}
   m_Layer: 5
   m_Name: CANVAS_Select
   m_TagString: SelectionCanvas
@@ -3033,6 +3058,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1563995808}
+--- !u!114 &1563995812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563995805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a040ea61e6fb16247a07aa84db7c03a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1564186406
 GameObject:
   m_ObjectHideFlags: 0
