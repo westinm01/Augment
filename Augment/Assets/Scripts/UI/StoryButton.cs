@@ -12,6 +12,8 @@ public class StoryButton : MonoBehaviour
     public List<int> speakers = new List<int>();
     public DialogueSystem dialogueSystem;
     public int chapter;
+    
+    public string[] AIAugmentors = new string[6];
 
     private void Awake()
     {
@@ -31,6 +33,7 @@ public class StoryButton : MonoBehaviour
         dialogueSystem.chapter = chapter;
         dialogueSystem.SetDialogueOrder(dialogueOrder);
         dialogueSystem.SetCurrentSpeakers(speakers);
+        dialogueSystem.SetAIAugmentors(AIAugmentors);
         dialogueSystem.BeginDialogue();
         
         //find the dialoguerunner

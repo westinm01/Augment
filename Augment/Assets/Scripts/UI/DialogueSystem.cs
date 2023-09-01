@@ -16,6 +16,8 @@ public class DialogueSystem : MonoBehaviour
 
     public DialogueRunner dialogueRunner;
 
+    private string[] AIAugmentors = new string[6];
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +58,7 @@ public class DialogueSystem : MonoBehaviour
     public void IncrementIndex()
     {
         index++;
-        if (index > dialogueOrder.Count)
+        if (index >= dialogueOrder.Count)
         {
             //dialogue completed.
         }
@@ -69,10 +71,19 @@ public class DialogueSystem : MonoBehaviour
 
     public void DisplaySpeakers()
     {
-        for(int i = 0; i < currentSpeakers.Count; i++)
+        int i = 0;
+        for(i = 0; i < currentSpeakers.Count; i++)
         {
             Debug.Log("CS: " + i);
             this.gameObject.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = augmentorProfileImages[currentSpeakers[i]].sprite;
+            this.gameObject.transform.GetChild(i).gameObject.GetComponent<Image>().color = Color.white;
+        }
+        if(i < 4)
+        {
+            for(int j = i; j < 4; j++)
+            {
+                this.gameObject.transform.GetChild(j).gameObject.GetComponent<Image>().color = Color.clear;
+            }
         }
         //need to hide white square sprites if there are less than 4 speakers.
 
@@ -98,6 +109,7 @@ public class DialogueSystem : MonoBehaviour
     {
         currentSpeakers.Clear();
         dialogueOrder.Clear();
+        dialogueRunner.Stop();
         index = 0;
     }
 
@@ -105,7 +117,9 @@ public class DialogueSystem : MonoBehaviour
 
     public void BeginDialogue()
     {
-        dialogueRunner.startNode = "Chapter" + chapter;
+        
+        //dialogueRunner.startNode = "Chapter" + chapter;
+        dialogueRunner.StartDialogue("Chapter" + chapter);
         //dialogueRunner.StartDialogue(yp.sourceScripts[1]);
         //dialogueRunner.yarnProject = yp;
         /*
@@ -115,6 +129,26 @@ public class DialogueSystem : MonoBehaviour
         dialogueRunner.StartDialogue(fifthScript);
         */
     }
+
+    public void SetAIAugmentors(string [] newAIAugmentors)
+    {
+        for(int i = 0; i < newAIAugmentors.Length; i++)
+        {
+            AIAugmentors[i] = newAIAugmentors[i];
+            
+        }
+    }
+
+    public void LoadAIAugmentors()
+    {
+        SaveSelection ss = GameObject.FindGameObjectsWithTag("AugmentorSelector")[0].GetComponent<SaveSelection>();
+        for(int i = 0; i < 6; i++)
+        {
+            ss.AIAugmentors[i] = AIAugmentors[i];
+        }
+        ss.player2IsHuman = false;
+    }
+
     
 
 }

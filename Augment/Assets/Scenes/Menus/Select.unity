@@ -2515,7 +2515,7 @@ GameObject:
   - component: {fileID: 1457181672}
   m_Layer: 0
   m_Name: AugmentorSelector
-  m_TagString: Untagged
+  m_TagString: AugmentorSelector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
