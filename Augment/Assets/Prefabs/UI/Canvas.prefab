@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 3430674238860577332}
   - component: {fileID: 8506632280507839659}
   - component: {fileID: 9004985515807000796}
-  - component: {fileID: 2785368408142224028}
+  - component: {fileID: 975808446274399019}
   m_Layer: 5
   m_Name: Safe Area Panel
   m_TagString: Untagged
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2785368408142224028
+--- !u!114 &975808446274399019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,7 +188,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4629905856489290014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f7dc6c55fdce24cab6deab4f0f90eb, type: 3}
+  m_Script: {fileID: 11500000, guid: c97afc556caea1c44969477eb7ddec74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 2867340569682816245}
+  ConformX: 1
+  ConformY: 1
+  Logging: 0

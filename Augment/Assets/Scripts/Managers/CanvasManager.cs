@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -21,9 +22,9 @@ public class CanvasManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI augmentDescription;
     [SerializeField]
-    private SpriteRenderer characterPortrait;
+    private Image characterPortrait;
     [SerializeField]
-    private SpriteRenderer background;
+    private Image background;
     
     [Header("Check Popup")]
     [SerializeField]
@@ -90,6 +91,7 @@ public class CanvasManager : MonoBehaviour
         augmentName.text = piece.pieceAugmentor.augmentName;
         augmentDescription.text = piece.pieceAugmentor.augmentDesc;
         characterPortrait.sprite = piece.pieceAugmentor.sprite;
+        characterPortrait.preserveAspect = true;
         background.color = piece.pieceAugmentor.backgroundColor;
         bool currPlayer = GameManager.Instance.GetCurrentPlayer().playerTeam;
         if (piece.pieceAugmentor.hasPrompt && piece.team == currPlayer && piece.pieceAugmentor.canActivate) {
