@@ -128,6 +128,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3053927877880718895, guid: 58cbfc05b1db44d4f8278498e9b100f8, type: 3}
   m_PrefabInstance: {fileID: 1000651309}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &921238016 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8314416890425352240, guid: 53a881ddec34d8945ab330f3579267ae, type: 3}
+  m_PrefabInstance: {fileID: 8314416891082239244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1000651309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -915,6 +920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1602841045467648775, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 921238016}
     - target: {fileID: 1602841045467648824, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
       propertyPath: m_Pivot.x
       value: 0

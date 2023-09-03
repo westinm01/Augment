@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Yarn;
+using Yarn.Unity;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -9,10 +11,17 @@ public class DialogueSystem : MonoBehaviour
     public List<int> dialogueOrder = new List<int>();
     public List<int> currentSpeakers = new List<int>();
     private int index = 0;
+
+    public int chapter = 1;
+
+    public DialogueRunner dialogueRunner;
+
+    private string[] AIAugmentors = new string[6];
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
 
     // Update is called once per frame
@@ -49,7 +58,7 @@ public class DialogueSystem : MonoBehaviour
     public void IncrementIndex()
     {
         index++;
-        if (index > dialogueOrder.Count)
+        if (index >= dialogueOrder.Count)
         {
             //dialogue completed.
         }
@@ -62,10 +71,22 @@ public class DialogueSystem : MonoBehaviour
 
     public void DisplaySpeakers()
     {
-        for(int i = 0; i < 4; i++)
+        int i = 0;
+        for(i = 0; i < currentSpeakers.Count; i++)
         {
+            Debug.Log("CS: " + i);
             this.gameObject.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = augmentorProfileImages[currentSpeakers[i]].sprite;
+            this.gameObject.transform.GetChild(i).gameObject.GetComponent<Image>().color = Color.white;
         }
+        if(i < 4)
+        {
+            for(int j = i; j < 4; j++)
+            {
+                this.gameObject.transform.GetChild(j).gameObject.GetComponent<Image>().color = Color.clear;
+            }
+        }
+        //need to hide white square sprites if there are less than 4 speakers.
+
     }
 
     public void UpdateSpeaker()
@@ -88,7 +109,46 @@ public class DialogueSystem : MonoBehaviour
     {
         currentSpeakers.Clear();
         dialogueOrder.Clear();
+        dialogueRunner.Stop();
         index = 0;
     }
+
+
+
+    public void BeginDialogue()
+    {
+        
+        //dialogueRunner.startNode = "Chapter" + chapter;
+        dialogueRunner.StartDialogue("Chapter" + chapter);
+        //dialogueRunner.StartDialogue(yp.sourceScripts[1]);
+        //dialogueRunner.yarnProject = yp;
+        /*
+        YarnProject yarnProject = dialogueRunner.yarnProject;
+        YarnScripts yarnScripts = yarnProject.GetScripts();
+        YarnScript fifthScript = yarnScripts.GetScriptAt(1);
+        dialogueRunner.StartDialogue(fifthScript);
+        */
+    }
+
+    public void SetAIAugmentors(string [] newAIAugmentors)
+    {
+        for(int i = 0; i < newAIAugmentors.Length; i++)
+        {
+            AIAugmentors[i] = newAIAugmentors[i];
+            
+        }
+    }
+
+    public void LoadAIAugmentors()
+    {
+        SaveSelection ss = GameObject.FindGameObjectsWithTag("AugmentorSelector")[0].GetComponent<SaveSelection>();
+        for(int i = 0; i < 6; i++)
+        {
+            ss.AIAugmentors[i] = AIAugmentors[i];
+        }
+        ss.player2IsHuman = false;
+    }
+
+    
 
 }

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Yarn;
+using Yarn.Unity;
 
 public class StoryButton : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class StoryButton : MonoBehaviour
     public List<int> dialogueOrder = new List<int>();
     public List<int> speakers = new List<int>();
     public DialogueSystem dialogueSystem;
+    public int chapter;
+    
+    public string[] AIAugmentors = new string[6];
 
     private void Awake()
     {
@@ -25,7 +30,12 @@ public class StoryButton : MonoBehaviour
     {
         // Add your custom button behavior here
         Debug.Log("Story Button clicked!");
+        dialogueSystem.chapter = chapter;
         dialogueSystem.SetDialogueOrder(dialogueOrder);
         dialogueSystem.SetCurrentSpeakers(speakers);
+        dialogueSystem.SetAIAugmentors(AIAugmentors);
+        dialogueSystem.BeginDialogue();
+        
+        //find the dialoguerunner
     }
 }

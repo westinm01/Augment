@@ -104,8 +104,8 @@ public class SaveSelection : MonoBehaviour
         {
             PlayerPrefs.SetInt("Pawn1", player1Augmentors[0]);
             PlayerPrefs.SetInt("Knight1", player1Augmentors[1]);
-            PlayerPrefs.SetInt("Rook1", player1Augmentors[2]);
-            PlayerPrefs.SetInt("Bishop1", player1Augmentors[3]);
+            PlayerPrefs.SetInt("Bishop1", player1Augmentors[2]);
+            PlayerPrefs.SetInt("Rook1", player1Augmentors[3]);
             PlayerPrefs.SetInt("Queen1", player1Augmentors[4]);
             PlayerPrefs.SetInt("King1", player1Augmentors[5]);
             player1Ready = true;
@@ -113,8 +113,8 @@ public class SaveSelection : MonoBehaviour
             Debug.Log("PLAYER 1 AUGMENTORS:");
             Debug.Log(PlayerPrefs.GetInt("Pawn1"));
             Debug.Log(PlayerPrefs.GetInt("Knight1"));
-            Debug.Log(PlayerPrefs.GetInt("Rook1"));
             Debug.Log(PlayerPrefs.GetInt("Bishop1"));
+            Debug.Log(PlayerPrefs.GetInt("Rook1"));
             Debug.Log(PlayerPrefs.GetInt("Queen1"));
             Debug.Log(PlayerPrefs.GetInt("King1"));
             
@@ -123,8 +123,8 @@ public class SaveSelection : MonoBehaviour
         {
             PlayerPrefs.SetInt("Pawn2", player2Augmentors[0]);
             PlayerPrefs.SetInt("Knight2", player2Augmentors[1]);
-            PlayerPrefs.SetInt("Rook2", player2Augmentors[2]);
-            PlayerPrefs.SetInt("Bishop2", player2Augmentors[3]);
+            PlayerPrefs.SetInt("Bishop2", player2Augmentors[2]);
+            PlayerPrefs.SetInt("Rook2", player2Augmentors[3]);
             PlayerPrefs.SetInt("Queen2", player2Augmentors[4]);
             PlayerPrefs.SetInt("King2", player2Augmentors[5]);
             player2Ready = true;
@@ -132,8 +132,8 @@ public class SaveSelection : MonoBehaviour
             Debug.Log("PLAYER 2 AUGMENTORS:");
             Debug.Log(PlayerPrefs.GetInt("Pawn2"));
             Debug.Log(PlayerPrefs.GetInt("Knight2"));
-            Debug.Log(PlayerPrefs.GetInt("Rook2"));
             Debug.Log(PlayerPrefs.GetInt("Bishop2"));
+            Debug.Log(PlayerPrefs.GetInt("Rook2"));
             Debug.Log(PlayerPrefs.GetInt("Queen2"));
             Debug.Log(PlayerPrefs.GetInt("King2"));
             
@@ -199,6 +199,17 @@ public class SaveSelection : MonoBehaviour
                 return 0;
                 break;
         }
+    }
+
+    public void SetPlayer2IsHuman(bool b)
+    {
+        player2IsHuman = b;
+    }
+
+    public void ResetReady()
+    {
+        player1Ready = false;
+        player2Ready = false;
     }
     
 }
