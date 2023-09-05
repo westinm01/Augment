@@ -23,7 +23,7 @@ public class SelectManager : MonoBehaviour
 
     public void AddAugmentor(GameObject augmentor)
     {
-        GameObject parent = this.gameObject.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(currPiece).GetChild(0).gameObject;
+        GameObject parent = this.gameObject.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetChild(currPiece).GetChild(0).gameObject;
         GameObject imageObject = parent.transform.GetChild(0).GetChild(0).gameObject;
         GameObject textObject = parent.transform.GetChild(1).gameObject;
         textObject.GetComponent<TextMeshProUGUI>().text = augmentor.transform.parent.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text;
