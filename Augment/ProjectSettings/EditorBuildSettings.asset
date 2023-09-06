@@ -12,9 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/OnlineMenu.unity
     guid: 8eacd5e11e3a83c4e9bd051555be2894
   - enabled: 1
+    path: Assets/Scenes/Menus/Main.unity
+    guid: 2e3591db3fff44040975d8f077c69613
+  - enabled: 1
     path: Assets/Scenes/Menus/Select.unity
     guid: 264fceb699e7eae4395720b1540eb511
   - enabled: 1
     path: Assets/Scenes/Game Test.unity
     guid: ce5d80827aed149efa251bc4c0e487b1
+  - enabled: 1
+    path: Assets/Scenes/Menus/EndGame.unity
+    guid: d6abc03c87a98a24e9133ad0dcd5ce65
   m_configObjects: {}

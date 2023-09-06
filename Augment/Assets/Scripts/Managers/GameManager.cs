@@ -153,6 +153,17 @@ public class GameManager : MonoBehaviour
 
     public void EndGame() {
         Debug.Log("Game over");
+        SceneLoader s = GetComponent<SceneLoader>();
+        
+        s.LoadSceneName("EndGame");
+    }
+
+    public void EndGame(bool winner)
+    {
+        Debug.Log("Game over");
+        SceneLoader s = GetComponent<SceneLoader>();
+        
+        s.LoadSceneName("EndGame");
     }
 
     /// <summary>

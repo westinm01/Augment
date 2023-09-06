@@ -72,11 +72,63 @@ public class Player : MonoBehaviour
         // }
 
         // Check if any pieces can move
-        foreach (ChessPiece piece in playerPieces) {
-            if (piece.possibleEats.Count != 0 || piece.possibleSpaces.Count != 0) {
+        
+
+        //get all threatening pieces
+        List<ChessPiece> threateningPieces = GameManager.Instance.board.GetThreateningPieces(king.coord, enemyPlayer);
+
+        //check if the king can move without being threatened
+        foreach (Vector2Int vec in king.possibleSpaces) {
+            if (GameManager.Instance.board.GetThreateningPieces(vec, enemyPlayer).Count == 0) {
                 return false;
             }
         }
+
+        if (threateningPieces.Count == 1) {
+            Debug.Log("THREAT COUNT 1 vs. " + threateningPieces.Count);
+            ChessPiece piece = threateningPieces[0];
+            foreach (ChessPiece allyPiece in playerPieces) {
+                if (allyPiece.possibleEats.Contains(piece.coord)) {
+                    return false;
+                }
+            }
+        }
+
+        //using checkpath, find if a piece can block the checkmate
+        
+        foreach (ChessPiece piece in playerPieces) {
+            //Vector2Int oldSpace = piece.coord;
+            List<Vector2Int> trueSpaces = new List<Vector2Int>();
+            //add all possible spaces to truespaces
+            foreach (Vector2Int vec in piece.possibleSpaces) {
+                trueSpaces.Add(vec);
+            }
+            if (piece.possibleSpaces.Count != 0) {
+                foreach (Vector2Int vec in trueSpaces) {
+                    //update board with new position
+                    //piece.coord = vec;
+                    ChessPiece newCP = new ChessPiece();
+                    GameManager.Instance.board.AddPiece(newCP, vec.y, vec.x);
+                    GameManager.Instance.UpdateAllPossibleMoves();
+                    
+                    if (GameManager.Instance.board.GetThreateningPieces(king.coord, enemyPlayer).Count != 0) {
+                        Debug.Log(piece + "CHECKED " + vec);
+                        Debug.Log(GameManager.Instance.board.GetThreateningPieces(king.coord, enemyPlayer).Count);
+                        GameManager.Instance.board.RemovePiece(vec.y, vec.x);
+                        GameManager.Instance.UpdateAllPossibleMoves();
+                        return false;
+                        
+                    }
+                    else {
+                        GameManager.Instance.board.RemovePiece(vec.y, vec.x);
+                        GameManager.Instance.UpdateAllPossibleMoves();
+                        
+                    }
+                }
+            }
+        }
+
+        
 
         Debug.Log("CHECKMATE");
         return true;
