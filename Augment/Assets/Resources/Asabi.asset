@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Asabi
   augmentName: Web Trap
-  description: "Select this piece to place a web trap on a square within the piece\u2019s
-    standard movement. When an enemy crosses over this square, it is entangled and
-    unable to move from that square for 1 turn. If this piece eats an enemy that
-    is entangled, this piece may move again, using its standard movement. "
+  description: Places a web at the last space this piece was at. Enemies that land
+    on a web will be stunned for 2 turns.
   sprite: {fileID: 21300000, guid: f2268b0506ede104c8aaa0987319d094, type: 3}
   backgroundColor: {r: 0.5754717, g: 0, b: 0, a: 1}
   triggerVal: 1

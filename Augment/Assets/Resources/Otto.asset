@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Otto
   augmentName: Wrap-Around
-  description: This piece's movement can wrap-around the board horizontally.
+  description: This piece can move from one horizontal edge of the board to the other,
+    using its standard movement.
   sprite: {fileID: 21300000, guid: a16e922d24d43eb489c18ea301868c9d, type: 3}
   backgroundColor: {r: 0.82614, g: 0.36320752, b: 1, a: 1}
   triggerVal: 1

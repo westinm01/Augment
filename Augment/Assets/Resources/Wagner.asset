@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Wagner
   augmentName: Risk & Reward
-  description: Risk & Reward - Select a target. If that piece is eaten in the next
-    3 turns, it joins your team for the rest of the match. Otherwise, this piece
-    dies.
+  description: Risk & Reward - Select an enemy. If that piece is eaten in the next
+    3 turns, it becomes an ally for the rest of the match. If the condition is not
+    met, this piece is lost.
   sprite: {fileID: 21300000, guid: 2092a58f27e5daf4495bbddf8c4c8675, type: 3}
   backgroundColor: {r: 0.49056602, g: 0.24091057, b: 0, a: 1}
   triggerVal: 0

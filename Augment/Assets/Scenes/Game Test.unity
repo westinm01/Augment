@@ -916,6 +916,46 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1602841044327676699, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -43
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841045270938984, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 215.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841045270938984, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -283.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841045270938984, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9991925
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841045270938984, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841045270938984, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841045270938984, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.040179882
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841045270938984, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841045270938984, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 153.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841045270938984, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 4.606
+      objectReference: {fileID: 0}
     - target: {fileID: 1602841045467648771, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
       propertyPath: m_Name
       value: BoardCanvas
@@ -1006,6 +1046,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1602841045467648824, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841046072722519, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 601
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841046072722519, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 478.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841046072722519, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 300.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841046072722519, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 92.119995
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602841046192826135, guid: 89cf3f085c56f5e49ab17410206375f1, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Duke
   m_EditorClassIdentifier: 
   characterName: Duke
-  augmentName: Magical Musician
-  description: Choose an ally. If that ally eats a piece within 2 turns, you can
-    move the enemy king by 1 space.
+  augmentName: Toccata Take-Ove
+  description: Select an enemy. If this piece eats the selected enemy in 1 turn,
+    the enemy king can be moved once.
   sprite: {fileID: 21300000, guid: 7c590cac7f8e3434bb5f573639117491, type: 3}
   backgroundColor: {r: 0, g: 0.4245283, b: 0.17688683, a: 1}
   triggerVal: 0

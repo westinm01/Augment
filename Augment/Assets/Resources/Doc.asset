@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Doc
   m_EditorClassIdentifier: 
   characterName: Doc
-  augmentName: Time Killer
-  description: Every time this piece eats an enemy piece, reduce the opponent's turn
-    timer to 5 seconds for their next turn.
+  augmentName: Out of Time
+  description: 'When this piece eats an enemy, the opponent has 5 seconds to make
+    their next move. '
   sprite: {fileID: 21300000, guid: 2af472cc2b5ed594c8e566968f23a5ae, type: 3}
   backgroundColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
   triggerVal: 3

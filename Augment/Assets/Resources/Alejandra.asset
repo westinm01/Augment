@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Alejandra
   augmentName: Life Saver
-  description: This piece has an extra life. If an enemy piece eats this one, they
-    return to their space, and this piece loses a life. If this piece is on its last
-    life, it is eaten, and the enemy piece doesn't return.
+  description: This piece has an extra life. If an enemy takes this piece, they return
+    to their last space, and this piece loses a life. If this piece is on its last
+    life, it is taken, and the enemy doesn't return to its last space.
   sprite: {fileID: 21300000, guid: c287d73343a8b4c4a9a387747dedb0db, type: 3}
   backgroundColor: {r: 1, g: 0, b: 0, a: 1}
   triggerVal: 4

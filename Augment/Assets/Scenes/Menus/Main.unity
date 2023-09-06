@@ -860,8 +860,9 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 'Reality Warp: Once per game, you can switch the positions of 2 enemy
-        pieces or 2 ally pieces.'
+      value: 'Reality Warp: Once per game, this piece can switch the positions of
+        it and another piece on the board. King pieces are not a valid option to
+        be selected.'
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -1174,7 +1175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorTitle
-      value: The Resilient
+      value: The Master Sorceror
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: infoPanelObject
@@ -1182,7 +1183,8 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 'Wrap Around:'
+      value: 'Wrap-Around: This piece can move from one horizontal edge of the board
+        to the other, using its standard movement.'
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -2253,7 +2255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorTitle
-      value: The Resilient
+      value: The Augmenting Artist
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: infoPanelObject
@@ -2261,7 +2263,7 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 
+      value: Sketch - Upon eating an enemy, this piece copies its Augment.
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -3512,7 +3514,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 136641282}
   m_OnClick:
     m_PersistentCalls:
@@ -11185,10 +11187,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 552324716}
   - {fileID: 212987079}
   - {fileID: 1695023678}
   - {fileID: 872292816}
-  - {fileID: 552324716}
   - {fileID: 670788686}
   m_Father: {fileID: 1709926170}
   m_RootOrder: -1
@@ -11680,8 +11682,8 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 'Web Trap: Choose a space to place a web that is hidden to your opponent.
-        If an enemy piece is placed on this space, it is stunned for 2 turns.'
+      value: 'Web Trap: Places a web at the last space this piece was at. Enemies
+        that land on a web will be stunned for 2 turns.'
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -14172,6 +14174,10 @@ PrefabInstance:
       propertyPath: infoPanelObject
       value: 
       objectReference: {fileID: 1986276261}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 'Up And Over: This piece can jump over allies. '
+      objectReference: {fileID: 0}
     - target: {fileID: 445593252113570002, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -14566,6 +14572,141 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405165282}
+  m_CullTransparentMesh: 1
+--- !u!1 &407908100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 407908101}
+  - component: {fileID: 407908103}
+  - component: {fileID: 407908102}
+  m_Layer: 5
+  m_Name: Text_Version
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &407908101
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407908100}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 534006002}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 225, y: -149}
+  m_SizeDelta: {x: 310, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &407908102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407908100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Version 0.1 [BETA]
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &407908103
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407908100}
   m_CullTransparentMesh: 1
 --- !u!1 &427541037
 GameObject:
@@ -15885,7 +16026,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 407908101}
   m_Father: {fileID: 476453417}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18410,9 +18552,10 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 'Vanish: This piece can vanish from the board for 3 turns. Returning
-        to its space will eat any enemy piece on it. If there is an ally piece instead,
-        this piece is discarded.'
+      value: "Vanish:  Select this piece to be intangible for 3 turns, starting on
+        activation. Allies and enemies can exist in this piece\u2019s square. After
+        3 turns, this piece becomes tangible again, eating any enemies in its space.
+        If an ally is in its space upon returning, this piece is lost."
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -21940,7 +22083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorTitle
-      value: The Resilient
+      value: The Life-saving Lifeguard
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: infoPanelObject
@@ -21948,9 +22091,10 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 'Life Saver: This piece has an extra life. If an enemy piece eats this
-        one, they return to their space, and this piece loses a life. If this piece
-        is on its last life, it is eaten, and the enemy piece doesn''t return.'
+      value: 'Life Saver: This piece has an extra life. If an enemy eats this piece,
+        they return to their last space, and this piece loses a life. If instead
+        this piece is on its last life, it is eaten, and the enemy doesn''t return
+        to its last space.'
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -22853,8 +22997,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 350, y: 630}
-  m_SizeDelta: {x: 600, y: 300}
+  m_AnchoredPosition: {x: 350, y: 698}
+  m_SizeDelta: {x: 600, y: 480}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &847288956
 MonoBehaviour:
@@ -23747,7 +23891,7 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 'Double Down: This piece can move twice in one turn.'
+      value: 'Double Trouble: This piece can move twice in one turn.'
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -24936,7 +25080,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 972096328}
   m_OnClick:
     m_PersistentCalls:
@@ -26126,8 +26270,9 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 'Reality Warp: Once per game, you can switch the positions of 2 enemy
-        pieces or 2 ally pieces.'
+      value: 'Reality Warp: Once per game, this piece can switch the positions of
+        it and another piece on the board. King pieces are not a valid option to
+        be selected.'
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -26445,9 +26590,10 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 'Vanish: This piece can vanish from the board for 3 turns. Returning
-        to its space will eat any enemy piece on it. If there is an ally piece instead,
-        this piece is discarded.'
+      value: "Vanish:  Select this piece to be intangible for 3 turns, starting on
+        activation. Allies and enemies can exist in this piece\u2019s square. After
+        3 turns, this piece becomes tangible again, eating any enemies in its space.
+        If an ally is in its space upon returning, this piece is lost."
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -27533,7 +27679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorTitle
-      value: The Candlemaker
+      value: The Candle Maker
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: infoPanelObject
@@ -27541,8 +27687,9 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 'Trailblazer: Upon moving this piece, a trail of fire is left after,
-        preventing enemies from moving onto these spaces.'
+      value: 'Trailblazer: This piece creates a trail of fire with its movement,
+        preventing any piece from being placed in those spaces. The fire lasts for
+        1 turn. '
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -31235,8 +31382,8 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 'Web Trap: Choose a space to place a web that is hidden to your opponent.
-        If an enemy piece is placed on this space, it is stunned for 2 turns.'
+      value: 'Web Trap: Places a web at the last space this piece was at. Enemies
+        that land on a web will be stunned for 2 turns.'
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -32711,8 +32858,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.20999146, y: -150.25}
-  m_SizeDelta: {x: -22.38, y: 277.78}
+  m_AnchoredPosition: {x: -0.20999146, y: -184}
+  m_SizeDelta: {x: -22.38, y: 340}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1422817225
 MonoBehaviour:
@@ -32734,7 +32881,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hopper: This piece can jump over any ally piece.'
+  m_text: 'Up And Over: This piece can jump over allies. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
   m_sharedMaterial: {fileID: -8520518597383263340, guid: b89b1a24d6a80fc46883b564901f85d6, type: 2}
@@ -34360,7 +34507,7 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 'Double Down: This piece can move twice in one turn.'
+      value: 'Double Trouble: This piece can move twice in one turn.'
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -35334,9 +35481,9 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 'Risk & Reward: Select a target. If that piece is eaten in the next
-        3 turns, it joins your team for the rest of the match. Otherwise, this piece
-        dies.'
+      value: 'Risk & Reward: Select an enemy. If that piece is eaten in the next
+        3 turns, it becomes an ally for the rest of the match. If the condition is
+        not met, this piece is lost.'
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -37521,6 +37668,10 @@ PrefabInstance:
       propertyPath: infoPanelObject
       value: 
       objectReference: {fileID: 1986276261}
+    - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
+      propertyPath: augmentDescription
+      value: 'Up And Over: This piece can jump over allies. '
+      objectReference: {fileID: 0}
     - target: {fileID: 445593252113570002, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -38205,7 +38356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorTitle
-      value: The Resilient
+      value: The Friendly Forger
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: infoPanelObject
@@ -38213,7 +38364,10 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 
+      value: 'Forged in Fire - This piece can create a piece of equal or lower value
+        in a free space next to it. The more powerful the piece, the more turns it
+        takes to construct it. This piece cannot move while constructing. King pieces
+        can not be created. '
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -40087,7 +40241,47 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorLore
-      value: Lore still a rough draft
+      value: "\r\tUnlike his family, Duke never really had any musical talents. His
+        mother was a contemporary jazz singer at the local bar, and his older brother,
+        Louis, played in the band alongside their father accompanying them. Duke
+        would always hide behind the stage curtains, peeking through a thin tear
+        to watch his family perform as he tapped his foot to the rhythm. Despite
+        being the black sheep of the family, he was encouraged by them to take lessons
+        to unlock his musical potential. Duke would go through numerous instructors,
+        but could never find an instrument that suited him.\r\n The family performed
+        at different venues throughout the week, and Duke would remain backstage
+        as usual. Refusing to be left behind, he took a chance and grabbed a dusty
+        saxophone. From behind the curtain, he played and gathered the undivided
+        attention of the audience. They were enamored by his playing, how each note
+        flowed into the next and the passion he put into playing. His family were
+        surprised and stopped their own show to let Duke take the spotlight. Wanting
+        to train his son further to follow in the family\u2019s footsteps, Duke\u2019s
+        father resolved to save enough money to send him to the city's prestigious
+        music school. \r\nHowever, the family\u2019s performances came to an end
+        when Duke\u2019s father would be called to war and sent to a distant land.
+        He never returned. Feeling the loss, Duke\u2019s mother stopped taking gigs
+        at the bar, and Louis grew to despise music, promising to never pick up an
+        instrument ever again. Duke, however, chose to pursue a music career, and
+        attended the school his father promised to send him to. He was an excellent
+        student, and his seemingly natural talent for playing the sax earned him
+        the admiration of students and teachers. Wanting to relive the good old days,
+        he built his own jazz band, \u201CThe Grand Duchy\u201D, and played in jazz
+        clubs reminiscent of vintage bars.\r\nAfter their mother passed from terminal
+        illness, the two brothers grew apart. Duke lived the family\u2019s dream
+        of making it big in the city as a jazz musician. People were enamored with
+        his music, especially those about family and the war that claimed his father.
+        By then, anti-war sentiments had risen, and many resonated with the messages
+        of peace Duke composed. It would catch the attention of different pro-war
+        groups who would come and harass Duke\u2019s performances.\r\n\tIt would
+        come to a head when Louis, who still supported his little brother despite
+        his disdain for music, got into a violent disagreement with one of Duke\u2019s
+        critics. Glass was broken, and guns were drawn, with Louis ending up on the
+        floor with a gun to his head. But before the trigger could be pulled, Duke
+        stepped in, armed with merely a saxophone. A soothing melody filled the room,
+        manifested through notes flying around. As if moved by the music, the patrons\u2019
+        hearts were calmed and changed. Having realized his power to change hearts
+        and minds, Duke set out on a road trip with his band, going to places plagued
+        by violence and soothing the hearts of the people there.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorName
@@ -40095,7 +40289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentorTitle
-      value: The Resilient
+      value: The Magical Musician
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: infoPanelObject
@@ -40103,7 +40297,9 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 
+      value: Toccata Take-Over - Select an enemy. If this piece eats the selected
+        enemy in 2 turns, the enemy king can be moved in the same turn. This can
+        only happen once per game.
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -41691,7 +41887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 79.99994}
+  m_AnchoredPosition: {x: 0, y: 80}
   m_SizeDelta: {x: 0, y: -560}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1986276263
@@ -42190,8 +42386,8 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: 'Time Killer: Every time this piece eats an enemy piece, reduce the
-        opponent''s timer by 15 seconds. OR only 5 seconds to make their next move.'
+      value: "Out of Time: When this piece takes an enemy, the opponent has 5 seconds
+        to make their next move. \r"
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
@@ -43806,7 +44002,11 @@ PrefabInstance:
       objectReference: {fileID: 1986276261}
     - target: {fileID: 445593252113570001, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: augmentDescription
-      value: Skate Trick
+      value: "Skater Trick - If this piece takes two pawns consecutively, an ally
+        pawn is placed adjacent to it, in the nearest available space. If this piece
+        takes a pawn, any non-pawn piece, and another pawn, an ally version of that
+        second taken piece is placed adjacent to it, in the nearest available space.
+        Any augments that piece may have is not applied.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 445593252113570012, guid: d772c44a2418c2945a33caf10d2347d3, type: 3}
       propertyPath: m_Name
