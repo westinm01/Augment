@@ -18,7 +18,7 @@ public class Ghost : Augmentor
     {
         counter--;
         if (counter == 0) {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 }

@@ -22,7 +22,7 @@ public class KnightPiece : ChessPiece
         {
             int newX = coord.x + vec.x;
             int newY = coord.y + vec.y;
-            if(TryGetComponent<Otto>(out Otto ottoInstance))
+            if(TryGetComponent<Otto>(out Otto ottoInstance)  && this.gameObject.activeSelf == true)
             {
                 if(newX < 0)
                 {
