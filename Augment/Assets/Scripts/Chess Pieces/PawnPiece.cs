@@ -6,11 +6,13 @@ public class PawnPiece : ChessPiece
 {
 
     public int direction = 1;   // 1 for moving up, -1 for moving down
+    private bool wrapAround = false;
 
     public override void GetPossibleSpaces()
     {
         base.GetPossibleSpaces();
         int nextY = coord.y - direction;
+        
         Vector2Int nextMove = new Vector2Int(coord.x, nextY);
 
         // Check move up/down
@@ -27,9 +29,21 @@ public class PawnPiece : ChessPiece
             }
         }
         
+        int rightPos = coord.x + 1;
+        int leftPos = coord.x - 1;
+        if (TryGetComponent<Otto>(out Otto ottoInstance) && this.gameObject.activeSelf == true)
+        {
+            wrapAround = false;
+            rightPos = rightPos % 8;
+            if(leftPos < 0)
+            {
+                leftPos = 7;
+            }
+        }
         // Check diagonal eats
-        ChessPiece leftDiagonal = GameManager.Instance.board.GetChessPiece(coord.x - 1, nextY);
-        ChessPiece rightDiagonal = GameManager.Instance.board.GetChessPiece(coord.x + 1, nextY);
+        ChessPiece leftDiagonal = GameManager.Instance.board.GetChessPiece(leftPos, nextY);
+        ChessPiece rightDiagonal = GameManager.Instance.board.GetChessPiece(rightPos, nextY);
+        
         if (leftDiagonal != null && ValidMoveInCheck(leftDiagonal.coord)) {
             if (leftDiagonal.team != this.team) {
                 possibleEats.Add(leftDiagonal.coord);
@@ -51,8 +65,20 @@ public class PawnPiece : ChessPiece
     public override bool CanAttack(Vector2Int space) {
         int nextY = coord.y - direction;
 
-        Vector2Int leftDiagonal = new Vector2Int(coord.x - 1, nextY);
-        Vector2Int rightDiagonal = new Vector2Int(coord.x + 1, nextY);
+        int rightPos = coord.x + 1;
+        int leftPos = coord.x - 1;
+        if (TryGetComponent<Otto>(out Otto ottoInstance) && this.gameObject.activeSelf == true)
+        {
+            wrapAround = false;
+            rightPos = rightPos % 8;
+            if(leftPos < 0)
+            {
+                leftPos = 7;
+            }
+        }
+
+        Vector2Int leftDiagonal = new Vector2Int(leftPos, nextY);
+        Vector2Int rightDiagonal = new Vector2Int(rightPos, nextY);
 
         return (space == leftDiagonal || space == rightDiagonal);
     }

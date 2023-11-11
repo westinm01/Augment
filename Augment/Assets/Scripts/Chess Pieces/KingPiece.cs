@@ -7,6 +7,7 @@ public class KingPiece : ChessPiece
     private bool moved;
     public RookPiece kingSide = null;
     public RookPiece queenSide = null;
+    private bool wrapAround = false;
 
     private void Awake()
     {
@@ -43,6 +44,15 @@ public class KingPiece : ChessPiece
         {
             int newX = coord.x + vec.x;
             int newY = coord.y + vec.y;
+            if (TryGetComponent<Otto>(out Otto ottoInstance) && this.gameObject.activeSelf == true)
+        {
+            wrapAround = false;
+            if(newX < 0)
+            {
+                newX = 7;
+            }
+            newX = newX % 8;
+        }
             Vector2Int nextMove = new Vector2Int(newX, newY);
             // Player enemyPlayer = GameManager.Instance.GetPlayer(!this.team);
 
