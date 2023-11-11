@@ -42,7 +42,7 @@ public class RookPiece : ChessPiece
         int up = 1;
         int down = -1;
 
-        if (TryGetComponent<Otto>(out Otto ottoInstance))
+        if (TryGetComponent<Otto>(out Otto ottoInstance)  && this.gameObject.activeSelf == true)
         {
             wrapAround = false;
             for (int i = coord.x + 1; i <= GameManager.Instance.board.getWidth(); i = (i + 1)%8)
@@ -144,7 +144,7 @@ public class RookPiece : ChessPiece
             }
             return true;
         }
-        else if(TryGetComponent<Sali>(out Sali sali))
+        else if(TryGetComponent<Sali>(out Sali sali)  && this.gameObject.activeSelf == true)
         {
             //Debug.Log("Has Sali");
             //check if x and y are occupied by an ally

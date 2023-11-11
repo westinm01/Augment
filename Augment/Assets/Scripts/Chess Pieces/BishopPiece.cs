@@ -21,7 +21,7 @@ public class BishopPiece : ChessPiece
         int down = -1;
 
 
-        if (TryGetComponent<Otto>(out Otto ottoInstance))
+        if (TryGetComponent<Otto>(out Otto ottoInstance) && this.gameObject.activeSelf == true)
         {
             wrapAround = false;
             //top right
@@ -151,7 +151,7 @@ public class BishopPiece : ChessPiece
             }
             return true;
         }
-        else if(TryGetComponent<Sali>(out Sali sali))
+        else if(TryGetComponent<Sali>(out Sali sali) && this.gameObject.activeSelf == true)
         {
             if(!GameManager.Instance.board.InBounds(xCheck, yCheck))
             {

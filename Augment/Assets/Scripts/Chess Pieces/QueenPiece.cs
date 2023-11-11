@@ -18,7 +18,7 @@ public class QueenPiece : ChessPiece
         int up = 1;
         int down = -1;
 
-        if (TryGetComponent<Otto>(out Otto ottoInstance))
+        if (TryGetComponent<Otto>(out Otto ottoInstance)  && this.gameObject.activeSelf == true)
         {
             for (int i = coord.x + 1; i <= GameManager.Instance.board.getWidth(); i = (i + 1)%8)
             {
@@ -232,7 +232,7 @@ public class QueenPiece : ChessPiece
             }
             return true;
         }
-        else if(TryGetComponent<Sali>(out Sali sali))
+        else if(TryGetComponent<Sali>(out Sali sali)  && this.gameObject.activeSelf == true)
         {
             if(!GameManager.Instance.board.InBounds(xCheck, yCheck))
             {
