@@ -21,6 +21,8 @@ public class SaveSelection : MonoBehaviour
         get { return _instance; }
     }
 
+    public GameObject duplicateText;
+
     void Awake()
     {
         
@@ -39,21 +41,42 @@ public class SaveSelection : MonoBehaviour
     public void StartButton()
     {
         CaptureSelection();
-        ConfirmSelection();
-        if(player2IsHuman)
+        
+        if(player2IsHuman && !player1Ready)
         {
             //reset the scene, but remember player1Augmentors
             //DontDestroyOnLoad(this.gameObject);
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Select");
+            
+            if(CheckDuplicates(true))
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Select");
+                ConfirmSelection();
+            }
+            else
+            {
+                GameObject myText = Instantiate(duplicateText, panelAssign.transform);
+            }
+        }
+        
+        else if(player2IsHuman && player1Ready)
+        {
+            
+            if(CheckDuplicates(false))
+            {
+                ConfirmSelection();
+                DontDestroyOnLoad(this.gameObject);
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Game Test");
+            }
+            else
+            {
+                GameObject myText = Instantiate(duplicateText, panelAssign.transform);
+            }
+            
         }
         else
         {
             CaptureSelection();
             ConfirmSelection(); 
-        }
-        if(player1Ready && player2Ready)
-        {
-            DontDestroyOnLoad(this.gameObject);
             UnityEngine.SceneManagement.SceneManager.LoadScene("Game Test");
         }
         
@@ -211,5 +234,35 @@ public class SaveSelection : MonoBehaviour
         player1Ready = false;
         player2Ready = false;
     }
-    
+    bool CheckDuplicates(bool player)
+    {
+        //check if there are duplicates in the augmentors
+        if(player)
+        {
+            for(int i = 0; i < 6; i++)
+            {
+                for(int j = i + 1; j < 6; j++)
+                {
+                    if(player1Augmentors[i] == player1Augmentors[j])
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
+        else
+        {
+            for(int i = 0; i < 6; i++)
+            {
+                for(int j = i + 1; j < 6; j++)
+                {
+                    if(player2Augmentors[i] == player2Augmentors[j])
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
 }

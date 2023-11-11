@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class StartGame : MonoBehaviour
 {
+    
     public void ClickStartButton()
     {
+        
         SaveSelection.Instance.StartButton();
     }
 }
