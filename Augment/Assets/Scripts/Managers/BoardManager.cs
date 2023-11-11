@@ -162,7 +162,7 @@ public class BoardManager : MonoBehaviour
             if (enemyPlayer.isInCheckmate()) {
                 Debug.Log("CHECKMATE!");
                 StartCoroutine(CanvasManager.Instance.CheckmateCoroutine());
-                GameManager.Instance.EndGame();
+                GameManager.Instance.EndGame(!enemyPlayer.playerTeam);
             }
             else {
                 StartCoroutine(CanvasManager.Instance.CheckCoroutine());

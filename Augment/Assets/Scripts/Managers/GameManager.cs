@@ -162,7 +162,12 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game over");
         SceneLoader s = GetComponent<SceneLoader>();
-        
+        int x = 0;
+        if(winner)
+        {
+            x = 1;
+        }
+        PlayerPrefs.SetInt("lastWinner", x);
         s.LoadSceneName("EndGame");
     }
 
