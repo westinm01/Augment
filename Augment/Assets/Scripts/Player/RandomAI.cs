@@ -39,4 +39,10 @@ public class RandomAI : AIPlayer
 
         isMakingMove = false;
     }
+
+    public override void DecrementTime(float decrease)
+    {
+        return;
+    }
+
 }

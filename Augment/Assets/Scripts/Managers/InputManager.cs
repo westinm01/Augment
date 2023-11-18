@@ -32,13 +32,20 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {   
-        AIPlayer currAI;
-        if (GameManager.Instance.GetCurrentPlayer().TryGetComponent<AIPlayer>(out currAI)) {
+        RandomAI currAI;
+        if(!SaveSelection.Instance.player2IsHuman && !GameManager.Instance.GetCurrentPlayer().playerTeam){
+            currAI = GameManager.Instance.GetPlayer(false) as RandomAI;
+                if (!currAI.isMakingMove) {
+                    currAI.StartMove();
+                }
+                return;
+        }
+        /*if (GameManager.Instance.GetCurrentPlayer().TryGetComponent<AIPlayer>(out currAI)) {
             if (!currAI.isMakingMove) {
                 currAI.StartMove();
             }
             return;
-        }
+        }*/
 
         if (isFrozen) {
             return;

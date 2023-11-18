@@ -143,7 +143,7 @@ public class Player : MonoBehaviour
         return capturedPieces[capturedPieces.Count-1];
     }
 
-    public void DecrementTime(float decrease)
+    public virtual void DecrementTime(float decrease)
     {
         totalTimer -= decrease;
         if (totalTimer <= 0) {

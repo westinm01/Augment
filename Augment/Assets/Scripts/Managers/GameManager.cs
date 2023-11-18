@@ -49,6 +49,24 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(SaveSelection.Instance != null)
+        {
+            if (!SaveSelection.Instance.player2IsHuman)
+            {
+                //whitePlayer = new HumanPlayer();
+                Player aiPlayer = new RandomAI();
+                blackPlayer.playerTeam = false;
+                aiPlayer.playerPieces = blackPlayer.playerPieces;
+                aiPlayer.threateningPieces = blackPlayer.threateningPieces;
+                aiPlayer.checkPath = blackPlayer.checkPath;
+                aiPlayer.capturedPieces = blackPlayer.capturedPieces;
+                aiPlayer.maxTotalTime = blackPlayer.maxTotalTime;
+                aiPlayer.maxTurnTime = blackPlayer.maxTurnTime;
+                aiPlayer.totalTimer = blackPlayer.totalTimer;
+                aiPlayer.inCheck = false;
+                blackPlayer = aiPlayer;
+            }
+        }
         currPlayer = whitePlayer;
         whitePlayer.UpdatePossibleMoves();
         blackPlayer.UpdatePossibleMoves();
@@ -71,6 +89,12 @@ public class GameManager : MonoBehaviour
             board.UnHighlightPieces();
             SwitchTeams();
         }
+        /*if(currPlayer == blackPlayer && blackPlayer is RandomAI){
+            RandomAI ai = blackPlayer as RandomAI;
+            if(!ai.isMakingMove){
+                ai.StartMove();
+            }
+        }*/
     }
 
     public Player GetCurrentPlayer() {
