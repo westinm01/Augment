@@ -72,8 +72,10 @@ public class Tree
         Node child = new Node(parent.depth + 1);
         if(board.GetPiece(move.x, move.y) != null && board.GetPiece(move.x, move.y).team != piece.team){
             possibleEat = board.GetPiece(move.x, move.y);
+            //remove possible eat from the boardf
+            board.RemovePiece(move.x, move.y);
         }
-
+        child.opponentMoves = GetAdvantage(!piece.team);
         return child;
 
         //keep in mind possible eat
