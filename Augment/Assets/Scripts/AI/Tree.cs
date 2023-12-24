@@ -9,6 +9,10 @@ public class Tree
 
     GameManager gameManager;
     ChessBoard board;
+    //TODO: NEED TO MAKE A BOARD MANAGER
+
+    Player thisPlayer;
+    Player opponentPlayer;
     
     int width = 8;
     int height = 8;
@@ -18,33 +22,40 @@ public class Tree
     public Tree()
     {
         
-        //get the game manager instance
+        //get the game manager instance and players
         gameManager = GameManager.Instance;
-        Player thisPlayer = gameManager.blackPlayer;
-        Player opponentPlayer = gameManager.whitePlayer;
+        thisPlayer = gameManager.blackPlayer;
+        opponentPlayer = gameManager.whitePlayer;
         InitializeBoard();
 
         rootNode = new Node(0);
         
         List<ChessPiece> teamPieces = thisPlayer.playerPieces;
+
+
+        //TREE GENERATION:
+            //For every piece, get a list of all its moves, eats, and protects (not implemented yet)
+                //for every eat, create a node for it and add it to the tree
+                //for every move, create a node for it and add it to the tree
         foreach(ChessPiece piece in teamPieces){
-            //get every possible move for that piece
-            piece.GetPossibleSpaces();
+            
+            piece.GetPossibleSpaces(); //get every possible space for that piece
             List<Vector2Int> possibleMoves = piece.possibleSpaces;
             List<Vector2Int> possibleEats = piece.possibleEats;
             
-            Vector2Int piecePosition = piece.coord;
+            
 
-            //tree generation logic
-            foreach(Vector2Int move in possibleMoves){
-                //create a new node for that move
-                /*Node newNode = new Node(board);
-                //add the move to the node
-                newNode.move = move;
-                //add the piece to the node
-                newNode.piece = piece;
-                //add the node to the root node's children
-                rootNode.children.Add(newNode);*/
+            
+            foreach(Vector2Int eatMove in possibleEats){
+                rootNode.AddChild(CreateNode(rootNode, piece, eatMove));
+
+            }
+
+            if(possibleEats.Count <= 0){
+                foreach(Vector2Int move in possibleMoves){
+                    rootNode.AddChild(CreateNode(rootNode, piece, move));
+
+                }
             }
         }
 
@@ -68,21 +79,31 @@ public class Tree
     
 
     Node CreateNode(Node parent, ChessPiece piece, Vector2Int move){
-        ChessPiece possibleEat;
+        Vector2Int piecePosition = piece.coord;
+        int eatValue = 0;
         Node child = new Node(parent.depth + 1);
+
+        //1. Calculate teamValue (ratio of piece values) after a possible eat
         if(board.GetPiece(move.x, move.y) != null && board.GetPiece(move.x, move.y).team != piece.team){
-            possibleEat = board.GetPiece(move.x, move.y);
-            //remove possible eat from the boardf
-            board.RemovePiece(move.x, move.y);
+            ChessPiece possibleEat = board.GetPiece(move.x, move.y);
+            eatValue = possibleEat.pieceValue;
         }
-        child.opponentMoves = GetAdvantage(!piece.team);
+
+        int opponentAdvantage = GetAdvantage(!piece.team) - eatValue;
+        int teamAdvantage = GetAdvantage(piece.team);
+        child.teamValue = (float)teamAdvantage / (float)opponentAdvantage; //Ratio between Ai pieces and player piece values
+
+        //2. need to move the piece, and calculate how many moves the opponent can make
+        //board.MovePiece(piece, move.x, move.y);//TODO: NEED TO MAKE A BOARD MANAGER
+        List<ChessPiece> opponentPieces = opponentPlayer.playerPieces;
+        int opponentMoves = 0;
+        foreach(ChessPiece opponentPiece in opponentPieces){
+            opponentPiece.GetPossibleSpaces();
+            opponentMoves += opponentPiece.possibleSpaces.Count;
+        }
+        child.opponentMoves = opponentMoves;
+        //board.MovePiece(piece, piecePosition.x, piecePosition.y);//TODO: NEED TO MAKE A BOARD MANAGER
         return child;
-
-        //keep in mind possible eat
-
-        //board.MovePiece(piece, move);
-
-
     }
 
     int GetAdvantage(bool team){

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Node
 {
-    int heuristicValue;
-    int costValue;
-    int teamValue;
-    int opponentMoves;
-    int teamMoves;
+    public float heuristicValue;
+    public int costValue;
+    public float teamValue;
+    public int opponentMoves;
+    public int teamMoves;
     public int depth;
     //ChessBoard b;
     public List<Node> children = new List<Node>();
@@ -31,7 +31,7 @@ public class Node
     }*/
 
 ///////////////////////////////////////////
-    public int getHeuristicValue()
+    public float getHeuristicValue()
     {
         return heuristicValue;
     }
@@ -41,13 +41,13 @@ public class Node
         return costValue;
     }
 
-    public int calculateHeuristicValue()
+    public float calculateHeuristicValue()
     {
         heuristicValue = teamValue - opponentMoves + teamMoves; //placeholder heuristic
         return  heuristicValue;
     }
 
-    void AddNode(Node n)
+    public void AddChild(Node n)
     {
         children.Add(n);
     }
