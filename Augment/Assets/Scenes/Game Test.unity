@@ -404,11 +404,11 @@ GameObject:
   - component: {fileID: 1193725144}
   m_Layer: 0
   m_Name: RandomAI
-  m_TagString: Untagged
+  m_TagString: RandomAI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1193725144
 MonoBehaviour:
   m_ObjectHideFlags: 0

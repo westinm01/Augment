@@ -52,10 +52,12 @@ public class GameManager : MonoBehaviour
         if(SaveSelection.Instance != null)
         {
             if (!SaveSelection.Instance.player2IsHuman)
-            {
+            {   
+                Debug.Log("Player 2 is AI");
+                GameObject ai = GameObject.FindGameObjectsWithTag("RandomAI")[0];
                 //whitePlayer = new HumanPlayer();
-                Player aiPlayer = new RandomAI();
-                blackPlayer.playerTeam = false;
+                RandomAI aiPlayer = ai.GetComponent<RandomAI>();
+                aiPlayer.playerTeam = false;
                 aiPlayer.playerPieces = blackPlayer.playerPieces;
                 aiPlayer.threateningPieces = blackPlayer.threateningPieces;
                 aiPlayer.checkPath = blackPlayer.checkPath;
@@ -65,6 +67,8 @@ public class GameManager : MonoBehaviour
                 aiPlayer.totalTimer = blackPlayer.totalTimer;
                 aiPlayer.inCheck = false;
                 blackPlayer = aiPlayer;
+                
+                
             }
         }
         currPlayer = whitePlayer;
